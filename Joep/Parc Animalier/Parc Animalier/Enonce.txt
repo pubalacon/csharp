@@ -1,0 +1,22 @@
+Creer un modele de park animalier. chaque jour les animaux mangent et se reproduisent , leur niveau d'energie baisse d'un montant fixe chaque jour.
+pour la repoduction chaque jour chaque paire male femelle d'une espece a une chance fixe (dependant de son espece) de faire un bebe.
+les animaux on les attributs :
+int energie (mort a 0) qui baisse de 20 par jour
+string espece;
+sexe (type que vous souhaitez)
+Il y a des predateurs et des proies.
+predateurs : Lion, ours, hyene.
+proies: gazelle, lapin giraffe.
+les proies ont un attribut double EscapeChance
+et les predateurs un attribut double HuntSuccesChance
+(compris entre 0 et 1)
+a la reproduction la moyenne est passee a l'enfant;
+les predateurs pour se nourrir choisissent une proie au hazard et tentent
+de l'attraper (chance de succes = EscapeChance * HuntSuccesChance)
+s'ils y arrivent leur energie passe a 100;
+sinon l'energie de la proie baisse de 20 et celle du predateur aussi.
+un predateur a moins de 20 d'energie ne chasse pas et a 2* plus de chances de
+se reproduire.
+une proie se nourrit et gagne entre 10 et 40 d'energie.
+peupler la reserve naturelle d'animaux aux attributs EscapeChance et HuntSuccesChance
+randomises et voir ce qui se passe.
