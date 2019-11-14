@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M20483C | All Modules - Programming in C# - go  deploy</title>
+
+        <link rel="stylesheet" href="./M20483C _ LAB 03_files/godeployMain.min.css">
+    <link rel="stylesheet" href="./M20483C _ LAB 03_files/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" type="text/css" href="./M20483C _ LAB 03_files/labs.min.css">
+
+</head>
+<body class="" style="background-color: rgb(255, 255, 255);">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top py-0 bg-brand" id="main-navbar">
+        <span class="h1 navbar-brand brandname my-1 ">go  deploy</span>
+            <div class="navbar-text h5 font-weight-normal my-1 ml-1 mr-auto collapse navbar-collapse" id="navbar-title">M20483C | All Modules - Programming in C#</div>
+        <div class="collapse navbar-collapse header-nav" id="header-nav-menu">
+<form action="https://lms.godeploy.it/Account/LogOff?Length=6" class="navbar-right" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="RzxbEh_C_O1u5siOYspFt00Ol_pPjLWXqtcnvwlY-dJm6E7EbwmIrsKZCvKJfCvOh6f4vZroMcEYhsZAIZRplrPKUtyTs0-x5ENFzroXHbqwX7SBnmXvi2sCbI-RqxCbQVMqLMB8kVrSYGC2VA9k8A2"></form>        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" style="font-size: 1.4em;" href="https://lms.godeploy.it/RedirectToHome" title="Home">
+                    <i class="far fa-home" title="Home"></i>
+                </a>
+            </li>
+                                    
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 1.4em;" aria-label="Account profile icon that opens a list of account options">
+                    <i class="far fa-user-circle"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right shadow" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="https://lms.godeploy.it/Manage">oheinrich@orange.fr</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="javascript:document.getElementById(&#39;logoutForm&#39;).submit()">Log off</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a href="https://godeploy.zendesk.com/hc/en-us" target="_blank" class="nav-link" style="font-size: 1.4em;"><span class="sr-only">Help icon that links to the help articles and allows you to create support requests</span><i class="far fa-question-circle" title="Help"></i></a>
+            </li>
+        </ul>
+</div>
+
+
+    </nav>
+
+    
+
+<main id="lab-container" class="h-100" data-mei-id="f2def404-29f7-e911-abe3-00155de2c913">
+    <h1 class="sr-only">M20483C | All Modules - Programming in C#</h1>
+    <div class="row h-100 no-gutters">
+        <div class="col bg-light h-100 position-relative" style="overflow-y: auto; flex-basis: calc(67.9696% - 3px);" id="lab-content-container">
+
+            <nav class="navbar navbar-expand navbar-light bg-gray-400" id="lab-navbar">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link tab-link" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#" id="tab-home-link" data-target="tab-home" data-link-text="Home" data-scroll-top="0">Home</a>
+        </li>
+            <li class="nav-item active bg-light">
+                <a class="nav-link tab-link" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#" id="tab-lab-guide-link" data-target="tab-lab-guide" aria-valuetext="Lab Guide">Lab Guide</a>
+            </li>
+            </ul>
+</nav>
+
+
+            <div class="container position-relative pt-2 lab-tab" id="tab-home" style="display: none;">
+                    <div class="mb-4">
+        <h6 class="mt-0"><i class="fa fa-server"></i> Virtual Machines</h6>
+
+        <div class="popover-help mb-2" data-toggle="popover" data-content="Select Virtual Machine" data-original-title="" title="">
+            <div class="dropdown" id="vm-dropdown">
+                <button class="btn btn-sm btn-outline-secondary dropdown-toggle btn-block text-left" type="button" id="vm-dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">20483C-SEA-DEV1</button>
+                <div class="dropdown-menu" aria-labelledby="vm-dropdown-btn" id="vm-dropdown-menu">
+                        <a class="dropdown-item active" data-vm-id="f7def404-29f7-e911-abe3-00155de2c913" data-vm-credentials="[{&quot;Username&quot;:&quot;Admin&quot;,&quot;Password&quot;:&quot;Pa55w.rd&quot;}]" data-has-optical-drive="false" data-has-floppy-drive="true)" data-vm-name="20483C-SEA-DEV1" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">20483C-SEA-DEV1</a>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" id="cad-btn" class="btn btn-sm btn-outline-secondary mb-1">Ctrl+Alt+Del</button>
+
+        <button class="btn btn-sm btn-outline-secondary reconnect-display-btn popover-help mb-1" data-toggle="popover" data-content="Reconnect selected VM Display" data-original-title="" title="">
+            <i class="fas fa-sync"></i>
+        </button>
+
+        <div class="btn-group popover-help mb-1" data-toggle="popover" data-content="Selected VM Power Operations" data-original-title="" title="">
+            <div class="dropdown">
+                <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="far fa-bolt"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="pwr-dropdown-btn" id="pwr-dropdown-menu">
+                    <a class="dropdown-item text-danger power-op" data-op="stop" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">Power Off</a>
+                    <a class="dropdown-item text-danger power-op" data-op="start" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">Power On</a>
+                    <a class="dropdown-item text-danger power-op" data-op="restart" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">Restart</a>
+                        <a class="dropdown-item text-danger power-op" data-op="reset-gateway" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">Reset Gateway</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div id="vm-credentials-target" style="font-size: 80%" class="mt-3">
+            <table>
+                <tbody><tr>
+                    <th class="pr-2">Username</th>
+                    <td>Admin</td>
+                    <td class="pl-2"><i class="fas fa-paste paste-credential paste-tab" data-text="Admin"></i></td>
+                </tr>
+                <tr>
+                    <th class="pr-2">Password</th>
+                    <td>Pa55w.rd</td>
+                    <td class="pl-2"><i class="fas fa-paste paste-credential paste-enter" data-text="Pa55w.rd"></i></td>
+                </tr>
+            </tbody></table>
+    </div>
+    </div>
+    <hr>
+
+
+
+<div class="mb-4 position-relative" aria-label="VM Tools">
+    <h6><i class="fa fa-wrench"></i> Tools</h6>
+        <button id="fullscreen-btn" type="button" class="btn btn-sm btn-outline-secondary popover-help mb-1" data-toggle="popover" data-content="Fullscreen mode" data-original-title="" title="">
+            <i class="far fa-expand-alt"></i>
+        </button>
+        <button id="exit-fullscreen-btn" type="button" class="btn btn-sm btn-outline-secondary popover-help mb-1" style="display: none;" data-toggle="popover" data-content="Exit fullscreen mode" data-original-title="" title="">
+            <i class="far fa-compress-alt"></i>
+        </button>
+        <a id="screenshotBtn" class="btn btn-sm btn-outline-secondary popover-help mb-1" data-toggle="popover" data-content="Take a screenshot" data-original-title="" title="">
+            <i class="far fa-file-image"></i>
+        </a>
+        <div class="btn-group mb-1 popover-help" data-toggle="popover" data-content="Paste into the VM" data-original-title="" title="">
+            <div class="dropdown" id="paste-box-dropdown">
+                <button class="btn btn-sm btn-outline-secondary" type="button" id="paste-box-dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="far fa-paste"></i>
+                </button>
+                <div class="dropdown-menu bg-success text-white" aria-labelledby="paste-box-dropdown-btn">
+                    <div class="px-3 py-2 position-relative">
+                        <p class="text-center mt-0"><strong>Paste Activated</strong></p>
+                        <p class="text-justify mb-0">You may paste using Ctrl + V or right click here and click 'Paste'</p>
+                        <textarea id="paste-box" class="position-absolute h-100 w-100" style="opacity: 0; top: 0; left: 0" disabled=""></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="btn-group mb-1 popover-help" data-toggle="popover" data-content="Exit Lab Options" data-original-title="" title="">
+        <div class="dropdown">
+            <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Exit Lab
+            </button>
+            <div class="dropdown-menu" aria-labelledby="end-dropdown-btn" id="end-dropdown-menu">
+                    <a class="dropdown-item text-success" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#" data-toggle="modal" data-target="#save-lab-modal">Exit and Save Lab</a>
+                <a class="dropdown-item text-danger" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#" data-toggle="modal" data-target="#end-lab-modal">Exit and End Lab</a>
+            </div>
+        </div>
+    </div>
+        <div class="custom-control custom-checkbox mt-2 popover-help" data-toggle="popover" data-content="Switching Enhanced Mode on enables audio and improved display resolution features" data-original-title="" title="">
+            <input type="checkbox" class="custom-control-input" id="enhanced-mode-switch">
+            <label class="custom-control-label" for="enhanced-mode-switch">Enhanced Mode</label>
+        </div>
+</div>
+
+<div class="mb-4">
+    <h6><i class="fas fa-info-circle"></i> Lab Information</h6>
+    <p>
+            <a data-toggle="modal" data-target="#launch-info-modal" aria-haspopup="true" aria-expanded="false" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">Show Lab Information</a>
+            <br>
+        <a href="https://godeploy.zendesk.com/hc/en-us/requests/new" target="_blank">Submit a Support Request</a>
+    </p>
+</div>
+
+            </div>
+
+<div id="tab-lab-guide" class="lab-tab container position-relative pt-4" style="">
+    <div id="labGuideContainer">
+        <h6><i class="fas fa-book"></i> Lab Guide</h6>
+        <div class="py-2">
+            <button class="btn btn-sm btn-brand popout-btn d-block w-100" data-link="/Labs/LabGuide/f2def404-29f7-e911-abe3-00155de2c913">
+                View in Another Window
+            </button>
+        </div>
+        <div class="form-inline">
+<div class="btn-group btn-group-sm mr-2" id="labGuidePageSelector" style="">
+    <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lab 3</button>
+    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 26px, 0px); top: 0px; left: 0px; will-change: transform;">
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=87a301e4-e6ac-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="87a301e4-e6ac-e811-8373-00155d026631">Lab 1</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=1c980c6c-43fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="1c980c6c-43fd-e811-8373-00155d026631">Lab 2</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=5d3d54a8-43fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link active" data-page-id="5d3d54a8-43fd-e811-8373-00155d026631">Lab 3</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=e61a2fd7-43fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="e61a2fd7-43fd-e811-8373-00155d026631">Lab 4</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=8bf74af0-43fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="8bf74af0-43fd-e811-8373-00155d026631">Lab 5</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=f90df406-44fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="f90df406-44fd-e811-8373-00155d026631">Lab 6</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=780fb7b3-44fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="780fb7b3-44fd-e811-8373-00155d026631">Lab 7</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=3a876de6-44fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="3a876de6-44fd-e811-8373-00155d026631">Lab 8</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=88a3d872-45fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="88a3d872-45fd-e811-8373-00155d026631">Lab 9</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=ca0447b3-45fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="ca0447b3-45fd-e811-8373-00155d026631">Lab 10</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=7db412da-45fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="7db412da-45fd-e811-8373-00155d026631">Lab 11</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=5a3fb3fa-45fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="5a3fb3fa-45fd-e811-8373-00155d026631">Lab 12</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=87bd782a-46fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="87bd782a-46fd-e811-8373-00155d026631">Lab 13</a>
+    </div>
+</div>
+
+            <div class="custom-control custom-checkbox ml-2">
+                <input type="checkbox" class="custom-control-input" id="show-screenshots-checkbox">
+                <label class="custom-control-label" for="show-screenshots-checkbox">Show Screenshots</label>
+            </div>
+        </div>
+        <div class="lab-markdown reduced-headers pt-2" id="lab-guide-area"><h3 id="module-3-developing-the-code-for-a-graphical-application">Module 3: Developing the Code for a Graphical Application</h3>
+<div class=" alert alert-danger"><p>Important Information about running this class.</p>
+<p>YOU MUST SAVE THE LABS EVERY DAY.  YOU SHOULD ALSO CHECK THE LABS ARE SAVED BY LOGGING BACK INTO THE LMS.</p>
+<p>FAILING TO DO SO WILL RESULT IN LOSS OF WORK WHICH IS UNRECOVERABLE.  GO DEPLOY WILL BE UNABLE TO RECOVER LABS WHICH HAVE NOT BEEN SAVED!</p></div>
+<h4 id="lab-writing-the-code-for-the-grades-prototype-application">Lab: Writing the Code for the Grades Prototype Application</h4>
+<div class=" alert alert-secondary"><p><strong>Scenario</strong></p>
+<p>The School of Fine Arts has decided that they want to extend their basic class enrollment application to enable teachers to record the grades that students in their class have achieved for each subject, and to allow students to view their own grades. <br>
+This functionality necessitates implementing a log on functionality to authenticate the user and to determine whether the user is a teacher or a student.<br>
+You decide to start by developing parts of a prototype application to test proof of concept and to obtain client feedback before developing the final application. <br>
+The prototype application will use basic WPF views rather than separate forms for the user interface. These views have already been designed and you must add the code to navigate through them.<br>
+You also decide to begin by storing the user and grade information in basic structs, and to use a dummy data source in the application to test the log on functionality.</p>
+<p><strong>Objectives</strong></p>
+<p>After completing this lab, you will be able to:</p>
+<ul>
+<li>Navigate among views.</li>
+<li>Create and use collections of structs.</li>
+<li>Handle events.</li>
+</ul></div>
+<h4 id="exercise-1-adding-navigation-logic-to-the-grades-prototype-application">Exercise 1: Adding Navigation Logic to the Grades Prototype Application</h4>
+<div class=" alert alert-secondary"><p><strong>Scenario</strong></p>
+<p>In this exercise, you will add navigation logic to the <strong>Grades Prototype</strong> application.</p>
+<ul>
+<li>First, you will examine the window and views in the application so that you are familiar with the existing structure of the application. </li>
+<li>You will define a public event handler named <strong>LogonSuccess</strong> that will be raised when a user successfully logs on to the application. </li>
+<li>You will add dummy code to the <strong>Logon_Click</strong> event handler to store the username and role of the current user and calls the <strong>LogonSuccess</strong> event. </li>
+<li>Then you will add markup to the <strong>LogonPage</strong> XAML code to connect the <strong>Logon</strong> button to the <strong>Logon_Click</strong> event handler. </li>
+<li>Next, you will add code to the <strong>GotoLogon</strong> method to display the log on view and to hide the other views. </li>
+<li>You will implement the <strong>Logon_Success</strong> method to handle a successful log on by displaying the logged-on views, and then you will add markup to the <strong>MainWindow</strong> XAML code to connect the <strong>LogonSuccess</strong> event to the <strong>Logon_Success</strong> method. </li>
+<li>You will add code to <strong>MainWindow</strong> to determine whether the user is a teacher or a student, display their name in the application, and display either the <strong>StudentsPage</strong> view for teachers or the <strong>StudentProfile</strong> view for students. </li>
+<li>You will then add code to the <strong>StudentsPage</strong> view that catches a student name being clicked, calls the <strong>StudentSelected</strong> event for that student, and displays their student profile. <br>
+Finally, you will run the application and verify that the appropriate views are displayed for students and teachers upon a successful log on.</li>
+</ul></div>
+<h5 id="task-1-examine-the-window-and-views-in-the-application">Task 1: Examine the window and views in the application</h5>
+<ol>
+<li><p>Start <strong>Microsoft Visual Studio</strong> and open the <strong>GradesPrototype.sln</strong> solution from the <strong>[Repository Root]\Allfiles\Mod03\Labfiles\Starter\Exercise 1</strong> folder.</p></li>
+<li><p>Build the solution.</p></li>
+<li><p>Review <strong>MainWindow.xaml</strong>, which is the main window for the application and will host the following views:</p>
+<ul>
+<li>LogonPage.xaml</li>
+<li>StudentProfile.xaml</li>
+<li>StudentsPage.xaml<br>
+<br></li></ul></li>
+<li><p>In the <strong>Views</strong> folder, review <strong>LogonPage.xaml</strong>. Notice that this view contains text boxes for the username and password, a check box to identify the user as a teacher, and a button to log on to the application.</p></li>
+<li><p>In the <strong>Views</strong> folder, review <strong>StudentProfile.xaml</strong>. Notice that this view contains a report card that currently displays a list of dummy grades. The view also contains a back button and a blank space that will display the student's name. This view is displayed when a student logs on or when a teacher views a student's profile.</p></li>
+<li><p>In the <strong>Views</strong> folder, review <strong>StudentsPage.xaml</strong>. Notice that this view contains the list of students in a particular class. This view is displayed when a teacher logs on. A teacher can click a student and the <strong>Students Profile</strong> view that contains the selected students' data will be displayed.</p></li>
+</ol>
+<h5 id="task-2-define-the-logonsuccess-event-and-add-dummy-code-for-the-logon_click-event">Task 2: Define the LogonSuccess event and add dummy code for the Logon_Click event</h5>
+<ol>
+<li><p>In the <strong>LogonPage.xaml.csharp</strong> class, in the <strong>Event Members</strong> region, define a public event handler named <strong>LogonSuccess</strong>.</p></li>
+<li><p>In the <strong>Logon Validation</strong> region, add an event handler for the <strong>Logon_Click</strong> event, which takes an <strong>object</strong> parameter named <strong>sender</strong> and a <strong>RoutedEventArgs</strong> parameter named <strong>e</strong>.</p></li>
+<li><p>In the <strong>Logon_Click</strong> event handler, add code to do the following:</p>
+<ul>
+<li>Save the username and role that the user specified on the form in the relevant properties of the <strong>SessionContext</strong> object.</li>
+<li>If the user is a student, set the <strong>CurrentStudent</strong> property of the <strong>SessionContext</strong> object to the string <strong>Eric Gruber</strong>.</li>
+<li>Raise the <strong>LogonSuccess</strong> event.<br>
+<br></li></ul></li>
+<li><p>In the <strong>LogonPage.xaml</strong> XAML editor, locate the definition of the <strong>Log on</strong> button.</p></li>
+<li><p>Modify the definition to call the <strong>Logon_Click</strong> method when the button is clicked.</p></li>
+</ol>
+<h5 id="task-3-add-code-to-display-the-log-on-view">Task 3: Add code to display the Log On view</h5>
+<ol>
+<li><p>In the <strong>MainWindow.xaml.csharp</strong> code, locate the <strong>GotoLogon</strong> method, and then add code to display the <strong>logonPage</strong> view and hide <strong>studentsPage</strong> and <strong>studentProfile</strong> views.</p></li>
+<li><p>In the <strong>Event Handlers</strong> region, add code to the <strong>Logon_Success</strong> method to handle a successful log on. This method should take an <strong>object</strong> parameter named <strong>sender</strong> and an <strong>EventArgs</strong> parameter named <strong>e</strong>. The method should update the display and show the data for the current user.</p></li>
+<li><p>In the <strong>MainWindow.xaml</strong> <strong>XAML</strong> editor, locate the definition of the <strong>LogonPage</strong> page.</p></li>
+<li><p>Modify the definition to call the <strong>Logon_Success</strong> method for the <strong>LogonSuccess</strong> event.</p></li>
+</ol>
+<h5 id="task-4-add-code-to-determine-the-type-of-user">Task 4: Add code to determine the type of user</h5>
+<ol>
+<li><p>In the <strong>MainWindow.xaml.csharp</strong> file, in the <strong>Refresh</strong> method, add code to determine the type of user, display <strong>Welcome &lt;username\&gt;</strong> in the <strong>txtName</strong> text box, and then call either the <strong>GotoStudentProfile</strong> method (for students) or the <strong>GotoStudentsPage</strong> method (for teachers) to display the appropriate view.</p></li>
+<li><p>In the <strong>GotoStudentProfile</strong> method, add code to hide the <strong>studentsPage</strong> view, and then add code to display and refresh the <strong>studentProfile</strong> view.</p></li>
+<li><p>In the <strong>GotoStudentsPage</strong> method, add code to hide the <strong>studentProfile</strong> view, and then add code to display and refresh the <strong>studentsPage</strong> view.</p></li>
+<li><p>In the <strong>StudentProfile.xaml.csharp</strong> file, in the <strong>Refresh</strong> method, add code to: </p>
+<ul>
+<li>Parse the student name into the first name and last name by using a regular expression as shown in the following example.</li></ul>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token class-name">Match</span> matchNames <span class="token operator">=</span> Regex<span class="token punctuation">.</span><span class="token function">Match</span><span class="token punctuation">(</span>SessionContext<span class="token punctuation">.</span>CurrentStudent<span class="token punctuation">,</span> <span class="token string">@"([^ ]+) ([^ ]+)"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="Match matchNames = Regex.Match(SessionContext.CurrentStudent, @&quot;([^ ]+) ([^ ]+)&quot;);" class="paste"></span></span></code></pre>
+<ul>
+<li>If a name is successfully parsed, display the first name and last name of the student in the appropriate boxes. </li>
+<li>If the user is a student, hide the <strong>btnBack</strong> button, or if the user is a teacher, display the <strong>btnBack</strong> button.</li></ul></li>
+</ol>
+<h5 id="task-5-handle-the-student_click-event">Task 5: Handle the Student_Click event</h5>
+<ol>
+<li><p>In the <strong>StudentsPage.xaml.csharp</strong> file, in the <strong>StudentsPage</strong> class, locate the <strong>Student_Click</strong> method.</p></li>
+<li><p>Add code to this method to identify which student was clicked by using the<strong>Tag</strong> property of the button, and then raise the <strong>StudentSelected</strong> event, passing the student name as the second parameter.</p></li>
+<li><p>In the <strong>MainWindow.xaml.csharp</strong> file, in the <strong>studentsPage_StudentSelected</strong> method, add code to set the <strong>CurrentStudent</strong> property of the <strong>SessionContext</strong> object to the student who was clicked by using the <strong>Child</strong> property of the <strong>e</strong> argument.</p></li>
+<li><p>Call the <strong>GotoStudentProfile</strong> method.</p></li>
+<li><p>In the <strong>MainWindow.xaml</strong> <strong>XAML</strong> editor, locate the definition of the <strong>StudentsPage</strong> page.</p></li>
+<li><p>Modify the definition to call the <strong>studentsPage_StudentSelected</strong> method for the <strong>StudentSelected</strong> event.</p></li>
+</ol>
+<h5 id="task-6-build-and-test-the-application">Task 6: Build and test the application</h5>
+<ol>
+<li><p>Build the solution and resolve any compilation errors.</p></li>
+<li><p>Run the application.</p></li>
+<li><p>Log on as the teacher, <strong>vallee</strong>, with the password <strong>password</strong>.</p></li>
+<li><p>Verify that the application displays the <strong>StudentPage</strong> view.</p>
+<p><img src="./M20483C _ LAB 03_files/d29fc6fa-4320-47fb-8de8-59e40fb940ee_thumb.png" alt="Screenshot"></p></li>
+<li><p>Click <strong>Kevin Liu</strong> and verify that the application displays the <strong>StudentProfile</strong> view.</p>
+<p><img src="./M20483C _ LAB 03_files/ef9c9c4f-dd3b-441d-bcf4-1833daa1f33d_thumb.png" alt="Screenshot"></p></li>
+<li><p>Log off the application.</p></li>
+<li><p>Log on as the student, <strong>Gruber</strong>, with password as the <strong>password</strong>.</p></li>
+<li><p>Verify that the application displays the student profile page for Eric Gruber.</p></li>
+<li><p>Close the application and then close the solution.</p></li>
+</ol>
+<div class=" alert alert-success"><p><strong>Result:</strong> After completing this exercise, you should have updated the <strong>Grades Prototype</strong> application to respond to user events and move among the application views appropriately.</p></div>
+<h4 id="exercise-2-creating-data-types-to-store-user-and-grade-information">Exercise 2: Creating Data Types to Store User and Grade Information</h4>
+<div class=" alert alert-secondary"><p><strong>Scenario</strong></p>
+<p>In this exercise, you will define basic structs that will hold the teacher, student, and grade information for the application. You will then examine the dummy data source that the application uses to populate the collections in this exercise.</p></div>
+<h5 id="task-1-define-basic-structs-for-holding-grade-student-and-teacher-information">Task 1: Define basic structs for holding Grade, Student, and Teacher information</h5>
+<ol>
+<li><p>Open the <strong>GradesPrototype</strong> solution from the <strong>[Repository Root]\Allfiles\Mod03\Labfiles\Starter\Exercise 2</strong> folder.</p></li>
+<li><p>In the <strong>Data</strong> folder, open <strong>Grade.csharp</strong>.</p></li>
+<li><p>In the <strong>GradesPrototype.Data</strong> namespace, create a <strong>struct</strong> named <strong>Grade</strong> that contains the following fields:</p>
+<ul>
+<li><strong>StudentID</strong> as an integer</li>
+<li><strong>AssessmentDate</strong> as a string</li>
+<li><strong>SubjectName</strong> as a string</li>
+<li><strong>Assessment</strong> as a string</li>
+<li><strong>Comments</strong> as a string<br>
+<br></li></ul></li>
+<li><p>In the <strong>GradesPrototype.Data</strong> namespace, create a <strong>struct</strong> named <strong>Student</strong> that contains the following fields:</p>
+<ul>
+<li><strong>StudentID</strong> as an integer</li>
+<li><strong>UserName</strong> as a string</li>
+<li><strong>Password</strong> as a string</li>
+<li><strong>TeacherID</strong> as an integer</li>
+<li><strong>FirstName</strong> as a string</li>
+<li><strong>LastName</strong> as a string<br>
+<br></li></ul></li>
+<li><p>In the <strong>GradesPrototype.Data</strong> namespace, create a <strong>struct</strong> named <strong>Teacher</strong> that contains the following fields:</p>
+<ul>
+<li><strong>TeacherID</strong> as an integer</li>
+<li><strong>UserName</strong> as a string</li>
+<li><strong>Password</strong> as a string</li>
+<li><strong>FirstName</strong> as a string</li>
+<li><strong>LastName</strong> as a string</li>
+<li><strong>Class</strong> as a string</li></ul></li>
+</ol>
+<h5 id="task-2-examine-the-dummy-data-source-used-to-populate-the-collections">Task 2: Examine the dummy data source used to populate the collections</h5>
+<ol>
+<li><p>In the <strong>Data</strong> folder, in the <strong>DataSource.csharp</strong> file, expand the <strong>Sample Data</strong> region.</p></li>
+<li><p>Note how the <strong>Teachers ArrayList</strong> is populated with the <strong>Teacher</strong> data, each containing <strong>TeacherID</strong>, <strong>UserName</strong>, <strong>Password</strong>, <strong>FirstName</strong>, <strong>LastName</strong>, and <strong>Class</strong> fields.</p></li>
+<li><p>Note how the <strong>Students ArrayList</strong> is populated with the <strong>Student</strong> data, each containing a <strong>StudentID</strong>, <strong>UserName</strong>, <strong>Password</strong>, <strong>TeacherID</strong>, <strong>FirstName</strong>, and <strong>LastName</strong> fields.</p></li>
+<li><p>Note how the <strong>Grades ArrayList</strong> is populated with the <strong>Grade</strong> data, each containing a <strong>StudentID</strong>, <strong>AssessmentDate</strong>, <strong>SubjectName</strong>, <strong>Assessment</strong>, and <strong>Comments</strong> fields.</p></li>
+</ol>
+<div class=" alert alert-success"><p><strong>Result:</strong> After completing this exercise, the application will contain structs for the teacher, student, and grade types.</p></div>
+<h4 id="exercise-3-displaying-user-and-grade-information">Exercise 3: Displaying User and Grade Information</h4>
+<div class=" alert alert-secondary"><p><strong>Scenario</strong></p>
+<p>In this exercise, you will first define a public event handler named <strong>LogonFailed</strong> that will be raised when a user fails to log on successfully.<br>
+You will add code to the <strong>Logon_Click</strong> event handler to validate the username and password entered by the user against the Users collection in the <strong>MainWindow</strong> window. <br>
+If the user is a teacher or a student, you will store their details in the global context and then raise the <strong>LogonSuccess</strong> event, but if the user is not validated, you will raise the <strong>LogonFailed</strong> event. <br>
+You will handle logon failure in the <strong>Logon_Failed</strong> method to display a message to the user and then you will add markup to the <strong>MainWindow</strong> XAML code to connect the <strong>LogonFailed</strong> event to the <strong>Logon_Failed</strong> method. <br>
+You will add code to the <strong>StudentsPage</strong> view to display students for the current teacher, and to display the details for a student when the user clicks their name. <br>
+You will then use data binding to display the details and grades for the current student in the <strong>StudentProfile</strong> view, and to display only the <strong>Back</strong> button if the user is a teacher. <br>
+Finally, you will run the application and verify that only valid users can log on and that valid users can see only data appropriate to their role.</p></div>
+<h5 id="task-1-add-the-logonfailed-event">Task 1: Add the LogonFailed event</h5>
+<ol>
+<li><p>Open the <strong>GradesPrototype</strong> solution from the <strong>[Repository Root]\Allfiles\Mod03\Labfiles\Starter\Exercise 3</strong> folder.</p></li>
+<li><p>In the <strong>LogonPage.xaml.csharp</strong> file, in the <strong>Event Members</strong> region, define an event handler named <strong>LogonFailed</strong>.</p></li>
+<li><p>In the <strong>Logon_Click</strong> event, add code to do the following:</p>
+<ul>
+<li>Determine whether the user is a teacher by using a LINQ query to retrieve teachers with the same username and password as the current user. If the LINQ query returns a result, then the user is a teacher.</li>
+<li>If the user is a teacher, set the <strong>UserID</strong>, <strong>UserRole</strong>, <strong>UserName</strong>, and <strong>CurrentTeacher</strong> properties of the <strong>SessionContext</strong> object to the appropriate fields from the data source, and then raise the <strong>LogonSuccess</strong> event.</li>
+<li>If the user is not a teacher, determine whether the user is a student by using a LINQ query to retrieve students with the same username and password as the current user.</li>
+<li>If the user is a student, set the <strong>UserID</strong>, <strong>UserRole</strong>, <strong>UserName</strong>, and <strong>CurrentStudent</strong> properties of the <strong>SessionContext</strong> object to the appropriate fields from the data source, and then raise the <strong>LogonSuccess</strong> event.</li>
+<li>If the credentials do not match any teachers or students, raise the <strong>LogonFailed</strong> event.</li></ul></li>
+</ol>
+<h5 id="task-2-add-the-logon_failed-event-handler">Task 2: Add the Logon_Failed event handler</h5>
+<ol>
+<li><p>In the <strong>MainWindow.xaml.csharp</strong> class, in the <strong>Event Handlers</strong> region, add an event handler for the <strong>Logon_Failed</strong> event that takes an <strong>object</strong> parameter named <strong>sender</strong> and an <strong>EventArgs</strong> parameter named <strong>e</strong>.</p></li>
+<li><p>In the <strong>Logon_Failed</strong> event handler, add code to display an error message to the user.</p></li>
+<li><p>In the <strong>MainWindow.xaml</strong> <strong>XAML</strong> editor, locate the definition of the <strong>LogonPage</strong> page.</p></li>
+<li><p>Modify the definition to call the <strong>Logon_Failed</strong> method for the <strong>LogonFailed</strong> event.</p></li>
+<li><p>In the <strong>MainWindow.xaml.csharp</strong> code, locate the <strong>Refresh</strong> method.</p></li>
+<li><p>In the <strong>case</strong> statement for a student, add code to display the student<br>
+name in <strong>txtName</strong> text box at the top of the page.</p></li>
+<li><p>In the <strong>case</strong> statement for a teacher, add code to display the teacher name in the banner at the top of the page.</p></li>
+</ol>
+<h5 id="task-3-display-the-students-for-the-current-teacher">Task 3: Display the students for the current teacher</h5>
+<ol>
+<li>In <strong>StudentsPage.xaml</strong> <strong>XAML</strong> editor, locate the <strong>ItemsControl</strong> named <strong>list</strong> and note how data binding is used to display the name of each student.</li>
+</ol>
+<div class=" alert alert-warning"><p><strong>Note:</strong> DataBinding is also used to retrieve the <strong>StudentID</strong> of a student. This binding is used when a user clicks a student on the <strong>Student Page</strong> list to identify which student's data to display in the <strong>Student Profile</strong> page.</p></div>
+<ol start="2">
+<li><p>In the <strong>StudentsPage.xaml.csharp</strong> code, locate the <strong>Refresh</strong> method, and then add code to do the following:</p>
+<ul>
+<li>Find all the students for the current teacher and store them in a new <strong>ArrayList</strong> object.</li>
+<li>Bind the collection to the <strong>ItemsSource</strong> property of the <strong>list</strong> control.</li>
+<li>Display the class name.</li>
+<li>Locate the <strong>Student_Click</strong> event and then add code to do the following:</li>
+<li>Identify which student was clicked by using the <strong>Tag</strong> property of the button.</li>
+<li>Find the details of that student by examining the <strong>DataContext</strong> of the button.</li>
+<li>Raise the <strong>StudentSelected</strong> event, passing the student as the second parameter. <br>
+<br></li></ul></li>
+<li><p>In the <strong>StudentsPage_StudentSelected</strong> event handler, add code to set the <strong>CurrentStudent</strong> property of the <strong>SessionContext</strong> object to the student passed to the event by using the <strong>Child</strong> property of the <strong>e</strong> argument.</p></li>
+</ol>
+<h5 id="task-4-set-the-datacontext-for-the-page">Task 4: Set the DataContext for the page</h5>
+<ol>
+<li><p>In the <strong>StudentProfile.xaml.csharp</strong> file, in the <strong>Refresh</strong> method, add code to display the details of the current student in the <strong>studentName StackPanel</strong> object and to display the <strong>Back</strong> button only if the user is a teacher.</p></li>
+<li><p>In the <strong>StudentProfile.xaml</strong> <strong>XAML</strong> editor, locate the definition of the <strong>firstName</strong> text block.</p></li>
+<li><p>Modify the definition to bind the <strong>Text</strong> property to the <strong>FirstName</strong> field.</p></li>
+<li><p>Locate the definition of the <strong>lastName</strong> text block.</p></li>
+<li><p>Modify the definition to bind the <strong>Text</strong> property to the <strong>LastName</strong> field.</p></li>
+<li><p>In the <strong>StudentProfile.xaml.csharp</strong> file, at the end of the <strong>Refresh</strong> method, add code to iterate the grades for the current student in the <strong>DataSource.Grades</strong> list and then display them in the <strong>studentGrades</strong> control by using data binding.</p></li>
+</ol>
+<h5 id="task-5-build-and-test-the-application">Task 5: Build and test the application</h5>
+<ol>
+<li><p>Build the solution and resolve any compilation errors.</p></li>
+<li><p>Run the application.</p></li>
+<li><p>Log on as <strong>parkerd</strong> with <strong>password</strong> as the password and verify that the <strong>Logon Failed</strong> message box appears.</p></li>
+<li><p>Log on as <strong>vallee</strong> with <strong>password</strong> as the password and verify that the <strong>Students</strong> page appears.</p></li>
+<li><p>Click <strong>Kevin Liu</strong>, verify that the <strong>Student Profile</strong> page appears, and then log off.</p></li>
+<li><p>Log on as <strong>grubere</strong> with <strong>password</strong> as the password and verify that the <strong>Student Profile</strong> page appears.</p></li>
+<li><p>Close the application and then close the solution.</p></li>
+</ol>
+<div class=" alert alert-success"><p><strong>Result:</strong> After completing this exercise, only valid users will be able to log on to the application and they will see only data appropriate to their role.</p></div>
+<div class=" alert alert-info"><p><strong>Congratulations!</strong>  You have now completed this lab.  You should ensure you save your lab environment.  Failure to do so will result in the loss of all work.</p></div></div>
+    </div>
+    <div id="labGuidePoppedOutContainer" class="text-center" style="display:none;">
+        <p>Your lab guide is open in another window</p>
+        <p class="text-muted"><i class="fal fa-window fa-9x"></i></p>
+        <p><button class="btn btn-brand d-block w-100 focus-popout-btn">Show Lab Guide</button></p>
+    </div>
+</div>
+
+
+                        <div class="lab-timer text-center bg-light p-2" id="lab-timer-container">
+                <div class="position-relative h-100 w-100" id="lab-timer-warning" data-original-title="" title="">
+                    <h2><span class="badge badge-secondary style colorDefinition size_lg" id="lab-timer">
+                        <i class="fas fa-stopwatch" id="stopwatch" data-toggle="popover" data-content="Time Remaining" data-trigger="hover" data-placement="top" data-original-title="" title=""></i>
+                        <span id="lab-timer-timer">07:55:54</span>
+                    </span></h2>
+                </div>
+            </div>
+
+        </div>
+        <div class="gutter gutter-horizontal" style="flex-basis: 6px;"></div><div class="col bg-dark" style="overflow: auto; flex-basis: calc(32.0304% - 3px);" id="lab-display-container">
+            <div style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 1;">
+    <div class="d-flex align-items-center justify-content-center" style="height: 100%; overflow: hidden" id="outer-display">
+
+        <div class="card border-warning connection-error-box" id="display-error-checking" style="display: none;">
+            <div class="card-header bg-warning border-0 text-white">Sorry, there was a problem connecting to your VM</div>
+            <div class="card-body text-center">
+                <p>We're checking your connection, please wait...</p>
+            </div>
+        </div>
+
+        <div class="card border-danger connection-error-box" id="display-error" style="display: none;">
+            <div class="card-header bg-danger border-0 text-white">Sorry, there was a problem connecting to your VM</div>
+            <div class="card-body text-center">
+                <button class="btn btn-sm btn-outline-secondary ml-1 reconnect-display-btn">Reconnect</button>
+            </div>
+        </div>
+
+        <div class="card border-danger connection-error-box" id="display-error-contact" style="display: none;">
+            <div class="card-header bg-danger border-0 text-white">Unexpected VM State</div>
+            <div class="card-body text-center">
+                <p>Your VM is in an unexpected state. Please <a href="mailto:support@godeploy.it">contact support</a>.</p>
+            </div>
+        </div>
+
+        <div class="card border-primary connection-error-box" id="display-error-stopped" style="display: none;">
+            <div class="card-header bg-primary border-0 text-white">Your VM is turned off</div>
+            <div class="card-body text-center">
+                <button class="btn btn-sm btn-outline-secondary ml-1 power-op" data-op="start">Power on</button>
+            </div>
+        </div>
+
+        <div class="card border-primary connection-error-box" id="display-error-starting" style="display: none;">
+            <div class="card-header bg-primary border-0 text-white">Your VM is turning on</div>
+            <div class="card-body text-center">
+                <p>Your VM is turning on, please wait...</p>
+            </div>
+        </div>
+
+        <div class="card border-primary connection-error-box" id="display-error-stopping" style="display: none;">
+            <div class="card-header bg-primary border-0 text-white">Your VM is turning off</div>
+            <div class="card-body text-center">
+                <p>Your VM is turning off, please wait...</p>
+            </div>
+        </div>
+
+        <div id="display" class="position-relative">
+            <div style="position: absolute; top: 0; left: 0; background-color: #000; z-index: -2; height: 100%;width:100%"></div>
+        <div style="position: relative; width: 1024px; height: 768px;"><div style="position: relative; width: 1024px; height: 768px; transform-origin: 0px 0px;"><div style="width: 1024px; height: 768px; position: absolute; left: 0px; top: 0px; overflow: hidden;"><canvas width="1024" height="768" style="z-index: -1; position: absolute; left: 0px; top: 0px;"></canvas></div><div style="width: 32px; height: 32px; position: absolute; left: 0px; top: 0px; overflow: hidden; transform: translate(-15px, -15px) matrix(1, 0, 0, 1, 0, 0);"><canvas width="64" height="64" style="z-index: -1; position: absolute; left: 0px; top: 0px;"></canvas></div></div></div></div>
+    </div>
+</div>
+
+        </div>
+    </div>
+</main>
+
+<div class="modal" tabindex="-1" role="dialog" id="end-lab-modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-warning text-white">
+                <h5 class="modal-title">Warning - you are about to end your lab</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                    <p>Any change you have made to your lab will be irrevocably lost and you will need to start again.</p>
+                    <p class="mb-0">You can, instead, save your lab and then continue from where you left off, later.</p>
+            </div>
+            <div class="modal-footer">
+                    <a href="https://lms.godeploy.it/Modules/SaveLab/f2def404-29f7-e911-abe3-00155de2c913" class="btn btn-link text-success confirmed-navigation">Save my Lab</a>
+                <a href="https://lms.godeploy.it/Modules/EndLab/f2def404-29f7-e911-abe3-00155de2c913" class="btn btn-danger confirmed-navigation" id="end-lab-btn">End my lab</a>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="save-lab-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h5 class="modal-title">Save your lab</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you wish to leave?</p>
+                    <p>Your lab will be saved for 7 days, after which it will be stopped and deleted.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://lms.godeploy.it/Modules/SaveLab/f2def404-29f7-e911-abe3-00155de2c913" class="btn btn-success confirmed-navigation">Save my Lab</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="launch-info-modal" data-show="true" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-white">
+                    <h5 class="modal-title">Important information about your lab</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>When launching Visual Studio you must sign in with a Microsoft Account or create a new one.&nbsp; The Visual Studio Community Edition trial has expired and is to be expected.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="info-modal-ok-btn">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" role="dialog" id="launch-errata-modal" data-show="false">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-white">
+                    <h5 class="modal-title">Important information about your lab</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p><br></p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="info-modal-ok-btn">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="modal" tabindex="-1" role="dialog" id="screenshot-modal">
+    <div class="modal-dialog modal-lg" role="document" style="max-width: 1024px;">
+        <div class="modal-content">
+            <div class="modal-body" id="screenshot-background" style="background-position: center center; background-repeat: no-repeat; background-size: auto 100%; height: 768px;">
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="lab_ui_lab-dns-modal" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">DNS Record</h5>
+            </div>
+            <div class="modal-body">
+                <form id="lab_ui_a-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditARecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-a-record-name-input">Name</label>
+                            <input id="dns-a-record-name-input" class="form-control" name="Name">
+                            <div class="text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dns-a-record-ipv4address-input">IPv4 Address</label>
+                            <input id="dns-a-record-ipv4address-input" class="form-control" name="Ipv4Address">
+                        </div>
+                    </div>
+                </form>
+                <form id="lab_ui_aaaa-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditAaaaRecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-aaaa-record-name-input">Name</label>
+                            <input id="dns-aaaa-record-name-input" class="form-control" name="Name">
+                            <div class="text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dns-aaaa-record-ipv6address-input">IPv6 Address</label>
+                            <input id="dns-aaaa-record-ipv6address-input" class="form-control" name="Ipv6Address">
+                        </div>
+                    </div>
+                </form>
+                <form id="lab_ui_cname-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditCnameRecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-cname-record-name-input">Name</label>
+                            <input id="dns-cname-record-name-input" class="form-control" name="Name">
+                            <div class="text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dns-cname-record-cname-input">CNAME</label>
+                            <input id="dns-cname-record-cname-input" class="form-control" name="Cname">
+                        </div>
+                    </div>
+                </form>
+                <form id="lab_ui_mx-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditMxRecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-mx-record-name-input">Name</label>
+                            <input id="dns-mx-record-name-input" class="form-control" name="Name">
+                            <div class="text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-6">
+                                <label for="dns-mx-record-preference-input">Preference</label>
+                                <input id="dns-mx-record-preference-input" class="form-control" name="Preference">
+                            </div>
+                            <div class="form-group col-18">
+                                <label for="dns-mx-record-exchange-input">Host</label>
+                                <input id="dns-mx-record-exchange-input" class="form-control" name="Exchange">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <form id="lab_ui_srv-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditSrvRecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-srv-record-name-input">Name</label>
+                            <input id="dns-srv-record-name-input" class="form-control" name="Name" placeholder="_service._protocol.name">
+                            <div class="row">
+                                <div class="col-12"><small class="text-muted">_service._protocol.name</small></div>
+                                <div class="col-12 text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-8">
+                                <label for="dns-srv-record-priority-input">Priority</label>
+                                <input id="dns-srv-record-priority-input" class="form-control" name="Priority">
+                            </div>
+                            <div class="form-group col-8">
+                                <label for="dns-srv-record-weight-input">Weight</label>
+                                <input id="dns-srv-record-weight-input" class="form-control" name="Weight">
+                            </div>
+                            <div class="form-group col-8">
+                                <label for="dns-srv-record-port-input">Port</label>
+                                <input id="dns-srv-record-port-input" class="form-control" name="Port">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dns-srv-record-target-input">Target</label>
+                            <input id="dns-srv-record-target-input" class="form-control" name="Target">
+                        </div>
+                    </div>
+                </form>
+                <form id="lab_ui_txt-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditTxtRecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-txt-record-name-input">Name</label>
+                            <input id="dns-txt-record-name-input" class="form-control" name="Name">
+                            <div class="text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dns-txt-record-value-input">Value</label>
+                            <textarea id="dns-txt-record-value-input" class="form-control" name="Value"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger mr-auto" id="delete-dns-record-btn">Delete</button>
+                <button type="button" class="btn btn-secondary" id="save-dns-record-btn">Save</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <script src="./M20483C _ LAB 03_files/jquery.min.js.téléchargement"></script>
+    <script src="./M20483C _ LAB 03_files/bootstrap.bundle.min.js.téléchargement"></script>
+    
+    <script src="./M20483C _ LAB 03_files/labs.js.téléchargement"></script>
+    <script src="./M20483C _ LAB 03_files/all.min.js.téléchargement"></script>
+    <script src="./M20483C _ LAB 03_files/easytimer.min.js.téléchargement"></script>
+    <script src="./M20483C _ LAB 03_files/handlebars.min.js.téléchargement" integrity="sha256-dlwklXLDib5XGMYI+HdNEXczJXTsFtq+qIrSdXoCv6o=" crossorigin="anonymous"></script>
+    <script type="text/x-handlebars-template" id="vm-credentials-template">
+        {{#each this}}
+            <table>
+                <tr>
+                    <th class="pr-2">Username</th>
+                    <td>{{Username}}</td>
+                    <td class="pl-2"><i class="fas fa-paste paste-credential paste-tab" data-text="{{Username}}"></i></td>
+                </tr>
+                <tr>
+                    <th class="pr-2">Password</th>
+                    <td>{{Password}}</td>
+                    <td class="pl-2"><i class="fas fa-paste paste-credential paste-enter" data-text="{{Password}}"></i></td>
+                </tr>
+            </table>
+        {{/each}}
+    </script>
+    <script type="text/javascript">
+        window.focus();
+
+        $('a.confirmed-navigation').on('click',
+            function() {
+                window.onbeforeunload = null;
+            });
+
+        var pasteBox = document.getElementById('paste-box');
+        pasteBox.disabled = true;
+        var pasteBoxOpen = false;
+
+        $('#paste-box-dropdown').on('shown.bs.dropdown',
+            function() {
+                pasteBoxOpen = true;
+                pasteBox.disabled = false;
+                pasteBox.focus();
+            });
+
+        $('#paste-box-dropdown').on('hidden.bs.dropdown',
+            function() {
+                pasteBoxOpen = false;
+                window.focus();
+                pasteBox.value = '';
+                pasteBox.disabled = true;
+            });
+
+        window.onbeforeunload = function(e) {
+            return "If you navigate away from this page your changes may be lost and VMs deleted. We will try to save them for you.\n\nIt may be best to cancel navigation and click the \"End Lab\" or \"Save Lab\" button, instead.";
+        };
+
+        var pasteboxKbEvent = function(e) {
+            if (document.activeElement !== pasteBox) return;
+
+            client.guac.sendKeyEvent(0, 0xFFE3);
+            client.guac.sendKeyEvent(0, 0xFFE9);
+
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+        };
+
+        window.addEventListener('keydown', pasteboxKbEvent, true);
+        window.addEventListener('keyup', pasteboxKbEvent, true);
+        window.addEventListener('keypress', pasteboxKbEvent, true);
+
+        document.addEventListener('paste',
+            function(e) {
+                if (document.activeElement !== pasteBox) {
+                    return;
+                }
+                if (typeof e.clipboardData === 'undefined') {
+                    var text = window.clipboardData.getData('Text');
+                } else {
+                    var text = e.clipboardData.getData('text/plain');
+                }
+
+                client.sendKeys(text);
+
+                if (pasteBoxOpen) $('#paste-box-dropdown').dropdown('toggle');
+            });
+
+        var checkVmStateTimeout;
+        
+        function checkVmState(connecting) {
+            $('.connection-error-box,#display').hide();
+            $('#display-error-checking').show();
+
+            if (checkVmStateTimeout) clearTimeout(checkVmStateTimeout);
+
+            var vmId = $('#vm-dropdown-menu a.active').data('vmId');
+
+            $.ajax({
+                url: '/Labs/NVmControl/f2def404-29f7-e911-abe3-00155de2c913/' + vmId + '/get-state',
+                type: 'get',
+                success: function(data) {
+                    $('.connection-error-box').hide();
+                    switch(data) {
+                    case 'stopped':
+                    case 'saved':
+                        $('#display-error-stopped').show();
+                        break;
+                    case 'starting':
+                        $('#display-error-starting').show();
+                        checkVmStateTimeout = setTimeout(function() { checkVmState(false); }, 2000);
+                        break;
+                    case 'stopping':
+                        $('#display-error-stopping').show();
+                        checkVmStateTimeout = setTimeout(function() { checkVmState(false); }, 2000);
+                        break;
+                    case 'saving':
+                        $('#display-error-checking').show();
+                        checkVmStateTimeout = setTimeout(function() { checkVmState(false); }, 2000);
+                        break;
+                    case 'started':
+                        if (connecting) {
+                            $('#display-error').show();
+                        } else {
+                            $('#vm-dropdown-menu a.active').triggerHandler('click');
+                        }
+                        break;
+                    default:
+                        $('#display-error-contact').show();
+                        break;
+                    }
+                },
+                error: function() {
+                    $('#display-error-contact').show();
+                }
+            });
+        }
+
+        var envId = "f5def404-29f7-e911-abe3-00155de2c913";
+
+        var Client = Client || {};
+
+        Client.Rde = function(displayElement) {
+            this.tunnelUrl = 'wss://remote.labsonline.it/wsTunnel';
+            this.guac = null;
+            this.mouse = null;
+            this.keyboard = null;
+            this.tunnel = null;
+            this.enhancedMode = false;
+            this.resizeTimeout = null;
+            this.keysPressed = [];
+
+            var KEYSYM_CTRL = 0xFFE3;
+            var KEYSYM_ALT = 0xFFE9;
+            var KEYSYM_DELETE = 0xFFFF;
+            
+            var self = this;
+            
+            var onkeydown = function(keysym) {
+                self.guac.sendKeyEvent(1, keysym);
+                self.registerKeypress(keysym);
+            };
+
+            var onkeyup = function(keysym) {
+                self.guac.sendKeyEvent(0, keysym);
+                self.unregisterKeypress(keysym);
+            };
+
+            this.initialize = function() {
+                this.tunnel = new Guacamole.WebSocketTunnel(this.tunnelUrl);
+                this.guac = new Guacamole.Client(this.tunnel);
+                this.guac.onerror = function() {
+                    self.enhancedMode = false;
+                    $('#enhanced-mode-switch').prop('checked', false);
+                    checkVmState(true);
+                }
+
+                window.onresize = function() {
+                    if (self.resizeTimeout) window.clearTimeout(self.resizeTimeout);
+                    self.resizeTimeout = window.setTimeout(function() {
+                        window.clearTimeout(self.resizeTimeout);
+                        if (self.enhancedMode) {
+                            var outerOuterDisplay = document.getElementById('outer-display');
+                            self.guac.sendSize(outerOuterDisplay.offsetWidth, outerOuterDisplay.offsetHeight);
+                        }
+                    }, 300);
+                };
+                
+                displayElement.appendChild(this.guac.getDisplay().getElement());
+
+                window.onunload = function() {
+                    self.guac.disconnect();
+                };
+
+                this.mouse = new Guacamole.Mouse(this.guac.getDisplay().getElement());
+
+                this.mouse.onmousedown = function(mouseState) {
+                    self.guac.sendMouseState(mouseState);
+                };
+                this.mouse.onmouseup = function(mouseState) {
+                    self.guac.sendMouseState(mouseState);
+                };
+                this.mouse.onmousemove = function(mouseState) {
+                    self.guac.sendMouseState(mouseState);
+                };
+
+                this.keyboard = new Guacamole.Keyboard(document);
+                this.captureKeyboard();
+            };
+            
+            this.captureKeyboard = function() {
+                this.keyboard.onkeyup = onkeyup;
+                this.keyboard.onkeydown = onkeydown;
+            }
+            
+            this.releaseKeyboard = function() {
+                this.keyboard.onkeyup = null;
+                this.keyboard.onkeydown = null;
+            }
+            
+            this.registerKeypress = function(keysym) {
+                this.keysPressed.push(keysym);
+            }
+            
+            this.unregisterKeypress = function(keysym) {
+                var index = this.keysPressed.indexOf(keysym);
+                if (index === -1) return;
+                this.keysPressed.splice(index, 1);
+            }
+            
+            this.unregisterAllKeypresses = function() {
+                var self = this;
+                this.keysPressed.forEach(function(keysym) {
+                    self.guac.sendKeyEvent(0, keysym);
+                    if (keysym === KEYSYM_ALT) {
+                        self.guac.sendKeyEvent(1, keysym);
+                        self.guac.sendKeyEvent(0, keysym);
+                    }
+                });
+                this.keysPressed = [];
+            }
+
+            this.connect = function(envId, vmId) {
+                var self = this;
+
+                try {
+                    this.guac.disconnect();
+                } catch (e) { /* ignore */
+                }
+
+                window.setTimeout(function() {
+                        var connectionString = 'eid=' + envId + '&vid=' + vmId;
+                        if (self.enhancedMode) {
+                            var outerDisplay = document.getElementById('outer-display');
+                            var supportedAudioFormats = Guacamole.AudioPlayer.getSupportedTypes();
+                            connectionString += '&enhanced=1&width=' + outerDisplay.offsetWidth + '&height=' + outerDisplay.offsetHeight + '&audio=' + supportedAudioFormats.join('&audio=');
+                        }
+                        self.guac.connect(connectionString);
+                    },
+                    500);
+            };
+            
+            this.toggleEnhancedMode = function(enabled) {
+                this.enhancedMode = enabled;
+                $('#enhanced-mode-switch').prop('checked', enabled);
+                $('#vm-dropdown-menu a.active').first().triggerHandler('click');
+            };
+
+            this.initialize();
+
+            this.sendCad = function() {
+                this.unregisterAllKeypresses();
+                this.guac.sendKeyEvent(1, KEYSYM_CTRL);
+                this.guac.sendKeyEvent(1, KEYSYM_ALT);
+                this.guac.sendKeyEvent(1, KEYSYM_DELETE);
+                this.guac.sendKeyEvent(0, KEYSYM_CTRL);
+                this.guac.sendKeyEvent(0, KEYSYM_ALT);
+                this.guac.sendKeyEvent(0, KEYSYM_DELETE);
+            };
+
+            this.sendKeys = function(text) {
+                var self = this;
+                this.unregisterAllKeypresses();
+                text = text.replace(/\r\n?/g, "\n");
+                var strArr = text.split("");
+                
+                var sendKey = function(strArr) {
+                    if (strArr.length === 0) return;
+                    
+                    var char = strArr.shift();
+                    
+                    var codepoint = char.charCodeAt(0);
+                    var keysym = codepoint;
+                    if (codepoint >= 0x0100) {
+                        keysym = 0x01000000 | codepoint;
+                    }
+                    self.guac.sendKeyEvent(1, keysym);
+                    self.guac.sendKeyEvent(0, keysym);
+                    
+                    window.setTimeout(sendKey, 10, strArr);
+                }
+                
+                sendKey(strArr);
+            };
+        };
+
+        var client = new Client.Rde(document.getElementById('display'));
+        
+        var vmCredentialsTarget = document.getElementById('vm-credentials-target');
+        var vmCredentialsTemplate = Handlebars.compile(document.getElementById('vm-credentials-template').innerHTML);
+        function showCredentialsForVm(vmCredentials) {
+            vmCredentialsTarget.innerHTML = vmCredentialsTemplate(vmCredentials);
+        }
+
+        function showVmContextMenus(vmId) {
+            var vmContextMenuDropdowns = $('.vm-context-menu-dropdown');
+            vmContextMenuDropdowns.each(function(vmCintextMenuDropdownIndex, vmCOntextMenuDropdownElement) {
+                var vmContextMenuDropdown = $(vmCOntextMenuDropdownElement);
+                vmContextMenuDropdown.toggle(false);
+
+                var vmContextMenus = vmContextMenuDropdown.find('.vm-context-menu');
+                vmContextMenus.toggle(false);
+
+                vmContextMenus.each(function(vmContextMenuIndex, vmContextMenuElement) {
+                    var vmContextMenu = $(vmContextMenuElement);
+                    if (vmContextMenu.data('vmId') === vmId) {
+                        vmContextMenu.toggle(true);
+                        vmContextMenuDropdown.toggle(true);
+                    }
+                });
+            });
+        }
+
+        var vmItems = $('#vm-dropdown-menu a');
+        vmItems.on(
+            'click',
+            function() {
+                if (checkVmStateTimeout) {
+                    clearTimeout(checkVmStateTimeout);
+                }
+                $('#vm-dropdown-menu a').removeClass('active');
+                var $this = $(this);
+                $this.addClass('active');
+                client.connect(envId, $this.data('vmId'));
+                $('#vm-dropdown-btn').text($this.text());
+                $('.connection-error-box').hide();
+                $('#display').show();
+                showCredentialsForVm($this.data('vmCredentials'));
+                showVmContextMenus($this.data('vmId'));
+            }).first().triggerHandler('click');
+
+        var selectVm = function(vmName) {
+            vmItems.each(function(i, el) {
+                if (el.dataset.vmName === vmName) {
+                    $(el).triggerHandler('click');
+                }
+            });
+        };
+
+        document.addEventListener('select-vm', function(e) {
+            selectVm(e.detail);
+        });
+
+        $('#cad-btn').on('click',
+            function() {
+                client.sendCad();
+                $(this).blur();
+            });
+        
+        var pasteTextHandler = function() {
+            var stringToSend = $(this).data('text');
+            if ($(this).hasClass('paste-enter')) {
+                stringToSend += "\n";
+            }
+            if ($(this).hasClass('paste-tab')) {
+                stringToSend += "\t";;
+            }
+            client.sendKeys(stringToSend);
+        };
+
+        $('.paste-text').on('click', pasteTextHandler);
+        $('#vm-credentials-target').on('click', '.paste-credential', pasteTextHandler);
+
+        $('.reconnect-display-btn').on('click',
+            function() {
+                $('#vm-dropdown-menu a.active').triggerHandler('click');
+                $(this).blur();
+            });
+
+        var infoModal = $('#launch-info-modal');
+        var errataModel = $('#launch-errata-modal');
+        if (infoModal.data('show') === true) {
+            infoModal.modal('show');
+            if (errataModel.data('show') === true) {
+                $('#info-modal-ok-btn').on('click',
+                    function() {
+                        window.setTimeout(function() { errataModel.modal('show'); }, 500);
+                    });
+            }
+        } else if (errataModel.data('show') === true) {
+            errataModel.modal('show');
+        }
+
+        $('.power-op').on('click',
+            function() {
+                var op = $(this).data('op');
+                var vmId = $('#vm-dropdown-menu a.active').first().data('vmId');
+                $.ajax({
+                    url: '/Labs/NVmControl/f2def404-29f7-e911-abe3-00155de2c913/' + vmId + '/' + op,
+                    type: 'get',
+                    success: function() {
+                        if (op === 'start') {
+                            checkVmState(false);
+                        }
+                    },
+                    error: function() {
+                        alert('An error occurred whilst carrying out that power operation');
+                    }
+                });
+                $(this).blur();
+            });
+        
+        $('#enhanced-mode-switch').on('click', function() {
+            client.toggleEnhancedMode($(this).is(':checked'));
+            $(this).blur();
+        });
+
+        var timerTarget = $("#lab-timer");
+        var timerTargetTimer = $("#lab-timer-timer");
+        var timerWarning = $('#lab-timer-warning');
+        var warningThreshold = 14;
+        var canExtend = true;
+
+        $('#stopwatch').popover();
+        timerWarning.popover({
+            template:
+                '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header bg-warning"></h3><div class="popover-body"></div></div>',
+            trigger: 'manual',
+            placement: 'top',
+            content:
+                '<div class="text-center"><div class="mb-2">You may extend by a further 60 minutes:</div>' +
+                    '<button id="extend-timer-btn" class="btn btn-success">Extend</button>' +
+                    '<button id="ignore-timer-btn" class="btn btn-secondary ml-2">Ignore</button>' +
+                    '</div>',
+            html: true,
+            title: '<i class="fa fa-exclamation-triangle"></i> Your Lab will end soon',
+            boundary: 'window'
+        });
+
+        $('body').on('click',
+            '#extend-timer-btn',
+            function() {
+                $('#extend-timer-btn').attr('disabled', true).html('Requesting...');
+                $.ajax({
+                    url: '/Modules/AddTime/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'post',
+                    success: function(data) {
+                        startTimer(data);
+                        timerTarget.removeClass('badge-warning').addClass('badge-secondary');
+                        timerWarning.popover('hide');
+                    },
+                    error: function() {
+                        alert('There was an error extending your lab expiry time. Please try again or contact support');
+                    }
+                });
+            });
+        $('body').on('click',
+            '#ignore-timer-btn',
+            function() {
+                timerWarning.popover('toggle');
+            });
+
+        $('.popover-help').popover({
+            container: "body",
+            placement: "top",
+            trigger: "hover",
+            boundary: "window"
+        });
+
+        var timer = new Timer();
+
+        function startTimer(seconds) {
+            if (timer.isRunning()) {
+                timer.stop();
+            }
+
+            timer.start({
+                precision: 'seconds',
+                startValues: { seconds: seconds },
+                target: { seconds: 0 },
+                countdown: true
+            });
+        }
+
+        function showTimerWarning() {
+            timerWarning.popover('show');
+            timerTarget.removeClass('badge-secondary')
+                .addClass('badge-warning')
+                .on('click',
+                    function() {
+                        timerWarning.popover('toggle');
+                    });
+        }
+
+        timerTargetTimer.html(timer.getTimeValues().toString());
+
+        timer.addEventListener('secondsUpdated',
+            function(e) {
+                var timeValues = timer.getTimeValues();
+                timerTargetTimer.html(timeValues.toString());
+            });
+
+        timer.addEventListener('minutesUpdated',
+            function(e) {
+                var timeValues = timer.getTimeValues();
+                if (canExtend && timeValues.days === 0 && timeValues.hours === 0 && timeValues.minutes === warningThreshold) {
+                    showTimerWarning();
+                }
+            });
+
+        timer.addEventListener('started',
+            function(e) {
+                var timeValues = timer.getTimeValues();
+                if (canExtend && timeValues.days === 0 && timeValues.hours === 0 && timeValues.minutes <= warningThreshold) {
+                    showTimerWarning();
+                }
+            });
+
+        timer.addEventListener('targetAchieved',
+            function() {
+                window.onbeforeunload = null;
+                window.location.replace('/Modules/ExpireLab/f2def404-29f7-e911-abe3-00155de2c913');
+            });
+
+        startTimer(28799);
+
+        $('#screenshotBtn').on(
+            'click',
+            function() {
+                var canvas = $('#display canvas').first();
+                this.href = canvas[0].toDataURL();
+                this.filename = 'screenshot.png';
+                this.download = 'screenshot.png';
+            });
+
+        $('.dvd-image-item').on('click',
+            function() {
+                var self = $(this);
+                $.ajax({
+                    url: '/Labs/InsertIsoImage/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        VmId: self.data('vmId'),
+                        DiskDriveId: self.data('diskDriveId'),
+                        MediaImageId: self.data('mediaImageId')
+                    }),
+                    dataType: 'json',
+                    error: function() {
+                        alert('An error occurred whilst inserting a DVD');
+                    }
+                });
+            });
+        $('.dvd-drive-eject-btn').on('click',
+            function() {
+                var self = $(this);
+                $.ajax({
+                    url: '/Labs/EjectIsoImage/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        VmId: self.data('vmId'),
+                        DiskDriveId: self.data('diskDriveId')
+                    }),
+                    dataType: 'json',
+                    error: function() {
+                        alert('An error occurred whilst ejecting a DVD');
+                    }
+                });
+            });
+        $('.net-switch-item').on('click',
+            function() {
+                var self = $(this);
+                $.ajax({
+                    url: '/Labs/ConnectNetAdapterSwitch/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        VmId: self.data('vmId'),
+                        VNetAdapterId: self.data('netAdapterId'),
+                        VSwitchId: self.data('switchId')
+                    }),
+                    dataType: 'json',
+                    error: function() {
+                        alert('An error occurred whilst changing network connections');
+                    }
+                });
+            });
+
+        $('.fd-image-item').on('click',
+            function() {
+                var self = $(this);
+                $.ajax({
+                    url: '/Labs/InsertFdImage/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        VmId: self.data('vmId'),
+                        MediaImageId: self.data('mediaImageId')
+                    }),
+                    dataType: 'json',
+                    error: function() {
+                        alert('An error occurred whilst inserting a floppy disk image');
+                    }
+                });
+            });
+        $('.fd-drive-eject-btn').on('click',
+            function() {
+                var self = $(this);
+                $.ajax({
+                    url: '/Labs/EjectFdImage/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        VmId: self.data('vmId')
+                    }),
+                    dataType: 'json',
+                    error: function() {
+                        alert('An error occurred whilst ejecting a floppy disk image');
+                    }
+                });
+            });
+
+        var labDns = false;
+
+        function clearDnsRecords() {
+            $('.dns-records').each(function() {
+                var el = $(this);
+                el.html('');
+            });
+        }
+        function showDnsRecords() {
+            $('.dns-records').each(function() {
+                var el = $(this);
+                if (el.find('tr').length > 0) {
+                    el.show();
+                } else {
+                    el.siblings('.no-dns-records').show();
+                }
+            });
+        }
+        function showDnsLoading() {
+            $('.dns-records,.no-dns-records').hide();
+            $('.dns-records-loading').show();
+        }
+        function hideDnsLoading() {
+            $('.dns-records-loading').hide();
+        }
+        function appendDnsEntries(data) {
+            appendARecords(data.ARecords);
+            appendAaaaRecords(data.AaaaRecords);
+            appendCnameRecords(data.CnameRecords);
+            appendMxRecords(data.MxRecords);
+            appendSrvRecords(data.SrvRecords);
+            appendTxtRecords(data.TxtRecords);
+        }
+        function setLabZoneName(zoneName) {
+            $('span.dns-zone-name').html(zoneName);
+        }
+        var aRecordsBody = $('#lab_ui_a-records');
+        var aaaaRecordsBody = $('#lab_ui_aaaa-records');
+        var cnameRecordsBody = $('#lab_ui_cname-records');
+        var mxRecordsBody = $('#lab_ui_mx-records');
+        var srvRecordsBody = $('#lab_ui_srv-records');
+        var txtRecordsBody = $('#lab_ui_txt-records');
+        function getEditDeleteCell() {
+            return $('<td/>')
+                .append($('<a href="#" class="dns-record-edit-btn dns-record-op-btn text-black mr-2" data-op="edit"/>').append($('<i class="fas fa-edit"></i>')))
+                .append($('<a href="#" class="dns-record-delete-btn dns-record-op-btn text-danger" data-op="delete"/>').append($('<i class="fas fa-trash-alt"></i>')));
+        }
+        function appendARecords(aRecords) {
+            aRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'a');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('ipv4Address', record.Ipv4Address);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Ipv4Address));
+                row.append(getEditDeleteCell());
+                aRecordsBody.append(row);
+            });
+        }
+        function appendAaaaRecords(aaaaRecords) {
+            aaaaRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'aaaa');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('ipv6Address', record.Ipv6Address);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Ipv6Address));
+                row.append(getEditDeleteCell());
+                aaaaRecordsBody.append(row);
+            });
+        }
+        function appendCnameRecords(cnameRecords) {
+            cnameRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'cname');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('cname', record.Cname);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Cname));
+                row.append(getEditDeleteCell());
+                cnameRecordsBody.append(row);
+            });
+        }
+        function appendMxRecords(mxRecords) {
+            mxRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'mx');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('preference', record.Preference);
+                row.data('exchange', record.Exchange);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Preference));
+                row.append($('<td/>').html(record.Exchange));
+                row.append(getEditDeleteCell());
+                mxRecordsBody.append(row);
+            });
+        }
+        function appendSrvRecords(srvRecords) {
+            srvRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'srv');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('priority', record.Priority);
+                row.data('weight', record.Weight);
+                row.data('port', record.Port);
+                row.data('target', record.Target);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Priority));
+                row.append($('<td/>').html(record.Weight));
+                row.append($('<td/>').html(record.Port));
+                row.append($('<td/>').html(record.Target));
+                row.append(getEditDeleteCell());
+                srvRecordsBody.append(row);
+            });
+        }
+        function appendTxtRecords(txtRecords) {
+            txtRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'txt');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('value', record.Value);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Value));
+                row.append(getEditDeleteCell());
+                txtRecordsBody.append(row);
+            });
+        }
+        function loadLabDns(id) {
+            showDnsLoading();
+            clearDnsRecords();
+            $.ajax({
+                url: '/LabDomains/GetLabDnsEntries/' + id,
+                type: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    setLabZoneName(data.FqZoneName);
+                    appendDnsEntries(data);
+                },
+                complete: function() {
+                    hideDnsLoading();
+                    showDnsRecords();
+                }
+            });
+        }
+
+        var dnsForms = {
+            "a": $('#lab_ui_a-record-form'),
+            "aaaa": $('#lab_ui_aaaa-record-form'),
+            "cname": $('#lab_ui_cname-record-form'),
+            "mx": $('#lab_ui_mx-record-form'),
+            "srv": $('#lab_ui_srv-record-form'),
+            "txt": $('#lab_ui_txt-record-form')
+        };
+        var dnsFormsModal = $('#lab_ui_lab-dns-modal');
+        var dnsFormsModalButtons = dnsFormsModal.find('.modal-footer button');
+        function hideForms() {
+            $('.dns-record-form').hide().removeClass('active');
+        }
+        function showRecordForm(type) {
+            dnsForms[type].show().addClass('active');
+        }
+        function resetRecordFormFields(type) {
+            dnsForms[type].find('input,textarea').val('').removeAttr('readonly');
+            dnsForms[type].find('input[name="Delete"]').val('false');
+        }
+        function fillRecordForm(type, data) {
+            var fields = dnsForms[type].find('input,textarea');
+            fields.each(function() {
+                var fieldName = this.name.charAt(0).toLowerCase() + this.name.slice(1);
+                if (fieldName in data) {
+                    this.value = data[fieldName];
+                }
+            });
+        }
+        function disableNameField(type) {
+            dnsForms[type].find('input[name="Name"]').attr('readonly', true);
+        }
+        function hideDnsDeleteButton() {
+            $('#delete-dns-record-btn').hide();
+        }
+        function showDnsDeleteButton() {
+            $('#delete-dns-record-btn').show();
+        }
+        function disableDnsFormButtons() {
+            dnsFormsModalButtons.attr('disabled', true);
+        }
+        function enableDnsFormButtons() {
+            dnsFormsModalButtons.removeAttr('disabled');
+        }
+        function disableDnsOpButtons() {
+            $('a.dns-record-op-btn').addClass('disabled');
+        }
+        function enableDnsOpButtons() {
+            $('a.dns-record-op-btn').removeClass('disabled');
+        }
+        function setDeleteFlag() {
+            dnsFormsModal.find('form.active:first input[name="Delete"]').val('true');
+        }
+        function registerDnsClickEvents() {
+            dnsFormsModal.on('hidden.bs.modal', function() {
+                client.captureKeyboard();
+                enableDnsOpButtons();
+            });
+            dnsFormsModal.on('shown.bs.modal', function() {
+                client.releaseKeyboard();
+            });
+            $('a.add-dns-record-btn').on('click', function(e) {
+                hideForms();
+                var type = $(this).data('recordType');
+                if (type in dnsForms) {
+                    showRecordForm(type);
+                    resetRecordFormFields(type);
+                    hideDnsDeleteButton();
+                    enableDnsFormButtons();
+                    dnsFormsModal.modal('show');
+                }
+
+                e.preventDefault();
+            });
+            $('tbody.dns-records').on('click', 'a.dns-record-op-btn', function(e) {
+                e.preventDefault();
+
+                if ($(this).hasClass('disabled')) return;
+
+                hideForms();
+                var record = $(this).closest('tr').data();
+                var op = $(this).data('op');
+                if (!record.recordType in dnsForms) {
+                    return;
+                }
+
+                disableDnsOpButtons();
+                
+                if (op === 'edit') {
+                    showRecordForm(record.recordType);
+                    resetRecordFormFields(record.recordType);
+                    disableNameField(record.recordType);
+                    showDnsDeleteButton();
+                    fillRecordForm(record.recordType, record);
+                    enableDnsFormButtons();
+                    dnsFormsModal.modal('show');
+                    return;
+                }
+                
+                if (op === 'delete') {
+                    showRecordForm(record.recordType);
+                    resetRecordFormFields(record.recordType);
+                    fillRecordForm(record.recordType, record);
+                    setDeleteFlag();
+                    dnsFormsModal.find('form.active').trigger('submit');
+                    return;
+                }
+
+                enableDnsOpButtons();
+            });
+            $('.dns-record-form').on('submit', function(e) {
+                e.preventDefault();
+                var form = $(this);
+                var formData = new FormData(form[0]);
+
+                $.ajax({
+                    url: form.attr('action'),
+                    type: 'post',
+                    processData: false,
+                    contentType: false,
+                    data: formData,
+                    success: function() {
+                        loadLabDns('f2def404-29f7-e911-abe3-00155de2c913');
+                        dnsFormsModal.modal('hide');
+                    },
+                    complete: function() {
+                        enableDnsFormButtons();
+                        enableDnsOpButtons();
+                    }
+                });
+            });
+            $('#save-dns-record-btn').on('click', function(e) {
+                e.preventDefault();
+                disableDnsFormButtons();
+                dnsFormsModal.find('form.active').trigger('submit');
+            });
+            $('#delete-dns-record-btn').on('click', function(e) {
+                e.preventDefault();
+                setDeleteFlag();
+                $('#save-dns-record-btn').triggerHandler('click');
+            });
+        }
+
+        if (labDns) {
+            document.addEventListener('DOMContentLoaded', function() {
+                loadLabDns('f2def404-29f7-e911-abe3-00155de2c913');
+                registerDnsClickEvents();
+            });
+        }
+
+        var fullscreenBtn = document.getElementById('fullscreen-btn');
+        var exitFullscreenBtn = document.getElementById('exit-fullscreen-btn');
+
+        fullscreenBtn.addEventListener('click',
+            function() {
+                var elem = document.documentElement;
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.mozRequestFullScreen) { /* Firefox */
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                    elem.msRequestFullscreen();
+                }
+            });
+        
+        exitFullscreenBtn.addEventListener('click',
+            function() {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { /* Firefox */
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { /* IE/Edge */
+                    document.msExitFullscreen();
+                }
+            });
+        
+        document.addEventListener('fullscreenchange', function() {
+            if (document.fullscreenElement === null) {
+                exitFullscreenBtn.style.display = 'none';
+                fullscreenBtn.style.display = '';
+            } else {
+                exitFullscreenBtn.style.display = '';
+                fullscreenBtn.style.display = 'none';
+            }
+        });
+        
+        document.body.style.backgroundColor = '#fff';
+    </script>
+
+
+
+</body></html>

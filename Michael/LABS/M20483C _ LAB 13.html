@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M20483C | All Modules - Programming in C# - go  deploy</title>
+
+        <link rel="stylesheet" href="./M20483C _ LAB 13_files/godeployMain.min.css">
+    <link rel="stylesheet" href="./M20483C _ LAB 13_files/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" type="text/css" href="./M20483C _ LAB 13_files/labs.min.css">
+
+</head>
+<body class="" style="background-color: rgb(255, 255, 255);">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top py-0 bg-brand" id="main-navbar">
+        <span class="h1 navbar-brand brandname my-1 ">go  deploy</span>
+            <div class="navbar-text h5 font-weight-normal my-1 ml-1 mr-auto collapse navbar-collapse" id="navbar-title">M20483C | All Modules - Programming in C#</div>
+        <div class="collapse navbar-collapse header-nav" id="header-nav-menu">
+<form action="https://lms.godeploy.it/Account/LogOff?Length=6" class="navbar-right" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="RzxbEh_C_O1u5siOYspFt00Ol_pPjLWXqtcnvwlY-dJm6E7EbwmIrsKZCvKJfCvOh6f4vZroMcEYhsZAIZRplrPKUtyTs0-x5ENFzroXHbqwX7SBnmXvi2sCbI-RqxCbQVMqLMB8kVrSYGC2VA9k8A2"></form>        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" style="font-size: 1.4em;" href="https://lms.godeploy.it/RedirectToHome" title="Home">
+                    <i class="far fa-home" title="Home"></i>
+                </a>
+            </li>
+                                    
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 1.4em;" aria-label="Account profile icon that opens a list of account options">
+                    <i class="far fa-user-circle"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right shadow" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="https://lms.godeploy.it/Manage">oheinrich@orange.fr</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="javascript:document.getElementById(&#39;logoutForm&#39;).submit()">Log off</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a href="https://godeploy.zendesk.com/hc/en-us" target="_blank" class="nav-link" style="font-size: 1.4em;"><span class="sr-only">Help icon that links to the help articles and allows you to create support requests</span><i class="far fa-question-circle" title="Help"></i></a>
+            </li>
+        </ul>
+</div>
+
+
+    </nav>
+
+    
+
+<main id="lab-container" class="h-100" data-mei-id="f2def404-29f7-e911-abe3-00155de2c913">
+    <h1 class="sr-only">M20483C | All Modules - Programming in C#</h1>
+    <div class="row h-100 no-gutters">
+        <div class="col bg-light h-100 position-relative" style="overflow-y: auto; flex-basis: calc(67.9696% - 3px);" id="lab-content-container">
+
+            <nav class="navbar navbar-expand navbar-light bg-gray-400" id="lab-navbar">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link tab-link" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#" id="tab-home-link" data-target="tab-home" data-link-text="Home" data-scroll-top="0">Home</a>
+        </li>
+            <li class="nav-item active bg-light">
+                <a class="nav-link tab-link" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#" id="tab-lab-guide-link" data-target="tab-lab-guide" aria-valuetext="Lab Guide">Lab Guide</a>
+            </li>
+            </ul>
+</nav>
+
+
+            <div class="container position-relative pt-2 lab-tab" id="tab-home" style="display: none;">
+                    <div class="mb-4">
+        <h6 class="mt-0"><i class="fa fa-server"></i> Virtual Machines</h6>
+
+        <div class="popover-help mb-2" data-toggle="popover" data-content="Select Virtual Machine" data-original-title="" title="">
+            <div class="dropdown" id="vm-dropdown">
+                <button class="btn btn-sm btn-outline-secondary dropdown-toggle btn-block text-left" type="button" id="vm-dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">20483C-SEA-DEV1</button>
+                <div class="dropdown-menu" aria-labelledby="vm-dropdown-btn" id="vm-dropdown-menu">
+                        <a class="dropdown-item active" data-vm-id="f7def404-29f7-e911-abe3-00155de2c913" data-vm-credentials="[{&quot;Username&quot;:&quot;Admin&quot;,&quot;Password&quot;:&quot;Pa55w.rd&quot;}]" data-has-optical-drive="false" data-has-floppy-drive="true)" data-vm-name="20483C-SEA-DEV1" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">20483C-SEA-DEV1</a>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" id="cad-btn" class="btn btn-sm btn-outline-secondary mb-1">Ctrl+Alt+Del</button>
+
+        <button class="btn btn-sm btn-outline-secondary reconnect-display-btn popover-help mb-1" data-toggle="popover" data-content="Reconnect selected VM Display" data-original-title="" title="">
+            <i class="fas fa-sync"></i>
+        </button>
+
+        <div class="btn-group popover-help mb-1" data-toggle="popover" data-content="Selected VM Power Operations" data-original-title="" title="">
+            <div class="dropdown">
+                <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="far fa-bolt"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="pwr-dropdown-btn" id="pwr-dropdown-menu">
+                    <a class="dropdown-item text-danger power-op" data-op="stop" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">Power Off</a>
+                    <a class="dropdown-item text-danger power-op" data-op="start" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">Power On</a>
+                    <a class="dropdown-item text-danger power-op" data-op="restart" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">Restart</a>
+                        <a class="dropdown-item text-danger power-op" data-op="reset-gateway" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">Reset Gateway</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div id="vm-credentials-target" style="font-size: 80%" class="mt-3">
+            <table>
+                <tbody><tr>
+                    <th class="pr-2">Username</th>
+                    <td>Admin</td>
+                    <td class="pl-2"><i class="fas fa-paste paste-credential paste-tab" data-text="Admin"></i></td>
+                </tr>
+                <tr>
+                    <th class="pr-2">Password</th>
+                    <td>Pa55w.rd</td>
+                    <td class="pl-2"><i class="fas fa-paste paste-credential paste-enter" data-text="Pa55w.rd"></i></td>
+                </tr>
+            </tbody></table>
+    </div>
+    </div>
+    <hr>
+
+
+
+<div class="mb-4 position-relative" aria-label="VM Tools">
+    <h6><i class="fa fa-wrench"></i> Tools</h6>
+        <button id="fullscreen-btn" type="button" class="btn btn-sm btn-outline-secondary popover-help mb-1" data-toggle="popover" data-content="Fullscreen mode" data-original-title="" title="">
+            <i class="far fa-expand-alt"></i>
+        </button>
+        <button id="exit-fullscreen-btn" type="button" class="btn btn-sm btn-outline-secondary popover-help mb-1" style="display: none;" data-toggle="popover" data-content="Exit fullscreen mode" data-original-title="" title="">
+            <i class="far fa-compress-alt"></i>
+        </button>
+        <a id="screenshotBtn" class="btn btn-sm btn-outline-secondary popover-help mb-1" data-toggle="popover" data-content="Take a screenshot" data-original-title="" title="">
+            <i class="far fa-file-image"></i>
+        </a>
+        <div class="btn-group mb-1 popover-help" data-toggle="popover" data-content="Paste into the VM" data-original-title="" title="">
+            <div class="dropdown" id="paste-box-dropdown">
+                <button class="btn btn-sm btn-outline-secondary" type="button" id="paste-box-dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="far fa-paste"></i>
+                </button>
+                <div class="dropdown-menu bg-success text-white" aria-labelledby="paste-box-dropdown-btn">
+                    <div class="px-3 py-2 position-relative">
+                        <p class="text-center mt-0"><strong>Paste Activated</strong></p>
+                        <p class="text-justify mb-0">You may paste using Ctrl + V or right click here and click 'Paste'</p>
+                        <textarea id="paste-box" class="position-absolute h-100 w-100" style="opacity: 0; top: 0; left: 0" disabled=""></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="btn-group mb-1 popover-help" data-toggle="popover" data-content="Exit Lab Options" data-original-title="" title="">
+        <div class="dropdown">
+            <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Exit Lab
+            </button>
+            <div class="dropdown-menu" aria-labelledby="end-dropdown-btn" id="end-dropdown-menu">
+                    <a class="dropdown-item text-success" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#" data-toggle="modal" data-target="#save-lab-modal">Exit and Save Lab</a>
+                <a class="dropdown-item text-danger" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#" data-toggle="modal" data-target="#end-lab-modal">Exit and End Lab</a>
+            </div>
+        </div>
+    </div>
+        <div class="custom-control custom-checkbox mt-2 popover-help" data-toggle="popover" data-content="Switching Enhanced Mode on enables audio and improved display resolution features" data-original-title="" title="">
+            <input type="checkbox" class="custom-control-input" id="enhanced-mode-switch">
+            <label class="custom-control-label" for="enhanced-mode-switch">Enhanced Mode</label>
+        </div>
+</div>
+
+<div class="mb-4">
+    <h6><i class="fas fa-info-circle"></i> Lab Information</h6>
+    <p>
+            <a data-toggle="modal" data-target="#launch-info-modal" aria-haspopup="true" aria-expanded="false" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">Show Lab Information</a>
+            <br>
+        <a href="https://godeploy.zendesk.com/hc/en-us/requests/new" target="_blank">Submit a Support Request</a>
+    </p>
+</div>
+
+            </div>
+
+<div id="tab-lab-guide" class="lab-tab container position-relative pt-4" style="">
+    <div id="labGuideContainer">
+        <h6><i class="fas fa-book"></i> Lab Guide</h6>
+        <div class="py-2">
+            <button class="btn btn-sm btn-brand popout-btn d-block w-100" data-link="/Labs/LabGuide/f2def404-29f7-e911-abe3-00155de2c913">
+                View in Another Window
+            </button>
+        </div>
+        <div class="form-inline">
+<div class="btn-group btn-group-sm mr-2" id="labGuidePageSelector" style="">
+    <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lab 13</button>
+    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 26px, 0px); top: 0px; left: 0px; will-change: transform;">
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=87a301e4-e6ac-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="87a301e4-e6ac-e811-8373-00155d026631">Lab 1</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=1c980c6c-43fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="1c980c6c-43fd-e811-8373-00155d026631">Lab 2</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=5d3d54a8-43fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="5d3d54a8-43fd-e811-8373-00155d026631">Lab 3</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=e61a2fd7-43fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="e61a2fd7-43fd-e811-8373-00155d026631">Lab 4</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=8bf74af0-43fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="8bf74af0-43fd-e811-8373-00155d026631">Lab 5</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=f90df406-44fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="f90df406-44fd-e811-8373-00155d026631">Lab 6</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=780fb7b3-44fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="780fb7b3-44fd-e811-8373-00155d026631">Lab 7</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=3a876de6-44fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="3a876de6-44fd-e811-8373-00155d026631">Lab 8</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=88a3d872-45fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="88a3d872-45fd-e811-8373-00155d026631">Lab 9</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=ca0447b3-45fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="ca0447b3-45fd-e811-8373-00155d026631">Lab 10</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=7db412da-45fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="7db412da-45fd-e811-8373-00155d026631">Lab 11</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=5a3fb3fa-45fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="5a3fb3fa-45fd-e811-8373-00155d026631">Lab 12</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=87bd782a-46fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link active" data-page-id="87bd782a-46fd-e811-8373-00155d026631">Lab 13</a>
+    </div>
+</div>
+
+            <div class="custom-control custom-checkbox ml-2">
+                <input type="checkbox" class="custom-control-input" id="show-screenshots-checkbox">
+                <label class="custom-control-label" for="show-screenshots-checkbox">Show Screenshots</label>
+            </div>
+        </div>
+        <div class="lab-markdown reduced-headers pt-2" id="lab-guide-area"><h3 id="module-13-encrypting-and-decrypting-data">Module 13: Encrypting and Decrypting Data</h3>
+<div class=" alert alert-danger"><p>Important Information about running this class.</p>
+<p>YOU MUST SAVE THE LABS EVERY DAY.  YOU SHOULD ALSO CHECK THE LABS ARE SAVED BY LOGGING BACK INTO THE LMS.</p>
+<p>FAILING TO DO SO WILL RESULT IN LOSS OF WORK WHICH IS UNRECOVERABLE.  GO DEPLOY WILL BE UNABLE TO RECOVER LABS WHICH HAVE NOT BEEN SAVED!</p></div>
+<h4 id="lab-encrypting-the-grades-report">Lab: Encrypting the Grades Report</h4>
+<div class=" alert alert-secondary"><p><strong>Scenario</strong></p>
+<p>You have been asked to update the Grades application to ensure that reports are secure when they are stored on a user's computer. You decide to use asymmetric encryption to protect the report as it is generated, before it is written to disk. Administrative staff will need to merge reports for each class into one document, so you decide to develop a separate application that generates a combined report and prints it.</p>
+<p><strong>Objectives</strong></p>
+<p>After completing this lab, you will be able to:</p>
+<ul>
+<li>Encrypt data by using asymmetric encryption.</li>
+<li>Decrypt data.</li>
+</ul>
+<p><strong>Lab Setup</strong></p>
+<p>Estimated Time: <strong>60 minutes</strong></p></div>
+<h4 id="exercise-1-encrypting-the-grades-report">Exercise 1: Encrypting the Grades Report</h4>
+<div class=" alert alert-secondary"><p>Scenario<br>
+In this exercise, you will update the reporting functionality to encrypt the report as it is generated, but before it is saved to disk.</p>
+<ul>
+<li><p>First, you will create an asymmetric certificate by using a prewritten batch file. The batch file uses the <strong>MakeCert</strong> tool that ships with the Windows Software Development Kit (SDK).</p></li>
+<li><p>You will create a self-signed certificate named <strong>Grades</strong> using the SHA-1 hash algorithm and store it in the LocalMachine certificate store.</p></li>
+<li><p>You will then write code in the <strong>Grades</strong> application to retrieve the certificate by looping through the certificates in the LocalMachine store and checking the name of the certificate against the name that is stored in the <strong>App.Config</strong> file.</p></li>
+<li><p>Next, you will use the classes that are provided in the <strong>System.Security.Cryptography</strong> and <strong>System.Security.Cryptography.X509Certificates</strong> namespaces to write the <strong>EncryptWithX509</strong> method in the Grades.Utilities.WordWrapper class.</p></li>
+<li><p>You will get the public key from the certificate that you created and use it to create an instance of the <strong>RSAPKCS1KeyExchangeFormatter</strong> class.</p></li>
+<li><p>You will use this to encrypt the data for the report and then return the encrypted buffered data to the calling method as a byte array. You will then write code in the <strong>EncryptAndSaveToDisk</strong> method to write the returned data to the file that the user specifies.</p></li>
+<li><p>Finally, you will build and test the application and verify that the reports are now encrypted.</p></li>
+</ul></div>
+<h5 id="task-1-create-an-asymmetric-certificate">Task 1: Create an asymmetric certificate</h5>
+<ol>
+<li><p>Open <strong>Visual Studio 2017</strong>.</p></li>
+<li><p>In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p></li>
+<li><p>In the <strong>Open Project</strong> dialog box, browse to <strong>[Repository Root]\AllFiles\Mod13\Labfiles\Starter\Exercise 1</strong>, click <strong>Grades.sln</strong>, and then click <strong>Open</strong>.</p></li>
+</ol>
+<div class=" alert alert-warning"><p><strong>Note:</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p></div>
+<ol start="4">
+<li><p>In <strong>Solution Explorer</strong>, right-click Solution <strong>'Grades'</strong>, and then click <strong>Properties</strong>.</p></li>
+<li><p>On the <strong>Startup Project</strong> page, click <strong>Multiple startup projects</strong>, set <strong>Grades.Web</strong> and <strong>Grades.WPF</strong> to <strong>Start</strong>, and then click <strong>OK</strong>.</p></li>
+<li><p>In <strong>Solution Explorer</strong>, expand the <strong>Grades.Utilities</strong> node, and then double-click the <strong>CreateCertificate.cmd</strong> file.</p></li>
+<li><p>Review the contents of this file.</p></li>
+<li><p>Go to <strong>Apps</strong> list, click <strong>File Explorer</strong>.</p></li>
+<li><p>Search <strong>Developer Command Prompt for VS 2017</strong> and right-click the <strong>developer Command Prompt for VS 2017</strong> icon, and click <strong>Run as administrator</strong>.</p></li>
+<li><p>In the <strong>User Account Control</strong> dialog box and then click <strong>Yes</strong>.</p></li>
+<li><p>In the <strong>Command Prompt</strong> window, type the following, and then press Enter.</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">cd <span class="token punctuation">[</span><span class="token class-name">Repository</span> Root<span class="token punctuation">]</span>\AllFiles\Mod13\Labfiles\Starter\<span class="token class-name">Exercise</span> <span class="token number">1</span>\Grades<span class="token punctuation">.</span>Utilities<span aria-hidden="true" class="line-paster-rows"><span data-code="cd [Repository Root]\AllFiles\Mod13\Labfiles\Starter\Exercise 1\Grades.Utilities" class="paste"></span></span></code></pre></li>
+<li><p>In the <strong>Command Prompt</strong> window, type the following, and then press Enter.</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">CreateCertificate<span class="token punctuation">.</span>cmd<span aria-hidden="true" class="line-paster-rows"><span data-code="CreateCertificate.cmd" class="paste"></span></span></code></pre></li>
+<li><p>Verify that the command returns a success message, and then close the <strong>Command Prompt</strong> window.</p></li>
+</ol>
+<h4 id="task-2-retrieve-the-grade-certificate">Task 2: Retrieve the Grade certificate</h4>
+<ol>
+<li><p>In <strong>Visual Studio</strong>, on the <strong>View</strong> menu, click <strong>Task List</strong>.</p></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 2a: Loop through the certificates in the X509 store to return the one matching _certificateSubjectName</strong> task.</p></li>
+<li><p>In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">foreach</span> <span class="token punctuation">(</span><span class="token keyword">var</span> cert <span class="token keyword">in</span> store<span class="token punctuation">.</span>Certificates<span class="token punctuation">)</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>cert<span class="token punctuation">.</span>SubjectName<span class="token punctuation">.</span>Name<span class="token punctuation">.</span><span class="token function">Equals</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>_certificateSubjectName<span class="token punctuation">,</span>    StringComparison<span class="token punctuation">.</span>InvariantCultureIgnoreCase<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> cert<span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="foreach (var cert in store.Certificates)
+  if (cert.SubjectName.Name.Equals(this._certificateSubjectName,    StringComparison.InvariantCultureIgnoreCase))
+    return cert;" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-3-encrypt-the-data">Task 3: Encrypt the data</h5>
+<ol>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3a: Get the public key from the X509 certificate</strong>task.</p></li>
+<li><p>In the code editor, delete the following line of code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">NotImplementedException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="throw new NotImplementedException();" class="paste"></span></span></code></pre></li>
+<li><p>In the blank line below the comment, type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">var</span> provider <span class="token operator">=</span> <span class="token punctuation">(</span>RSACryptoServiceProvider<span class="token punctuation">)</span><span class="token keyword">this</span><span class="token punctuation">.</span>_certificate<span class="token punctuation">.</span>PublicKey<span class="token punctuation">.</span>Key<span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="var provider = (RSACryptoServiceProvider)this._certificate.PublicKey.Key;" class="paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3b: Create an instance of the AesManaged algorithm</strong> task.</p></li>
+<li><p>In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">using</span> <span class="token punctuation">(</span><span class="token keyword">var</span> algorithm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AesManaged</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span><span aria-hidden="true" class="line-paster-rows"><span data-code="using (var algorithm = new AesManaged())
+{" class="paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3c: Create an underlying stream for the unencrypted data</strong> task.</p></li>
+<li><p>In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">using</span> <span class="token punctuation">(</span><span class="token keyword">var</span> outStream <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MemoryStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span><span aria-hidden="true" class="line-paster-rows"><span data-code="using (var outStream = new MemoryStream())
+{" class="paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3d: Create an AES encryptor based on the key and IV</strong> task.</p></li>
+<li><p>In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">using</span> <span class="token punctuation">(</span><span class="token keyword">var</span> encryptor <span class="token operator">=</span> algorithm<span class="token punctuation">.</span><span class="token function">CreateEncryptor</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token keyword">var</span> keyFormatter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RSAPKCS1KeyExchangeFormatter</span><span class="token punctuation">(</span>provider<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> encryptedKey <span class="token operator">=</span> keyFormatter<span class="token punctuation">.</span><span class="token function">CreateKeyExchange</span><span class="token punctuation">(</span>algorithm<span class="token punctuation">.</span>Key<span class="token punctuation">,</span>  algorithm<span class="token punctuation">.</span><span class="token function">GetType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="using (var encryptor = algorithm.CreateEncryptor())
+{
+  var keyFormatter = new RSAPKCS1KeyExchangeFormatter(provider);
+  var encryptedKey = keyFormatter.CreateKeyExchange(algorithm.Key,  algorithm.GetType());" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3e: Create byte arrays to get the length of the encryption key and IV</strong> task.</p></li>
+<li><p>In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">var</span> keyLength <span class="token operator">=</span> BitConverter<span class="token punctuation">.</span><span class="token function">GetBytes</span><span class="token punctuation">(</span>encryptedKey<span class="token punctuation">.</span>Length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> ivLength <span class="token operator">=</span> BitConverter<span class="token punctuation">.</span><span class="token function">GetBytes</span><span class="token punctuation">(</span>algorithm<span class="token punctuation">.</span>IV<span class="token punctuation">.</span>Length<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="var keyLength = BitConverter.GetBytes(encryptedKey.Length);
+var ivLength = BitConverter.GetBytes(algorithm.IV.Length);" class="paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3f: Write the following to the out stream</strong> task.</p></li>
+<li><p>In the code editor, click in the blank line below the comment block, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">outStream<span class="token punctuation">.</span><span class="token function">Write</span><span class="token punctuation">(</span>keyLength<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> keyLength<span class="token punctuation">.</span>Length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+outStream<span class="token punctuation">.</span><span class="token function">Write</span><span class="token punctuation">(</span>ivLength<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> ivLength<span class="token punctuation">.</span>Length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+outStream<span class="token punctuation">.</span><span class="token function">Write</span><span class="token punctuation">(</span>encryptedKey<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> encryptedKey<span class="token punctuation">.</span>Length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+outStream<span class="token punctuation">.</span><span class="token function">Write</span><span class="token punctuation">(</span>algorithm<span class="token punctuation">.</span>IV<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> algorithm<span class="token punctuation">.</span>IV<span class="token punctuation">.</span>Length<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="outStream.Write(keyLength, 0, keyLength.Length);
+outStream.Write(ivLength, 0, ivLength.Length);
+outStream.Write(encryptedKey, 0, encryptedKey.Length);
+outStream.Write(algorithm.IV, 0, algorithm.IV.Length);" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3g: Create a CryptoStream that will write the encrypted data to the underlying buffer</strong> task.</p></li>
+<li><p>In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">using</span> <span class="token punctuation">(</span><span class="token keyword">var</span> encrypt <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CryptoStream</span><span class="token punctuation">(</span>outStream<span class="token punctuation">,</span> encryptor<span class="token punctuation">,</span>     CryptoStreamMode<span class="token punctuation">.</span>Write<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span><span aria-hidden="true" class="line-paster-rows"><span data-code="using (var encrypt = new CryptoStream(outStream, encryptor,     CryptoStreamMode.Write))
+{" class="paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3h: Write all the data to the stream</strong> task.</p></li>
+<li><p>In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">encrypt<span class="token punctuation">.</span><span class="token function">Write</span><span class="token punctuation">(</span>bytesToEncrypt<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> bytesToEncrypt<span class="token punctuation">.</span>Length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+encrypt<span class="token punctuation">.</span><span class="token function">FlushFinalBlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="encrypt.Write(bytesToEncrypt, 0, bytesToEncrypt.Length);
+encrypt.FlushFinalBlock();" class="paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3i: Return the encrypted buffered data as a byte[].</strong> task.</p></li>
+<li><p>In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">      <span class="token keyword">return</span> outStream<span class="token punctuation">.</span><span class="token function">ToArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-paster-rows"><span data-code="      return outStream.ToArray();
+      }
+    }
+  }
+}" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-4-write-the-encrypted-data-to-disk">Task 4: Write the encrypted data to disk</h5>
+<ol>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 4a: Write the encrypted bytes to disk</strong> task.</p></li>
+<li><p>In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">File<span class="token punctuation">.</span><span class="token function">WriteAllBytes</span><span class="token punctuation">(</span>filePath<span class="token punctuation">,</span> encryptedBytes<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="File.WriteAllBytes(filePath, encryptedBytes);" class="paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-5-build-and-test-the-application">Task 5: Build and test the application</h5>
+<ol>
+<li><p>On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p></li>
+<li><p>On the <strong>Debug</strong> menu, click <strong>Start Without Debugging</strong>.</p></li>
+<li><p>When the application loads, in the <strong>Username</strong> text box, type <strong>vallee</strong>, and in the <strong>Password</strong> text box, type <strong>password99</strong>, and then click <strong>Log on</strong>.</p></li>
+<li><p>In the <strong>Class 3C</strong> view, click <strong>George Li</strong>.</p></li>
+<li><p>In the <strong>Report Card</strong> view, click <strong>save report</strong>.</p></li>
+<li><p>In the <strong>Save As</strong> dialog box, browse to the <strong>[Repository Root]\AllFiles\Mod13\Labfiles\Reports</strong> folder, in the <strong>File name</strong> text box, type <strong>GeorgeLi</strong>, and then click <strong>Save</strong>.</p></li>
+<li><p>In the <strong>Report Card</strong> view, click <strong>Back</strong>.</p></li>
+<li><p>In the <strong>Class 3C</strong> view, click <strong>Kevin Liu</strong>.</p></li>
+<li><p>In the <strong>Report Card</strong> view, click <strong>save report</strong>.</p></li>
+<li><p>In the <strong>Save As</strong> dialog box, browse to the <strong>[Repository Root]\AllFiles\Mod13\Labfiles\Reports</strong> folder, in the <strong>File name</strong> text box, type <strong>KevinLiu</strong>, and then click <strong>Save</strong>.</p></li>
+<li><p>In the <strong>Report Card</strong> view, click <strong>Log off</strong>, and then close the application.</p></li>
+<li><p>On the <strong>File</strong> menu, click <strong>Close Solution</strong>.</p></li>
+<li><p>Open <strong>Microsoft Edge</strong>, and in the address bar, type <strong>[Repository Root]\AllFiles\Mod13\Labfiles\Reports\KevinLiu.xml</strong>, and then press Enter.</p></li>
+<li><p>Note the page is blank because the file is encrypted, and then close <strong>Microsoft Edge</strong>.</p></li>
+<li><p>Open <strong>File Explorer</strong>, and then browse to the <strong>[Repository Root]\AllFiles\Mod13\Labfiles\Reports</strong> folder.</p></li>
+<li><p>Right-click <strong>KevinLiu.xml</strong>, and then click <strong>Edit</strong>.</p></li>
+<li><p>Review the encrypted data, close <strong>Notepad</strong>, and then close <strong>File Explorer</strong>.</p></li>
+</ol>
+<div class=" alert alert-success"><p><strong>Result:</strong> After completing this exercise, you should have updated the <strong>Grades</strong> application to encrypt generated reports.</p></div>
+<h4 id="exercise-2-decrypting-the-grades-report">Exercise 2: Decrypting the Grades Report</h4>
+<div class=" alert alert-secondary"><p><strong>Scenario</strong></p>
+<p>In this exercise, you will create a separate utility to enable users to print reports. Users will be able to select a folder that contains encrypted reports, and the application will then generate one combined report and send it to the default printer.</p>
+<ul>
+<li><p>First, you will use the classes that are provided in the System.Security.Cryptography and System.Security.Cryptography.X509Certificates namespaces to write the DecryptWithX509 method in the SchoolReports.WordWrapper class.</p></li>
+<li><p>You will get the private key from the certificate and use it to create an instance of the RSACryptoServiceProvider class. You will use this to decrypt the data from the individual reports and then return the decrypted data to the calling method as a byte array. Finally, you will build and test the application and verify that a printed version of the composite report has been generated.</p></li>
+</ul></div>
+<h5 id="task-1-decrypt-the-data">Task 1: Decrypt the data</h5>
+<ol>
+<li><p>In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p></li>
+<li><p>In the <strong>Open Project</strong> dialog box, browse to <strong>[Repository Root]\AllFiles\Mod13\Labfiles\Starter\Exercise 2</strong>, click <strong>School-Reports.sln</strong>, and then click <strong>Open</strong>.</p></li>
+</ol>
+<div class=" alert alert-warning"><p><strong>Note:</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p></div>
+<ol start="3">
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1a: Get the private key from the X509 certificate</strong> task.</p></li>
+<li><p>In the code editor, delete the following line of code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">NotImplementedException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="throw new NotImplementedException();" class="paste"></span></span></code></pre></li>
+<li><p>In the blank line below the comment, type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">var</span> provider <span class="token operator">=</span> <span class="token punctuation">(</span>RSACryptoServiceProvider<span class="token punctuation">)</span><span class="token keyword">this</span><span class="token punctuation">.</span>_certificate<span class="token punctuation">.</span>PrivateKey<span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="var provider = (RSACryptoServiceProvider)this._certificate.PrivateKey;" class="paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1b: Create an instance of the AESManaged algorithm which the data is encrypted with</strong> task.</p></li>
+<li><p>In the blank line below the comment, type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">using</span> <span class="token punctuation">(</span><span class="token keyword">var</span> algorithm <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AesManaged</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span><span aria-hidden="true" class="line-paster-rows"><span data-code="using (var algorithm = new AesManaged())
+{" class="paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1c: Create a stream to process the bytes</strong> task.</p></li>
+<li><p>In the blank line below the comment, type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">using</span> <span class="token punctuation">(</span><span class="token keyword">var</span> inStream <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MemoryStream</span><span class="token punctuation">(</span>bytesToDecrypt<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span><span aria-hidden="true" class="line-paster-rows"><span data-code="using (var inStream = new MemoryStream(bytesToDecrypt))
+{" class="paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1d: Create byte arrays to get the length of the encryption key and IV</strong> task.</p></li>
+<li><p>In the blank line below the comment, type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">var</span> keyLength <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> ivLength <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">byte</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="var keyLength = new byte[4];
+var ivLength = new byte[4];" class="paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1e: Read the key and IV lengths starting from index 0 in the in stream</strong> task.</p></li>
+<li><p>In the blank line below the comment, type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">inStream<span class="token punctuation">.</span><span class="token function">Seek</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> SeekOrigin<span class="token punctuation">.</span>Begin<span class="token punctuation">)</span><span class="token punctuation">;</span>
+inStream<span class="token punctuation">.</span><span class="token function">Read</span><span class="token punctuation">(</span>keyLength<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> keyLength<span class="token punctuation">.</span>Length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+inStream<span class="token punctuation">.</span><span class="token function">Read</span><span class="token punctuation">(</span>ivLength<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> ivLength<span class="token punctuation">.</span>Length<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="inStream.Seek(0, SeekOrigin.Begin);
+inStream.Read(keyLength, 0, keyLength.Length);
+inStream.Read(ivLength, 0, ivLength.Length);" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1f: Convert the lengths to ints for later use</strong> task.</p></li>
+<li><p>In the blank line below the comment, type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">var</span> convertedKeyLength <span class="token operator">=</span> BitConverter<span class="token punctuation">.</span><span class="token function">ToInt32</span><span class="token punctuation">(</span>keyLength<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> convertedIvLength <span class="token operator">=</span> BitConverter<span class="token punctuation">.</span><span class="token function">ToInt32</span><span class="token punctuation">(</span>ivLength<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="var convertedKeyLength = BitConverter.ToInt32(keyLength, 0);
+var convertedIvLength = BitConverter.ToInt32(ivLength, 0);" class="paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1g: Determine the starting position and length of data</strong> task.</p></li>
+<li><p>In the blank line below the comment, type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">var</span> dataStartPos <span class="token operator">=</span> convertedKeyLength <span class="token operator">+</span> convertedIvLength <span class="token operator">+</span> keyLength<span class="token punctuation">.</span>Length <span class="token operator">+</span>  ivLength<span class="token punctuation">.</span>Length<span class="token punctuation">;</span>
+<span class="token keyword">var</span> dataLength <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>inStream<span class="token punctuation">.</span>Length <span class="token operator">-</span> dataStartPos<span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="var dataStartPos = convertedKeyLength + convertedIvLength + keyLength.Length +  ivLength.Length;
+var dataLength = (int)inStream.Length - dataStartPos;" class="paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1h: Create the byte arrays for the encrypted key, the IV, and the encrypted data.</strong> task.</p></li>
+<li><p>In the blank line below the comment, type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">var</span> encryptionKey <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">byte</span><span class="token punctuation">[</span>convertedKeyLength<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> iv <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">byte</span><span class="token punctuation">[</span>convertedIvLength<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> encryptedData <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">byte</span><span class="token punctuation">[</span>dataLength<span class="token punctuation">]</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="var encryptionKey = new byte[convertedKeyLength];
+var iv = new byte[convertedIvLength];
+var encryptedData = new byte[dataLength];" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1i: Read the key, IV, and encrypted data from the in stream</strong> task.</p></li>
+<li><p>In the blank line below the comment, type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">inStream<span class="token punctuation">.</span><span class="token function">Read</span><span class="token punctuation">(</span>encryptionKey<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> convertedKeyLength<span class="token punctuation">)</span><span class="token punctuation">;</span>
+inStream<span class="token punctuation">.</span><span class="token function">Read</span><span class="token punctuation">(</span>iv<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> convertedIvLength<span class="token punctuation">)</span><span class="token punctuation">;</span>
+inStream<span class="token punctuation">.</span><span class="token function">Read</span><span class="token punctuation">(</span>encryptedData<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> dataLength<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="inStream.Read(encryptionKey, 0, convertedKeyLength);
+inStream.Read(iv, 0, convertedIvLength);
+inStream.Read(encryptedData, 0, dataLength);" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1j: Decrypt the encrypted AesManaged encryption key</strong> task.</p></li>
+<li><p>In the blank line below the comment, type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">var</span> decryptedKey <span class="token operator">=</span> provider<span class="token punctuation">.</span><span class="token function">Decrypt</span><span class="token punctuation">(</span>encryptionKey<span class="token punctuation">,</span> <span class="token keyword">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="var decryptedKey = provider.Decrypt(encryptionKey, false);" class="paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1k: Create an underlying stream for the decrypted data</strong> task.</p></li>
+<li><p>In the blank line below the comment, type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">using</span> <span class="token punctuation">(</span><span class="token keyword">var</span> outStream <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">MemoryStream</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span><span aria-hidden="true" class="line-paster-rows"><span data-code="using (var outStream = new MemoryStream())
+{" class="paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1l: Create an AES decryptor based on the key and IV</strong> task.</p></li>
+<li><p>In the blank line below the comment, type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">using</span> <span class="token punctuation">(</span><span class="token keyword">var</span> decryptor <span class="token operator">=</span> algorithm<span class="token punctuation">.</span><span class="token function">CreateDecryptor</span><span class="token punctuation">(</span>decryptedKey<span class="token punctuation">,</span> iv<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span><span aria-hidden="true" class="line-paster-rows"><span data-code="using (var decryptor = algorithm.CreateDecryptor(decryptedKey, iv))
+{" class="paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1m: Create a CryptoStream that will write the decrypted data to the underlying buffer</strong> task.</p></li>
+<li><p>In the blank line below the comment, type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">using</span> <span class="token punctuation">(</span><span class="token keyword">var</span> decrypt <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">CryptoStream</span><span class="token punctuation">(</span>outStream<span class="token punctuation">,</span> decryptor<span class="token punctuation">,</span>     CryptoStreamMode<span class="token punctuation">.</span>Write<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span><span aria-hidden="true" class="line-paster-rows"><span data-code="using (var decrypt = new CryptoStream(outStream, decryptor,     CryptoStreamMode.Write))
+{" class="paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1n: Write all the data to the stream</strong> task.</p></li>
+<li><p>In the blank line below the comment, type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">decrypt<span class="token punctuation">.</span><span class="token function">Write</span><span class="token punctuation">(</span>encryptedData<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> dataLength<span class="token punctuation">)</span><span class="token punctuation">;</span>
+decrypt<span class="token punctuation">.</span><span class="token function">FlushFinalBlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="decrypt.Write(encryptedData, 0, dataLength);
+decrypt.FlushFinalBlock();" class="paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1o: Return the decrypted buffered data as a byte[].</strong> task.</p></li>
+<li><p>In the blank line below the comment, type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">          <span class="token keyword">return</span> outStream<span class="token punctuation">.</span><span class="token function">ToArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-paster-rows"><span data-code="          return outStream.ToArray();
+        }
+      }
+    }
+  }
+}" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-2-build-and-test-the-solution">Task 2: Build and test the solution</h5>
+<ol>
+<li><p>On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p></li>
+<li><p>On the <strong>Debug</strong> menu, click <strong>Start Without Debugging</strong>.</p></li>
+<li><p>When the application loads, click <strong>Browse</strong>.</p></li>
+<li><p>In the <strong>Browse For Folder</strong> dialog box, browse to the <strong>[Repository Root]\AllFiles\Mod13\Labfiles\Reports</strong> folder, and then click <strong>OK</strong>.</p></li>
+<li><p>Click <strong>Print</strong>.</p></li>
+<li><p>In the <strong>Save Print Output As</strong> dialog box, browse to the <strong>[Repository Root]\AllFiles\Mod13\Labfiles\Reports\ClassReport</strong> folder, in the <strong>File name</strong> text box, type <strong>3CReport</strong>, and then click <strong>Save</strong>.</p></li>
+<li><p>In the <strong>The School of Fine Arts</strong> dialog box, click <strong>OK</strong>, and then close the application.</p></li>
+<li><p>Open <strong>File Explorer</strong>, and browse to the <strong>[Repository Root]\AllFiles\Mod13\Labfiles\Reports\ClassReport</strong> folder.</p></li>
+<li><p>Double-click <strong>3CReport</strong>.</p></li>
+<li><p>Review the unencrypted report, and then close the file.</p></li>
+</ol>
+<div class=" alert alert-success"><p><strong>Result:</strong> After completing this exercise, you should have a composite unencrypted report that was generated from the encrypted reports.</p></div>
+<div class=" alert alert-info"><p><strong>Congratulations!</strong>  You have now completed this lab.  You should ensure you save your lab environment.  Failure to do so will result in the loss of all work.</p></div></div>
+    </div>
+    <div id="labGuidePoppedOutContainer" class="text-center" style="display:none;">
+        <p>Your lab guide is open in another window</p>
+        <p class="text-muted"><i class="fal fa-window fa-9x"></i></p>
+        <p><button class="btn btn-brand d-block w-100 focus-popout-btn">Show Lab Guide</button></p>
+    </div>
+</div>
+
+
+                        <div class="lab-timer text-center bg-light p-2" id="lab-timer-container">
+                <div class="position-relative h-100 w-100" id="lab-timer-warning" data-original-title="" title="">
+                    <h2><span class="badge badge-secondary style colorDefinition size_lg" id="lab-timer">
+                        <i class="fas fa-stopwatch" id="stopwatch" data-toggle="popover" data-content="Time Remaining" data-trigger="hover" data-placement="top" data-original-title="" title=""></i>
+                        <span id="lab-timer-timer">07:54:11</span>
+                    </span></h2>
+                </div>
+            </div>
+
+        </div>
+        <div class="gutter gutter-horizontal" style="flex-basis: 6px;"></div><div class="col bg-dark" style="overflow: auto; flex-basis: calc(32.0304% - 3px);" id="lab-display-container">
+            <div style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 1;">
+    <div class="d-flex align-items-center justify-content-center" style="height: 100%; overflow: hidden" id="outer-display">
+
+        <div class="card border-warning connection-error-box" id="display-error-checking" style="display: none;">
+            <div class="card-header bg-warning border-0 text-white">Sorry, there was a problem connecting to your VM</div>
+            <div class="card-body text-center">
+                <p>We're checking your connection, please wait...</p>
+            </div>
+        </div>
+
+        <div class="card border-danger connection-error-box" id="display-error" style="display: none;">
+            <div class="card-header bg-danger border-0 text-white">Sorry, there was a problem connecting to your VM</div>
+            <div class="card-body text-center">
+                <button class="btn btn-sm btn-outline-secondary ml-1 reconnect-display-btn">Reconnect</button>
+            </div>
+        </div>
+
+        <div class="card border-danger connection-error-box" id="display-error-contact" style="display: none;">
+            <div class="card-header bg-danger border-0 text-white">Unexpected VM State</div>
+            <div class="card-body text-center">
+                <p>Your VM is in an unexpected state. Please <a href="mailto:support@godeploy.it">contact support</a>.</p>
+            </div>
+        </div>
+
+        <div class="card border-primary connection-error-box" id="display-error-stopped" style="display: none;">
+            <div class="card-header bg-primary border-0 text-white">Your VM is turned off</div>
+            <div class="card-body text-center">
+                <button class="btn btn-sm btn-outline-secondary ml-1 power-op" data-op="start">Power on</button>
+            </div>
+        </div>
+
+        <div class="card border-primary connection-error-box" id="display-error-starting" style="display: none;">
+            <div class="card-header bg-primary border-0 text-white">Your VM is turning on</div>
+            <div class="card-body text-center">
+                <p>Your VM is turning on, please wait...</p>
+            </div>
+        </div>
+
+        <div class="card border-primary connection-error-box" id="display-error-stopping" style="display: none;">
+            <div class="card-header bg-primary border-0 text-white">Your VM is turning off</div>
+            <div class="card-body text-center">
+                <p>Your VM is turning off, please wait...</p>
+            </div>
+        </div>
+
+        <div id="display" class="position-relative">
+            <div style="position: absolute; top: 0; left: 0; background-color: #000; z-index: -2; height: 100%;width:100%"></div>
+        <div style="position: relative; width: 1024px; height: 768px;"><div style="position: relative; width: 1024px; height: 768px; transform-origin: 0px 0px;"><div style="width: 1024px; height: 768px; position: absolute; left: 0px; top: 0px; overflow: hidden;"><canvas width="1024" height="768" style="z-index: -1; position: absolute; left: 0px; top: 0px;"></canvas></div><div style="width: 32px; height: 32px; position: absolute; left: 0px; top: 0px; overflow: hidden; transform: translate(-15px, -15px) matrix(1, 0, 0, 1, 0, 0);"><canvas width="64" height="64" style="z-index: -1; position: absolute; left: 0px; top: 0px;"></canvas></div></div></div></div>
+    </div>
+</div>
+
+        </div>
+    </div>
+</main>
+
+<div class="modal" tabindex="-1" role="dialog" id="end-lab-modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-warning text-white">
+                <h5 class="modal-title">Warning - you are about to end your lab</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                    <p>Any change you have made to your lab will be irrevocably lost and you will need to start again.</p>
+                    <p class="mb-0">You can, instead, save your lab and then continue from where you left off, later.</p>
+            </div>
+            <div class="modal-footer">
+                    <a href="https://lms.godeploy.it/Modules/SaveLab/f2def404-29f7-e911-abe3-00155de2c913" class="btn btn-link text-success confirmed-navigation">Save my Lab</a>
+                <a href="https://lms.godeploy.it/Modules/EndLab/f2def404-29f7-e911-abe3-00155de2c913" class="btn btn-danger confirmed-navigation" id="end-lab-btn">End my lab</a>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="save-lab-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h5 class="modal-title">Save your lab</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you wish to leave?</p>
+                    <p>Your lab will be saved for 7 days, after which it will be stopped and deleted.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://lms.godeploy.it/Modules/SaveLab/f2def404-29f7-e911-abe3-00155de2c913" class="btn btn-success confirmed-navigation">Save my Lab</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="launch-info-modal" data-show="true" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-white">
+                    <h5 class="modal-title">Important information about your lab</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>When launching Visual Studio you must sign in with a Microsoft Account or create a new one.&nbsp; The Visual Studio Community Edition trial has expired and is to be expected.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="info-modal-ok-btn">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" role="dialog" id="launch-errata-modal" data-show="false">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-white">
+                    <h5 class="modal-title">Important information about your lab</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p><br></p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="info-modal-ok-btn">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="modal" tabindex="-1" role="dialog" id="screenshot-modal">
+    <div class="modal-dialog modal-lg" role="document" style="max-width: 1024px;">
+        <div class="modal-content">
+            <div class="modal-body" id="screenshot-background" style="background-position: center center; background-repeat: no-repeat; background-size: auto 100%; height: 768px;">
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="lab_ui_lab-dns-modal" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">DNS Record</h5>
+            </div>
+            <div class="modal-body">
+                <form id="lab_ui_a-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditARecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-a-record-name-input">Name</label>
+                            <input id="dns-a-record-name-input" class="form-control" name="Name">
+                            <div class="text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dns-a-record-ipv4address-input">IPv4 Address</label>
+                            <input id="dns-a-record-ipv4address-input" class="form-control" name="Ipv4Address">
+                        </div>
+                    </div>
+                </form>
+                <form id="lab_ui_aaaa-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditAaaaRecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-aaaa-record-name-input">Name</label>
+                            <input id="dns-aaaa-record-name-input" class="form-control" name="Name">
+                            <div class="text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dns-aaaa-record-ipv6address-input">IPv6 Address</label>
+                            <input id="dns-aaaa-record-ipv6address-input" class="form-control" name="Ipv6Address">
+                        </div>
+                    </div>
+                </form>
+                <form id="lab_ui_cname-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditCnameRecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-cname-record-name-input">Name</label>
+                            <input id="dns-cname-record-name-input" class="form-control" name="Name">
+                            <div class="text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dns-cname-record-cname-input">CNAME</label>
+                            <input id="dns-cname-record-cname-input" class="form-control" name="Cname">
+                        </div>
+                    </div>
+                </form>
+                <form id="lab_ui_mx-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditMxRecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-mx-record-name-input">Name</label>
+                            <input id="dns-mx-record-name-input" class="form-control" name="Name">
+                            <div class="text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-6">
+                                <label for="dns-mx-record-preference-input">Preference</label>
+                                <input id="dns-mx-record-preference-input" class="form-control" name="Preference">
+                            </div>
+                            <div class="form-group col-18">
+                                <label for="dns-mx-record-exchange-input">Host</label>
+                                <input id="dns-mx-record-exchange-input" class="form-control" name="Exchange">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <form id="lab_ui_srv-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditSrvRecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-srv-record-name-input">Name</label>
+                            <input id="dns-srv-record-name-input" class="form-control" name="Name" placeholder="_service._protocol.name">
+                            <div class="row">
+                                <div class="col-12"><small class="text-muted">_service._protocol.name</small></div>
+                                <div class="col-12 text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-8">
+                                <label for="dns-srv-record-priority-input">Priority</label>
+                                <input id="dns-srv-record-priority-input" class="form-control" name="Priority">
+                            </div>
+                            <div class="form-group col-8">
+                                <label for="dns-srv-record-weight-input">Weight</label>
+                                <input id="dns-srv-record-weight-input" class="form-control" name="Weight">
+                            </div>
+                            <div class="form-group col-8">
+                                <label for="dns-srv-record-port-input">Port</label>
+                                <input id="dns-srv-record-port-input" class="form-control" name="Port">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dns-srv-record-target-input">Target</label>
+                            <input id="dns-srv-record-target-input" class="form-control" name="Target">
+                        </div>
+                    </div>
+                </form>
+                <form id="lab_ui_txt-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditTxtRecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-txt-record-name-input">Name</label>
+                            <input id="dns-txt-record-name-input" class="form-control" name="Name">
+                            <div class="text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dns-txt-record-value-input">Value</label>
+                            <textarea id="dns-txt-record-value-input" class="form-control" name="Value"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger mr-auto" id="delete-dns-record-btn">Delete</button>
+                <button type="button" class="btn btn-secondary" id="save-dns-record-btn">Save</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <script src="./M20483C _ LAB 13_files/jquery.min.js.téléchargement"></script>
+    <script src="./M20483C _ LAB 13_files/bootstrap.bundle.min.js.téléchargement"></script>
+    
+    <script src="./M20483C _ LAB 13_files/labs.js.téléchargement"></script>
+    <script src="./M20483C _ LAB 13_files/all.min.js.téléchargement"></script>
+    <script src="./M20483C _ LAB 13_files/easytimer.min.js.téléchargement"></script>
+    <script src="./M20483C _ LAB 13_files/handlebars.min.js.téléchargement" integrity="sha256-dlwklXLDib5XGMYI+HdNEXczJXTsFtq+qIrSdXoCv6o=" crossorigin="anonymous"></script>
+    <script type="text/x-handlebars-template" id="vm-credentials-template">
+        {{#each this}}
+            <table>
+                <tr>
+                    <th class="pr-2">Username</th>
+                    <td>{{Username}}</td>
+                    <td class="pl-2"><i class="fas fa-paste paste-credential paste-tab" data-text="{{Username}}"></i></td>
+                </tr>
+                <tr>
+                    <th class="pr-2">Password</th>
+                    <td>{{Password}}</td>
+                    <td class="pl-2"><i class="fas fa-paste paste-credential paste-enter" data-text="{{Password}}"></i></td>
+                </tr>
+            </table>
+        {{/each}}
+    </script>
+    <script type="text/javascript">
+        window.focus();
+
+        $('a.confirmed-navigation').on('click',
+            function() {
+                window.onbeforeunload = null;
+            });
+
+        var pasteBox = document.getElementById('paste-box');
+        pasteBox.disabled = true;
+        var pasteBoxOpen = false;
+
+        $('#paste-box-dropdown').on('shown.bs.dropdown',
+            function() {
+                pasteBoxOpen = true;
+                pasteBox.disabled = false;
+                pasteBox.focus();
+            });
+
+        $('#paste-box-dropdown').on('hidden.bs.dropdown',
+            function() {
+                pasteBoxOpen = false;
+                window.focus();
+                pasteBox.value = '';
+                pasteBox.disabled = true;
+            });
+
+        window.onbeforeunload = function(e) {
+            return "If you navigate away from this page your changes may be lost and VMs deleted. We will try to save them for you.\n\nIt may be best to cancel navigation and click the \"End Lab\" or \"Save Lab\" button, instead.";
+        };
+
+        var pasteboxKbEvent = function(e) {
+            if (document.activeElement !== pasteBox) return;
+
+            client.guac.sendKeyEvent(0, 0xFFE3);
+            client.guac.sendKeyEvent(0, 0xFFE9);
+
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+        };
+
+        window.addEventListener('keydown', pasteboxKbEvent, true);
+        window.addEventListener('keyup', pasteboxKbEvent, true);
+        window.addEventListener('keypress', pasteboxKbEvent, true);
+
+        document.addEventListener('paste',
+            function(e) {
+                if (document.activeElement !== pasteBox) {
+                    return;
+                }
+                if (typeof e.clipboardData === 'undefined') {
+                    var text = window.clipboardData.getData('Text');
+                } else {
+                    var text = e.clipboardData.getData('text/plain');
+                }
+
+                client.sendKeys(text);
+
+                if (pasteBoxOpen) $('#paste-box-dropdown').dropdown('toggle');
+            });
+
+        var checkVmStateTimeout;
+        
+        function checkVmState(connecting) {
+            $('.connection-error-box,#display').hide();
+            $('#display-error-checking').show();
+
+            if (checkVmStateTimeout) clearTimeout(checkVmStateTimeout);
+
+            var vmId = $('#vm-dropdown-menu a.active').data('vmId');
+
+            $.ajax({
+                url: '/Labs/NVmControl/f2def404-29f7-e911-abe3-00155de2c913/' + vmId + '/get-state',
+                type: 'get',
+                success: function(data) {
+                    $('.connection-error-box').hide();
+                    switch(data) {
+                    case 'stopped':
+                    case 'saved':
+                        $('#display-error-stopped').show();
+                        break;
+                    case 'starting':
+                        $('#display-error-starting').show();
+                        checkVmStateTimeout = setTimeout(function() { checkVmState(false); }, 2000);
+                        break;
+                    case 'stopping':
+                        $('#display-error-stopping').show();
+                        checkVmStateTimeout = setTimeout(function() { checkVmState(false); }, 2000);
+                        break;
+                    case 'saving':
+                        $('#display-error-checking').show();
+                        checkVmStateTimeout = setTimeout(function() { checkVmState(false); }, 2000);
+                        break;
+                    case 'started':
+                        if (connecting) {
+                            $('#display-error').show();
+                        } else {
+                            $('#vm-dropdown-menu a.active').triggerHandler('click');
+                        }
+                        break;
+                    default:
+                        $('#display-error-contact').show();
+                        break;
+                    }
+                },
+                error: function() {
+                    $('#display-error-contact').show();
+                }
+            });
+        }
+
+        var envId = "f5def404-29f7-e911-abe3-00155de2c913";
+
+        var Client = Client || {};
+
+        Client.Rde = function(displayElement) {
+            this.tunnelUrl = 'wss://remote.labsonline.it/wsTunnel';
+            this.guac = null;
+            this.mouse = null;
+            this.keyboard = null;
+            this.tunnel = null;
+            this.enhancedMode = false;
+            this.resizeTimeout = null;
+            this.keysPressed = [];
+
+            var KEYSYM_CTRL = 0xFFE3;
+            var KEYSYM_ALT = 0xFFE9;
+            var KEYSYM_DELETE = 0xFFFF;
+            
+            var self = this;
+            
+            var onkeydown = function(keysym) {
+                self.guac.sendKeyEvent(1, keysym);
+                self.registerKeypress(keysym);
+            };
+
+            var onkeyup = function(keysym) {
+                self.guac.sendKeyEvent(0, keysym);
+                self.unregisterKeypress(keysym);
+            };
+
+            this.initialize = function() {
+                this.tunnel = new Guacamole.WebSocketTunnel(this.tunnelUrl);
+                this.guac = new Guacamole.Client(this.tunnel);
+                this.guac.onerror = function() {
+                    self.enhancedMode = false;
+                    $('#enhanced-mode-switch').prop('checked', false);
+                    checkVmState(true);
+                }
+
+                window.onresize = function() {
+                    if (self.resizeTimeout) window.clearTimeout(self.resizeTimeout);
+                    self.resizeTimeout = window.setTimeout(function() {
+                        window.clearTimeout(self.resizeTimeout);
+                        if (self.enhancedMode) {
+                            var outerOuterDisplay = document.getElementById('outer-display');
+                            self.guac.sendSize(outerOuterDisplay.offsetWidth, outerOuterDisplay.offsetHeight);
+                        }
+                    }, 300);
+                };
+                
+                displayElement.appendChild(this.guac.getDisplay().getElement());
+
+                window.onunload = function() {
+                    self.guac.disconnect();
+                };
+
+                this.mouse = new Guacamole.Mouse(this.guac.getDisplay().getElement());
+
+                this.mouse.onmousedown = function(mouseState) {
+                    self.guac.sendMouseState(mouseState);
+                };
+                this.mouse.onmouseup = function(mouseState) {
+                    self.guac.sendMouseState(mouseState);
+                };
+                this.mouse.onmousemove = function(mouseState) {
+                    self.guac.sendMouseState(mouseState);
+                };
+
+                this.keyboard = new Guacamole.Keyboard(document);
+                this.captureKeyboard();
+            };
+            
+            this.captureKeyboard = function() {
+                this.keyboard.onkeyup = onkeyup;
+                this.keyboard.onkeydown = onkeydown;
+            }
+            
+            this.releaseKeyboard = function() {
+                this.keyboard.onkeyup = null;
+                this.keyboard.onkeydown = null;
+            }
+            
+            this.registerKeypress = function(keysym) {
+                this.keysPressed.push(keysym);
+            }
+            
+            this.unregisterKeypress = function(keysym) {
+                var index = this.keysPressed.indexOf(keysym);
+                if (index === -1) return;
+                this.keysPressed.splice(index, 1);
+            }
+            
+            this.unregisterAllKeypresses = function() {
+                var self = this;
+                this.keysPressed.forEach(function(keysym) {
+                    self.guac.sendKeyEvent(0, keysym);
+                    if (keysym === KEYSYM_ALT) {
+                        self.guac.sendKeyEvent(1, keysym);
+                        self.guac.sendKeyEvent(0, keysym);
+                    }
+                });
+                this.keysPressed = [];
+            }
+
+            this.connect = function(envId, vmId) {
+                var self = this;
+
+                try {
+                    this.guac.disconnect();
+                } catch (e) { /* ignore */
+                }
+
+                window.setTimeout(function() {
+                        var connectionString = 'eid=' + envId + '&vid=' + vmId;
+                        if (self.enhancedMode) {
+                            var outerDisplay = document.getElementById('outer-display');
+                            var supportedAudioFormats = Guacamole.AudioPlayer.getSupportedTypes();
+                            connectionString += '&enhanced=1&width=' + outerDisplay.offsetWidth + '&height=' + outerDisplay.offsetHeight + '&audio=' + supportedAudioFormats.join('&audio=');
+                        }
+                        self.guac.connect(connectionString);
+                    },
+                    500);
+            };
+            
+            this.toggleEnhancedMode = function(enabled) {
+                this.enhancedMode = enabled;
+                $('#enhanced-mode-switch').prop('checked', enabled);
+                $('#vm-dropdown-menu a.active').first().triggerHandler('click');
+            };
+
+            this.initialize();
+
+            this.sendCad = function() {
+                this.unregisterAllKeypresses();
+                this.guac.sendKeyEvent(1, KEYSYM_CTRL);
+                this.guac.sendKeyEvent(1, KEYSYM_ALT);
+                this.guac.sendKeyEvent(1, KEYSYM_DELETE);
+                this.guac.sendKeyEvent(0, KEYSYM_CTRL);
+                this.guac.sendKeyEvent(0, KEYSYM_ALT);
+                this.guac.sendKeyEvent(0, KEYSYM_DELETE);
+            };
+
+            this.sendKeys = function(text) {
+                var self = this;
+                this.unregisterAllKeypresses();
+                text = text.replace(/\r\n?/g, "\n");
+                var strArr = text.split("");
+                
+                var sendKey = function(strArr) {
+                    if (strArr.length === 0) return;
+                    
+                    var char = strArr.shift();
+                    
+                    var codepoint = char.charCodeAt(0);
+                    var keysym = codepoint;
+                    if (codepoint >= 0x0100) {
+                        keysym = 0x01000000 | codepoint;
+                    }
+                    self.guac.sendKeyEvent(1, keysym);
+                    self.guac.sendKeyEvent(0, keysym);
+                    
+                    window.setTimeout(sendKey, 10, strArr);
+                }
+                
+                sendKey(strArr);
+            };
+        };
+
+        var client = new Client.Rde(document.getElementById('display'));
+        
+        var vmCredentialsTarget = document.getElementById('vm-credentials-target');
+        var vmCredentialsTemplate = Handlebars.compile(document.getElementById('vm-credentials-template').innerHTML);
+        function showCredentialsForVm(vmCredentials) {
+            vmCredentialsTarget.innerHTML = vmCredentialsTemplate(vmCredentials);
+        }
+
+        function showVmContextMenus(vmId) {
+            var vmContextMenuDropdowns = $('.vm-context-menu-dropdown');
+            vmContextMenuDropdowns.each(function(vmCintextMenuDropdownIndex, vmCOntextMenuDropdownElement) {
+                var vmContextMenuDropdown = $(vmCOntextMenuDropdownElement);
+                vmContextMenuDropdown.toggle(false);
+
+                var vmContextMenus = vmContextMenuDropdown.find('.vm-context-menu');
+                vmContextMenus.toggle(false);
+
+                vmContextMenus.each(function(vmContextMenuIndex, vmContextMenuElement) {
+                    var vmContextMenu = $(vmContextMenuElement);
+                    if (vmContextMenu.data('vmId') === vmId) {
+                        vmContextMenu.toggle(true);
+                        vmContextMenuDropdown.toggle(true);
+                    }
+                });
+            });
+        }
+
+        var vmItems = $('#vm-dropdown-menu a');
+        vmItems.on(
+            'click',
+            function() {
+                if (checkVmStateTimeout) {
+                    clearTimeout(checkVmStateTimeout);
+                }
+                $('#vm-dropdown-menu a').removeClass('active');
+                var $this = $(this);
+                $this.addClass('active');
+                client.connect(envId, $this.data('vmId'));
+                $('#vm-dropdown-btn').text($this.text());
+                $('.connection-error-box').hide();
+                $('#display').show();
+                showCredentialsForVm($this.data('vmCredentials'));
+                showVmContextMenus($this.data('vmId'));
+            }).first().triggerHandler('click');
+
+        var selectVm = function(vmName) {
+            vmItems.each(function(i, el) {
+                if (el.dataset.vmName === vmName) {
+                    $(el).triggerHandler('click');
+                }
+            });
+        };
+
+        document.addEventListener('select-vm', function(e) {
+            selectVm(e.detail);
+        });
+
+        $('#cad-btn').on('click',
+            function() {
+                client.sendCad();
+                $(this).blur();
+            });
+        
+        var pasteTextHandler = function() {
+            var stringToSend = $(this).data('text');
+            if ($(this).hasClass('paste-enter')) {
+                stringToSend += "\n";
+            }
+            if ($(this).hasClass('paste-tab')) {
+                stringToSend += "\t";;
+            }
+            client.sendKeys(stringToSend);
+        };
+
+        $('.paste-text').on('click', pasteTextHandler);
+        $('#vm-credentials-target').on('click', '.paste-credential', pasteTextHandler);
+
+        $('.reconnect-display-btn').on('click',
+            function() {
+                $('#vm-dropdown-menu a.active').triggerHandler('click');
+                $(this).blur();
+            });
+
+        var infoModal = $('#launch-info-modal');
+        var errataModel = $('#launch-errata-modal');
+        if (infoModal.data('show') === true) {
+            infoModal.modal('show');
+            if (errataModel.data('show') === true) {
+                $('#info-modal-ok-btn').on('click',
+                    function() {
+                        window.setTimeout(function() { errataModel.modal('show'); }, 500);
+                    });
+            }
+        } else if (errataModel.data('show') === true) {
+            errataModel.modal('show');
+        }
+
+        $('.power-op').on('click',
+            function() {
+                var op = $(this).data('op');
+                var vmId = $('#vm-dropdown-menu a.active').first().data('vmId');
+                $.ajax({
+                    url: '/Labs/NVmControl/f2def404-29f7-e911-abe3-00155de2c913/' + vmId + '/' + op,
+                    type: 'get',
+                    success: function() {
+                        if (op === 'start') {
+                            checkVmState(false);
+                        }
+                    },
+                    error: function() {
+                        alert('An error occurred whilst carrying out that power operation');
+                    }
+                });
+                $(this).blur();
+            });
+        
+        $('#enhanced-mode-switch').on('click', function() {
+            client.toggleEnhancedMode($(this).is(':checked'));
+            $(this).blur();
+        });
+
+        var timerTarget = $("#lab-timer");
+        var timerTargetTimer = $("#lab-timer-timer");
+        var timerWarning = $('#lab-timer-warning');
+        var warningThreshold = 14;
+        var canExtend = true;
+
+        $('#stopwatch').popover();
+        timerWarning.popover({
+            template:
+                '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header bg-warning"></h3><div class="popover-body"></div></div>',
+            trigger: 'manual',
+            placement: 'top',
+            content:
+                '<div class="text-center"><div class="mb-2">You may extend by a further 60 minutes:</div>' +
+                    '<button id="extend-timer-btn" class="btn btn-success">Extend</button>' +
+                    '<button id="ignore-timer-btn" class="btn btn-secondary ml-2">Ignore</button>' +
+                    '</div>',
+            html: true,
+            title: '<i class="fa fa-exclamation-triangle"></i> Your Lab will end soon',
+            boundary: 'window'
+        });
+
+        $('body').on('click',
+            '#extend-timer-btn',
+            function() {
+                $('#extend-timer-btn').attr('disabled', true).html('Requesting...');
+                $.ajax({
+                    url: '/Modules/AddTime/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'post',
+                    success: function(data) {
+                        startTimer(data);
+                        timerTarget.removeClass('badge-warning').addClass('badge-secondary');
+                        timerWarning.popover('hide');
+                    },
+                    error: function() {
+                        alert('There was an error extending your lab expiry time. Please try again or contact support');
+                    }
+                });
+            });
+        $('body').on('click',
+            '#ignore-timer-btn',
+            function() {
+                timerWarning.popover('toggle');
+            });
+
+        $('.popover-help').popover({
+            container: "body",
+            placement: "top",
+            trigger: "hover",
+            boundary: "window"
+        });
+
+        var timer = new Timer();
+
+        function startTimer(seconds) {
+            if (timer.isRunning()) {
+                timer.stop();
+            }
+
+            timer.start({
+                precision: 'seconds',
+                startValues: { seconds: seconds },
+                target: { seconds: 0 },
+                countdown: true
+            });
+        }
+
+        function showTimerWarning() {
+            timerWarning.popover('show');
+            timerTarget.removeClass('badge-secondary')
+                .addClass('badge-warning')
+                .on('click',
+                    function() {
+                        timerWarning.popover('toggle');
+                    });
+        }
+
+        timerTargetTimer.html(timer.getTimeValues().toString());
+
+        timer.addEventListener('secondsUpdated',
+            function(e) {
+                var timeValues = timer.getTimeValues();
+                timerTargetTimer.html(timeValues.toString());
+            });
+
+        timer.addEventListener('minutesUpdated',
+            function(e) {
+                var timeValues = timer.getTimeValues();
+                if (canExtend && timeValues.days === 0 && timeValues.hours === 0 && timeValues.minutes === warningThreshold) {
+                    showTimerWarning();
+                }
+            });
+
+        timer.addEventListener('started',
+            function(e) {
+                var timeValues = timer.getTimeValues();
+                if (canExtend && timeValues.days === 0 && timeValues.hours === 0 && timeValues.minutes <= warningThreshold) {
+                    showTimerWarning();
+                }
+            });
+
+        timer.addEventListener('targetAchieved',
+            function() {
+                window.onbeforeunload = null;
+                window.location.replace('/Modules/ExpireLab/f2def404-29f7-e911-abe3-00155de2c913');
+            });
+
+        startTimer(28799);
+
+        $('#screenshotBtn').on(
+            'click',
+            function() {
+                var canvas = $('#display canvas').first();
+                this.href = canvas[0].toDataURL();
+                this.filename = 'screenshot.png';
+                this.download = 'screenshot.png';
+            });
+
+        $('.dvd-image-item').on('click',
+            function() {
+                var self = $(this);
+                $.ajax({
+                    url: '/Labs/InsertIsoImage/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        VmId: self.data('vmId'),
+                        DiskDriveId: self.data('diskDriveId'),
+                        MediaImageId: self.data('mediaImageId')
+                    }),
+                    dataType: 'json',
+                    error: function() {
+                        alert('An error occurred whilst inserting a DVD');
+                    }
+                });
+            });
+        $('.dvd-drive-eject-btn').on('click',
+            function() {
+                var self = $(this);
+                $.ajax({
+                    url: '/Labs/EjectIsoImage/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        VmId: self.data('vmId'),
+                        DiskDriveId: self.data('diskDriveId')
+                    }),
+                    dataType: 'json',
+                    error: function() {
+                        alert('An error occurred whilst ejecting a DVD');
+                    }
+                });
+            });
+        $('.net-switch-item').on('click',
+            function() {
+                var self = $(this);
+                $.ajax({
+                    url: '/Labs/ConnectNetAdapterSwitch/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        VmId: self.data('vmId'),
+                        VNetAdapterId: self.data('netAdapterId'),
+                        VSwitchId: self.data('switchId')
+                    }),
+                    dataType: 'json',
+                    error: function() {
+                        alert('An error occurred whilst changing network connections');
+                    }
+                });
+            });
+
+        $('.fd-image-item').on('click',
+            function() {
+                var self = $(this);
+                $.ajax({
+                    url: '/Labs/InsertFdImage/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        VmId: self.data('vmId'),
+                        MediaImageId: self.data('mediaImageId')
+                    }),
+                    dataType: 'json',
+                    error: function() {
+                        alert('An error occurred whilst inserting a floppy disk image');
+                    }
+                });
+            });
+        $('.fd-drive-eject-btn').on('click',
+            function() {
+                var self = $(this);
+                $.ajax({
+                    url: '/Labs/EjectFdImage/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        VmId: self.data('vmId')
+                    }),
+                    dataType: 'json',
+                    error: function() {
+                        alert('An error occurred whilst ejecting a floppy disk image');
+                    }
+                });
+            });
+
+        var labDns = false;
+
+        function clearDnsRecords() {
+            $('.dns-records').each(function() {
+                var el = $(this);
+                el.html('');
+            });
+        }
+        function showDnsRecords() {
+            $('.dns-records').each(function() {
+                var el = $(this);
+                if (el.find('tr').length > 0) {
+                    el.show();
+                } else {
+                    el.siblings('.no-dns-records').show();
+                }
+            });
+        }
+        function showDnsLoading() {
+            $('.dns-records,.no-dns-records').hide();
+            $('.dns-records-loading').show();
+        }
+        function hideDnsLoading() {
+            $('.dns-records-loading').hide();
+        }
+        function appendDnsEntries(data) {
+            appendARecords(data.ARecords);
+            appendAaaaRecords(data.AaaaRecords);
+            appendCnameRecords(data.CnameRecords);
+            appendMxRecords(data.MxRecords);
+            appendSrvRecords(data.SrvRecords);
+            appendTxtRecords(data.TxtRecords);
+        }
+        function setLabZoneName(zoneName) {
+            $('span.dns-zone-name').html(zoneName);
+        }
+        var aRecordsBody = $('#lab_ui_a-records');
+        var aaaaRecordsBody = $('#lab_ui_aaaa-records');
+        var cnameRecordsBody = $('#lab_ui_cname-records');
+        var mxRecordsBody = $('#lab_ui_mx-records');
+        var srvRecordsBody = $('#lab_ui_srv-records');
+        var txtRecordsBody = $('#lab_ui_txt-records');
+        function getEditDeleteCell() {
+            return $('<td/>')
+                .append($('<a href="#" class="dns-record-edit-btn dns-record-op-btn text-black mr-2" data-op="edit"/>').append($('<i class="fas fa-edit"></i>')))
+                .append($('<a href="#" class="dns-record-delete-btn dns-record-op-btn text-danger" data-op="delete"/>').append($('<i class="fas fa-trash-alt"></i>')));
+        }
+        function appendARecords(aRecords) {
+            aRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'a');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('ipv4Address', record.Ipv4Address);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Ipv4Address));
+                row.append(getEditDeleteCell());
+                aRecordsBody.append(row);
+            });
+        }
+        function appendAaaaRecords(aaaaRecords) {
+            aaaaRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'aaaa');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('ipv6Address', record.Ipv6Address);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Ipv6Address));
+                row.append(getEditDeleteCell());
+                aaaaRecordsBody.append(row);
+            });
+        }
+        function appendCnameRecords(cnameRecords) {
+            cnameRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'cname');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('cname', record.Cname);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Cname));
+                row.append(getEditDeleteCell());
+                cnameRecordsBody.append(row);
+            });
+        }
+        function appendMxRecords(mxRecords) {
+            mxRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'mx');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('preference', record.Preference);
+                row.data('exchange', record.Exchange);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Preference));
+                row.append($('<td/>').html(record.Exchange));
+                row.append(getEditDeleteCell());
+                mxRecordsBody.append(row);
+            });
+        }
+        function appendSrvRecords(srvRecords) {
+            srvRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'srv');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('priority', record.Priority);
+                row.data('weight', record.Weight);
+                row.data('port', record.Port);
+                row.data('target', record.Target);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Priority));
+                row.append($('<td/>').html(record.Weight));
+                row.append($('<td/>').html(record.Port));
+                row.append($('<td/>').html(record.Target));
+                row.append(getEditDeleteCell());
+                srvRecordsBody.append(row);
+            });
+        }
+        function appendTxtRecords(txtRecords) {
+            txtRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'txt');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('value', record.Value);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Value));
+                row.append(getEditDeleteCell());
+                txtRecordsBody.append(row);
+            });
+        }
+        function loadLabDns(id) {
+            showDnsLoading();
+            clearDnsRecords();
+            $.ajax({
+                url: '/LabDomains/GetLabDnsEntries/' + id,
+                type: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    setLabZoneName(data.FqZoneName);
+                    appendDnsEntries(data);
+                },
+                complete: function() {
+                    hideDnsLoading();
+                    showDnsRecords();
+                }
+            });
+        }
+
+        var dnsForms = {
+            "a": $('#lab_ui_a-record-form'),
+            "aaaa": $('#lab_ui_aaaa-record-form'),
+            "cname": $('#lab_ui_cname-record-form'),
+            "mx": $('#lab_ui_mx-record-form'),
+            "srv": $('#lab_ui_srv-record-form'),
+            "txt": $('#lab_ui_txt-record-form')
+        };
+        var dnsFormsModal = $('#lab_ui_lab-dns-modal');
+        var dnsFormsModalButtons = dnsFormsModal.find('.modal-footer button');
+        function hideForms() {
+            $('.dns-record-form').hide().removeClass('active');
+        }
+        function showRecordForm(type) {
+            dnsForms[type].show().addClass('active');
+        }
+        function resetRecordFormFields(type) {
+            dnsForms[type].find('input,textarea').val('').removeAttr('readonly');
+            dnsForms[type].find('input[name="Delete"]').val('false');
+        }
+        function fillRecordForm(type, data) {
+            var fields = dnsForms[type].find('input,textarea');
+            fields.each(function() {
+                var fieldName = this.name.charAt(0).toLowerCase() + this.name.slice(1);
+                if (fieldName in data) {
+                    this.value = data[fieldName];
+                }
+            });
+        }
+        function disableNameField(type) {
+            dnsForms[type].find('input[name="Name"]').attr('readonly', true);
+        }
+        function hideDnsDeleteButton() {
+            $('#delete-dns-record-btn').hide();
+        }
+        function showDnsDeleteButton() {
+            $('#delete-dns-record-btn').show();
+        }
+        function disableDnsFormButtons() {
+            dnsFormsModalButtons.attr('disabled', true);
+        }
+        function enableDnsFormButtons() {
+            dnsFormsModalButtons.removeAttr('disabled');
+        }
+        function disableDnsOpButtons() {
+            $('a.dns-record-op-btn').addClass('disabled');
+        }
+        function enableDnsOpButtons() {
+            $('a.dns-record-op-btn').removeClass('disabled');
+        }
+        function setDeleteFlag() {
+            dnsFormsModal.find('form.active:first input[name="Delete"]').val('true');
+        }
+        function registerDnsClickEvents() {
+            dnsFormsModal.on('hidden.bs.modal', function() {
+                client.captureKeyboard();
+                enableDnsOpButtons();
+            });
+            dnsFormsModal.on('shown.bs.modal', function() {
+                client.releaseKeyboard();
+            });
+            $('a.add-dns-record-btn').on('click', function(e) {
+                hideForms();
+                var type = $(this).data('recordType');
+                if (type in dnsForms) {
+                    showRecordForm(type);
+                    resetRecordFormFields(type);
+                    hideDnsDeleteButton();
+                    enableDnsFormButtons();
+                    dnsFormsModal.modal('show');
+                }
+
+                e.preventDefault();
+            });
+            $('tbody.dns-records').on('click', 'a.dns-record-op-btn', function(e) {
+                e.preventDefault();
+
+                if ($(this).hasClass('disabled')) return;
+
+                hideForms();
+                var record = $(this).closest('tr').data();
+                var op = $(this).data('op');
+                if (!record.recordType in dnsForms) {
+                    return;
+                }
+
+                disableDnsOpButtons();
+                
+                if (op === 'edit') {
+                    showRecordForm(record.recordType);
+                    resetRecordFormFields(record.recordType);
+                    disableNameField(record.recordType);
+                    showDnsDeleteButton();
+                    fillRecordForm(record.recordType, record);
+                    enableDnsFormButtons();
+                    dnsFormsModal.modal('show');
+                    return;
+                }
+                
+                if (op === 'delete') {
+                    showRecordForm(record.recordType);
+                    resetRecordFormFields(record.recordType);
+                    fillRecordForm(record.recordType, record);
+                    setDeleteFlag();
+                    dnsFormsModal.find('form.active').trigger('submit');
+                    return;
+                }
+
+                enableDnsOpButtons();
+            });
+            $('.dns-record-form').on('submit', function(e) {
+                e.preventDefault();
+                var form = $(this);
+                var formData = new FormData(form[0]);
+
+                $.ajax({
+                    url: form.attr('action'),
+                    type: 'post',
+                    processData: false,
+                    contentType: false,
+                    data: formData,
+                    success: function() {
+                        loadLabDns('f2def404-29f7-e911-abe3-00155de2c913');
+                        dnsFormsModal.modal('hide');
+                    },
+                    complete: function() {
+                        enableDnsFormButtons();
+                        enableDnsOpButtons();
+                    }
+                });
+            });
+            $('#save-dns-record-btn').on('click', function(e) {
+                e.preventDefault();
+                disableDnsFormButtons();
+                dnsFormsModal.find('form.active').trigger('submit');
+            });
+            $('#delete-dns-record-btn').on('click', function(e) {
+                e.preventDefault();
+                setDeleteFlag();
+                $('#save-dns-record-btn').triggerHandler('click');
+            });
+        }
+
+        if (labDns) {
+            document.addEventListener('DOMContentLoaded', function() {
+                loadLabDns('f2def404-29f7-e911-abe3-00155de2c913');
+                registerDnsClickEvents();
+            });
+        }
+
+        var fullscreenBtn = document.getElementById('fullscreen-btn');
+        var exitFullscreenBtn = document.getElementById('exit-fullscreen-btn');
+
+        fullscreenBtn.addEventListener('click',
+            function() {
+                var elem = document.documentElement;
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.mozRequestFullScreen) { /* Firefox */
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                    elem.msRequestFullscreen();
+                }
+            });
+        
+        exitFullscreenBtn.addEventListener('click',
+            function() {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { /* Firefox */
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { /* IE/Edge */
+                    document.msExitFullscreen();
+                }
+            });
+        
+        document.addEventListener('fullscreenchange', function() {
+            if (document.fullscreenElement === null) {
+                exitFullscreenBtn.style.display = 'none';
+                fullscreenBtn.style.display = '';
+            } else {
+                exitFullscreenBtn.style.display = '';
+                fullscreenBtn.style.display = 'none';
+            }
+        });
+        
+        document.body.style.backgroundColor = '#fff';
+    </script>
+
+
+
+</body></html>

@@ -1,0 +1,17 @@
+C:\Users\Formation\source\repos\mongo01\mongo01\bin\Debug\netcoreapp3.0\mongo01.exe
+C:\Users\Formation\source\repos\mongo01\mongo01\bin\Debug\netcoreapp3.0\mongo01.deps.json
+C:\Users\Formation\source\repos\mongo01\mongo01\bin\Debug\netcoreapp3.0\mongo01.runtimeconfig.json
+C:\Users\Formation\source\repos\mongo01\mongo01\bin\Debug\netcoreapp3.0\mongo01.runtimeconfig.dev.json
+C:\Users\Formation\source\repos\mongo01\mongo01\bin\Debug\netcoreapp3.0\mongo01.dll
+C:\Users\Formation\source\repos\mongo01\mongo01\bin\Debug\netcoreapp3.0\mongo01.pdb
+C:\Users\Formation\source\repos\mongo01\mongo01\bin\Debug\netcoreapp3.0\DnsClient.dll
+C:\Users\Formation\source\repos\mongo01\mongo01\bin\Debug\netcoreapp3.0\MongoDB.Bson.dll
+C:\Users\Formation\source\repos\mongo01\mongo01\bin\Debug\netcoreapp3.0\MongoDB.Driver.dll
+C:\Users\Formation\source\repos\mongo01\mongo01\bin\Debug\netcoreapp3.0\MongoDB.Driver.Core.dll
+C:\Users\Formation\source\repos\mongo01\mongo01\bin\Debug\netcoreapp3.0\SharpCompress.dll
+C:\Users\Formation\source\repos\mongo01\mongo01\obj\Debug\netcoreapp3.0\mongo01.AssemblyInfoInputs.cache
+C:\Users\Formation\source\repos\mongo01\mongo01\obj\Debug\netcoreapp3.0\mongo01.AssemblyInfo.cs
+C:\Users\Formation\source\repos\mongo01\mongo01\obj\Debug\netcoreapp3.0\mongo01.csproj.CopyComplete
+C:\Users\Formation\source\repos\mongo01\mongo01\obj\Debug\netcoreapp3.0\mongo01.dll
+C:\Users\Formation\source\repos\mongo01\mongo01\obj\Debug\netcoreapp3.0\mongo01.pdb
+C:\Users\Formation\source\repos\mongo01\mongo01\obj\Debug\netcoreapp3.0\mongo01.csprojAssemblyReference.cache

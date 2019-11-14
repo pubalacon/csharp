@@ -1,0 +1,6 @@
+C:\Users\Formation\source\repos\ConsoleApp12\ConsoleApp12\obj\Debug\ConsoleApp12.csprojAssemblyReference.cache
+C:\Users\Formation\source\repos\ConsoleApp12\ConsoleApp12\bin\Debug\ConsoleApp12.exe.config
+C:\Users\Formation\source\repos\ConsoleApp12\ConsoleApp12\bin\Debug\ConsoleApp12.exe
+C:\Users\Formation\source\repos\ConsoleApp12\ConsoleApp12\bin\Debug\ConsoleApp12.pdb
+C:\Users\Formation\source\repos\ConsoleApp12\ConsoleApp12\obj\Debug\ConsoleApp12.exe
+C:\Users\Formation\source\repos\ConsoleApp12\ConsoleApp12\obj\Debug\ConsoleApp12.pdb

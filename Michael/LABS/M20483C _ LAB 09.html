@@ -1,0 +1,1835 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M20483C | All Modules - Programming in C# - go  deploy</title>
+
+        <link rel="stylesheet" href="./M20483C _ LAB 09_files/godeployMain.min.css">
+    <link rel="stylesheet" href="./M20483C _ LAB 09_files/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" type="text/css" href="./M20483C _ LAB 09_files/labs.min.css">
+
+</head>
+<body class="" style="background-color: rgb(255, 255, 255);">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top py-0 bg-brand" id="main-navbar">
+        <span class="h1 navbar-brand brandname my-1 ">go  deploy</span>
+            <div class="navbar-text h5 font-weight-normal my-1 ml-1 mr-auto collapse navbar-collapse" id="navbar-title">M20483C | All Modules - Programming in C#</div>
+        <div class="collapse navbar-collapse header-nav" id="header-nav-menu">
+<form action="https://lms.godeploy.it/Account/LogOff?Length=6" class="navbar-right" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="RzxbEh_C_O1u5siOYspFt00Ol_pPjLWXqtcnvwlY-dJm6E7EbwmIrsKZCvKJfCvOh6f4vZroMcEYhsZAIZRplrPKUtyTs0-x5ENFzroXHbqwX7SBnmXvi2sCbI-RqxCbQVMqLMB8kVrSYGC2VA9k8A2"></form>        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" style="font-size: 1.4em;" href="https://lms.godeploy.it/RedirectToHome" title="Home">
+                    <i class="far fa-home" title="Home"></i>
+                </a>
+            </li>
+                                    
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 1.4em;" aria-label="Account profile icon that opens a list of account options">
+                    <i class="far fa-user-circle"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right shadow" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="https://lms.godeploy.it/Manage">oheinrich@orange.fr</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="javascript:document.getElementById(&#39;logoutForm&#39;).submit()">Log off</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a href="https://godeploy.zendesk.com/hc/en-us" target="_blank" class="nav-link" style="font-size: 1.4em;"><span class="sr-only">Help icon that links to the help articles and allows you to create support requests</span><i class="far fa-question-circle" title="Help"></i></a>
+            </li>
+        </ul>
+</div>
+
+
+    </nav>
+
+    
+
+<main id="lab-container" class="h-100" data-mei-id="f2def404-29f7-e911-abe3-00155de2c913">
+    <h1 class="sr-only">M20483C | All Modules - Programming in C#</h1>
+    <div class="row h-100 no-gutters">
+        <div class="col bg-light h-100 position-relative" style="overflow-y: auto; flex-basis: calc(67.9696% - 3px);" id="lab-content-container">
+
+            <nav class="navbar navbar-expand navbar-light bg-gray-400" id="lab-navbar">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link tab-link" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#" id="tab-home-link" data-target="tab-home" data-link-text="Home" data-scroll-top="0">Home</a>
+        </li>
+            <li class="nav-item active bg-light">
+                <a class="nav-link tab-link" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#" id="tab-lab-guide-link" data-target="tab-lab-guide" aria-valuetext="Lab Guide">Lab Guide</a>
+            </li>
+            </ul>
+</nav>
+
+
+            <div class="container position-relative pt-2 lab-tab" id="tab-home" style="display: none;">
+                    <div class="mb-4">
+        <h6 class="mt-0"><i class="fa fa-server"></i> Virtual Machines</h6>
+
+        <div class="popover-help mb-2" data-toggle="popover" data-content="Select Virtual Machine" data-original-title="" title="">
+            <div class="dropdown" id="vm-dropdown">
+                <button class="btn btn-sm btn-outline-secondary dropdown-toggle btn-block text-left" type="button" id="vm-dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">20483C-SEA-DEV1</button>
+                <div class="dropdown-menu" aria-labelledby="vm-dropdown-btn" id="vm-dropdown-menu">
+                        <a class="dropdown-item active" data-vm-id="f7def404-29f7-e911-abe3-00155de2c913" data-vm-credentials="[{&quot;Username&quot;:&quot;Admin&quot;,&quot;Password&quot;:&quot;Pa55w.rd&quot;}]" data-has-optical-drive="false" data-has-floppy-drive="true)" data-vm-name="20483C-SEA-DEV1" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">20483C-SEA-DEV1</a>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" id="cad-btn" class="btn btn-sm btn-outline-secondary mb-1">Ctrl+Alt+Del</button>
+
+        <button class="btn btn-sm btn-outline-secondary reconnect-display-btn popover-help mb-1" data-toggle="popover" data-content="Reconnect selected VM Display" data-original-title="" title="">
+            <i class="fas fa-sync"></i>
+        </button>
+
+        <div class="btn-group popover-help mb-1" data-toggle="popover" data-content="Selected VM Power Operations" data-original-title="" title="">
+            <div class="dropdown">
+                <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="far fa-bolt"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="pwr-dropdown-btn" id="pwr-dropdown-menu">
+                    <a class="dropdown-item text-danger power-op" data-op="stop" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">Power Off</a>
+                    <a class="dropdown-item text-danger power-op" data-op="start" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">Power On</a>
+                    <a class="dropdown-item text-danger power-op" data-op="restart" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">Restart</a>
+                        <a class="dropdown-item text-danger power-op" data-op="reset-gateway" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">Reset Gateway</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div id="vm-credentials-target" style="font-size: 80%" class="mt-3">
+            <table>
+                <tbody><tr>
+                    <th class="pr-2">Username</th>
+                    <td>Admin</td>
+                    <td class="pl-2"><i class="fas fa-paste paste-credential paste-tab" data-text="Admin"></i></td>
+                </tr>
+                <tr>
+                    <th class="pr-2">Password</th>
+                    <td>Pa55w.rd</td>
+                    <td class="pl-2"><i class="fas fa-paste paste-credential paste-enter" data-text="Pa55w.rd"></i></td>
+                </tr>
+            </tbody></table>
+    </div>
+    </div>
+    <hr>
+
+
+
+<div class="mb-4 position-relative" aria-label="VM Tools">
+    <h6><i class="fa fa-wrench"></i> Tools</h6>
+        <button id="fullscreen-btn" type="button" class="btn btn-sm btn-outline-secondary popover-help mb-1" data-toggle="popover" data-content="Fullscreen mode" data-original-title="" title="">
+            <i class="far fa-expand-alt"></i>
+        </button>
+        <button id="exit-fullscreen-btn" type="button" class="btn btn-sm btn-outline-secondary popover-help mb-1" style="display: none;" data-toggle="popover" data-content="Exit fullscreen mode" data-original-title="" title="">
+            <i class="far fa-compress-alt"></i>
+        </button>
+        <a id="screenshotBtn" class="btn btn-sm btn-outline-secondary popover-help mb-1" data-toggle="popover" data-content="Take a screenshot" data-original-title="" title="">
+            <i class="far fa-file-image"></i>
+        </a>
+        <div class="btn-group mb-1 popover-help" data-toggle="popover" data-content="Paste into the VM" data-original-title="" title="">
+            <div class="dropdown" id="paste-box-dropdown">
+                <button class="btn btn-sm btn-outline-secondary" type="button" id="paste-box-dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="far fa-paste"></i>
+                </button>
+                <div class="dropdown-menu bg-success text-white" aria-labelledby="paste-box-dropdown-btn">
+                    <div class="px-3 py-2 position-relative">
+                        <p class="text-center mt-0"><strong>Paste Activated</strong></p>
+                        <p class="text-justify mb-0">You may paste using Ctrl + V or right click here and click 'Paste'</p>
+                        <textarea id="paste-box" class="position-absolute h-100 w-100" style="opacity: 0; top: 0; left: 0" disabled=""></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="btn-group mb-1 popover-help" data-toggle="popover" data-content="Exit Lab Options" data-original-title="" title="">
+        <div class="dropdown">
+            <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Exit Lab
+            </button>
+            <div class="dropdown-menu" aria-labelledby="end-dropdown-btn" id="end-dropdown-menu">
+                    <a class="dropdown-item text-success" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#" data-toggle="modal" data-target="#save-lab-modal">Exit and Save Lab</a>
+                <a class="dropdown-item text-danger" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#" data-toggle="modal" data-target="#end-lab-modal">Exit and End Lab</a>
+            </div>
+        </div>
+    </div>
+        <div class="custom-control custom-checkbox mt-2 popover-help" data-toggle="popover" data-content="Switching Enhanced Mode on enables audio and improved display resolution features" data-original-title="" title="">
+            <input type="checkbox" class="custom-control-input" id="enhanced-mode-switch">
+            <label class="custom-control-label" for="enhanced-mode-switch">Enhanced Mode</label>
+        </div>
+</div>
+
+<div class="mb-4">
+    <h6><i class="fas fa-info-circle"></i> Lab Information</h6>
+    <p>
+            <a data-toggle="modal" data-target="#launch-info-modal" aria-haspopup="true" aria-expanded="false" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">Show Lab Information</a>
+            <br>
+        <a href="https://godeploy.zendesk.com/hc/en-us/requests/new" target="_blank">Submit a Support Request</a>
+    </p>
+</div>
+
+            </div>
+
+<div id="tab-lab-guide" class="lab-tab container position-relative pt-4" style="">
+    <div id="labGuideContainer">
+        <h6><i class="fas fa-book"></i> Lab Guide</h6>
+        <div class="py-2">
+            <button class="btn btn-sm btn-brand popout-btn d-block w-100" data-link="/Labs/LabGuide/f2def404-29f7-e911-abe3-00155de2c913">
+                View in Another Window
+            </button>
+        </div>
+        <div class="form-inline">
+<div class="btn-group btn-group-sm mr-2" id="labGuidePageSelector" style="">
+    <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lab 9</button>
+    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 26px, 0px); top: 0px; left: 0px; will-change: transform;">
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=87a301e4-e6ac-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="87a301e4-e6ac-e811-8373-00155d026631">Lab 1</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=1c980c6c-43fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="1c980c6c-43fd-e811-8373-00155d026631">Lab 2</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=5d3d54a8-43fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="5d3d54a8-43fd-e811-8373-00155d026631">Lab 3</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=e61a2fd7-43fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="e61a2fd7-43fd-e811-8373-00155d026631">Lab 4</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=8bf74af0-43fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="8bf74af0-43fd-e811-8373-00155d026631">Lab 5</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=f90df406-44fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="f90df406-44fd-e811-8373-00155d026631">Lab 6</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=780fb7b3-44fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="780fb7b3-44fd-e811-8373-00155d026631">Lab 7</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=3a876de6-44fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="3a876de6-44fd-e811-8373-00155d026631">Lab 8</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=88a3d872-45fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link active" data-page-id="88a3d872-45fd-e811-8373-00155d026631">Lab 9</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=ca0447b3-45fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="ca0447b3-45fd-e811-8373-00155d026631">Lab 10</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=7db412da-45fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="7db412da-45fd-e811-8373-00155d026631">Lab 11</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=5a3fb3fa-45fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="5a3fb3fa-45fd-e811-8373-00155d026631">Lab 12</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=87bd782a-46fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="87bd782a-46fd-e811-8373-00155d026631">Lab 13</a>
+    </div>
+</div>
+
+            <div class="custom-control custom-checkbox ml-2">
+                <input type="checkbox" class="custom-control-input" id="show-screenshots-checkbox">
+                <label class="custom-control-label" for="show-screenshots-checkbox">Show Screenshots</label>
+            </div>
+        </div>
+        <div class="lab-markdown reduced-headers pt-2" id="lab-guide-area"><h3 id="module-9-designing-the-user-interface-for-a-graphical-application">Module 9: Designing the User Interface for a Graphical Application</h3>
+<div class=" alert alert-danger"><p>Important Information about running this class.</p>
+<p>YOU MUST SAVE THE LABS EVERY DAY.  YOU SHOULD ALSO CHECK THE LABS ARE SAVED BY LOGGING BACK INTO THE LMS.</p>
+<p>FAILING TO DO SO WILL RESULT IN LOSS OF WORK WHICH IS UNRECOVERABLE.  GO DEPLOY WILL BE UNABLE TO RECOVER LABS WHICH HAVE NOT BEEN SAVED!</p></div>
+<h4 id="lab-customizing-student-photographs-and-styling-the-application">Lab: Customizing Student Photographs and Styling the Application</h4>
+<div class=" alert alert-secondary"><p><strong>Scenario</strong></p>
+<p>Now that you and The School of Fine Arts are happy with the basic functionality of the application, you need to improve the appearance of the interface to give the user a nicer experience through the use of animations and a consistent look and feel.</p>
+<p>You decide to create a StudentPhoto control that will enable you to display photographs of students in the student list and other views.<br>
+You also decide to create a fluid method for a teacher to remove a student from their class.<br>
+Finally, you want to update the look of the various views, keeping their look consistent across the application.</p>
+<p><strong>Objectives</strong></p>
+<p>After completing this lab, you will be able to:</p>
+<ul>
+<li>Create and use user controls.</li>
+<li>Use styles and animations.</li>
+</ul>
+<p><strong>Lab Setup</strong></p>
+<p>Estimated Time: <strong>90 minutes</strong></p></div>
+<h4 id="exercise-1-customizing-the-appearance-of-student-photographs">Exercise 1: Customizing the Appearance of Student Photographs</h4>
+<div class=" alert alert-secondary"><p><strong>Scenario</strong></p>
+<p>In this exercise, you will customize the appearance of student photographs in the production application.</p>
+<ul>
+<li>You will begin by creating a StudentPhoto user control that will host the photographs on the various pages in the UI.</li>
+<li>Then you will lay out the user controls and write code to raise the Student_Click method when a user clicks a student photograph.</li>
+<li>Next, you will add a remove button with a red X to the user control that users can click to remove a student from a class. When a user places their mouse over the button, the opacity of the button and the photograph will change.</li>
+<li>Finally, you will run the application to verify that the student's image is displayed correctly on the StudentsPage view.</li>
+</ul></div>
+<h5 id="task-1-create-the-studentphoto-user-control">Task 1: Create the StudentPhoto user control</h5>
+<ol>
+<li><p>Open <strong>Visual Studio 2017</strong>.</p></li>
+<li><p>In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p></li>
+<li><p>In the <strong>Open Project</strong> dialog box, browse to <strong>[Repository Root]\Allfiles\Mod09\Labfiles\Starter\Exercise 1</strong>, click <strong>Grades.sln</strong>, and then click <strong>Open</strong>.</p></li>
+</ol>
+<div class=" alert alert-warning"><p><strong>Note:</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p></div>
+<ol start="4">
+<li><p>In <strong>Solution Explorer</strong>, right-click <strong>Solution 'Grades'</strong>, and then click <strong>Properties</strong>.</p></li>
+<li><p>On the <strong>Startup Project</strong> page, click <strong>Multiple startup projects</strong>. Set <strong>Grades.Web</strong> and <strong>Grades.WPF</strong> to <strong>Start</strong>, and then click <strong>OK</strong>.</p></li>
+<li><p>In <strong>Solution Explorer</strong>, expand <strong>Grades.WPF</strong>, and then expand <strong>Controls</strong>.</p></li>
+<li><p>Right-click <strong>Controls</strong>, point to <strong>Add</strong>, and then click <strong>New Item</strong>.</p></li>
+<li><p>In the <strong>Add New Item - Grades.WPF</strong> dialog box, in the template list, click <strong>User Control (WPF)</strong>.</p></li>
+<li><p>In the <strong>Name</strong> text box, type <strong>StudentPhoto</strong>, and then click <strong>Add</strong>.</p></li>
+<li><p>In the XAML editor, modify the markup to look like the following markup (the changes are highlighted as bold text):</p>
+<pre class="single-paste line-paster language-xml"><code class="xml  language-xml"> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>UserControl</span> <span class="token attr-name"><span class="token namespace">x:</span>Class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Grades.WPF.StudentPhoto<span class="token punctuation">"</span></span>
+              <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://schemas.microsoft.com/winfx/2006/xaml/presentation<span class="token punctuation">"</span></span>
+              <span class="token attr-name"><span class="token namespace">xmlns:</span>x</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://schemas.microsoft.com/winfx/2006/xaml<span class="token punctuation">"</span></span>
+              <span class="token attr-name"><span class="token namespace">xmlns:</span>mc</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://schemas.openxmlformats.       org/markup-compatibility/2006<span class="token punctuation">"</span></span> 
+              <span class="token attr-name"><span class="token namespace">xmlns:</span>d</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://schemas.microsoft.com/expression/blend/2008<span class="token punctuation">"</span></span> 
+              <span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Grid</span><span class="token punctuation">&gt;</span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Image</span> <span class="token attr-name">Stretch</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UniformToFill<span class="token punctuation">"</span></span> <span class="token attr-name">Source</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{Binding File}<span class="token punctuation">"</span></span> <span class="token attr-name">Margin</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>8<span class="token punctuation">"</span></span>  <span class="token punctuation">/&gt;</span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Image</span> <span class="token attr-name">Margin</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">Source</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>../Images/Image_Frame.png<span class="token punctuation">"</span></span> <span class="token attr-name">Stretch</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Fill<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TextBlock</span> <span class="token attr-name">Text</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{Binding Name}<span class="token punctuation">"</span></span> <span class="token attr-name">Style</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{StaticResource LabelCenter}<span class="token punctuation">"</span></span>       <span class="token attr-name">FontSize</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>16<span class="token punctuation">"</span></span> <span class="token attr-name">VerticalAlignment</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Bottom<span class="token punctuation">"</span></span> <span class="token attr-name">Margin</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>8,0,14.583,8<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Grid</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>UserControl</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-paster-rows"><span data-code=" &lt;UserControl x:Class=&quot;Grades.WPF.StudentPhoto&quot;
+              xmlns=&quot;http://schemas.microsoft.com/winfx/2006/xaml/presentation&quot;
+              xmlns:x=&quot;http://schemas.microsoft.com/winfx/2006/xaml&quot;
+              xmlns:mc=&quot;http://schemas.openxmlformats.       org/markup-compatibility/2006&quot; 
+              xmlns:d=&quot;http://schemas.microsoft.com/expression/blend/2008&quot; 
+              &gt;
+     &lt;Grid&gt;
+         &lt;Image Stretch=&quot;UniformToFill&quot; Source=&quot;{Binding File}&quot; Margin=&quot;8&quot;  /&gt;
+         &lt;Image Margin=&quot;0&quot; Source=&quot;../Images/Image_Frame.png&quot; Stretch=&quot;Fill&quot; /&gt;
+         &lt;TextBlock Text=&quot;{Binding Name}&quot; Style=&quot;{StaticResource LabelCenter}&quot;       FontSize=&quot;16&quot; VerticalAlignment=&quot;Bottom&quot; Margin=&quot;8,0,14.583,8&quot; /&gt;
+     &lt;/Grid&gt;
+ &lt;/UserControl&gt;" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In <strong>Solution Explorer</strong>, expand <strong>StudentPhoto.xaml</strong>, and then double-click <strong>StudentPhoto.xaml.csharp</strong>. </p></li>
+<li><p>In the code editor, delete all of the <strong>using</strong> directives, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">using</span> System<span class="token punctuation">.</span>Windows<span class="token punctuation">.</span>Controls<span class="token punctuation">;</span>
+<span class="token keyword">using</span> System<span class="token punctuation">.</span>Windows<span class="token punctuation">.</span>Media<span class="token punctuation">.</span>Animation<span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="using System.Windows.Controls;
+using System.Windows.Media.Animation;" class="paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>Modify the <strong>namespace Grades.WPF.Controls</strong> code to look like the following code: </p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">namespace</span> Grades<span class="token punctuation">.</span>WPF<span aria-hidden="true" class="line-paster-rows"><span data-code="namespace Grades.WPF" class="paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-2-display-the-students-photographs-in-the-studentspage-view">Task 2: Display the students' photographs in the StudentsPage view</h5>
+<ol>
+<li><p>In <strong>Solution Explorer</strong>, expand <strong>Views</strong>, and then double-click <strong>StudentsPage.xaml</strong>.</p></li>
+<li><p>Locate the <strong>&lt;!-- TODO: Exercise 1: Task 2a: Define the DataTemplate for the "list" ItemsControl including the StudentPhoto user control --&gt;</strong> comment, click at the end of the comment, press Enter, and then type the following markup:</p>
+<pre class="single-paste line-paster language-xml"><code class="xml  language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ItemsControl.ItemTemplate</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DataTemplate</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Grid</span> <span class="token attr-name">Margin</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+             &lt;local:StudentPhoto Height="150" Width="127.5" Cursor="Hand" <span aria-hidden="true" class="line-paster-rows"><span data-code="&lt;ItemsControl.ItemTemplate&gt;
+    &lt;DataTemplate&gt;
+        &lt;Grid Margin=&quot;8&quot;&gt;
+             &lt;local:StudentPhoto Height=&quot;150&quot; Width=&quot;127.5&quot; Cursor=&quot;Hand&quot; " class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+</ol>
+<div class=" alert alert-warning"><p><strong>Note:</strong> When you type an opening tag for an element, such as <strong>&lt;ItemsControl.ItemTemplate&gt;</strong>, the XAML editor automatically creates a corresponding closing tag, such as <strong>&lt;/ItemsControl.ItemTemplate&gt;</strong>. For the purposes of these instructions, and to ensure that the code appears in the correctly commented place, delete any closing tags that are generated automatically. You will add them in at the appropriate point in the XAML markup in later steps.</p></div>
+<h5 id="task-3-enable-the-user-to-display-the-details-for-a-student">Task 3: Enable the user to display the details for a student</h5>
+<ol>
+<li><p>In <strong>StudentsPage.xaml</strong>, locate the <strong>&lt;!-- TODO: Exercise 1: Task 3a: Set the handler for the click event for the StudentPhoto control --&gt;</strong> comment, and above the comment, click at the end of the <strong>Cursor="Hand"</strong> markup.</p></li>
+<li><p>Press Spacebar, and then type the following markup:</p>
+<pre class="single-paste line-paster language-xml"><code class="xml  language-xml">MouseLeftButtonUp="Student_Click" /&gt;<span aria-hidden="true" class="line-paster-rows"><span data-code="MouseLeftButtonUp=&quot;Student_Click&quot; /&gt;" class="paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3b: Review the following event handler</strong> task.</p></li>
+<li><p>Review the <strong>Student_Click</strong> method which raises the <strong>StudentSelected</strong> event to display the details of the student when a user clicks their photo.</p></li>
+</ol>
+<h5 id="task-4-add-a-remove-button-to-the-studentspage-view">Task 4: Add a Remove button to the StudentsPage view</h5>
+<ol>
+<li><p>In <strong>StudentsPage.xaml</strong>, Locate the <strong>&lt;!-- TODO: Exercise 1: Task 4a: Add the "Remove" button to the DataTemplate --&gt;</strong> comment, click at the end of the comment, press Enter, and then type the following markup:</p>
+<pre class="single-paste line-paster language-xml"><code class="xml  language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Grid</span> <span class="token attr-name">VerticalAlignment</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Top<span class="token punctuation">"</span></span> <span class="token attr-name">HorizontalAlignment</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Right<span class="token punctuation">"</span></span> <span class="token attr-name">Background</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#00000000<span class="token punctuation">"</span></span>    <span class="token attr-name">Opacity</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>0.3<span class="token punctuation">"</span></span> <span class="token attr-name">Width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>20<span class="token punctuation">"</span></span> <span class="token attr-name">Height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>20<span class="token punctuation">"</span></span> <span class="token attr-name">ToolTipService.ToolTip</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Remove from class<span class="token punctuation">"</span></span>    <span class="token attr-name">Tag</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{Binding}<span class="token punctuation">"</span></span> <span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Image</span> <span class="token attr-name">Source</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>../Images/delete.png<span class="token punctuation">"</span></span> <span class="token attr-name">Stretch</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Uniform<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Grid</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-paster-rows"><span data-code="&lt;Grid VerticalAlignment=&quot;Top&quot; HorizontalAlignment=&quot;Right&quot; Background=&quot;#00000000&quot;    Opacity=&quot;0.3&quot; Width=&quot;20&quot; Height=&quot;20&quot; ToolTipService.ToolTip=&quot;Remove from class&quot;    Tag=&quot;{Binding}&quot; &gt;
+    &lt;Image Source=&quot;../Images/delete.png&quot; Stretch=&quot;Uniform&quot; /&gt;
+&lt;/Grid&gt;" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 4b: Review the following event handler</strong> task.</p></li>
+<li><p>The code in this method increases the opacity of the grid containing the remove button and reduces the opacity of the grid containing the photo when the user moves the mouse over the delete image.</p></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 4c: Review the following event handler</strong> task.</p></li>
+<li><p>The code in this method reduces the opacity of the grid that contains the remove icon and increases the opacity of the grid that contains the photo when the user moves the mouse away from the deleted image.</p></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 4d: Review the following event handler</strong> task.</p></li>
+<li><p>The code in this method removes a student from the current teacher's class when a user clicks the remove icon.</p></li>
+<li><p>In <strong>StudentsPage.xaml</strong>, locate the <strong>&lt;!-- TODO: Exercise 1: Task 4d: Add event handlers to highlight the "Remove" button as the mouse enters and exits this control --&gt;</strong> comment, and above the comment, click at the end of the <strong>Tag="{Binding}"</strong> code (before the closing &gt; tag), press Enter, and then type the following markup:</p>
+<pre class="single-paste line-paster language-xml"><code class="xml  language-xml">MouseEnter="RemoveStudent_MouseEnter" MouseLeave="RemoveStudent_MouseLeave"
+MouseLeftButtonUp="RemoveStudent_Click"<span aria-hidden="true" class="line-paster-rows"><span data-code="MouseEnter=&quot;RemoveStudent_MouseEnter&quot; MouseLeave=&quot;RemoveStudent_MouseLeave&quot;
+MouseLeftButtonUp=&quot;RemoveStudent_Click&quot;" class="paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>Click at the end of the <strong>&lt;Image Source="../Images/delete.png" Stretch="Uniform" /&gt;</strong> markup, press Enter, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">        <span class="token operator">&lt;</span><span class="token operator">/</span>Grid<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>DataTemplate<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>ItemsControl<span class="token punctuation">.</span>ItemTemplate<span class="token operator">&gt;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="        &lt;/Grid&gt;
+    &lt;/DataTemplate&gt;
+&lt;/ItemsControl.ItemTemplate&gt;" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-5-display-all-students-for-the-current-teacher">Task 5: Display all students for the current teacher</h5>
+<ol>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 5a: Bind the list of students to the "list" ItemsControl</strong> task.</p></li>
+<li><p>In this method, review the code that finds all students for the current teacher and constructs a list of students.</p></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 5a: Bind the list of students to the "list" ItemsControl</strong> task.</p></li>
+<li><p>In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">list<span class="token punctuation">.</span>ItemsSource <span class="token operator">=</span> resultData<span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="list.ItemsSource = resultData;" class="paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-6-build-and-test-the-application">Task 6: Build and test the application</h5>
+<ol>
+<li><p>On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p></li>
+<li><p>On the <strong>Debug</strong> menu, click <strong>Start Without Debugging</strong>.</p></li>
+<li><p>When the application starts, in the <strong>Username</strong> text box, type <strong>vallee</strong>, in the <strong>Password</strong> text box, type <strong>password99</strong>, and then click <strong>Log on</strong>.</p></li>
+<li><p>Verify that the student list appears with photographs.</p></li>
+<li><p>In the student list, place the mouse over the red <strong>x</strong> for the student <strong>Weber</strong>.</p></li>
+<li><p>Verify that the student photograph for becomes transparent and that the red <strong>x</strong> becomes opaque.</p></li>
+<li><p>Move the cursor away from the red x and verify that the student photograph becomes opaque and that the red x becomes transparent.</p></li>
+<li><p>Click the red <strong>x</strong> for <strong>Weber</strong>, verify that the <strong>Student</strong> message box appears, and then click <strong>Yes</strong>.</p></li>
+<li><p>Verify that <strong>Weber</strong> is removed from the student list.</p></li>
+<li><p>Close the application, and then close <strong>Visual Studio</strong>.</p></li>
+</ol>
+<div class=" alert alert-success"><p><strong>Result:</strong> After completing this exercise, the application will display the photographs of each student on the <strong>Student List</strong> page.</p></div>
+<h4 id="exercise-2-styling-the-logon-view">Exercise 2: Styling the Logon View</h4>
+<div class=" alert alert-secondary"><p><strong>Scenario</strong></p>
+<p>In this exercise, you will update the LogonPage control to have the same look and feel as the rest of the application.</p>
+<ul>
+<li>First, you will define styles for the username and password text boxes on the LogonPage of the application. You will use the Style property of each control to apply the styles that you have defined.</li>
+<li>Then you will define some global styles for use across the entire application.<br>
+You will define a style for labels and a style for text.</li>
+<li>Finally, you will run the application to verify that the styling of the text elements has changed throughout the application.</li>
+</ul></div>
+<h5 id="task-1-define-and-apply-styles-for-the-logonpage-view">Task 1: Define and apply styles for the LogonPage view</h5>
+<ol>
+<li><p>In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p></li>
+<li><p>In the <strong>Open Project</strong> dialog box, browse to <strong>[Repository Root]\Allfiles\Mod09\Labfiles\Starter\Exercise 2</strong>, click <strong>Grades.sln</strong>, and then click <strong>Open</strong>.</p></li>
+</ol>
+<div class=" alert alert-warning"><p><strong>Note:</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p></div>
+<ol start="3">
+<li><p>In <strong>Solution Explorer</strong>, right-click <strong>Solution 'Grades'</strong>, and then click <strong>Properties</strong>.</p></li>
+<li><p>On the <strong>Startup Project</strong> page, click <strong>Multiple startup projects</strong>, set <strong>Grades.Web</strong> and <strong>Grades.WPF</strong> to <strong>Start</strong>, and then click <strong>OK</strong>.</p></li>
+<li><p>In <strong>Solution Explorer</strong>, expand <strong>Grades.WPF</strong>, expand <strong>Views</strong>, and then double-click <strong>LogonPage.xaml</strong>.</p></li>
+<li><p>In the XAML editor, locate the <strong>&lt;!-- TODO: Exercise 2: Task 1a: Define the LoginTextBoxStyle --\&gt;</strong> comment.</p></li>
+<li><p>Click at the end of the comment, press Enter, and then type the following markup:</p>
+<pre class="single-paste line-paster language-xml"><code class="xml  language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>UserControl.Resources</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Style</span> <span class="token attr-name"><span class="token namespace">x:</span>Key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>LoginTextBoxStyle<span class="token punctuation">"</span></span> <span class="token attr-name">BasedOn</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{StaticResource TextBoxStyle}<span class="token punctuation">"</span></span>    <span class="token attr-name">TargetType</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{x:Type TextBox}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Setter</span> <span class="token attr-name">Property</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Margin<span class="token punctuation">"</span></span> <span class="token attr-name">Value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>5<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Setter</span> <span class="token attr-name">Property</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>FontSize<span class="token punctuation">"</span></span> <span class="token attr-name">Value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>24<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Setter</span> <span class="token attr-name">Property</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>MaxLength<span class="token punctuation">"</span></span> <span class="token attr-name">Value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>16<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Style</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-paster-rows"><span data-code="&lt;UserControl.Resources&gt;
+    &lt;Style x:Key=&quot;LoginTextBoxStyle&quot; BasedOn=&quot;{StaticResource TextBoxStyle}&quot;    TargetType=&quot;{x:Type TextBox}&quot;&gt;
+        &lt;Setter Property=&quot;Margin&quot; Value=&quot;5&quot; /&gt;
+        &lt;Setter Property=&quot;FontSize&quot; Value=&quot;24&quot;/&gt;
+        &lt;Setter Property=&quot;MaxLength&quot; Value=&quot;16&quot; /&gt;
+    &lt;/Style&gt;" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>Locate the <strong>&lt;!-- TODO: Exercise 2: Task 1b: Apply the LoginTextBoxStyle to the "username" TextBox --&gt;</strong> comment.</p></li>
+<li><p>In the line of markup below the comment, delete the <strong>FontSize</strong> property, and then modify the markup as shown in bold below:</p>
+<pre class="single-paste line-paster language-xml"><code class="xml  language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>TextBox</span> <span class="token attr-name"><span class="token namespace">x:</span>Name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span> <span class="token attr-name">Grid.Row</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token attr-name">Grid.Column</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token attr-name">Style</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{StaticResource  LoginTextBoxStyle}<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span aria-hidden="true" class="line-paster-rows"><span data-code="&lt;TextBox x:Name=&quot;username&quot; Grid.Row=&quot;1&quot; Grid.Column=&quot;1&quot; Style=&quot;{StaticResource  LoginTextBoxStyle}&quot; /&gt;" class="paste"></span></span></code></pre></li>
+<li><p>Locate the <strong>&lt;!-- TODO: Exercise 2: Task 1c: Define the PasswordBoxStyle --&gt;</strong> comment.</p></li>
+<li><p>Click at the end of the comment, press Enter, and then type the following markup:</p>
+<pre class="single-paste line-paster language-xml"><code class="xml  language-xml">    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Style</span> <span class="token attr-name"><span class="token namespace">x:</span>Key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>PasswordBoxStyle<span class="token punctuation">"</span></span> <span class="token attr-name">TargetType</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{x:Type PasswordBox}<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Setter</span> <span class="token attr-name">Property</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Margin<span class="token punctuation">"</span></span> <span class="token attr-name">Value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>5<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Setter</span> <span class="token attr-name">Property</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>FontSize<span class="token punctuation">"</span></span> <span class="token attr-name">Value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>24<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Setter</span> <span class="token attr-name">Property</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>MaxLength<span class="token punctuation">"</span></span> <span class="token attr-name">Value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>16<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Style</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>UserControl.Resources</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-paster-rows"><span data-code="    &lt;Style x:Key=&quot;PasswordBoxStyle&quot; TargetType=&quot;{x:Type PasswordBox}&quot;&gt;
+        &lt;Setter Property=&quot;Margin&quot; Value=&quot;5&quot; /&gt;
+        &lt;Setter Property=&quot;FontSize&quot; Value=&quot;24&quot;/&gt;
+        &lt;Setter Property=&quot;MaxLength&quot; Value=&quot;16&quot; /&gt;
+    &lt;/Style&gt;
+&lt;/UserControl.Resources&gt;" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>Locate the <strong>TODO: Exercise 2: Task 1d: Apply the PasswordBoxStyle to the "password" TextBox</strong> comment.</p></li>
+<li><p>In the line of markup below the comment, delete the <strong>FontSize</strong> property, and then modify the markup as shown in bold below:</p>
+<pre class="single-paste line-paster language-xml"><code class="xml  language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PasswordBox</span> <span class="token attr-name"><span class="token namespace">x:</span>Name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">Grid.Row</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2<span class="token punctuation">"</span></span> <span class="token attr-name">Grid.Column</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token attr-name">Style</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{StaticResource PasswordBoxStyle}<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span aria-hidden="true" class="line-paster-rows"><span data-code="&lt;PasswordBox x:Name=&quot;password&quot; Grid.Row=&quot;2&quot; Grid.Column=&quot;1&quot; Style=&quot;{StaticResource PasswordBoxStyle}&quot; /&gt;" class="paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-2-define-global-styles-for-the-application">Task 2: Define global styles for the application</h5>
+<ol>
+<li><p>In <strong>Solution Explorer</strong>, expand <strong>Themes</strong>, and then double-click <strong>Generic.xaml</strong>.</p></li>
+<li><p>In the XAML editor, locate the <strong>&lt;!-- TODO: Exercise 2: Task 2a: Define the label styling used throughout the application --&gt;</strong> comment near the end of the file.</p></li>
+<li><p>Click in the blank line below the comment, and type the following markup:</p>
+<pre class="single-paste line-paster language-xml"><code class="xml  language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Setter</span> <span class="token attr-name">Property</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>TextWrapping<span class="token punctuation">"</span></span> <span class="token attr-name">Value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>NoWrap<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Setter</span> <span class="token attr-name">Property</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>FontFamily<span class="token punctuation">"</span></span> <span class="token attr-name">Value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Buxton Sketch<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Setter</span> <span class="token attr-name">Property</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>FontSize<span class="token punctuation">"</span></span> <span class="token attr-name">Value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>19<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Setter</span> <span class="token attr-name">Property</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Foreground<span class="token punctuation">"</span></span> <span class="token attr-name">Value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#FF303030<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span aria-hidden="true" class="line-paster-rows"><span data-code="&lt;Setter Property=&quot;TextWrapping&quot; Value=&quot;NoWrap&quot;/&gt;
+&lt;Setter Property=&quot;FontFamily&quot; Value=&quot;Buxton Sketch&quot;/&gt;
+&lt;Setter Property=&quot;FontSize&quot; Value=&quot;19&quot;/&gt;
+&lt;Setter Property=&quot;Foreground&quot; Value=&quot;#FF303030&quot; /&gt;" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>Locate the <strong>&lt;!-- TODO: Exercise 2: Task 2b: Define the text styling used throughout the application --&gt;</strong> comment.</p></li>
+<li><p>Click in the blank line below the comment, then type the following markup:</p>
+<pre class="single-paste line-paster language-xml"><code class="xml  language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Setter</span> <span class="token attr-name">Property</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>TextWrapping<span class="token punctuation">"</span></span> <span class="token attr-name">Value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>NoWrap<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Setter</span> <span class="token attr-name">Property</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>FontFamily<span class="token punctuation">"</span></span> <span class="token attr-name">Value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Buxton Sketch<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Setter</span> <span class="token attr-name">Property</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>FontSize<span class="token punctuation">"</span></span> <span class="token attr-name">Value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>12<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Setter</span> <span class="token attr-name">Property</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>TextAlignment<span class="token punctuation">"</span></span> <span class="token attr-name">Value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Left<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Setter</span> <span class="token attr-name">Property</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Foreground<span class="token punctuation">"</span></span> <span class="token attr-name">Value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#FF303030<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span aria-hidden="true" class="line-paster-rows"><span data-code="&lt;Setter Property=&quot;TextWrapping&quot; Value=&quot;NoWrap&quot;/&gt;
+&lt;Setter Property=&quot;FontFamily&quot; Value=&quot;Buxton Sketch&quot;/&gt;
+&lt;Setter Property=&quot;FontSize&quot; Value=&quot;12&quot;/&gt;
+&lt;Setter Property=&quot;TextAlignment&quot; Value=&quot;Left&quot; /&gt;
+&lt;Setter Property=&quot;Foreground&quot; Value=&quot;#FF303030&quot; /&gt;" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-3-build-and-test-the-application">Task 3: Build and test the application</h5>
+<ol>
+<li><p>On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p></li>
+<li><p>On the <strong>Debug</strong> menu, click <strong>Start Without Debugging.</strong></p></li>
+<li><p>When the application starts, in the <strong>Username</strong> text box, type <strong>vallee</strong>, and in the <strong>Password</strong> text box, type <strong>password99</strong>, and then click <strong>Log on</strong>.</p></li>
+<li><p>In the <strong>The School of Fine Arts</strong> window, verify that the styling of the text elements of the application has changed.</p>
+<p><img src="./M20483C _ LAB 09_files/bced037c-48e2-4586-ab31-27046e732a70_thumb.png" alt="Screenshot"></p></li>
+<li><p>Close the application.</p></li>
+<li><p>On the <strong>File</strong> menu, click <strong>Close Solution</strong>.</p></li>
+</ol>
+<div class=" alert alert-success"><p><strong>Result:</strong> After completing this exercise, the Logon view will be styled with a consistent look and feel.</p></div>
+<h4 id="exercise-3-animating-the-studentphoto-control-if-time-permits">Exercise 3: Animating the StudentPhoto Control (If Time Permits)</h4>
+<div class=" alert alert-secondary"><p><strong>Scenario</strong><br>
+In this exercise, you will update the StudentPhoto control to animate when the user places the mouse over it.</p>
+<ul>
+<li>First, you will define an animation for the StudentPhoto control, which will cause a student's photograph to pulse when a user places their mouse over it.</li>
+<li>You will then add event handlers for this animation and apply the animation to the control.</li>
+<li>Finally, you will run the application to verify that the animation executes correctly.</li>
+</ul></div>
+<h5 id="task-1-define-animations-for-the-studentphoto-control">Task 1: Define animations for the StudentPhoto control</h5>
+<ol>
+<li><p>In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p></li>
+<li><p>In the <strong>Open Project</strong> dialog box, browse to <strong>[Repository Root]\Allfiles\Mod09\Labfiles\Starter\Exercise 3</strong>, click <strong>Grades.sln</strong>, and then click <strong>Open</strong>.<br>
+  &gt;<strong>Note:</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p></li>
+<li><p>In <strong>Solution Explorer</strong>, right-click <strong>Solution 'Grades'</strong>, and then click <strong>Properties</strong>.</p></li>
+<li><p>On the <strong>Startup Project</strong> page, click <strong>Multiple startup projects</strong>. Set <strong>Grades.Web</strong> and <strong>Grades.WPF</strong> to <strong>Start</strong>, and then click <strong>OK</strong>.</p></li>
+<li><p>In <strong>Solution Explorer</strong>, in the <strong>Grades.WPF</strong> project, expand <strong>Controls</strong>, and then double-click <strong>StudentPhoto.xaml</strong>.</p></li>
+<li><p>In the XAML editor, locate the <strong>&lt;!-- TODO: Exercise 3: Task 1a: Define a ScaleTransform called "scale" --\&gt;</strong> comment.</p></li>
+<li><p>Click in the blank line below the comment, then type the following markup:</p>
+<pre class="single-paste line-paster language-xml"><code class="xml  language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>UserControl.RenderTransform</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ScaleTransform</span> <span class="token attr-name"><span class="token namespace">x:</span>Name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>scale<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>UserControl.RenderTransform</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-paster-rows"><span data-code="&lt;UserControl.RenderTransform&gt;
+    &lt;ScaleTransform x:Name=&quot;scale&quot; /&gt;
+&lt;/UserControl.RenderTransform&gt;" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the XAML editor, locate the <strong>&lt;!-- TODO: Exercise 3: Task 1b: Define animations for the "scale" transform--&gt;</strong> comment.</p></li>
+<li><p>Click in the blank line below the comment, then type the following markup.</p>
+<pre class="single-paste line-paster language-xml"><code class="xml  language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>UserControl.Resources</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Storyboard</span> <span class="token attr-name"><span class="token namespace">x:</span>Key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>sbMouseEnter<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DoubleAnimation</span> <span class="token attr-name">To</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1.1<span class="token punctuation">"</span></span> <span class="token attr-name">BeginTime</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>00:00:00<span class="token punctuation">"</span></span> <span class="token attr-name">Duration</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>00:00:00.05<span class="token punctuation">"</span></span>   <span class="token attr-name">Storyboard.TargetName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>scale<span class="token punctuation">"</span></span> <span class="token attr-name">Storyboard.TargetProperty</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ScaleX<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DoubleAnimation</span> <span class="token attr-name">To</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1.1<span class="token punctuation">"</span></span> <span class="token attr-name">BeginTime</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>00:00:00<span class="token punctuation">"</span></span> <span class="token attr-name">Duration</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>00:00:00.15<span class="token punctuation">"</span></span>   <span class="token attr-name">Storyboard.TargetName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>scale<span class="token punctuation">"</span></span> <span class="token attr-name">Storyboard.TargetProperty</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ScaleY<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Storyboard</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Storyboard</span> <span class="token attr-name"><span class="token namespace">x:</span>Key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>sbMouseLeave<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DoubleAnimation</span> <span class="token attr-name">To</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token attr-name">BeginTime</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>00:00:00<span class="token punctuation">"</span></span> <span class="token attr-name">Duration</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>00:00:00.05<span class="token punctuation">"</span></span>     <span class="token attr-name">Storyboard.TargetName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>scale<span class="token punctuation">"</span></span> <span class="token attr-name">Storyboard.TargetProperty</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ScaleX<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DoubleAnimation</span> <span class="token attr-name">To</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token attr-name">BeginTime</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>00:00:00<span class="token punctuation">"</span></span> <span class="token attr-name">Duration</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>00:00:00.15<span class="token punctuation">"</span></span>     <span class="token attr-name">Storyboard.TargetName</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>scale<span class="token punctuation">"</span></span> <span class="token attr-name">Storyboard.TargetProperty</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ScaleY<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Storyboard</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>UserControl.Resources</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-paster-rows"><span data-code="&lt;UserControl.Resources&gt;
+    &lt;Storyboard x:Key=&quot;sbMouseEnter&quot;&gt;
+        &lt;DoubleAnimation To=&quot;1.1&quot; BeginTime=&quot;00:00:00&quot; Duration=&quot;00:00:00.05&quot;   Storyboard.TargetName=&quot;scale&quot; Storyboard.TargetProperty=&quot;ScaleX&quot; /&gt;
+        &lt;DoubleAnimation To=&quot;1.1&quot; BeginTime=&quot;00:00:00&quot; Duration=&quot;00:00:00.15&quot;   Storyboard.TargetName=&quot;scale&quot; Storyboard.TargetProperty=&quot;ScaleY&quot; /&gt;
+    &lt;/Storyboard&gt;
+    &lt;Storyboard x:Key=&quot;sbMouseLeave&quot;&gt;
+        &lt;DoubleAnimation To=&quot;1&quot; BeginTime=&quot;00:00:00&quot; Duration=&quot;00:00:00.05&quot;     Storyboard.TargetName=&quot;scale&quot; Storyboard.TargetProperty=&quot;ScaleX&quot; /&gt;
+        &lt;DoubleAnimation To=&quot;1&quot; BeginTime=&quot;00:00:00&quot; Duration=&quot;00:00:00.15&quot;     Storyboard.TargetName=&quot;scale&quot; Storyboard.TargetProperty=&quot;ScaleY&quot; /&gt;
+    &lt;/Storyboard&gt;
+&lt;/UserControl.Resources&gt;" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-2-add-event-handlers-to-trigger-the-animations">Task 2: Add event handlers to trigger the animations</h5>
+<ol>
+<li><p>In <strong>Solution Explorer</strong>, expand <strong>StudentPhoto.xaml</strong>, and then double-click <strong>StudentPhoto.xaml.csharp</strong>.</p></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 3: Task 2a: Handle mouse events to trigger the storyboards that animate the photograph</strong> task.</p></li>
+<li><p>In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">OnMouseEnter</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Trigger the mouse enter animation to grow the size of the photograph currently under the mouse pointer</span>
+    <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>Resources<span class="token punctuation">[</span><span class="token string">"sbMouseEnter"</span><span class="token punctuation">]</span> <span class="token keyword">as</span> Storyboard<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">OnMouseLeave</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Trigger the mouse leave animation to shrink the size of the photograph currently under the mouse pointer to return it to its original size</span>
+    <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>Resources<span class="token punctuation">[</span><span class="token string">"sbMouseLeave"</span><span class="token punctuation">]</span> <span class="token keyword">as</span> Storyboard<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">Begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-paster-rows"><span data-code="public void OnMouseEnter()
+{
+    // Trigger the mouse enter animation to grow the size of the photograph currently under the mouse pointer
+    (this.Resources[&quot;sbMouseEnter&quot;] as Storyboard).Begin();
+}
+
+public void OnMouseLeave()
+{
+    // Trigger the mouse leave animation to shrink the size of the photograph currently under the mouse pointer to return it to its original size
+    (this.Resources[&quot;sbMouseLeave&quot;] as Storyboard).Begin();
+}" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In <strong>Solution Explorer</strong>, in <strong>Views</strong>, expand <strong>StudentsPage.xaml</strong>, and then double-click <strong>StudentsPage.xaml.csharp</strong>.</p></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 3: Task 2b: Forward the MouseEnter and MouseLeave events to the photograph control</strong> task.</p></li>
+<li><p>In the code editor, click in the blank space below the comment, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">Student_MouseEnter</span><span class="token punctuation">(</span><span class="token keyword">object</span> sender<span class="token punctuation">,</span> <span class="token class-name">MouseEventArgs</span> e<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Call the OnMouseEnter event handler on the specific photograph currently under the mouse pointer</span>
+    <span class="token punctuation">(</span><span class="token punctuation">(</span>StudentPhoto<span class="token punctuation">)</span>sender<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">OnMouseEnter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">Student_MouseLeave</span><span class="token punctuation">(</span><span class="token keyword">object</span> sender<span class="token punctuation">,</span> <span class="token class-name">MouseEventArgs</span> e<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Call the OnMouseLeave event handler on the specific photograph currently under the mouse pointer</span>
+    <span class="token punctuation">(</span><span class="token punctuation">(</span>StudentPhoto<span class="token punctuation">)</span>sender<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">OnMouseLeave</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-paster-rows"><span data-code="private void Student_MouseEnter(object sender, MouseEventArgs e)
+{
+    // Call the OnMouseEnter event handler on the specific photograph currently under the mouse pointer
+    ((StudentPhoto)sender).OnMouseEnter();
+}
+
+private void Student_MouseLeave(object sender, MouseEventArgs e)
+{
+    // Call the OnMouseLeave event handler on the specific photograph currently under the mouse pointer
+    ((StudentPhoto)sender).OnMouseLeave();
+}" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In <strong>Solution Explorer</strong>, double-click <strong>StudentsPage.xaml</strong>.</p></li>
+<li><p>In the XAML editor, locate the <strong>&lt;!-- TODO: Exercise 3: Task 2c: Specify the handlers for the MouseEnter and MouseLeave events --&gt;</strong> comment.</p></li>
+<li><p>Below the comment, click at the end of the <strong>MouseLeftButtonUp="Student_Click"</strong> markup, press the space bar, and then type the following markup:</p>
+<pre class="single-paste line-paster language-xml"><code class="xml  language-xml">MouseEnter="Student_MouseEnter" MouseLeave="Student_MouseLeave"<span aria-hidden="true" class="line-paster-rows"><span data-code="MouseEnter=&quot;Student_MouseEnter&quot; MouseLeave=&quot;Student_MouseLeave&quot;" class="paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-3-build-and-test-the-application-1">Task 3: Build and test the application</h5>
+<ol>
+<li><p>On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p></li>
+<li><p>On the <strong>Debug</strong> menu, click <strong>Start Without Debugging.</strong></p></li>
+<li><p>When the application starts, in the <strong>Username</strong> text box, type <strong>vallee</strong>, and in the <strong>Password</strong> text box, type <strong>password99</strong>, and then click <strong>Log on</strong>.</p></li>
+<li><p>Place your mouse over one of the students in the student list and verify that the photograph animates-it should expand and contract as the mouse passes over it.</p></li>
+<li><p>Close the application.</p></li>
+<li><p>On the <strong>File</strong> menu, click <strong>Close Solution</strong>.</p></li>
+</ol>
+<div class=" alert alert-success"><p><strong>Result:</strong> After completing this exercise, the Photograph control will be animated.</p></div>
+<div class=" alert alert-info"><p><strong>Congratulations!</strong>  You have now completed this lab.  You should ensure you save your lab environment.  Failure to do so will result in the loss of all work.</p></div></div>
+    </div>
+    <div id="labGuidePoppedOutContainer" class="text-center" style="display:none;">
+        <p>Your lab guide is open in another window</p>
+        <p class="text-muted"><i class="fal fa-window fa-9x"></i></p>
+        <p><button class="btn btn-brand d-block w-100 focus-popout-btn">Show Lab Guide</button></p>
+    </div>
+</div>
+
+
+                        <div class="lab-timer text-center bg-light p-2" id="lab-timer-container">
+                <div class="position-relative h-100 w-100" id="lab-timer-warning" data-original-title="" title="">
+                    <h2><span class="badge badge-secondary style colorDefinition size_lg" id="lab-timer">
+                        <i class="fas fa-stopwatch" id="stopwatch" data-toggle="popover" data-content="Time Remaining" data-trigger="hover" data-placement="top" data-original-title="" title=""></i>
+                        <span id="lab-timer-timer">07:54:57</span>
+                    </span></h2>
+                </div>
+            </div>
+
+        </div>
+        <div class="gutter gutter-horizontal" style="flex-basis: 6px;"></div><div class="col bg-dark" style="overflow: auto; flex-basis: calc(32.0304% - 3px);" id="lab-display-container">
+            <div style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 1;">
+    <div class="d-flex align-items-center justify-content-center" style="height: 100%; overflow: hidden" id="outer-display">
+
+        <div class="card border-warning connection-error-box" id="display-error-checking" style="display: none;">
+            <div class="card-header bg-warning border-0 text-white">Sorry, there was a problem connecting to your VM</div>
+            <div class="card-body text-center">
+                <p>We're checking your connection, please wait...</p>
+            </div>
+        </div>
+
+        <div class="card border-danger connection-error-box" id="display-error" style="display: none;">
+            <div class="card-header bg-danger border-0 text-white">Sorry, there was a problem connecting to your VM</div>
+            <div class="card-body text-center">
+                <button class="btn btn-sm btn-outline-secondary ml-1 reconnect-display-btn">Reconnect</button>
+            </div>
+        </div>
+
+        <div class="card border-danger connection-error-box" id="display-error-contact" style="display: none;">
+            <div class="card-header bg-danger border-0 text-white">Unexpected VM State</div>
+            <div class="card-body text-center">
+                <p>Your VM is in an unexpected state. Please <a href="mailto:support@godeploy.it">contact support</a>.</p>
+            </div>
+        </div>
+
+        <div class="card border-primary connection-error-box" id="display-error-stopped" style="display: none;">
+            <div class="card-header bg-primary border-0 text-white">Your VM is turned off</div>
+            <div class="card-body text-center">
+                <button class="btn btn-sm btn-outline-secondary ml-1 power-op" data-op="start">Power on</button>
+            </div>
+        </div>
+
+        <div class="card border-primary connection-error-box" id="display-error-starting" style="display: none;">
+            <div class="card-header bg-primary border-0 text-white">Your VM is turning on</div>
+            <div class="card-body text-center">
+                <p>Your VM is turning on, please wait...</p>
+            </div>
+        </div>
+
+        <div class="card border-primary connection-error-box" id="display-error-stopping" style="display: none;">
+            <div class="card-header bg-primary border-0 text-white">Your VM is turning off</div>
+            <div class="card-body text-center">
+                <p>Your VM is turning off, please wait...</p>
+            </div>
+        </div>
+
+        <div id="display" class="position-relative">
+            <div style="position: absolute; top: 0; left: 0; background-color: #000; z-index: -2; height: 100%;width:100%"></div>
+        <div style="position: relative; width: 1024px; height: 768px;"><div style="position: relative; width: 1024px; height: 768px; transform-origin: 0px 0px;"><div style="width: 1024px; height: 768px; position: absolute; left: 0px; top: 0px; overflow: hidden;"><canvas width="1024" height="768" style="z-index: -1; position: absolute; left: 0px; top: 0px;"></canvas></div><div style="width: 32px; height: 32px; position: absolute; left: 0px; top: 0px; overflow: hidden; transform: translate(-15px, -15px) matrix(1, 0, 0, 1, 0, 0);"><canvas width="64" height="64" style="z-index: -1; position: absolute; left: 0px; top: 0px;"></canvas></div></div></div></div>
+    </div>
+</div>
+
+        </div>
+    </div>
+</main>
+
+<div class="modal" tabindex="-1" role="dialog" id="end-lab-modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-warning text-white">
+                <h5 class="modal-title">Warning - you are about to end your lab</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                    <p>Any change you have made to your lab will be irrevocably lost and you will need to start again.</p>
+                    <p class="mb-0">You can, instead, save your lab and then continue from where you left off, later.</p>
+            </div>
+            <div class="modal-footer">
+                    <a href="https://lms.godeploy.it/Modules/SaveLab/f2def404-29f7-e911-abe3-00155de2c913" class="btn btn-link text-success confirmed-navigation">Save my Lab</a>
+                <a href="https://lms.godeploy.it/Modules/EndLab/f2def404-29f7-e911-abe3-00155de2c913" class="btn btn-danger confirmed-navigation" id="end-lab-btn">End my lab</a>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="save-lab-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h5 class="modal-title">Save your lab</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you wish to leave?</p>
+                    <p>Your lab will be saved for 7 days, after which it will be stopped and deleted.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://lms.godeploy.it/Modules/SaveLab/f2def404-29f7-e911-abe3-00155de2c913" class="btn btn-success confirmed-navigation">Save my Lab</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="launch-info-modal" data-show="true" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-white">
+                    <h5 class="modal-title">Important information about your lab</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>When launching Visual Studio you must sign in with a Microsoft Account or create a new one.&nbsp; The Visual Studio Community Edition trial has expired and is to be expected.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="info-modal-ok-btn">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" role="dialog" id="launch-errata-modal" data-show="false">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-white">
+                    <h5 class="modal-title">Important information about your lab</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p><br></p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="info-modal-ok-btn">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="modal" tabindex="-1" role="dialog" id="screenshot-modal">
+    <div class="modal-dialog modal-lg" role="document" style="max-width: 1024px;">
+        <div class="modal-content">
+            <div class="modal-body" id="screenshot-background" style="background-position: center center; background-repeat: no-repeat; background-size: auto 100%; height: 768px;">
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="lab_ui_lab-dns-modal" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">DNS Record</h5>
+            </div>
+            <div class="modal-body">
+                <form id="lab_ui_a-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditARecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-a-record-name-input">Name</label>
+                            <input id="dns-a-record-name-input" class="form-control" name="Name">
+                            <div class="text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dns-a-record-ipv4address-input">IPv4 Address</label>
+                            <input id="dns-a-record-ipv4address-input" class="form-control" name="Ipv4Address">
+                        </div>
+                    </div>
+                </form>
+                <form id="lab_ui_aaaa-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditAaaaRecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-aaaa-record-name-input">Name</label>
+                            <input id="dns-aaaa-record-name-input" class="form-control" name="Name">
+                            <div class="text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dns-aaaa-record-ipv6address-input">IPv6 Address</label>
+                            <input id="dns-aaaa-record-ipv6address-input" class="form-control" name="Ipv6Address">
+                        </div>
+                    </div>
+                </form>
+                <form id="lab_ui_cname-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditCnameRecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-cname-record-name-input">Name</label>
+                            <input id="dns-cname-record-name-input" class="form-control" name="Name">
+                            <div class="text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dns-cname-record-cname-input">CNAME</label>
+                            <input id="dns-cname-record-cname-input" class="form-control" name="Cname">
+                        </div>
+                    </div>
+                </form>
+                <form id="lab_ui_mx-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditMxRecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-mx-record-name-input">Name</label>
+                            <input id="dns-mx-record-name-input" class="form-control" name="Name">
+                            <div class="text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-6">
+                                <label for="dns-mx-record-preference-input">Preference</label>
+                                <input id="dns-mx-record-preference-input" class="form-control" name="Preference">
+                            </div>
+                            <div class="form-group col-18">
+                                <label for="dns-mx-record-exchange-input">Host</label>
+                                <input id="dns-mx-record-exchange-input" class="form-control" name="Exchange">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <form id="lab_ui_srv-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditSrvRecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-srv-record-name-input">Name</label>
+                            <input id="dns-srv-record-name-input" class="form-control" name="Name" placeholder="_service._protocol.name">
+                            <div class="row">
+                                <div class="col-12"><small class="text-muted">_service._protocol.name</small></div>
+                                <div class="col-12 text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-8">
+                                <label for="dns-srv-record-priority-input">Priority</label>
+                                <input id="dns-srv-record-priority-input" class="form-control" name="Priority">
+                            </div>
+                            <div class="form-group col-8">
+                                <label for="dns-srv-record-weight-input">Weight</label>
+                                <input id="dns-srv-record-weight-input" class="form-control" name="Weight">
+                            </div>
+                            <div class="form-group col-8">
+                                <label for="dns-srv-record-port-input">Port</label>
+                                <input id="dns-srv-record-port-input" class="form-control" name="Port">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dns-srv-record-target-input">Target</label>
+                            <input id="dns-srv-record-target-input" class="form-control" name="Target">
+                        </div>
+                    </div>
+                </form>
+                <form id="lab_ui_txt-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditTxtRecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-txt-record-name-input">Name</label>
+                            <input id="dns-txt-record-name-input" class="form-control" name="Name">
+                            <div class="text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dns-txt-record-value-input">Value</label>
+                            <textarea id="dns-txt-record-value-input" class="form-control" name="Value"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger mr-auto" id="delete-dns-record-btn">Delete</button>
+                <button type="button" class="btn btn-secondary" id="save-dns-record-btn">Save</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <script src="./M20483C _ LAB 09_files/jquery.min.js.téléchargement"></script>
+    <script src="./M20483C _ LAB 09_files/bootstrap.bundle.min.js.téléchargement"></script>
+    
+    <script src="./M20483C _ LAB 09_files/labs.js.téléchargement"></script>
+    <script src="./M20483C _ LAB 09_files/all.min.js.téléchargement"></script>
+    <script src="./M20483C _ LAB 09_files/easytimer.min.js.téléchargement"></script>
+    <script src="./M20483C _ LAB 09_files/handlebars.min.js.téléchargement" integrity="sha256-dlwklXLDib5XGMYI+HdNEXczJXTsFtq+qIrSdXoCv6o=" crossorigin="anonymous"></script>
+    <script type="text/x-handlebars-template" id="vm-credentials-template">
+        {{#each this}}
+            <table>
+                <tr>
+                    <th class="pr-2">Username</th>
+                    <td>{{Username}}</td>
+                    <td class="pl-2"><i class="fas fa-paste paste-credential paste-tab" data-text="{{Username}}"></i></td>
+                </tr>
+                <tr>
+                    <th class="pr-2">Password</th>
+                    <td>{{Password}}</td>
+                    <td class="pl-2"><i class="fas fa-paste paste-credential paste-enter" data-text="{{Password}}"></i></td>
+                </tr>
+            </table>
+        {{/each}}
+    </script>
+    <script type="text/javascript">
+        window.focus();
+
+        $('a.confirmed-navigation').on('click',
+            function() {
+                window.onbeforeunload = null;
+            });
+
+        var pasteBox = document.getElementById('paste-box');
+        pasteBox.disabled = true;
+        var pasteBoxOpen = false;
+
+        $('#paste-box-dropdown').on('shown.bs.dropdown',
+            function() {
+                pasteBoxOpen = true;
+                pasteBox.disabled = false;
+                pasteBox.focus();
+            });
+
+        $('#paste-box-dropdown').on('hidden.bs.dropdown',
+            function() {
+                pasteBoxOpen = false;
+                window.focus();
+                pasteBox.value = '';
+                pasteBox.disabled = true;
+            });
+
+        window.onbeforeunload = function(e) {
+            return "If you navigate away from this page your changes may be lost and VMs deleted. We will try to save them for you.\n\nIt may be best to cancel navigation and click the \"End Lab\" or \"Save Lab\" button, instead.";
+        };
+
+        var pasteboxKbEvent = function(e) {
+            if (document.activeElement !== pasteBox) return;
+
+            client.guac.sendKeyEvent(0, 0xFFE3);
+            client.guac.sendKeyEvent(0, 0xFFE9);
+
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+        };
+
+        window.addEventListener('keydown', pasteboxKbEvent, true);
+        window.addEventListener('keyup', pasteboxKbEvent, true);
+        window.addEventListener('keypress', pasteboxKbEvent, true);
+
+        document.addEventListener('paste',
+            function(e) {
+                if (document.activeElement !== pasteBox) {
+                    return;
+                }
+                if (typeof e.clipboardData === 'undefined') {
+                    var text = window.clipboardData.getData('Text');
+                } else {
+                    var text = e.clipboardData.getData('text/plain');
+                }
+
+                client.sendKeys(text);
+
+                if (pasteBoxOpen) $('#paste-box-dropdown').dropdown('toggle');
+            });
+
+        var checkVmStateTimeout;
+        
+        function checkVmState(connecting) {
+            $('.connection-error-box,#display').hide();
+            $('#display-error-checking').show();
+
+            if (checkVmStateTimeout) clearTimeout(checkVmStateTimeout);
+
+            var vmId = $('#vm-dropdown-menu a.active').data('vmId');
+
+            $.ajax({
+                url: '/Labs/NVmControl/f2def404-29f7-e911-abe3-00155de2c913/' + vmId + '/get-state',
+                type: 'get',
+                success: function(data) {
+                    $('.connection-error-box').hide();
+                    switch(data) {
+                    case 'stopped':
+                    case 'saved':
+                        $('#display-error-stopped').show();
+                        break;
+                    case 'starting':
+                        $('#display-error-starting').show();
+                        checkVmStateTimeout = setTimeout(function() { checkVmState(false); }, 2000);
+                        break;
+                    case 'stopping':
+                        $('#display-error-stopping').show();
+                        checkVmStateTimeout = setTimeout(function() { checkVmState(false); }, 2000);
+                        break;
+                    case 'saving':
+                        $('#display-error-checking').show();
+                        checkVmStateTimeout = setTimeout(function() { checkVmState(false); }, 2000);
+                        break;
+                    case 'started':
+                        if (connecting) {
+                            $('#display-error').show();
+                        } else {
+                            $('#vm-dropdown-menu a.active').triggerHandler('click');
+                        }
+                        break;
+                    default:
+                        $('#display-error-contact').show();
+                        break;
+                    }
+                },
+                error: function() {
+                    $('#display-error-contact').show();
+                }
+            });
+        }
+
+        var envId = "f5def404-29f7-e911-abe3-00155de2c913";
+
+        var Client = Client || {};
+
+        Client.Rde = function(displayElement) {
+            this.tunnelUrl = 'wss://remote.labsonline.it/wsTunnel';
+            this.guac = null;
+            this.mouse = null;
+            this.keyboard = null;
+            this.tunnel = null;
+            this.enhancedMode = false;
+            this.resizeTimeout = null;
+            this.keysPressed = [];
+
+            var KEYSYM_CTRL = 0xFFE3;
+            var KEYSYM_ALT = 0xFFE9;
+            var KEYSYM_DELETE = 0xFFFF;
+            
+            var self = this;
+            
+            var onkeydown = function(keysym) {
+                self.guac.sendKeyEvent(1, keysym);
+                self.registerKeypress(keysym);
+            };
+
+            var onkeyup = function(keysym) {
+                self.guac.sendKeyEvent(0, keysym);
+                self.unregisterKeypress(keysym);
+            };
+
+            this.initialize = function() {
+                this.tunnel = new Guacamole.WebSocketTunnel(this.tunnelUrl);
+                this.guac = new Guacamole.Client(this.tunnel);
+                this.guac.onerror = function() {
+                    self.enhancedMode = false;
+                    $('#enhanced-mode-switch').prop('checked', false);
+                    checkVmState(true);
+                }
+
+                window.onresize = function() {
+                    if (self.resizeTimeout) window.clearTimeout(self.resizeTimeout);
+                    self.resizeTimeout = window.setTimeout(function() {
+                        window.clearTimeout(self.resizeTimeout);
+                        if (self.enhancedMode) {
+                            var outerOuterDisplay = document.getElementById('outer-display');
+                            self.guac.sendSize(outerOuterDisplay.offsetWidth, outerOuterDisplay.offsetHeight);
+                        }
+                    }, 300);
+                };
+                
+                displayElement.appendChild(this.guac.getDisplay().getElement());
+
+                window.onunload = function() {
+                    self.guac.disconnect();
+                };
+
+                this.mouse = new Guacamole.Mouse(this.guac.getDisplay().getElement());
+
+                this.mouse.onmousedown = function(mouseState) {
+                    self.guac.sendMouseState(mouseState);
+                };
+                this.mouse.onmouseup = function(mouseState) {
+                    self.guac.sendMouseState(mouseState);
+                };
+                this.mouse.onmousemove = function(mouseState) {
+                    self.guac.sendMouseState(mouseState);
+                };
+
+                this.keyboard = new Guacamole.Keyboard(document);
+                this.captureKeyboard();
+            };
+            
+            this.captureKeyboard = function() {
+                this.keyboard.onkeyup = onkeyup;
+                this.keyboard.onkeydown = onkeydown;
+            }
+            
+            this.releaseKeyboard = function() {
+                this.keyboard.onkeyup = null;
+                this.keyboard.onkeydown = null;
+            }
+            
+            this.registerKeypress = function(keysym) {
+                this.keysPressed.push(keysym);
+            }
+            
+            this.unregisterKeypress = function(keysym) {
+                var index = this.keysPressed.indexOf(keysym);
+                if (index === -1) return;
+                this.keysPressed.splice(index, 1);
+            }
+            
+            this.unregisterAllKeypresses = function() {
+                var self = this;
+                this.keysPressed.forEach(function(keysym) {
+                    self.guac.sendKeyEvent(0, keysym);
+                    if (keysym === KEYSYM_ALT) {
+                        self.guac.sendKeyEvent(1, keysym);
+                        self.guac.sendKeyEvent(0, keysym);
+                    }
+                });
+                this.keysPressed = [];
+            }
+
+            this.connect = function(envId, vmId) {
+                var self = this;
+
+                try {
+                    this.guac.disconnect();
+                } catch (e) { /* ignore */
+                }
+
+                window.setTimeout(function() {
+                        var connectionString = 'eid=' + envId + '&vid=' + vmId;
+                        if (self.enhancedMode) {
+                            var outerDisplay = document.getElementById('outer-display');
+                            var supportedAudioFormats = Guacamole.AudioPlayer.getSupportedTypes();
+                            connectionString += '&enhanced=1&width=' + outerDisplay.offsetWidth + '&height=' + outerDisplay.offsetHeight + '&audio=' + supportedAudioFormats.join('&audio=');
+                        }
+                        self.guac.connect(connectionString);
+                    },
+                    500);
+            };
+            
+            this.toggleEnhancedMode = function(enabled) {
+                this.enhancedMode = enabled;
+                $('#enhanced-mode-switch').prop('checked', enabled);
+                $('#vm-dropdown-menu a.active').first().triggerHandler('click');
+            };
+
+            this.initialize();
+
+            this.sendCad = function() {
+                this.unregisterAllKeypresses();
+                this.guac.sendKeyEvent(1, KEYSYM_CTRL);
+                this.guac.sendKeyEvent(1, KEYSYM_ALT);
+                this.guac.sendKeyEvent(1, KEYSYM_DELETE);
+                this.guac.sendKeyEvent(0, KEYSYM_CTRL);
+                this.guac.sendKeyEvent(0, KEYSYM_ALT);
+                this.guac.sendKeyEvent(0, KEYSYM_DELETE);
+            };
+
+            this.sendKeys = function(text) {
+                var self = this;
+                this.unregisterAllKeypresses();
+                text = text.replace(/\r\n?/g, "\n");
+                var strArr = text.split("");
+                
+                var sendKey = function(strArr) {
+                    if (strArr.length === 0) return;
+                    
+                    var char = strArr.shift();
+                    
+                    var codepoint = char.charCodeAt(0);
+                    var keysym = codepoint;
+                    if (codepoint >= 0x0100) {
+                        keysym = 0x01000000 | codepoint;
+                    }
+                    self.guac.sendKeyEvent(1, keysym);
+                    self.guac.sendKeyEvent(0, keysym);
+                    
+                    window.setTimeout(sendKey, 10, strArr);
+                }
+                
+                sendKey(strArr);
+            };
+        };
+
+        var client = new Client.Rde(document.getElementById('display'));
+        
+        var vmCredentialsTarget = document.getElementById('vm-credentials-target');
+        var vmCredentialsTemplate = Handlebars.compile(document.getElementById('vm-credentials-template').innerHTML);
+        function showCredentialsForVm(vmCredentials) {
+            vmCredentialsTarget.innerHTML = vmCredentialsTemplate(vmCredentials);
+        }
+
+        function showVmContextMenus(vmId) {
+            var vmContextMenuDropdowns = $('.vm-context-menu-dropdown');
+            vmContextMenuDropdowns.each(function(vmCintextMenuDropdownIndex, vmCOntextMenuDropdownElement) {
+                var vmContextMenuDropdown = $(vmCOntextMenuDropdownElement);
+                vmContextMenuDropdown.toggle(false);
+
+                var vmContextMenus = vmContextMenuDropdown.find('.vm-context-menu');
+                vmContextMenus.toggle(false);
+
+                vmContextMenus.each(function(vmContextMenuIndex, vmContextMenuElement) {
+                    var vmContextMenu = $(vmContextMenuElement);
+                    if (vmContextMenu.data('vmId') === vmId) {
+                        vmContextMenu.toggle(true);
+                        vmContextMenuDropdown.toggle(true);
+                    }
+                });
+            });
+        }
+
+        var vmItems = $('#vm-dropdown-menu a');
+        vmItems.on(
+            'click',
+            function() {
+                if (checkVmStateTimeout) {
+                    clearTimeout(checkVmStateTimeout);
+                }
+                $('#vm-dropdown-menu a').removeClass('active');
+                var $this = $(this);
+                $this.addClass('active');
+                client.connect(envId, $this.data('vmId'));
+                $('#vm-dropdown-btn').text($this.text());
+                $('.connection-error-box').hide();
+                $('#display').show();
+                showCredentialsForVm($this.data('vmCredentials'));
+                showVmContextMenus($this.data('vmId'));
+            }).first().triggerHandler('click');
+
+        var selectVm = function(vmName) {
+            vmItems.each(function(i, el) {
+                if (el.dataset.vmName === vmName) {
+                    $(el).triggerHandler('click');
+                }
+            });
+        };
+
+        document.addEventListener('select-vm', function(e) {
+            selectVm(e.detail);
+        });
+
+        $('#cad-btn').on('click',
+            function() {
+                client.sendCad();
+                $(this).blur();
+            });
+        
+        var pasteTextHandler = function() {
+            var stringToSend = $(this).data('text');
+            if ($(this).hasClass('paste-enter')) {
+                stringToSend += "\n";
+            }
+            if ($(this).hasClass('paste-tab')) {
+                stringToSend += "\t";;
+            }
+            client.sendKeys(stringToSend);
+        };
+
+        $('.paste-text').on('click', pasteTextHandler);
+        $('#vm-credentials-target').on('click', '.paste-credential', pasteTextHandler);
+
+        $('.reconnect-display-btn').on('click',
+            function() {
+                $('#vm-dropdown-menu a.active').triggerHandler('click');
+                $(this).blur();
+            });
+
+        var infoModal = $('#launch-info-modal');
+        var errataModel = $('#launch-errata-modal');
+        if (infoModal.data('show') === true) {
+            infoModal.modal('show');
+            if (errataModel.data('show') === true) {
+                $('#info-modal-ok-btn').on('click',
+                    function() {
+                        window.setTimeout(function() { errataModel.modal('show'); }, 500);
+                    });
+            }
+        } else if (errataModel.data('show') === true) {
+            errataModel.modal('show');
+        }
+
+        $('.power-op').on('click',
+            function() {
+                var op = $(this).data('op');
+                var vmId = $('#vm-dropdown-menu a.active').first().data('vmId');
+                $.ajax({
+                    url: '/Labs/NVmControl/f2def404-29f7-e911-abe3-00155de2c913/' + vmId + '/' + op,
+                    type: 'get',
+                    success: function() {
+                        if (op === 'start') {
+                            checkVmState(false);
+                        }
+                    },
+                    error: function() {
+                        alert('An error occurred whilst carrying out that power operation');
+                    }
+                });
+                $(this).blur();
+            });
+        
+        $('#enhanced-mode-switch').on('click', function() {
+            client.toggleEnhancedMode($(this).is(':checked'));
+            $(this).blur();
+        });
+
+        var timerTarget = $("#lab-timer");
+        var timerTargetTimer = $("#lab-timer-timer");
+        var timerWarning = $('#lab-timer-warning');
+        var warningThreshold = 14;
+        var canExtend = true;
+
+        $('#stopwatch').popover();
+        timerWarning.popover({
+            template:
+                '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header bg-warning"></h3><div class="popover-body"></div></div>',
+            trigger: 'manual',
+            placement: 'top',
+            content:
+                '<div class="text-center"><div class="mb-2">You may extend by a further 60 minutes:</div>' +
+                    '<button id="extend-timer-btn" class="btn btn-success">Extend</button>' +
+                    '<button id="ignore-timer-btn" class="btn btn-secondary ml-2">Ignore</button>' +
+                    '</div>',
+            html: true,
+            title: '<i class="fa fa-exclamation-triangle"></i> Your Lab will end soon',
+            boundary: 'window'
+        });
+
+        $('body').on('click',
+            '#extend-timer-btn',
+            function() {
+                $('#extend-timer-btn').attr('disabled', true).html('Requesting...');
+                $.ajax({
+                    url: '/Modules/AddTime/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'post',
+                    success: function(data) {
+                        startTimer(data);
+                        timerTarget.removeClass('badge-warning').addClass('badge-secondary');
+                        timerWarning.popover('hide');
+                    },
+                    error: function() {
+                        alert('There was an error extending your lab expiry time. Please try again or contact support');
+                    }
+                });
+            });
+        $('body').on('click',
+            '#ignore-timer-btn',
+            function() {
+                timerWarning.popover('toggle');
+            });
+
+        $('.popover-help').popover({
+            container: "body",
+            placement: "top",
+            trigger: "hover",
+            boundary: "window"
+        });
+
+        var timer = new Timer();
+
+        function startTimer(seconds) {
+            if (timer.isRunning()) {
+                timer.stop();
+            }
+
+            timer.start({
+                precision: 'seconds',
+                startValues: { seconds: seconds },
+                target: { seconds: 0 },
+                countdown: true
+            });
+        }
+
+        function showTimerWarning() {
+            timerWarning.popover('show');
+            timerTarget.removeClass('badge-secondary')
+                .addClass('badge-warning')
+                .on('click',
+                    function() {
+                        timerWarning.popover('toggle');
+                    });
+        }
+
+        timerTargetTimer.html(timer.getTimeValues().toString());
+
+        timer.addEventListener('secondsUpdated',
+            function(e) {
+                var timeValues = timer.getTimeValues();
+                timerTargetTimer.html(timeValues.toString());
+            });
+
+        timer.addEventListener('minutesUpdated',
+            function(e) {
+                var timeValues = timer.getTimeValues();
+                if (canExtend && timeValues.days === 0 && timeValues.hours === 0 && timeValues.minutes === warningThreshold) {
+                    showTimerWarning();
+                }
+            });
+
+        timer.addEventListener('started',
+            function(e) {
+                var timeValues = timer.getTimeValues();
+                if (canExtend && timeValues.days === 0 && timeValues.hours === 0 && timeValues.minutes <= warningThreshold) {
+                    showTimerWarning();
+                }
+            });
+
+        timer.addEventListener('targetAchieved',
+            function() {
+                window.onbeforeunload = null;
+                window.location.replace('/Modules/ExpireLab/f2def404-29f7-e911-abe3-00155de2c913');
+            });
+
+        startTimer(28799);
+
+        $('#screenshotBtn').on(
+            'click',
+            function() {
+                var canvas = $('#display canvas').first();
+                this.href = canvas[0].toDataURL();
+                this.filename = 'screenshot.png';
+                this.download = 'screenshot.png';
+            });
+
+        $('.dvd-image-item').on('click',
+            function() {
+                var self = $(this);
+                $.ajax({
+                    url: '/Labs/InsertIsoImage/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        VmId: self.data('vmId'),
+                        DiskDriveId: self.data('diskDriveId'),
+                        MediaImageId: self.data('mediaImageId')
+                    }),
+                    dataType: 'json',
+                    error: function() {
+                        alert('An error occurred whilst inserting a DVD');
+                    }
+                });
+            });
+        $('.dvd-drive-eject-btn').on('click',
+            function() {
+                var self = $(this);
+                $.ajax({
+                    url: '/Labs/EjectIsoImage/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        VmId: self.data('vmId'),
+                        DiskDriveId: self.data('diskDriveId')
+                    }),
+                    dataType: 'json',
+                    error: function() {
+                        alert('An error occurred whilst ejecting a DVD');
+                    }
+                });
+            });
+        $('.net-switch-item').on('click',
+            function() {
+                var self = $(this);
+                $.ajax({
+                    url: '/Labs/ConnectNetAdapterSwitch/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        VmId: self.data('vmId'),
+                        VNetAdapterId: self.data('netAdapterId'),
+                        VSwitchId: self.data('switchId')
+                    }),
+                    dataType: 'json',
+                    error: function() {
+                        alert('An error occurred whilst changing network connections');
+                    }
+                });
+            });
+
+        $('.fd-image-item').on('click',
+            function() {
+                var self = $(this);
+                $.ajax({
+                    url: '/Labs/InsertFdImage/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        VmId: self.data('vmId'),
+                        MediaImageId: self.data('mediaImageId')
+                    }),
+                    dataType: 'json',
+                    error: function() {
+                        alert('An error occurred whilst inserting a floppy disk image');
+                    }
+                });
+            });
+        $('.fd-drive-eject-btn').on('click',
+            function() {
+                var self = $(this);
+                $.ajax({
+                    url: '/Labs/EjectFdImage/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        VmId: self.data('vmId')
+                    }),
+                    dataType: 'json',
+                    error: function() {
+                        alert('An error occurred whilst ejecting a floppy disk image');
+                    }
+                });
+            });
+
+        var labDns = false;
+
+        function clearDnsRecords() {
+            $('.dns-records').each(function() {
+                var el = $(this);
+                el.html('');
+            });
+        }
+        function showDnsRecords() {
+            $('.dns-records').each(function() {
+                var el = $(this);
+                if (el.find('tr').length > 0) {
+                    el.show();
+                } else {
+                    el.siblings('.no-dns-records').show();
+                }
+            });
+        }
+        function showDnsLoading() {
+            $('.dns-records,.no-dns-records').hide();
+            $('.dns-records-loading').show();
+        }
+        function hideDnsLoading() {
+            $('.dns-records-loading').hide();
+        }
+        function appendDnsEntries(data) {
+            appendARecords(data.ARecords);
+            appendAaaaRecords(data.AaaaRecords);
+            appendCnameRecords(data.CnameRecords);
+            appendMxRecords(data.MxRecords);
+            appendSrvRecords(data.SrvRecords);
+            appendTxtRecords(data.TxtRecords);
+        }
+        function setLabZoneName(zoneName) {
+            $('span.dns-zone-name').html(zoneName);
+        }
+        var aRecordsBody = $('#lab_ui_a-records');
+        var aaaaRecordsBody = $('#lab_ui_aaaa-records');
+        var cnameRecordsBody = $('#lab_ui_cname-records');
+        var mxRecordsBody = $('#lab_ui_mx-records');
+        var srvRecordsBody = $('#lab_ui_srv-records');
+        var txtRecordsBody = $('#lab_ui_txt-records');
+        function getEditDeleteCell() {
+            return $('<td/>')
+                .append($('<a href="#" class="dns-record-edit-btn dns-record-op-btn text-black mr-2" data-op="edit"/>').append($('<i class="fas fa-edit"></i>')))
+                .append($('<a href="#" class="dns-record-delete-btn dns-record-op-btn text-danger" data-op="delete"/>').append($('<i class="fas fa-trash-alt"></i>')));
+        }
+        function appendARecords(aRecords) {
+            aRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'a');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('ipv4Address', record.Ipv4Address);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Ipv4Address));
+                row.append(getEditDeleteCell());
+                aRecordsBody.append(row);
+            });
+        }
+        function appendAaaaRecords(aaaaRecords) {
+            aaaaRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'aaaa');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('ipv6Address', record.Ipv6Address);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Ipv6Address));
+                row.append(getEditDeleteCell());
+                aaaaRecordsBody.append(row);
+            });
+        }
+        function appendCnameRecords(cnameRecords) {
+            cnameRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'cname');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('cname', record.Cname);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Cname));
+                row.append(getEditDeleteCell());
+                cnameRecordsBody.append(row);
+            });
+        }
+        function appendMxRecords(mxRecords) {
+            mxRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'mx');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('preference', record.Preference);
+                row.data('exchange', record.Exchange);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Preference));
+                row.append($('<td/>').html(record.Exchange));
+                row.append(getEditDeleteCell());
+                mxRecordsBody.append(row);
+            });
+        }
+        function appendSrvRecords(srvRecords) {
+            srvRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'srv');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('priority', record.Priority);
+                row.data('weight', record.Weight);
+                row.data('port', record.Port);
+                row.data('target', record.Target);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Priority));
+                row.append($('<td/>').html(record.Weight));
+                row.append($('<td/>').html(record.Port));
+                row.append($('<td/>').html(record.Target));
+                row.append(getEditDeleteCell());
+                srvRecordsBody.append(row);
+            });
+        }
+        function appendTxtRecords(txtRecords) {
+            txtRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'txt');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('value', record.Value);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Value));
+                row.append(getEditDeleteCell());
+                txtRecordsBody.append(row);
+            });
+        }
+        function loadLabDns(id) {
+            showDnsLoading();
+            clearDnsRecords();
+            $.ajax({
+                url: '/LabDomains/GetLabDnsEntries/' + id,
+                type: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    setLabZoneName(data.FqZoneName);
+                    appendDnsEntries(data);
+                },
+                complete: function() {
+                    hideDnsLoading();
+                    showDnsRecords();
+                }
+            });
+        }
+
+        var dnsForms = {
+            "a": $('#lab_ui_a-record-form'),
+            "aaaa": $('#lab_ui_aaaa-record-form'),
+            "cname": $('#lab_ui_cname-record-form'),
+            "mx": $('#lab_ui_mx-record-form'),
+            "srv": $('#lab_ui_srv-record-form'),
+            "txt": $('#lab_ui_txt-record-form')
+        };
+        var dnsFormsModal = $('#lab_ui_lab-dns-modal');
+        var dnsFormsModalButtons = dnsFormsModal.find('.modal-footer button');
+        function hideForms() {
+            $('.dns-record-form').hide().removeClass('active');
+        }
+        function showRecordForm(type) {
+            dnsForms[type].show().addClass('active');
+        }
+        function resetRecordFormFields(type) {
+            dnsForms[type].find('input,textarea').val('').removeAttr('readonly');
+            dnsForms[type].find('input[name="Delete"]').val('false');
+        }
+        function fillRecordForm(type, data) {
+            var fields = dnsForms[type].find('input,textarea');
+            fields.each(function() {
+                var fieldName = this.name.charAt(0).toLowerCase() + this.name.slice(1);
+                if (fieldName in data) {
+                    this.value = data[fieldName];
+                }
+            });
+        }
+        function disableNameField(type) {
+            dnsForms[type].find('input[name="Name"]').attr('readonly', true);
+        }
+        function hideDnsDeleteButton() {
+            $('#delete-dns-record-btn').hide();
+        }
+        function showDnsDeleteButton() {
+            $('#delete-dns-record-btn').show();
+        }
+        function disableDnsFormButtons() {
+            dnsFormsModalButtons.attr('disabled', true);
+        }
+        function enableDnsFormButtons() {
+            dnsFormsModalButtons.removeAttr('disabled');
+        }
+        function disableDnsOpButtons() {
+            $('a.dns-record-op-btn').addClass('disabled');
+        }
+        function enableDnsOpButtons() {
+            $('a.dns-record-op-btn').removeClass('disabled');
+        }
+        function setDeleteFlag() {
+            dnsFormsModal.find('form.active:first input[name="Delete"]').val('true');
+        }
+        function registerDnsClickEvents() {
+            dnsFormsModal.on('hidden.bs.modal', function() {
+                client.captureKeyboard();
+                enableDnsOpButtons();
+            });
+            dnsFormsModal.on('shown.bs.modal', function() {
+                client.releaseKeyboard();
+            });
+            $('a.add-dns-record-btn').on('click', function(e) {
+                hideForms();
+                var type = $(this).data('recordType');
+                if (type in dnsForms) {
+                    showRecordForm(type);
+                    resetRecordFormFields(type);
+                    hideDnsDeleteButton();
+                    enableDnsFormButtons();
+                    dnsFormsModal.modal('show');
+                }
+
+                e.preventDefault();
+            });
+            $('tbody.dns-records').on('click', 'a.dns-record-op-btn', function(e) {
+                e.preventDefault();
+
+                if ($(this).hasClass('disabled')) return;
+
+                hideForms();
+                var record = $(this).closest('tr').data();
+                var op = $(this).data('op');
+                if (!record.recordType in dnsForms) {
+                    return;
+                }
+
+                disableDnsOpButtons();
+                
+                if (op === 'edit') {
+                    showRecordForm(record.recordType);
+                    resetRecordFormFields(record.recordType);
+                    disableNameField(record.recordType);
+                    showDnsDeleteButton();
+                    fillRecordForm(record.recordType, record);
+                    enableDnsFormButtons();
+                    dnsFormsModal.modal('show');
+                    return;
+                }
+                
+                if (op === 'delete') {
+                    showRecordForm(record.recordType);
+                    resetRecordFormFields(record.recordType);
+                    fillRecordForm(record.recordType, record);
+                    setDeleteFlag();
+                    dnsFormsModal.find('form.active').trigger('submit');
+                    return;
+                }
+
+                enableDnsOpButtons();
+            });
+            $('.dns-record-form').on('submit', function(e) {
+                e.preventDefault();
+                var form = $(this);
+                var formData = new FormData(form[0]);
+
+                $.ajax({
+                    url: form.attr('action'),
+                    type: 'post',
+                    processData: false,
+                    contentType: false,
+                    data: formData,
+                    success: function() {
+                        loadLabDns('f2def404-29f7-e911-abe3-00155de2c913');
+                        dnsFormsModal.modal('hide');
+                    },
+                    complete: function() {
+                        enableDnsFormButtons();
+                        enableDnsOpButtons();
+                    }
+                });
+            });
+            $('#save-dns-record-btn').on('click', function(e) {
+                e.preventDefault();
+                disableDnsFormButtons();
+                dnsFormsModal.find('form.active').trigger('submit');
+            });
+            $('#delete-dns-record-btn').on('click', function(e) {
+                e.preventDefault();
+                setDeleteFlag();
+                $('#save-dns-record-btn').triggerHandler('click');
+            });
+        }
+
+        if (labDns) {
+            document.addEventListener('DOMContentLoaded', function() {
+                loadLabDns('f2def404-29f7-e911-abe3-00155de2c913');
+                registerDnsClickEvents();
+            });
+        }
+
+        var fullscreenBtn = document.getElementById('fullscreen-btn');
+        var exitFullscreenBtn = document.getElementById('exit-fullscreen-btn');
+
+        fullscreenBtn.addEventListener('click',
+            function() {
+                var elem = document.documentElement;
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.mozRequestFullScreen) { /* Firefox */
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                    elem.msRequestFullscreen();
+                }
+            });
+        
+        exitFullscreenBtn.addEventListener('click',
+            function() {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { /* Firefox */
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { /* IE/Edge */
+                    document.msExitFullscreen();
+                }
+            });
+        
+        document.addEventListener('fullscreenchange', function() {
+            if (document.fullscreenElement === null) {
+                exitFullscreenBtn.style.display = 'none';
+                fullscreenBtn.style.display = '';
+            } else {
+                exitFullscreenBtn.style.display = '';
+                fullscreenBtn.style.display = 'none';
+            }
+        });
+        
+        document.body.style.backgroundColor = '#fff';
+    </script>
+
+
+
+</body></html>

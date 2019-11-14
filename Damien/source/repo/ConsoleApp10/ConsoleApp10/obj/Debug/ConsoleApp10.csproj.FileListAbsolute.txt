@@ -1,0 +1,6 @@
+C:\Users\Formation\source\repos\ConsoleApp10\ConsoleApp10\bin\Debug\ConsoleApp10.exe.config
+C:\Users\Formation\source\repos\ConsoleApp10\ConsoleApp10\bin\Debug\ConsoleApp10.exe
+C:\Users\Formation\source\repos\ConsoleApp10\ConsoleApp10\bin\Debug\ConsoleApp10.pdb
+C:\Users\Formation\source\repos\ConsoleApp10\ConsoleApp10\obj\Debug\ConsoleApp10.csprojAssemblyReference.cache
+C:\Users\Formation\source\repos\ConsoleApp10\ConsoleApp10\obj\Debug\ConsoleApp10.exe
+C:\Users\Formation\source\repos\ConsoleApp10\ConsoleApp10\obj\Debug\ConsoleApp10.pdb

@@ -1,0 +1,2474 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M20483C | All Modules - Programming in C# - go  deploy</title>
+
+        <link rel="stylesheet" href="./M20483C _ LAB 04_files/godeployMain.min.css">
+    <link rel="stylesheet" href="./M20483C _ LAB 04_files/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" type="text/css" href="./M20483C _ LAB 04_files/labs.min.css">
+
+</head>
+<body class="" style="background-color: rgb(255, 255, 255);">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top py-0 bg-brand" id="main-navbar">
+        <span class="h1 navbar-brand brandname my-1 ">go  deploy</span>
+            <div class="navbar-text h5 font-weight-normal my-1 ml-1 mr-auto collapse navbar-collapse" id="navbar-title">M20483C | All Modules - Programming in C#</div>
+        <div class="collapse navbar-collapse header-nav" id="header-nav-menu">
+<form action="https://lms.godeploy.it/Account/LogOff?Length=6" class="navbar-right" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="RzxbEh_C_O1u5siOYspFt00Ol_pPjLWXqtcnvwlY-dJm6E7EbwmIrsKZCvKJfCvOh6f4vZroMcEYhsZAIZRplrPKUtyTs0-x5ENFzroXHbqwX7SBnmXvi2sCbI-RqxCbQVMqLMB8kVrSYGC2VA9k8A2"></form>        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" style="font-size: 1.4em;" href="https://lms.godeploy.it/RedirectToHome" title="Home">
+                    <i class="far fa-home" title="Home"></i>
+                </a>
+            </li>
+                                    
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 1.4em;" aria-label="Account profile icon that opens a list of account options">
+                    <i class="far fa-user-circle"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right shadow" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="https://lms.godeploy.it/Manage">oheinrich@orange.fr</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="javascript:document.getElementById(&#39;logoutForm&#39;).submit()">Log off</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a href="https://godeploy.zendesk.com/hc/en-us" target="_blank" class="nav-link" style="font-size: 1.4em;"><span class="sr-only">Help icon that links to the help articles and allows you to create support requests</span><i class="far fa-question-circle" title="Help"></i></a>
+            </li>
+        </ul>
+</div>
+
+
+    </nav>
+
+    
+
+<main id="lab-container" class="h-100" data-mei-id="f2def404-29f7-e911-abe3-00155de2c913">
+    <h1 class="sr-only">M20483C | All Modules - Programming in C#</h1>
+    <div class="row h-100 no-gutters">
+        <div class="col bg-light h-100 position-relative" style="overflow-y: auto; flex-basis: calc(67.9696% - 3px);" id="lab-content-container">
+
+            <nav class="navbar navbar-expand navbar-light bg-gray-400" id="lab-navbar">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link tab-link" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#" id="tab-home-link" data-target="tab-home" data-link-text="Home" data-scroll-top="0">Home</a>
+        </li>
+            <li class="nav-item active bg-light">
+                <a class="nav-link tab-link" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#" id="tab-lab-guide-link" data-target="tab-lab-guide" aria-valuetext="Lab Guide">Lab Guide</a>
+            </li>
+            </ul>
+</nav>
+
+
+            <div class="container position-relative pt-2 lab-tab" id="tab-home" style="display: none;">
+                    <div class="mb-4">
+        <h6 class="mt-0"><i class="fa fa-server"></i> Virtual Machines</h6>
+
+        <div class="popover-help mb-2" data-toggle="popover" data-content="Select Virtual Machine" data-original-title="" title="">
+            <div class="dropdown" id="vm-dropdown">
+                <button class="btn btn-sm btn-outline-secondary dropdown-toggle btn-block text-left" type="button" id="vm-dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">20483C-SEA-DEV1</button>
+                <div class="dropdown-menu" aria-labelledby="vm-dropdown-btn" id="vm-dropdown-menu">
+                        <a class="dropdown-item active" data-vm-id="f7def404-29f7-e911-abe3-00155de2c913" data-vm-credentials="[{&quot;Username&quot;:&quot;Admin&quot;,&quot;Password&quot;:&quot;Pa55w.rd&quot;}]" data-has-optical-drive="false" data-has-floppy-drive="true)" data-vm-name="20483C-SEA-DEV1" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">20483C-SEA-DEV1</a>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" id="cad-btn" class="btn btn-sm btn-outline-secondary mb-1">Ctrl+Alt+Del</button>
+
+        <button class="btn btn-sm btn-outline-secondary reconnect-display-btn popover-help mb-1" data-toggle="popover" data-content="Reconnect selected VM Display" data-original-title="" title="">
+            <i class="fas fa-sync"></i>
+        </button>
+
+        <div class="btn-group popover-help mb-1" data-toggle="popover" data-content="Selected VM Power Operations" data-original-title="" title="">
+            <div class="dropdown">
+                <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="far fa-bolt"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="pwr-dropdown-btn" id="pwr-dropdown-menu">
+                    <a class="dropdown-item text-danger power-op" data-op="stop" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">Power Off</a>
+                    <a class="dropdown-item text-danger power-op" data-op="start" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">Power On</a>
+                    <a class="dropdown-item text-danger power-op" data-op="restart" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">Restart</a>
+                        <a class="dropdown-item text-danger power-op" data-op="reset-gateway" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">Reset Gateway</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div id="vm-credentials-target" style="font-size: 80%" class="mt-3">
+            <table>
+                <tbody><tr>
+                    <th class="pr-2">Username</th>
+                    <td>Admin</td>
+                    <td class="pl-2"><i class="fas fa-paste paste-credential paste-tab" data-text="Admin"></i></td>
+                </tr>
+                <tr>
+                    <th class="pr-2">Password</th>
+                    <td>Pa55w.rd</td>
+                    <td class="pl-2"><i class="fas fa-paste paste-credential paste-enter" data-text="Pa55w.rd"></i></td>
+                </tr>
+            </tbody></table>
+    </div>
+    </div>
+    <hr>
+
+
+
+<div class="mb-4 position-relative" aria-label="VM Tools">
+    <h6><i class="fa fa-wrench"></i> Tools</h6>
+        <button id="fullscreen-btn" type="button" class="btn btn-sm btn-outline-secondary popover-help mb-1" data-toggle="popover" data-content="Fullscreen mode" data-original-title="" title="">
+            <i class="far fa-expand-alt"></i>
+        </button>
+        <button id="exit-fullscreen-btn" type="button" class="btn btn-sm btn-outline-secondary popover-help mb-1" style="display: none;" data-toggle="popover" data-content="Exit fullscreen mode" data-original-title="" title="">
+            <i class="far fa-compress-alt"></i>
+        </button>
+        <a id="screenshotBtn" class="btn btn-sm btn-outline-secondary popover-help mb-1" data-toggle="popover" data-content="Take a screenshot" data-original-title="" title="">
+            <i class="far fa-file-image"></i>
+        </a>
+        <div class="btn-group mb-1 popover-help" data-toggle="popover" data-content="Paste into the VM" data-original-title="" title="">
+            <div class="dropdown" id="paste-box-dropdown">
+                <button class="btn btn-sm btn-outline-secondary" type="button" id="paste-box-dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="far fa-paste"></i>
+                </button>
+                <div class="dropdown-menu bg-success text-white" aria-labelledby="paste-box-dropdown-btn">
+                    <div class="px-3 py-2 position-relative">
+                        <p class="text-center mt-0"><strong>Paste Activated</strong></p>
+                        <p class="text-justify mb-0">You may paste using Ctrl + V or right click here and click 'Paste'</p>
+                        <textarea id="paste-box" class="position-absolute h-100 w-100" style="opacity: 0; top: 0; left: 0" disabled=""></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="btn-group mb-1 popover-help" data-toggle="popover" data-content="Exit Lab Options" data-original-title="" title="">
+        <div class="dropdown">
+            <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Exit Lab
+            </button>
+            <div class="dropdown-menu" aria-labelledby="end-dropdown-btn" id="end-dropdown-menu">
+                    <a class="dropdown-item text-success" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#" data-toggle="modal" data-target="#save-lab-modal">Exit and Save Lab</a>
+                <a class="dropdown-item text-danger" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#" data-toggle="modal" data-target="#end-lab-modal">Exit and End Lab</a>
+            </div>
+        </div>
+    </div>
+        <div class="custom-control custom-checkbox mt-2 popover-help" data-toggle="popover" data-content="Switching Enhanced Mode on enables audio and improved display resolution features" data-original-title="" title="">
+            <input type="checkbox" class="custom-control-input" id="enhanced-mode-switch">
+            <label class="custom-control-label" for="enhanced-mode-switch">Enhanced Mode</label>
+        </div>
+</div>
+
+<div class="mb-4">
+    <h6><i class="fas fa-info-circle"></i> Lab Information</h6>
+    <p>
+            <a data-toggle="modal" data-target="#launch-info-modal" aria-haspopup="true" aria-expanded="false" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">Show Lab Information</a>
+            <br>
+        <a href="https://godeploy.zendesk.com/hc/en-us/requests/new" target="_blank">Submit a Support Request</a>
+    </p>
+</div>
+
+            </div>
+
+<div id="tab-lab-guide" class="lab-tab container position-relative pt-4" style="">
+    <div id="labGuideContainer">
+        <h6><i class="fas fa-book"></i> Lab Guide</h6>
+        <div class="py-2">
+            <button class="btn btn-sm btn-brand popout-btn d-block w-100" data-link="/Labs/LabGuide/f2def404-29f7-e911-abe3-00155de2c913">
+                View in Another Window
+            </button>
+        </div>
+        <div class="form-inline">
+<div class="btn-group btn-group-sm mr-2" id="labGuidePageSelector" style="">
+    <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lab 4</button>
+    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 26px, 0px); top: 0px; left: 0px; will-change: transform;">
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=87a301e4-e6ac-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="87a301e4-e6ac-e811-8373-00155d026631">Lab 1</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=1c980c6c-43fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="1c980c6c-43fd-e811-8373-00155d026631">Lab 2</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=5d3d54a8-43fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="5d3d54a8-43fd-e811-8373-00155d026631">Lab 3</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=e61a2fd7-43fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link active" data-page-id="e61a2fd7-43fd-e811-8373-00155d026631">Lab 4</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=8bf74af0-43fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="8bf74af0-43fd-e811-8373-00155d026631">Lab 5</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=f90df406-44fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="f90df406-44fd-e811-8373-00155d026631">Lab 6</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=780fb7b3-44fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="780fb7b3-44fd-e811-8373-00155d026631">Lab 7</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=3a876de6-44fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="3a876de6-44fd-e811-8373-00155d026631">Lab 8</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=88a3d872-45fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="88a3d872-45fd-e811-8373-00155d026631">Lab 9</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=ca0447b3-45fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="ca0447b3-45fd-e811-8373-00155d026631">Lab 10</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=7db412da-45fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="7db412da-45fd-e811-8373-00155d026631">Lab 11</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=5a3fb3fa-45fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="5a3fb3fa-45fd-e811-8373-00155d026631">Lab 12</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=87bd782a-46fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="87bd782a-46fd-e811-8373-00155d026631">Lab 13</a>
+    </div>
+</div>
+
+            <div class="custom-control custom-checkbox ml-2">
+                <input type="checkbox" class="custom-control-input" id="show-screenshots-checkbox">
+                <label class="custom-control-label" for="show-screenshots-checkbox">Show Screenshots</label>
+            </div>
+        </div>
+        <div class="lab-markdown reduced-headers pt-2" id="lab-guide-area"><h3 id="module-4-creating-classes-and-implementing-type-safe-collections">Module 4: Creating Classes and Implementing Type-Safe Collections</h3>
+<div class=" alert alert-danger"><p>Important Information about running this class.</p>
+<p>YOU MUST SAVE THE LABS EVERY DAY.  YOU SHOULD ALSO CHECK THE LABS ARE SAVED BY LOGGING BACK INTO THE LMS.</p>
+<p>FAILING TO DO SO WILL RESULT IN LOSS OF WORK WHICH IS UNRECOVERABLE.  GO DEPLOY WILL BE UNABLE TO RECOVER LABS WHICH HAVE NOT BEEN SAVED!</p></div>
+<h4 id="lab-adding-data-validation-and-type-safety-to-the-application">Lab: Adding Data Validation and Type-Safety to the Application</h4>
+<div class=" alert alert-secondary"><p><strong>Scenario</strong></p>
+<p>Now that the user interface navigation features are working, you decide to replace the simple structs with classes to make your application more efficient and straightforward. You have also been asked to include validation logic in the application to ensure that when a user adds grades to a student, that the data is valid before it is written to the database. You decide to create a unit test project that will perform tests against the required validation for different grade scenarios. Teachers who have seen the application have expressed a concern that the students in their classes are displayed in a random order. You decide to use the IComparable interface to enable them to be displayed in alphabetical order. Finally, you have been asked to add functionality to the application to enable teachers to add students to and remove students from a class, and to add student grades to the database.</p>
+<p><strong>Objectives</strong></p>
+<p>After completing this lab, you will be able to:</p>
+<ul>
+<li>Create classes.</li>
+<li>Write data validation code and unit tests.</li>
+<li>Implement the IComparable interface.</li>
+<li>Use generic collections.</li>
+</ul>
+<p><strong>Lab Setup</strong></p>
+<p>Estimated Time: <strong>75 minutes</strong></p></div>
+<h4 id="exercise-1-implementing-the-teacher-student-and-grade-structs-as-classes">Exercise 1: Implementing the Teacher, Student, and Grade Structs as Classes</h4>
+<div class=" alert alert-secondary"><p><strong>Scenario</strong></p>
+<p>In this exercise, you will convert the existing Teacher, Student, and Grade structs into classes. This will enable you to implement the additional functionality required for each class, such as adding constructors, properties, and methods.<br>
+In the Teacher and Student classes, add a write-only property for the password, add the VerifyPassword method, and then define their respective constructors.<br>
+You will also modify the Logon_Click method to use the VerifyPassword method to verify passwords when a user logs on.<br>
+Finally, you will run the application and verify that it still functions correctly, allowing a student or a teacher to log on.</p></div>
+<h5 id="task-1-convert-the-grades-struct-into-a-class">Task 1: Convert the Grades struct into a class</h5>
+<ol>
+<li><p>Click <strong>Visual Studio 2017</strong>.</p></li>
+<li><p>In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p></li>
+<li><p>In the <strong>Open Project</strong> dialog box, browse to <strong>[Repository Root]\Allfiles\Mod04\Labfiles\Starter\Exercise 1</strong>, click <strong>GradesPrototype.sln</strong>, and then click <strong>Open</strong>.</p></li>
+</ol>
+<div class=" alert alert-warning"><p><strong>Note :</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p></div>
+<ol start="4">
+<li><p>On the <strong>View</strong> menu, click <strong>Task List</strong>.</p></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 1a: Convert Grade into a class and define constructors</strong> task.</p></li>
+<li><p>In the code editor, below the comment, modify the <strong>public struct Grade</strong> declaration, replacing <strong>struct</strong> with <strong>class</strong>.</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Grade</span><span aria-hidden="true" class="line-paster-rows"><span data-code="public class Grade" class="paste"></span></span></code></pre></li>
+<li><p>Click at the end of the code <strong>public string Comments { get; set; }</strong>, press Enter twice, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token comment">// Constructor to initialize the properties of a new Grade</span>
+<span class="token keyword">public</span> <span class="token function">Grade</span><span class="token punctuation">(</span><span class="token keyword">int</span> studentID<span class="token punctuation">,</span> <span class="token keyword">string</span> assessmentDate<span class="token punctuation">,</span> <span class="token keyword">string</span> subject<span class="token punctuation">,</span> <span class="token keyword">string</span>
+assessment<span class="token punctuation">,</span> <span class="token keyword">string</span> comments<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    StudentID <span class="token operator">=</span> studentID<span class="token punctuation">;</span>
+    AssessmentDate <span class="token operator">=</span> assessmentDate<span class="token punctuation">;</span>
+    SubjectName <span class="token operator">=</span> subject<span class="token punctuation">;</span>
+    Assessment <span class="token operator">=</span> assessment<span class="token punctuation">;</span>
+    Comments <span class="token operator">=</span> comments<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Default constructor</span>
+<span class="token keyword">public</span> <span class="token function">Grade</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    StudentID <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    AssessmentDate <span class="token operator">=</span> DateTime<span class="token punctuation">.</span>Now<span class="token punctuation">.</span><span class="token function">ToString</span><span class="token punctuation">(</span><span class="token string">"d"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    SubjectName <span class="token operator">=</span> <span class="token string">"Math"</span><span class="token punctuation">;</span>
+    Assessment <span class="token operator">=</span> <span class="token string">"A"</span><span class="token punctuation">;</span>
+    Comments <span class="token operator">=</span> String<span class="token punctuation">.</span>Empty<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-paster-rows"><span data-code="// Constructor to initialize the properties of a new Grade
+public Grade(int studentID, string assessmentDate, string subject, string
+assessment, string comments)
+{
+    StudentID = studentID;
+    AssessmentDate = assessmentDate;
+    SubjectName = subject;
+    Assessment = assessment;
+    Comments = comments;
+}
+
+// Default constructor
+public Grade()
+{
+    StudentID = 0;
+    AssessmentDate = DateTime.Now.ToString(&quot;d&quot;);
+    SubjectName = &quot;Math&quot;;
+    Assessment = &quot;A&quot;;
+    Comments = String.Empty;
+}" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-2-convert-the-students-and-teachers-structs-into-classes">Task 2: Convert the Students and Teachers structs into classes</h5>
+<ol>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 2a: Convert Student into a class, make the password property write-only, add the VerifyPassword method, and define constructors</strong> task.</p></li>
+<li><p>In the code editor, below the comment, modify the <strong>public struct Student</strong> declaration, replacing <strong>struct</strong> with <strong>class</strong>.</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Student</span><span aria-hidden="true" class="line-paster-rows"><span data-code="public class Student" class="paste"></span></span></code></pre></li>
+<li><p>Delete the following line of code from the <strong>Student</strong> class.</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">public</span> <span class="token keyword">string</span> Password <span class="token punctuation">{</span><span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-paster-rows"><span data-code="public string Password {get; set;}" class="paste"></span></span></code></pre></li>
+<li><p>Press Enter, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">private</span> <span class="token keyword">string</span> _password <span class="token operator">=</span> Guid<span class="token punctuation">.</span><span class="token function">NewGuid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Generate a random password by default</span>
+
+<span class="token keyword">public</span> <span class="token keyword">string</span> Password 
+<span class="token punctuation">{</span>
+    <span class="token keyword">set</span>
+    <span class="token punctuation">{</span>
+        _password <span class="token operator">=</span> <span class="token keyword">value</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">bool</span> <span class="token function">VerifyPassword</span><span class="token punctuation">(</span><span class="token keyword">string</span> pass<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>String<span class="token punctuation">.</span><span class="token function">Compare</span><span class="token punctuation">(</span>pass<span class="token punctuation">,</span> _password<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-paster-rows"><span data-code="private string _password = Guid.NewGuid().ToString(); // Generate a random password by default
+
+public string Password 
+{
+    set
+    {
+        _password = value;
+    }
+}
+
+public bool VerifyPassword(string pass)
+{
+    return (String.Compare(pass, _password) == 0);
+}" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+</ol>
+<div class=" alert alert-warning"><p><strong>Note</strong> An application should not be able to read passwords; only set them and verify that a password is correct.</p></div>
+<ol start="5">
+<li><p>Click at the end of the code <strong>public string LastName { get; set; }</strong>, press Enter twice, and then type the following code:  </p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token comment">// Constructor to initialize the properties of a new Student</span>
+<span class="token keyword">public</span> <span class="token function">Student</span><span class="token punctuation">(</span><span class="token keyword">int</span> studentID<span class="token punctuation">,</span> <span class="token keyword">string</span> userName<span class="token punctuation">,</span> <span class="token keyword">string</span> password<span class="token punctuation">,</span> <span class="token keyword">string</span>   firstName<span class="token punctuation">,</span>   <span class="token keyword">string</span> lastName<span class="token punctuation">,</span> <span class="token keyword">int</span> teacherID<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+   StudentID <span class="token operator">=</span> studentID<span class="token punctuation">;</span>
+   UserName <span class="token operator">=</span> userName<span class="token punctuation">;</span>
+   Password <span class="token operator">=</span> password<span class="token punctuation">;</span>
+   FirstName <span class="token operator">=</span> firstName<span class="token punctuation">;</span>
+   LastName <span class="token operator">=</span> lastName<span class="token punctuation">;</span>
+   TeacherID <span class="token operator">=</span> teacherID<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Default constructor</span>
+<span class="token keyword">public</span> <span class="token function">Student</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+   StudentID <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+   UserName <span class="token operator">=</span> String<span class="token punctuation">.</span>Empty<span class="token punctuation">;</span>
+   Password <span class="token operator">=</span> String<span class="token punctuation">.</span>Empty<span class="token punctuation">;</span>
+   FirstName <span class="token operator">=</span> String<span class="token punctuation">.</span>Empty<span class="token punctuation">;</span>
+   LastName <span class="token operator">=</span> String<span class="token punctuation">.</span>Empty<span class="token punctuation">;</span>
+   TeacherID <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-paster-rows"><span data-code="// Constructor to initialize the properties of a new Student
+public Student(int studentID, string userName, string password, string   firstName,   string lastName, int teacherID)
+{
+   StudentID = studentID;
+   UserName = userName;
+   Password = password;
+   FirstName = firstName;
+   LastName = lastName;
+   TeacherID = teacherID;
+}
+
+// Default constructor
+public Student()
+{
+   StudentID = 0;
+   UserName = String.Empty;
+   Password = String.Empty;
+   FirstName = String.Empty;
+   LastName = String.Empty;
+   TeacherID = 0;
+}" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 2b: Convert Teacher into a class, make the password property write-only, add the VerifyPassword method, and define constructors</strong> task.</p></li>
+<li><p>In the code editor, below the comment, modify the <strong>public struct Teacher</strong> declaration, replacing <strong>struct</strong> with <strong>class</strong>.</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Teacher</span><span aria-hidden="true" class="line-paster-rows"><span data-code="public class Teacher" class="paste"></span></span></code></pre></li>
+<li><p>Delete the following line of code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">public</span> <span class="token keyword">string</span> Password <span class="token punctuation">{</span><span class="token keyword">get</span><span class="token punctuation">;</span> <span class="token keyword">set</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-paster-rows"><span data-code="public string Password {get; set;}," class="paste"></span></span></code></pre></li>
+<li><p>Press Enter and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">private</span> <span class="token keyword">string</span> _password <span class="token operator">=</span> Guid<span class="token punctuation">.</span><span class="token function">NewGuid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ToString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Generate a random password by default</span>
+
+<span class="token keyword">public</span> <span class="token keyword">string</span> Password
+<span class="token punctuation">{</span>
+    <span class="token keyword">set</span>
+    <span class="token punctuation">{</span>
+        _password <span class="token operator">=</span> <span class="token keyword">value</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">bool</span> <span class="token function">VerifyPassword</span><span class="token punctuation">(</span><span class="token keyword">string</span> pass<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>String<span class="token punctuation">.</span><span class="token function">Compare</span><span class="token punctuation">(</span>pass<span class="token punctuation">,</span> _password<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-paster-rows"><span data-code="private string _password = Guid.NewGuid().ToString(); // Generate a random password by default
+
+public string Password
+{
+    set
+    {
+        _password = value;
+    }
+}
+
+public bool VerifyPassword(string pass)
+{
+    return (String.Compare(pass, _password) == 0);
+}" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>Click at the end of the code <strong>public string Class {get; set;}</strong>, press Enter twice, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token comment">// Constructor to initialize the properties of a new Teacher</span>
+<span class="token keyword">public</span> <span class="token function">Teacher</span><span class="token punctuation">(</span><span class="token keyword">int</span> teacherID<span class="token punctuation">,</span> <span class="token keyword">string</span> userName<span class="token punctuation">,</span> <span class="token keyword">string</span> password<span class="token punctuation">,</span> <span class="token keyword">string</span> firstName<span class="token punctuation">,</span> <span class="token keyword">string</span> lastName<span class="token punctuation">,</span> <span class="token keyword">string</span> className<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+ TeacherID <span class="token operator">=</span> teacherID<span class="token punctuation">;</span>
+ UserName <span class="token operator">=</span> userName<span class="token punctuation">;</span>
+ Password <span class="token operator">=</span> password<span class="token punctuation">;</span>
+ FirstName <span class="token operator">=</span> firstName<span class="token punctuation">;</span>
+ LastName <span class="token operator">=</span> lastName<span class="token punctuation">;</span>
+ Class <span class="token operator">=</span> className<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Default constructor</span>
+<span class="token keyword">public</span> <span class="token function">Teacher</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+ TeacherID <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+ UserName <span class="token operator">=</span> String<span class="token punctuation">.</span>Empty<span class="token punctuation">;</span>
+ Password <span class="token operator">=</span> String<span class="token punctuation">.</span>Empty<span class="token punctuation">;</span>
+ FirstName <span class="token operator">=</span> String<span class="token punctuation">.</span>Empty<span class="token punctuation">;</span>
+ LastName <span class="token operator">=</span> String<span class="token punctuation">.</span>Empty<span class="token punctuation">;</span>
+ Class <span class="token operator">=</span> String<span class="token punctuation">.</span>Empty<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-paster-rows"><span data-code="// Constructor to initialize the properties of a new Teacher
+public Teacher(int teacherID, string userName, string password, string firstName, string lastName, string className)
+{
+ TeacherID = teacherID;
+ UserName = userName;
+ Password = password;
+ FirstName = firstName;
+ LastName = lastName;
+ Class = className;
+}
+
+// Default constructor
+public Teacher()
+{
+ TeacherID = 0;
+ UserName = String.Empty;
+ Password = String.Empty;
+ FirstName = String.Empty;
+ LastName = String.Empty;
+ Class = String.Empty;
+}" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-3-use-the-verifypassword-method-to-verify-the-password-when-a-user-logs-in">Task 3: Use the VerifyPassword method to verify the password when a user logs in</h5>
+<ol>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3a: Use the VerifyPassword method of the Teacher class to verify the teacher's password</strong> task.</p></li>
+<li><p>In the code editor, below the comment, in the code for the teacher variable, modify the <strong>String.Compare(t.Password, password.Password) == 0</strong> code to look like the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">t<span class="token punctuation">.</span><span class="token function">VerifyPassword</span><span class="token punctuation">(</span>password<span class="token punctuation">.</span>Password<span class="token punctuation">)</span><span aria-hidden="true" class="line-paster-rows"><span data-code="t.VerifyPassword(password.Password)" class="paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3b: Check whether teacher is null before examining the UserName property</strong> task.</p></li>
+<li><p>In the code editor, in the line below the comment, modify the <strong>if</strong> statement condition from <strong>!String.IsNullOrEmpty(teacher.UserName)</strong> to look like the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">teacher <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>String<span class="token punctuation">.</span><span class="token function">IsNullOrEmpty</span><span class="token punctuation">(</span>teacher<span class="token punctuation">.</span>UserName<span class="token punctuation">)</span><span aria-hidden="true" class="line-paster-rows"><span data-code="teacher != null &amp;&amp; !String.IsNullOrEmpty(teacher.UserName)" class="paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3c: Use the VerifyPassword method of the Student class to verify the student's password</strong> task.</p></li>
+<li><p>In the code editor, below the comment, in the code for the student variable, modify the <strong>String.Compare(s.Password, password.Password) == 0</strong> code to look like the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">s<span class="token punctuation">.</span><span class="token function">VerifyPassword</span><span class="token punctuation">(</span>password<span class="token punctuation">.</span>Password<span class="token punctuation">)</span><span aria-hidden="true" class="line-paster-rows"><span data-code="s.VerifyPassword(password.Password)" class="paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 3d: Check whether student is null before examining the UserName property</strong> task. </p></li>
+<li><p>In the code editor, in the line below the comment, modify the <strong>if</strong> statement condition from <strong>!String.IsNullOrEmpty(student.UserName)</strong> to look like the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">student <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>String<span class="token punctuation">.</span><span class="token function">IsNullOrEmpty</span><span class="token punctuation">(</span>student<span class="token punctuation">.</span>UserName<span class="token punctuation">)</span><span aria-hidden="true" class="line-paster-rows"><span data-code="student != null &amp;&amp; !String.IsNullOrEmpty(student.UserName)" class="paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-4-build-and-run-the-application-and-verify-that-a-teacher-or-student-can-still-log-on">Task 4: Build and run the application, and verify that a teacher or student can still log on</h5>
+<ol>
+<li><p>On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p></li>
+<li><p>On the <strong>Debug</strong> Menu, click <strong>Start Without Debugging</strong>.</p></li>
+<li><p>In the <strong>Username</strong> text box, type <strong>vallee</strong>.</p></li>
+<li><p>In the <strong>Password</strong> text box, type <strong>password</strong>, and then click <strong>Log on</strong>.</p></li>
+<li><p>Verify that the welcome screen appears, displaying the list of students.</p></li>
+<li><p>Click <strong>Log off</strong>.</p></li>
+<li><p>In the <strong>Username</strong> text box, delete the existing contents, type <strong>grubere</strong>, and then click <strong>Log on</strong>.</p></li>
+<li><p>Verify that the welcome screen appears, displaying the list of subjects and grades.</p></li>
+<li><p>Click <strong>Log off</strong>.</p></li>
+<li><p>Close the application.</p></li>
+<li><p>On the <strong>File</strong> menu, click <strong>Close Solution</strong>.</p></li>
+</ol>
+<div class=" alert alert-success"><p><strong>Results:</strong> After completing this exercise, the <strong>Teacher</strong>, <strong>Student</strong>, and <strong>Grade</strong> structs will be implemented as classes and the <strong>VerifyPassword</strong> method will be called when a user logs on.</p></div>
+<h4 id="exercise-2-adding-data-validation-to-the-grade-class">Exercise 2: Adding Data Validation to the Grade Class</h4>
+<div class=" alert alert-secondary"><p><strong>Scenario</strong></p>
+<p>In this exercise, you will define a public list of strings called Subjects to hold the names of each subject that can be assessed and then populate it with valid subject names.<br>
+You will then add validation logic to the Grade class to ensure that the subject name appears on the list you created and that the assessment date and assessment grade contain allowed values.<br>
+Finally, you will create a unit test project to verify that your validation code functions as expected.</p></div>
+<h5 id="task-1-create-a-list-of-valid-subject-names">Task 1: Create a list of valid subject names</h5>
+<ol>
+<li><p>In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p></li>
+<li><p>In the <strong>Open Project</strong> dialog box, browse to <strong>[Repository Root]\Allfiles\Mod04\Labfiles\Starter\Exercise 2</strong>, click <strong>GradesPrototype.sln</strong>, and then click <strong>Open</strong>.</p></li>
+</ol>
+<div class=" alert alert-warning"><p><strong>Note :</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p></div>
+<ol start="3">
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1a: Define a List collection for holding the names of valid subjects</strong> task.  <br>
+In the code editor, in the blank line below the comment, type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> List<span class="token operator">&lt;</span><span class="token keyword">string</span><span class="token operator">&gt;</span> Subjects<span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="public static List&lt;string&gt; Subjects;" class="paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 1b: Populate the list of valid subjects with sample data</strong> task.</p></li>
+<li><p>In the code editor, in the blank line below the comment, type the following code: </p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">Subjects <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token generic-method"><span class="token function">List</span><span class="token punctuation">&lt;</span><span class="token keyword">string</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token string">"Math"</span><span class="token punctuation">,</span> <span class="token string">"English"</span><span class="token punctuation">,</span> <span class="token string">"History"</span><span class="token punctuation">,</span> <span class="token string">"Geography"</span><span class="token punctuation">,</span>  <span class="token string">"Science"</span> <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="Subjects = new List&lt;string&gt;() { &quot;Math&quot;, &quot;English&quot;, &quot;History&quot;, &quot;Geography&quot;,  &quot;Science&quot; };" class="paste"></span></span></code></pre></li>
+</ol>
+<h6 id="task-2-add-validation-logic-to-the-grade-class-to-check-the-data-entered-by-the-user">Task 2: Add validation logic to the Grade class to check the data entered by the user</h6>
+<ol>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 2a: Add validation to the AssessmentDate property</strong> task.</p></li>
+<li><p>In the code editor under comment, delete the <strong>public string AssessmentDate { get; set; }</strong> code, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">private</span> <span class="token keyword">string</span> _assessmentDate<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">string</span> AssessmentDate
+<span class="token punctuation">{</span>
+    <span class="token keyword">get</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> _assessmentDate<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">set</span>
+<span class="token punctuation">{</span>
+    <span class="token class-name">DateTime</span> assessmentDate<span class="token punctuation">;</span>
+
+    <span class="token comment">// Verify that the user has provided a valid date</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>DateTime<span class="token punctuation">.</span><span class="token function">TryParse</span><span class="token punctuation">(</span><span class="token keyword">value</span><span class="token punctuation">,</span> <span class="token keyword">out</span> assessmentDate<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// Check that the date is no later than the current date</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>assessmentDate <span class="token operator">&amp;</span>gt<span class="token punctuation">;</span> DateTime<span class="token punctuation">.</span>Now<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token comment">// Throw an ArgumentOutOfRangeException if the date is after the current date</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ArgumentOutOfRangeException</span><span class="token punctuation">(</span><span class="token string">"AssessmentDate"</span><span class="token punctuation">,</span> <span class="token string">"Assessment date must be on or before the current date"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// If the date is valid, then save it in the appropriate format</span>
+        _assessmentDate <span class="token operator">=</span> assessmentDate<span class="token punctuation">.</span><span class="token function">ToString</span><span class="token punctuation">(</span><span class="token string">"d"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// If the date is not in a valid format then throw an ArgumentException</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ArgumentException</span><span class="token punctuation">(</span><span class="token string">"AssessmentDate"</span><span class="token punctuation">,</span> <span class="token string">"Assessment date is not recognized"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-paster-rows"><span data-code="private string _assessmentDate;
+
+public string AssessmentDate
+{
+    get
+    {
+        return _assessmentDate;
+    }set
+{
+    DateTime assessmentDate;
+
+    // Verify that the user has provided a valid date
+    if (DateTime.TryParse(value, out assessmentDate))
+    {
+        // Check that the date is no later than the current date
+        if (assessmentDate &amp;gt; DateTime.Now)
+        {
+            // Throw an ArgumentOutOfRangeException if the date is after the current date
+            throw new ArgumentOutOfRangeException(&quot;AssessmentDate&quot;, &quot;Assessment date must be on or before the current date&quot;);
+        }
+
+        // If the date is valid, then save it in the appropriate format
+        _assessmentDate = assessmentDate.ToString(&quot;d&quot;);
+    }
+    else
+    {
+        // If the date is not in a valid format then throw an ArgumentException
+        throw new ArgumentException(&quot;AssessmentDate&quot;, &quot;Assessment date is not recognized&quot;);
+    }
+}}" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 2b: Add validation to the SubjectName property</strong> task. </p></li>
+<li><p>In the code editor, below the comment, delete the <strong>public string SubjectName { get; set; }</strong> code, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">private</span> <span class="token keyword">string</span> _subjectName<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">string</span> SubjectName
+<span class="token punctuation">{</span>
+    <span class="token keyword">get</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> _subjectName<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">set</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Check that the specified subject is valid</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>DataSource<span class="token punctuation">.</span>Subjects<span class="token punctuation">.</span><span class="token function">Contains</span><span class="token punctuation">(</span><span class="token keyword">value</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// If the subject is valid store the subject name</span>
+        _subjectName <span class="token operator">=</span> <span class="token keyword">value</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// If the subject is not valid then throw an ArgumentException</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ArgumentException</span><span class="token punctuation">(</span><span class="token string">"SubjectName"</span><span class="token punctuation">,</span> <span class="token string">"Subject is not recognized"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-paster-rows"><span data-code="private string _subjectName;
+
+public string SubjectName
+{
+    get
+    {
+        return _subjectName;
+    }set
+{
+    // Check that the specified subject is valid
+    if (DataSource.Subjects.Contains(value))
+    {
+        // If the subject is valid store the subject name
+        _subjectName = value;
+    }
+    else
+    {
+        // If the subject is not valid then throw an ArgumentException
+        throw new ArgumentException(&quot;SubjectName&quot;, &quot;Subject is not recognized&quot;);
+    }
+}}" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 2c: Add validation to the Assessment property</strong> task.</p></li>
+<li><p>In the code editor, delete the <strong>public string Assessment { get; set; }</strong> code, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">private</span> <span class="token keyword">string</span> _assessment<span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">string</span> Assessment
+<span class="token punctuation">{</span>
+    <span class="token keyword">get</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> _assessment<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">set</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Verify that the grade is in the range A+ to E-</span>
+    <span class="token comment">// Use a regular expression: a single character in the range A-E at the start of the string followed by an optional + or - at the end of the string</span>
+    <span class="token class-name">Match</span> matchGrade <span class="token operator">=</span> Regex<span class="token punctuation">.</span><span class="token function">Match</span><span class="token punctuation">(</span><span class="token keyword">value</span><span class="token punctuation">,</span> <span class="token string">@"[A-E][+-]?$"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>matchGrade<span class="token punctuation">.</span>Success<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        _assessment <span class="token operator">=</span> <span class="token keyword">value</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// If the grade is not valid then throw an ArgumentOutOfRangeException</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ArgumentOutOfRangeException</span><span class="token punctuation">(</span><span class="token string">"Assessment"</span><span class="token punctuation">,</span> <span class="token string">"Assessment grade must be in the range of A+ to E-"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-paster-rows"><span data-code="private string _assessment;
+
+public string Assessment
+{
+    get
+    {
+        return _assessment;
+    }set
+{
+    // Verify that the grade is in the range A+ to E-
+    // Use a regular expression: a single character in the range A-E at the start of the string followed by an optional + or - at the end of the string
+    Match matchGrade = Regex.Match(value, @&quot;[A-E][+-]?$&quot;);
+
+    if (matchGrade.Success)
+    {
+        _assessment = value;
+    }
+    else
+    {
+        // If the grade is not valid then throw an ArgumentOutOfRangeException
+        throw new ArgumentOutOfRangeException(&quot;Assessment&quot;, &quot;Assessment grade must be in the range of A+ to E-&quot;);
+    }
+}}" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-3-add-a-unit-test-to-verify-that-the-validations-defined-for-the-grade-class-functions-as-expected">Task 3: Add a unit test to verify that the validations defined for the Grade class functions as expected</h5>
+<ol>
+<li><p>On the <strong>File</strong> menu, point to <strong>Add</strong>, and then click <strong>New Project</strong>.</p></li>
+<li><p>In the <strong>Add New Project</strong> dialog box, in the <strong>Installed</strong> templates list, expand <strong>Visual C#</strong>, click <strong>Test</strong>, and then in the <strong>Templates</strong> list, click <strong>Unit Test Project (.NET Framework)</strong>.</p></li>
+</ol>
+<div class=" alert alert-warning"><p><strong>Note:</strong> In the <strong>Add New Project</strong> window, make sure <strong>.NET Framework 4.7</strong> is selected on the top bar.</p></div>
+<ol start="3">
+<li><p>In the <strong>Name</strong> text box, type <strong>GradesTest</strong>, and then click <strong>OK</strong>.</p></li>
+<li><p>In <strong>Solution Explorer</strong>, right-click <strong>GradesTest</strong>, and click <strong>Add</strong> then click <strong>Reference</strong>.</p></li>
+<li><p>In the <strong>Reference Manager - GradesTest</strong> dialog box, expand <strong>Projects</strong> and then click <strong>Solution</strong>.</p></li>
+<li><p>Select the <strong>GradesPrototype</strong> check box, and then click <strong>OK</strong>.</p></li>
+<li><p>In the code editor, in the <strong>UnitTest1</strong> class, delete all of the existing code, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token punctuation">[</span><span class="token class-name">TestInitialize</span><span class="token punctuation">]</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">Init</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+<span class="token comment">// Create the data source (needed to populate the Subjects collection)</span>
+GradesPrototype<span class="token punctuation">.</span>Data<span class="token punctuation">.</span>DataSource<span class="token punctuation">.</span><span class="token function">CreateData</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">[</span><span class="token class-name">TestMethod</span><span class="token punctuation">]</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">TestValidGrade</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token class-name">GradesPrototype<span class="token punctuation">.</span>Data<span class="token punctuation">.</span>Grade</span> grade <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GradesPrototype<span class="token punctuation">.</span>Data<span class="token punctuation">.</span>Grade</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"01/01/2012"</span><span class="token punctuation">,</span> <span class="token string">"Math"</span><span class="token punctuation">,</span> <span class="token string">"A-"</span><span class="token punctuation">,</span> <span class="token string">"Very good"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Assert<span class="token punctuation">.</span><span class="token function">AreEqual</span><span class="token punctuation">(</span>grade<span class="token punctuation">.</span>AssessmentDate<span class="token punctuation">,</span> <span class="token string">"01/01/2012"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Assert<span class="token punctuation">.</span><span class="token function">AreEqual</span><span class="token punctuation">(</span>grade<span class="token punctuation">.</span>SubjectName<span class="token punctuation">,</span> <span class="token string">"Math"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Assert<span class="token punctuation">.</span><span class="token function">AreEqual</span><span class="token punctuation">(</span>grade<span class="token punctuation">.</span>Assessment<span class="token punctuation">,</span> <span class="token string">"A-"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">[</span><span class="token class-name">TestMethod</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token class-name">ExpectedException</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>ArgumentOutOfRangeException<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">TestBadDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Attempt to create a grade with a date in the future</span>
+    <span class="token class-name">GradesPrototype<span class="token punctuation">.</span>Data<span class="token punctuation">.</span>Grade</span> grade <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GradesPrototype<span class="token punctuation">.</span>Data<span class="token punctuation">.</span>Grade</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"1/1/2023"</span><span class="token punctuation">,</span> <span class="token string">"Math"</span><span class="token punctuation">,</span> <span class="token string">"A-"</span><span class="token punctuation">,</span> <span class="token string">"Very good"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">[</span><span class="token class-name">TestMethod</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token class-name">ExpectedException</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>ArgumentException<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> TestDateNotRecognized <span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Attempt to create a grade with an unrecognized date</span>
+    <span class="token class-name">GradesPrototype<span class="token punctuation">.</span>Data<span class="token punctuation">.</span>Grade</span> grade <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GradesPrototype<span class="token punctuation">.</span>Data<span class="token punctuation">.</span>Grade</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"13/13/2012"</span><span class="token punctuation">,</span> <span class="token string">"Math"</span><span class="token punctuation">,</span> <span class="token string">"A-"</span><span class="token punctuation">,</span> <span class="token string">"Very good"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">[</span><span class="token class-name">TestMethod</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token class-name">ExpectedException</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>ArgumentOutOfRangeException<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">TestBadAssessment</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Attempt to create a grade with an assessment outside the range A+ to E-</span>
+    <span class="token class-name">GradesPrototype<span class="token punctuation">.</span>Data<span class="token punctuation">.</span>Grade</span> grade <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GradesPrototype<span class="token punctuation">.</span>Data<span class="token punctuation">.</span>Grade</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"1/1/2012"</span><span class="token punctuation">,</span> <span class="token string">"Math"</span><span class="token punctuation">,</span> <span class="token string">"F-"</span><span class="token punctuation">,</span> <span class="token string">"Terrible"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">[</span><span class="token class-name">TestMethod</span><span class="token punctuation">]</span>
+<span class="token punctuation">[</span><span class="token class-name">ExpectedException</span><span class="token punctuation">(</span><span class="token keyword">typeof</span><span class="token punctuation">(</span>ArgumentException<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">TestBadSubject</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Attempt to create a grade with an unrecognized subject</span>
+    <span class="token class-name">GradesPrototype<span class="token punctuation">.</span>Data<span class="token punctuation">.</span>Grade</span> grade <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">GradesPrototype<span class="token punctuation">.</span>Data<span class="token punctuation">.</span>Grade</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"1/1/2012"</span><span class="token punctuation">,</span> <span class="token string">"French"</span><span class="token punctuation">,</span> <span class="token string">"B-"</span><span class="token punctuation">,</span> <span class="token string">"OK"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-paster-rows"><span data-code="[TestInitialize]
+public void Init()
+{
+// Create the data source (needed to populate the Subjects collection)
+GradesPrototype.Data.DataSource.CreateData();
+}
+
+[TestMethod]
+public void TestValidGrade()
+{
+    GradesPrototype.Data.Grade grade = new GradesPrototype.Data.Grade(1, &quot;01/01/2012&quot;, &quot;Math&quot;, &quot;A-&quot;, &quot;Very good&quot;);
+    Assert.AreEqual(grade.AssessmentDate, &quot;01/01/2012&quot;);
+    Assert.AreEqual(grade.SubjectName, &quot;Math&quot;);
+    Assert.AreEqual(grade.Assessment, &quot;A-&quot;);
+}
+
+[TestMethod]
+[ExpectedException(typeof(ArgumentOutOfRangeException))]
+public void TestBadDate()
+{
+    // Attempt to create a grade with a date in the future
+    GradesPrototype.Data.Grade grade = new GradesPrototype.Data.Grade(1, &quot;1/1/2023&quot;, &quot;Math&quot;, &quot;A-&quot;, &quot;Very good&quot;);
+}
+
+[TestMethod]
+[ExpectedException(typeof(ArgumentException))]
+public void TestDateNotRecognized ()
+{
+    // Attempt to create a grade with an unrecognized date
+    GradesPrototype.Data.Grade grade = new GradesPrototype.Data.Grade(1, &quot;13/13/2012&quot;, &quot;Math&quot;, &quot;A-&quot;, &quot;Very good&quot;);
+}
+
+[TestMethod]
+[ExpectedException(typeof(ArgumentOutOfRangeException))]
+public void TestBadAssessment()
+{
+    // Attempt to create a grade with an assessment outside the range A+ to E-
+    GradesPrototype.Data.Grade grade = new GradesPrototype.Data.Grade(1, &quot;1/1/2012&quot;, &quot;Math&quot;, &quot;F-&quot;, &quot;Terrible&quot;);
+}
+
+[TestMethod]
+[ExpectedException(typeof(ArgumentException))]
+public void TestBadSubject()
+{
+    // Attempt to create a grade with an unrecognized subject
+    GradesPrototype.Data.Grade grade = new GradesPrototype.Data.Grade(1, &quot;1/1/2012&quot;, &quot;French&quot;, &quot;B-&quot;, &quot;OK&quot;);
+}" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p></li>
+<li><p>On the <strong>Test</strong> menu, point to <strong>Run</strong>, and then click <strong>All Tests</strong>.</p></li>
+<li><p>In the <strong>Test Explorer</strong> window, verify that all the tests are passed.</p></li>
+<li><p>Close <strong>Test Explorer</strong>.</p></li>
+<li><p>On the <strong>File</strong> menu, click <strong>Close Solution</strong>.</p></li>
+</ol>
+<div class=" alert alert-success"><p><strong>Results:</strong> After completing this exercise, the <strong>Grade</strong> class will contain validation logic.</p></div>
+<h4 id="exercise-3-displaying-students-in-name-order">Exercise 3: Displaying Students in Name Order</h4>
+<div class=" alert alert-secondary"><p><strong>Scenario</strong></p>
+<p>In this exercise, you will write code to display the students in alphabetical order of the last name and then the first name.</p>
+<ul>
+<li>The application currently displays students in no specific order when logged on as a teacher, but you now want them to be displayed in alphabetical order of the last name and then the first name.</li>
+<li>To achieve this, you decide that the Student class should implement the IComparable&lt;&gt; interface to enable comparison of student data.</li>
+<li>You can then add code to the CompareTo method in the Student class, enabling students to be sorted based on their last name and first name.</li>
+<li>Currently, students are stored in a non-type-safe ArrayList collection. You decide to modify this so they are stored in a type-safe List collection.</li>
+<li>Finally, you will sort the student data and then run the application to verify that the students are retrieved and displayed in alphabetical order of their last name and first name.</li>
+</ul></div>
+<h5 id="task-1-run-the-application-and-verify-that-the-students-are-not-displayed-in-any-specific-order-when-logged-on-as-a-teacher">Task 1: Run the application and verify that the students are not displayed in any specific order when logged on as a teacher</h5>
+<ol>
+<li><p>In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p></li>
+<li><p>In the <strong>Open Project</strong> dialog box, browse to <strong>[Repository Root]\Allfiles\Mod04\Labfiles\Starter\Exercise 3</strong>, click <strong>GradesPrototype.sln</strong>, and then click <strong>Open</strong>.</p></li>
+</ol>
+<div class=" alert alert-warning"><p><strong>Note :</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p></div>
+<ol start="3">
+<li><p>On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p></li>
+<li><p>On the <strong>Debug</strong> Menu, click <strong>Start Without Debugging</strong>.</p></li>
+<li><p>In the <strong>Username</strong> text box, type <strong>vallee</strong>.</p></li>
+<li><p>In the <strong>Password</strong> text box, type <strong>password</strong>, and then click <strong>Log on</strong>.</p></li>
+<li><p>Verify that the students are not displayed in any specific order.</p></li>
+<li><p>Close the application.</p></li>
+</ol>
+<h5 id="task-2-implement-the-icomparableltstudentgt-interface-to-enable-comparison-of-students">Task 2: Implement the IComparable&lt;Student\&gt; interface to enable comparison of students</h5>
+<ol>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 3: Task 2a: Specify that the Student class implements the IComparable&lt;Student\&gt; interface</strong> task.</p></li>
+<li><p>In the code editor, click at the end of the <strong>public class Student</strong> declaration, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token punctuation">:</span> IComparable<span class="token operator">&lt;</span>Student<span class="token operator">&gt;</span><span aria-hidden="true" class="line-paster-rows"><span data-code=": IComparable&lt;Student&gt;" class="paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 3: Task 2b: Compare Student objects based on their LastName and FirstName properties</strong> task. </p></li>
+<li><p>In the code editor, in the blank line below the comment, type the following code: </p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token comment">// Compare Student objects based on their LastName and FirstName properties</span>
+<span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">CompareTo</span><span class="token punctuation">(</span><span class="token class-name">Student</span> other<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Concatenate the LastName and FirstName of this student</span>
+    <span class="token keyword">string</span> thisStudentsFullName <span class="token operator">=</span> LastName <span class="token operator">+</span> FirstName<span class="token punctuation">;</span><span class="token comment">// Concatenate the LastName and FirstName of the "other" student</span>
+<span class="token keyword">string</span> otherStudentsFullName <span class="token operator">=</span> other<span class="token punctuation">.</span>LastName <span class="token operator">+</span> other<span class="token punctuation">.</span>FirstName<span class="token punctuation">;</span>
+
+<span class="token comment">// Use String.Compare to compare the concatenated names and return the result</span>
+<span class="token keyword">return</span><span class="token punctuation">(</span>String<span class="token punctuation">.</span><span class="token function">Compare</span><span class="token punctuation">(</span>thisStudentsFullName<span class="token punctuation">,</span> otherStudentsFullName<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-paster-rows"><span data-code="// Compare Student objects based on their LastName and FirstName properties
+public int CompareTo(Student other)
+{
+    // Concatenate the LastName and FirstName of this student
+    string thisStudentsFullName = LastName + FirstName;// Concatenate the LastName and FirstName of the &quot;other&quot; student
+string otherStudentsFullName = other.LastName + other.FirstName;
+
+// Use String.Compare to compare the concatenated names and return the result
+return(String.Compare(thisStudentsFullName, otherStudentsFullName));}" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+</ol>
+<h4 id="task-3-change-the-students-arraylist-collection-into-a-listltstudentgt-collection">Task 3: Change the Students ArrayList collection into a List&lt;Student\&gt; collection</h4>
+<ol>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 3: Task 3a: Change the Students collection into a List<student></student></strong> task.</p></li>
+<li><p>In the code editor, below the comment, modify the <strong>public static ArrayList Students;</strong> code to look like the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> List<span class="token operator">&lt;</span>Student<span class="token operator">&gt;</span> Students<span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="public static List&lt;Student&gt; Students;" class="paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 3: Task 3b: Populate the List<student> collection</student></strong> task. </p></li>
+<li><p>In the code editor, below the comment, modify the <strong>Students = new ArrayList()</strong> code to look like the following code: </p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">Students <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token generic-method"><span class="token function">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Student</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-paster-rows"><span data-code="Students = new List&lt;Student&gt;()" class="paste"></span></span></code></pre></li>
+</ol>
+<h4 id="task-4-sort-the-data-in-the-students-collection">Task 4: Sort the data in the Students collection</h4>
+<ol>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 3: Task 4a: Sort the data in the Students collection</strong> task.</p></li>
+<li><p>In the code editor, click at the end of the comment line, press Enter, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">DataSource<span class="token punctuation">.</span>Students<span class="token punctuation">.</span><span class="token function">Sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="DataSource.Students.Sort();" class="paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-5-verify-that-students-are-retrieved-and-displayed-in-the-order-of-their-first-name-and-last-name">Task 5: Verify that Students are retrieved and displayed in the order of their first name and last name</h5>
+<ol>
+<li><p>On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p></li>
+<li><p>On the <strong>Debug</strong> menu, click <strong>Start Without Debugging</strong>.</p></li>
+<li><p>In the <strong>Username</strong> text box, type <strong>vallee</strong>.</p></li>
+<li><p>In the <strong>Password</strong> text box, type <strong>password</strong>, and then click <strong>Log on</strong>.</p></li>
+<li><p>Verify that the students are displayed in the alphabetical order, based on their last names.</p></li>
+<li><p>Log off and then close the application.</p></li>
+<li><p>On the <strong>File</strong> menu, click <strong>Close Solution</strong>.</p></li>
+</ol>
+<div class=" alert alert-success"><p><strong>Results:</strong> After completing this exercise, the application will display the students in the alphabetical order, based on last names, and then first names.</p></div>
+<h4 id="exercise-4-enabling-teachers-to-modify-class-and-grade-data">Exercise 4: Enabling Teachers to Modify Class and Grade Data</h4>
+<div class=" alert alert-secondary"><p><strong>Scenario</strong></p>
+<p>In this exercise, you will write code that enables a teacher to add a student and then enroll them in a class.<br>
+This will be implemented as two separate steps, because a teacher may want to add a student before knowing which class they will be enrolled in.<br>
+You will also enable a teacher to remove a student from a class. When adding or removing a student, you will display a prompt to confirm that the teacher wants to perform the action.</p>
+<ul>
+<li>To enroll a student in a class or remove them from a class, you modify the TeacherID property of that student.</li>
+<li>The application now includes the AssignStudentDialog window, which displays a list of students who are not assigned to a class.</li>
+<li>You need to add code to this window to assign a student to the teacher's class and to update the list of students as appropriate.</li>
+<li>You also need to add code to remove a student from a class and to enable teachers to add grades to their students.</li>
+<li>After a student has been added to the database, that student will be able to log on to view their grades. </li>
+</ul></div>
+<h5 id="task-1-change-the-teachers-and-grades-collections-to-be-generic-list-collections">Task 1: Change the Teachers and Grades collections to be generic List collections</h5>
+<ol>
+<li><p>In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p></li>
+<li><p>In the <strong>Open Project</strong> dialog box, browse to <strong>[Repository Root]\Allfiles\Mod04\Labfiles\Starter\Exercise 4</strong>, click <strong>GradesPrototype.sln</strong>, and then click <strong>Open</strong>.</p></li>
+</ol>
+<div class=" alert alert-warning"><p><strong>Note :</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p></div>
+<ol start="3">
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 4: Task 1a: Change the Teachers collection into a generic List</strong> task.</p></li>
+<li><p>In the code editor, below the comment, modify the code <strong>public static ArrayList Teachers;</strong> to look like the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> List<span class="token operator">&lt;</span>Teacher<span class="token operator">&gt;</span> Teachers<span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="public static List&lt;Teacher&gt; Teachers;" class="paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 4: Task 1b: Change the Grades collection into a generic List</strong> task.</p></li>
+<li><p>In the code editor, below the comment, modify the code <strong>public static ArrayList Grades;</strong> to look like the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">public</span> <span class="token keyword">static</span> List<span class="token operator">&lt;</span>Grade<span class="token operator">&gt;</span> Grades<span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="public static List&lt;Grade&gt; Grades;" class="paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 4: Task 1c: Populate the Teachers collection</strong> task.</p></li>
+<li><p>In the code editor, below the comment, modify the code <strong>Teachers = new ArrayList()</strong> to look like the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">Teachers <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token generic-method"><span class="token function">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Teacher</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-paster-rows"><span data-code="Teachers = new List&lt;Teacher&gt;()" class="paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 4: Task 1d: Populate the Grades collection</strong> task.</p></li>
+<li><p>In the code editor, below the comment, modify the code <strong>Grades = new ArrayList()</strong> to look like the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">Grades <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token generic-method"><span class="token function">List</span><span class="token punctuation">&lt;</span><span class="token class-name">Grade</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-paster-rows"><span data-code="Grades = new List&lt;Grade&gt;()" class="paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-2-add-the-enrollinclass-and-removefromclass-methods-for-the-teacher-class">Task 2: Add the EnrollInClass and RemoveFromClass methods for the Teacher class</h5>
+<ol>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 4: Task 2a: Enroll a student in the class for this teacher</strong> task.</p></li>
+<li><p>In the code editor, click in the blank line below the comment, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">EnrollInClass</span><span class="token punctuation">(</span><span class="token class-name">Student</span> student<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Verify that the student is not already enrolled in another class</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>student<span class="token punctuation">.</span>TeacherID <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// Set the TeacherID property of the student</span>
+        student<span class="token punctuation">.</span>TeacherID <span class="token operator">=</span> TeacherID<span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+     <span class="token keyword">else</span>
+     <span class="token punctuation">{</span>
+        <span class="token comment">// If the student is already assigned to a class, throw an  ArgumentException</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ArgumentException</span><span class="token punctuation">(</span><span class="token string">"Student"</span><span class="token punctuation">,</span> <span class="token string">"Student is already assigned to a class"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-paster-rows"><span data-code="public void EnrollInClass(Student student)
+{
+    // Verify that the student is not already enrolled in another class
+    if (student.TeacherID == 0)
+    {
+        // Set the TeacherID property of the student
+        student.TeacherID = TeacherID;
+     }
+     else
+     {
+        // If the student is already assigned to a class, throw an  ArgumentException
+        throw new ArgumentException(&quot;Student&quot;, &quot;Student is already assigned to a class&quot;);
+     }
+}" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 4: Task 2b: Remove a student from the class for this teacher</strong> task.</p></li>
+<li><p>In the code editor, click at the end of the comment line, press Enter, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token comment">// Remove a student from the class for this teacher</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">RemoveFromClass</span><span class="token punctuation">(</span><span class="token class-name">Student</span> student<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+   <span class="token comment">// Verify that the student is actually assigned to the class for this teacher</span>
+   <span class="token keyword">if</span> <span class="token punctuation">(</span>student<span class="token punctuation">.</span>TeacherID <span class="token operator">==</span> TeacherID<span class="token punctuation">)</span>
+   <span class="token punctuation">{</span>
+       <span class="token comment">// Reset the TeacherID property of the student</span>
+       student<span class="token punctuation">.</span>TeacherID <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+   <span class="token keyword">else</span>
+   <span class="token punctuation">{</span>
+       <span class="token comment">// If the student is not assigned to the class for this teacher, throw an ArgumentException</span>
+       <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ArgumentException</span><span class="token punctuation">(</span><span class="token string">"Student"</span><span class="token punctuation">,</span> <span class="token string">"Student is not assigned to this class"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-paster-rows"><span data-code="// Remove a student from the class for this teacher
+public void RemoveFromClass(Student student)
+{
+   // Verify that the student is actually assigned to the class for this teacher
+   if (student.TeacherID == TeacherID)
+   {
+       // Reset the TeacherID property of the student
+       student.TeacherID = 0;
+   }
+   else
+   {
+       // If the student is not assigned to the class for this teacher, throw an ArgumentException
+       throw new ArgumentException(&quot;Student&quot;, &quot;Student is not assigned to this class&quot;);
+   }
+}" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 4: Task 2c: Add a grade to a student (the grade is already populated)</strong> task.</p></li>
+<li><p>In the code editor, click at the end of the comment line, press Enter, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token comment">// Add a grade to a student (the grade is already populated)</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">AddGrade</span><span class="token punctuation">(</span><span class="token class-name">Grade</span> grade<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+   <span class="token comment">// Verify that the grade does not belong to another student - the StudentID  should be zero</span>
+   <span class="token keyword">if</span> <span class="token punctuation">(</span>grade<span class="token punctuation">.</span>StudentID <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+   <span class="token punctuation">{</span>
+      <span class="token comment">// Add the grade to the student's record</span>
+      grade<span class="token punctuation">.</span>StudentID <span class="token operator">=</span> StudentID<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// If the grade belongs to a different student, throw an ArgumentException</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ArgumentException</span><span class="token punctuation">(</span><span class="token string">"Grade"</span><span class="token punctuation">,</span> <span class="token string">"Grade belongs to a different  student"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-paster-rows"><span data-code="// Add a grade to a student (the grade is already populated)
+public void AddGrade(Grade grade)
+{
+   // Verify that the grade does not belong to another student - the StudentID  should be zero
+   if (grade.StudentID == 0)
+   {
+      // Add the grade to the student&#39;s record
+      grade.StudentID = StudentID;
+    }
+    else
+    {
+        // If the grade belongs to a different student, throw an ArgumentException
+        throw new ArgumentException(&quot;Grade&quot;, &quot;Grade belongs to a different  student&quot;);
+    }
+}" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-3-add-code-to-enroll-a-student-in-a-teachers-class">Task 3: Add code to enroll a student in a teacher's class</h5>
+<ol>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 4: Task 3a: Enroll a student in the teacher's class</strong> task.<br>
+33</p></li>
+<li><p>In the code editor, below the comment, click in the blank line in the <strong>Student_Click</strong> method, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">try</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Determine which student the user clicked</span>
+    <span class="token comment">// the StudentID is held in the Tag property of the Button that the user    clicked</span>
+    <span class="token class-name">Button</span> studentClicked <span class="token operator">=</span> sender <span class="token keyword">as</span> Button<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> studentID <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span>studentClicked<span class="token punctuation">.</span>Tag<span class="token punctuation">;</span><span class="token comment">// Find this student in the Students collection</span>
+<span class="token class-name">Student</span> student <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">from</span> s <span class="token keyword">in</span> <span class="token class-name">DataSource<span class="token punctuation">.</span>Students</span>
+                   <span class="token keyword">where</span> s<span class="token punctuation">.</span>StudentID <span class="token operator">==</span> studentID
+                   <span class="token keyword">select</span> s<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">First</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Prompt the user to confirm that they wish to add this student to their class</span>
+<span class="token keyword">string</span> message <span class="token operator">=</span> String<span class="token punctuation">.</span><span class="token function">Format</span><span class="token punctuation">(</span><span class="token string">"Add {0} {1} to your class?"</span><span class="token punctuation">,</span> student<span class="token punctuation">.</span>FirstName<span class="token punctuation">,</span>  student<span class="token punctuation">.</span>LastName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">MessageBoxResult</span> reply <span class="token operator">=</span> MessageBox<span class="token punctuation">.</span><span class="token function">Show</span><span class="token punctuation">(</span>message<span class="token punctuation">,</span> <span class="token string">"Confirm"</span><span class="token punctuation">,</span> MessageBoxButton<span class="token punctuation">.</span>YesNo<span class="token punctuation">,</span> MessageBoxImage<span class="token punctuation">.</span>Question<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// If the user confirms, add the student to their class</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>reply <span class="token operator">==</span> MessageBoxResult<span class="token punctuation">.</span>Yes<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Get the ID of the currently logged-on teacher</span>
+    <span class="token keyword">int</span> teacherID <span class="token operator">=</span> SessionContext<span class="token punctuation">.</span>CurrentTeacher<span class="token punctuation">.</span>TeacherID<span class="token punctuation">;</span>
+
+    <span class="token comment">// Assign the student to this teacher's class</span>
+    SessionContext<span class="token punctuation">.</span>CurrentTeacher<span class="token punctuation">.</span><span class="token function">EnrollInClass</span><span class="token punctuation">(</span>student<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Refresh the display - the new assigned student should disappear from     the list of unassigned students</span>
+    <span class="token function">Refresh</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span><span class="token punctuation">}</span>
+<span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> ex<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+      MessageBox<span class="token punctuation">.</span><span class="token function">Show</span><span class="token punctuation">(</span>ex<span class="token punctuation">.</span>Message<span class="token punctuation">,</span> <span class="token string">"Error enrolling student"</span><span class="token punctuation">,</span> MessageBoxButton<span class="token punctuation">.</span>OK<span class="token punctuation">,</span> MessageBoxImage<span class="token punctuation">.</span>Error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-paster-rows"><span data-code="try
+{
+    // Determine which student the user clicked
+    // the StudentID is held in the Tag property of the Button that the user    clicked
+    Button studentClicked = sender as Button;
+    int studentID = (int)studentClicked.Tag;// Find this student in the Students collection
+Student student = (from s in DataSource.Students
+                   where s.StudentID == studentID
+                   select s).First();
+
+// Prompt the user to confirm that they wish to add this student to their class
+string message = String.Format(&quot;Add {0} {1} to your class?&quot;, student.FirstName,  student.LastName);
+MessageBoxResult reply = MessageBox.Show(message, &quot;Confirm&quot;, MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+// If the user confirms, add the student to their class
+if (reply == MessageBoxResult.Yes)
+{
+    // Get the ID of the currently logged-on teacher
+    int teacherID = SessionContext.CurrentTeacher.TeacherID;
+
+    // Assign the student to this teacher&#39;s class
+    SessionContext.CurrentTeacher.EnrollInClass(student);
+
+    // Refresh the display - the new assigned student should disappear from     the list of unassigned students
+    Refresh();
+ }}
+catch (Exception ex)
+{
+      MessageBox.Show(ex.Message, &quot;Error enrolling student&quot;, MessageBoxButton.OK, MessageBoxImage.Error);
+}" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 4: Task 3b: Refresh the display of unassigned students</strong> task. </p></li>
+<li><p>In the code editor, below the comment, click in the blank line in the <strong>Refresh</strong> method, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token comment">// Find all unassigned students - they have a TeacherID of 0</span>
+<span class="token keyword">var</span> unassignedStudents <span class="token operator">=</span> <span class="token keyword">from</span> s <span class="token keyword">in</span> <span class="token class-name">DataSource<span class="token punctuation">.</span>Students</span>
+                         <span class="token keyword">where</span> s<span class="token punctuation">.</span>TeacherID <span class="token operator">==</span> <span class="token number">0</span>
+                         <span class="token keyword">select</span> s<span class="token punctuation">;</span>
+
+<span class="token comment">// If there are no unassigned students, then display the "No unassigned students" message</span>
+<span class="token comment">// and hide the list of unassigned students</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>unassignedStudents<span class="token punctuation">.</span><span class="token function">Count</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    txtMessage<span class="token punctuation">.</span>Visibility <span class="token operator">=</span> Visibility<span class="token punctuation">.</span>Visible<span class="token punctuation">;</span>
+    list<span class="token punctuation">.</span>Visibility <span class="token operator">=</span> Visibility<span class="token punctuation">.</span>Collapsed<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">else</span>
+<span class="token punctuation">{</span>
+     <span class="token comment">// If there are unassigned students, hide the "No unassigned students" message</span>
+     <span class="token comment">// and display the list of unassigned students</span>
+     txtMessage<span class="token punctuation">.</span>Visibility <span class="token operator">=</span> Visibility<span class="token punctuation">.</span>Collapsed<span class="token punctuation">;</span>
+     list<span class="token punctuation">.</span>Visibility <span class="token operator">=</span> Visibility<span class="token punctuation">.</span>Visible<span class="token punctuation">;</span>  <span class="token comment">// Bind the ItemControl on the dialog to the list of unassigned students</span>
+  <span class="token comment">// The names of the students will appear in the ItemsControl on the dialog</span>
+  list<span class="token punctuation">.</span>ItemsSource <span class="token operator">=</span> unassignedStudents<span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-paster-rows"><span data-code="// Find all unassigned students - they have a TeacherID of 0
+var unassignedStudents = from s in DataSource.Students
+                         where s.TeacherID == 0
+                         select s;
+
+// If there are no unassigned students, then display the &quot;No unassigned students&quot; message
+// and hide the list of unassigned students
+if (unassignedStudents.Count() == 0)
+{
+    txtMessage.Visibility = Visibility.Visible;
+    list.Visibility = Visibility.Collapsed;
+}
+else
+{
+     // If there are unassigned students, hide the &quot;No unassigned students&quot; message
+     // and display the list of unassigned students
+     txtMessage.Visibility = Visibility.Collapsed;
+     list.Visibility = Visibility.Visible;  // Bind the ItemControl on the dialog to the list of unassigned students
+  // The names of the students will appear in the ItemsControl on the dialog
+  list.ItemsSource = unassignedStudents;}" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 4: Task 3c: Enroll a student in the teacher's class</strong> task.  </p></li>
+<li><p>In the code editor, below the comment, click in the blank line in the <strong>EnrollStudent_Click</strong> method, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token comment">// Use the AssignStudentDialog to display unassigned students and add them to the teacher's class</span>
+<span class="token comment">// All of the work is performed in the code behind the dialog</span>
+<span class="token class-name">AssignStudentDialog</span> asd <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AssignStudentDialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+asd<span class="token punctuation">.</span><span class="token function">ShowDialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Refresh the display to show any newly enrolled students</span>
+<span class="token function">Refresh</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="// Use the AssignStudentDialog to display unassigned students and add them to the teacher&#39;s class
+// All of the work is performed in the code behind the dialog
+AssignStudentDialog asd = new AssignStudentDialog();
+asd.ShowDialog();
+
+// Refresh the display to show any newly enrolled students
+Refresh();" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-4-add-code-to-enable-a-teacher-to-remove-the-student-from-the-assigned-class">Task 4: Add code to enable a teacher to remove the student from the assigned class</h5>
+<ol>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 4: Task 4a: Enable a teacher to remove a student from a class</strong> task.</p></li>
+<li><p>In the code editor, below the comment, click in the blank line in the <strong>Remove_Click</strong> method, and then type the following code:</p>
+<pre class="line-paster language-cli"><code class="cli  language-cli">try
+{
+// Determine which student the user clicked
+// the StudentID is held in the Tag property of the Button that the user    clicked
+Button studentClicked = sender as Button;
+int studentID = (int)studentClicked.Tag;
+
+// Find this student in the Students collection
+Student student = (from s in DataSource.Students
+                   where s.StudentID == studentID
+                   select s).First();
+
+// Prompt the user to confirm that they wish to add this student to their class
+string message = String.Format("Add {0} {1} to your class?", student.FirstName,  student.LastName);
+MessageBoxResult reply = MessageBox.Show(message, "Confirm", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+// If the user confirms, add the student to their class
+if (reply == MessageBoxResult.Yes)
+{
+    // Get the ID of the currently logged-on teacher
+    int teacherID = SessionContext.CurrentTeacher.TeacherID;// Assign the student to this teacher's class
+SessionContext.CurrentTeacher.EnrollInClass(student);
+
+// Refresh the display - the new assigned student should disappear from     the list of unassigned students
+Refresh(); }
+}
+catch (Exception ex)
+{
+  MessageBox.Show(ex.Message, "Error enrolling student", MessageBoxButton.OK, MessageBoxImage.Error);
+}<span aria-hidden="true" class="line-paster-rows"><span data-code="try" class="paste"></span><span data-code="{" class="paste"></span><span data-code="// Determine which student the user clicked" class="paste"></span><span data-code="// the StudentID is held in the Tag property of the Button that the user    clicked" class="paste"></span><span data-code="Button studentClicked = sender as Button;" class="paste"></span><span data-code="int studentID = (int)studentClicked.Tag;" class="paste"></span><span class="no-paste"></span><span data-code="// Find this student in the Students collection" class="paste"></span><span data-code="Student student = (from s in DataSource.Students" class="paste"></span><span data-code="                   where s.StudentID == studentID" class="paste"></span><span data-code="                   select s).First();" class="paste"></span><span class="no-paste"></span><span data-code="// Prompt the user to confirm that they wish to add this student to their class" class="paste"></span><span data-code="string message = String.Format(&quot;Add {0} {1} to your class?&quot;, student.FirstName,  student.LastName);" class="paste"></span><span data-code="MessageBoxResult reply = MessageBox.Show(message, &quot;Confirm&quot;, MessageBoxButton.YesNo, MessageBoxImage.Question);" class="paste"></span><span class="no-paste"></span><span data-code="// If the user confirms, add the student to their class" class="paste"></span><span data-code="if (reply == MessageBoxResult.Yes)" class="paste"></span><span data-code="{" class="paste"></span><span data-code="    // Get the ID of the currently logged-on teacher" class="paste"></span><span data-code="    int teacherID = SessionContext.CurrentTeacher.TeacherID;// Assign the student to this teacher&#39;s class" class="paste"></span><span data-code="SessionContext.CurrentTeacher.EnrollInClass(student);" class="paste"></span><span class="no-paste"></span><span data-code="// Refresh the display - the new assigned student should disappear from     the list of unassigned students" class="paste"></span><span data-code="Refresh(); }" class="paste"></span><span data-code="}" class="paste"></span><span data-code="catch (Exception ex)" class="paste"></span><span data-code="{" class="paste"></span><span data-code="  MessageBox.Show(ex.Message, &quot;Error enrolling student&quot;, MessageBoxButton.OK, MessageBoxImage.Error);" class="paste"></span><span data-code="}" class="paste"></span></span></code></pre></li>
+</ol>
+<h4 id="task-5-add-code-to-enable-a-teacher-to-add-a-grade-to-a-student">Task 5: Add code to enable a teacher to add a grade to a student</h4>
+<ol>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 4: Task 5a: Enable a teacher to add a grade to a student</strong> task.</p></li>
+<li><p>In the code editor, below the comment, click in the blank line in the <strong>AddGrade_Click</strong> method, and then type the following code:</p>
+<pre class="line-paster language-cli"><code class="cli  language-cli">// Find all unassigned students - they have a TeacherID of 0
+var unassignedStudents = from s in DataSource.Students
+                      where s.TeacherID == 0
+                      select s;
+
+// If there are no unassigned students, then display the "No unassigned students" message
+// and hide the list of unassigned students
+if (unassignedStudents.Count() == 0)
+{
+ txtMessage.Visibility = Visibility.Visible;
+ list.Visibility = Visibility.Collapsed;
+}
+else
+{
+  // If there are unassigned students, hide the "No unassigned students" message
+  // and display the list of unassigned students
+  txtMessage.Visibility = Visibility.Collapsed;
+  list.Visibility = Visibility.Visible;
+
+   // Bind the ItemControl on the dialog to the list of unassigned students
+   // The names of the students will appear in the ItemsControl on the dialog
+   list.ItemsSource = unassignedStudents;
+}<span aria-hidden="true" class="line-paster-rows"><span data-code="// Find all unassigned students - they have a TeacherID of 0" class="paste"></span><span data-code="var unassignedStudents = from s in DataSource.Students" class="paste"></span><span data-code="                      where s.TeacherID == 0" class="paste"></span><span data-code="                      select s;" class="paste"></span><span class="no-paste"></span><span data-code="// If there are no unassigned students, then display the &quot;No unassigned students&quot; message" class="paste"></span><span data-code="// and hide the list of unassigned students" class="paste"></span><span data-code="if (unassignedStudents.Count() == 0)" class="paste"></span><span data-code="{" class="paste"></span><span data-code=" txtMessage.Visibility = Visibility.Visible;" class="paste"></span><span data-code=" list.Visibility = Visibility.Collapsed;" class="paste"></span><span data-code="}" class="paste"></span><span data-code="else" class="paste"></span><span data-code="{" class="paste"></span><span data-code="  // If there are unassigned students, hide the &quot;No unassigned students&quot; message" class="paste"></span><span data-code="  // and display the list of unassigned students" class="paste"></span><span data-code="  txtMessage.Visibility = Visibility.Collapsed;" class="paste"></span><span data-code="  list.Visibility = Visibility.Visible;" class="paste"></span><span class="no-paste"></span><span data-code="   // Bind the ItemControl on the dialog to the list of unassigned students" class="paste"></span><span data-code="   // The names of the students will appear in the ItemsControl on the dialog" class="paste"></span><span data-code="   list.ItemsSource = unassignedStudents;" class="paste"></span><span data-code="}" class="paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-6-run-the-application-and-verify-that-students-can-be-added-to-and-removed-from-classes-and-that-grades-can-be-added-to-students">Task 6: Run the application and verify that students can be added to and removed from classes, and that grades can be added to students</h5>
+<ol>
+<li>On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</li>
+</ol>
+<ul>
+<li>On the <strong>Debug</strong> menu, click <strong>Start Without Debugging</strong>.</li>
+</ul>
+<ol>
+<li><p>In the <strong>Username</strong> text box, type <strong>vallee</strong>.</p></li>
+<li><p>In the <strong>Password</strong> text box, type <strong>password</strong>, and then click <strong>Log on</strong>.</p></li>
+<li><p>Click <strong>New Student</strong>.</p>
+<ul>
+<li><p>In the <strong>First Name</strong> text box, type <strong>Darren</strong>.</p></li>
+<li><p>In the <strong>Last Name</strong> text box, type <strong>Parker</strong>.</p></li>
+<li><p>In the <strong>Password</strong> text box, type <strong>password</strong>, and then click <strong>OK</strong>.</p></li></ul></li>
+<li><p>Click <strong>Enroll Student</strong>.</p></li>
+<li><p>Verify that the <strong>Assign Student</strong> dialog box appears and that <strong>Darren Parker</strong> is in the list.</p></li>
+<li><p>Click <strong>Darren Parker</strong>.</p></li>
+<li><p>Verify that the <strong>Confirm</strong> message box appears, and then click <strong>Yes</strong>.</p></li>
+<li><p>In the <strong>Assign Student</strong> dialog box, verify that <strong>Darren Parker</strong> disappears and that the text <strong>No unassigned students</strong> is displayed.</p></li>
+<li><p>Click <strong>Close</strong>.</p></li>
+<li><p>Verify that <strong>Darren Parker</strong> is added to the student list.</p></li>
+<li><p>Click the student <strong>Kevin Liu</strong>.</p></li>
+<li><p>Click <strong>Remove Student</strong>.</p></li>
+<li><p>Verify that the <strong>Confirm</strong> message box appears, and then click <strong>Yes</strong>.</p></li>
+<li><p>Verify that <strong>Kevin Liu</strong> is removed from the student list.</p></li>
+<li><p>Click the student <strong>Darren Parker</strong>.</p></li>
+<li><p>Click <strong>Add Grade</strong>.</p></li>
+<li><p>Verify that the <strong>New Grade Details</strong> dialog box appears.</p>
+<ul>
+<li><p>Verify that the <strong>Date</strong> text box contains the current date.</p></li>
+<li><p>In the <strong>Subject</strong> list, click <strong>English</strong>.</p></li>
+<li><p>In the <strong>Assessment</strong> text box, type <strong>B</strong>.</p></li></ul></li>
+<li><p>In the <strong>Comments</strong> text box, type <strong>Good</strong>, and then click <strong>OK</strong>.</p></li>
+<li><p>Verify that the grade information appears on the report card.</p></li>
+<li><p>Click <strong>Log off</strong>.</p></li>
+<li><p>In the <strong>Username</strong> text box, type <strong>parkerd</strong>.</p></li>
+<li><p>Click <strong>Log on</strong>.</p></li>
+<li><p>Verify that the <strong>Welcome Darren Parker</strong> screen is displayed, showing the<br>
+report card and the previously added grade.</p></li>
+<li><p>Click <strong>Log off</strong>.</p></li>
+<li><p>Close the application.</p></li>
+<li><p>In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, click <strong>Close Solution</strong>.</p></li>
+</ol>
+<div class=" alert alert-success"><p><strong>Results:</strong> After completing this exercise, the application will enable teachers to add and remove students from their classes, and to add grades to students.</p></div>
+<div class=" alert alert-info"><p><strong>Congratulations!</strong>  You have now completed this lab.  You should ensure you save your lab environment.  Failure to do so will result in the loss of all work.</p></div></div>
+    </div>
+    <div id="labGuidePoppedOutContainer" class="text-center" style="display:none;">
+        <p>Your lab guide is open in another window</p>
+        <p class="text-muted"><i class="fal fa-window fa-9x"></i></p>
+        <p><button class="btn btn-brand d-block w-100 focus-popout-btn">Show Lab Guide</button></p>
+    </div>
+</div>
+
+
+                        <div class="lab-timer text-center bg-light p-2" id="lab-timer-container">
+                <div class="position-relative h-100 w-100" id="lab-timer-warning" data-original-title="" title="">
+                    <h2><span class="badge badge-secondary style colorDefinition size_lg" id="lab-timer">
+                        <i class="fas fa-stopwatch" id="stopwatch" data-toggle="popover" data-content="Time Remaining" data-trigger="hover" data-placement="top" data-original-title="" title=""></i>
+                        <span id="lab-timer-timer">07:55:46</span>
+                    </span></h2>
+                </div>
+            </div>
+
+        </div>
+        <div class="gutter gutter-horizontal" style="flex-basis: 6px;"></div><div class="col bg-dark" style="overflow: auto; flex-basis: calc(32.0304% - 3px);" id="lab-display-container">
+            <div style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 1;">
+    <div class="d-flex align-items-center justify-content-center" style="height: 100%; overflow: hidden" id="outer-display">
+
+        <div class="card border-warning connection-error-box" id="display-error-checking" style="display: none;">
+            <div class="card-header bg-warning border-0 text-white">Sorry, there was a problem connecting to your VM</div>
+            <div class="card-body text-center">
+                <p>We're checking your connection, please wait...</p>
+            </div>
+        </div>
+
+        <div class="card border-danger connection-error-box" id="display-error" style="display: none;">
+            <div class="card-header bg-danger border-0 text-white">Sorry, there was a problem connecting to your VM</div>
+            <div class="card-body text-center">
+                <button class="btn btn-sm btn-outline-secondary ml-1 reconnect-display-btn">Reconnect</button>
+            </div>
+        </div>
+
+        <div class="card border-danger connection-error-box" id="display-error-contact" style="display: none;">
+            <div class="card-header bg-danger border-0 text-white">Unexpected VM State</div>
+            <div class="card-body text-center">
+                <p>Your VM is in an unexpected state. Please <a href="mailto:support@godeploy.it">contact support</a>.</p>
+            </div>
+        </div>
+
+        <div class="card border-primary connection-error-box" id="display-error-stopped" style="display: none;">
+            <div class="card-header bg-primary border-0 text-white">Your VM is turned off</div>
+            <div class="card-body text-center">
+                <button class="btn btn-sm btn-outline-secondary ml-1 power-op" data-op="start">Power on</button>
+            </div>
+        </div>
+
+        <div class="card border-primary connection-error-box" id="display-error-starting" style="display: none;">
+            <div class="card-header bg-primary border-0 text-white">Your VM is turning on</div>
+            <div class="card-body text-center">
+                <p>Your VM is turning on, please wait...</p>
+            </div>
+        </div>
+
+        <div class="card border-primary connection-error-box" id="display-error-stopping" style="display: none;">
+            <div class="card-header bg-primary border-0 text-white">Your VM is turning off</div>
+            <div class="card-body text-center">
+                <p>Your VM is turning off, please wait...</p>
+            </div>
+        </div>
+
+        <div id="display" class="position-relative">
+            <div style="position: absolute; top: 0; left: 0; background-color: #000; z-index: -2; height: 100%;width:100%"></div>
+        <div style="position: relative; width: 1024px; height: 768px;"><div style="position: relative; width: 1024px; height: 768px; transform-origin: 0px 0px;"><div style="width: 1024px; height: 768px; position: absolute; left: 0px; top: 0px; overflow: hidden;"><canvas width="1024" height="768" style="z-index: -1; position: absolute; left: 0px; top: 0px;"></canvas></div><div style="width: 32px; height: 32px; position: absolute; left: 0px; top: 0px; overflow: hidden; transform: translate(-15px, -15px) matrix(1, 0, 0, 1, 0, 0);"><canvas width="64" height="64" style="z-index: -1; position: absolute; left: 0px; top: 0px;"></canvas></div></div></div></div>
+    </div>
+</div>
+
+        </div>
+    </div>
+</main>
+
+<div class="modal" tabindex="-1" role="dialog" id="end-lab-modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-warning text-white">
+                <h5 class="modal-title">Warning - you are about to end your lab</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                    <p>Any change you have made to your lab will be irrevocably lost and you will need to start again.</p>
+                    <p class="mb-0">You can, instead, save your lab and then continue from where you left off, later.</p>
+            </div>
+            <div class="modal-footer">
+                    <a href="https://lms.godeploy.it/Modules/SaveLab/f2def404-29f7-e911-abe3-00155de2c913" class="btn btn-link text-success confirmed-navigation">Save my Lab</a>
+                <a href="https://lms.godeploy.it/Modules/EndLab/f2def404-29f7-e911-abe3-00155de2c913" class="btn btn-danger confirmed-navigation" id="end-lab-btn">End my lab</a>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="save-lab-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h5 class="modal-title">Save your lab</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you wish to leave?</p>
+                    <p>Your lab will be saved for 7 days, after which it will be stopped and deleted.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://lms.godeploy.it/Modules/SaveLab/f2def404-29f7-e911-abe3-00155de2c913" class="btn btn-success confirmed-navigation">Save my Lab</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="launch-info-modal" data-show="true" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-white">
+                    <h5 class="modal-title">Important information about your lab</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>When launching Visual Studio you must sign in with a Microsoft Account or create a new one.&nbsp; The Visual Studio Community Edition trial has expired and is to be expected.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="info-modal-ok-btn">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" role="dialog" id="launch-errata-modal" data-show="false">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-white">
+                    <h5 class="modal-title">Important information about your lab</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p><br></p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="info-modal-ok-btn">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="modal" tabindex="-1" role="dialog" id="screenshot-modal">
+    <div class="modal-dialog modal-lg" role="document" style="max-width: 1024px;">
+        <div class="modal-content">
+            <div class="modal-body" id="screenshot-background" style="background-position: center center; background-repeat: no-repeat; background-size: auto 100%; height: 768px;">
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="lab_ui_lab-dns-modal" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">DNS Record</h5>
+            </div>
+            <div class="modal-body">
+                <form id="lab_ui_a-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditARecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-a-record-name-input">Name</label>
+                            <input id="dns-a-record-name-input" class="form-control" name="Name">
+                            <div class="text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dns-a-record-ipv4address-input">IPv4 Address</label>
+                            <input id="dns-a-record-ipv4address-input" class="form-control" name="Ipv4Address">
+                        </div>
+                    </div>
+                </form>
+                <form id="lab_ui_aaaa-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditAaaaRecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-aaaa-record-name-input">Name</label>
+                            <input id="dns-aaaa-record-name-input" class="form-control" name="Name">
+                            <div class="text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dns-aaaa-record-ipv6address-input">IPv6 Address</label>
+                            <input id="dns-aaaa-record-ipv6address-input" class="form-control" name="Ipv6Address">
+                        </div>
+                    </div>
+                </form>
+                <form id="lab_ui_cname-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditCnameRecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-cname-record-name-input">Name</label>
+                            <input id="dns-cname-record-name-input" class="form-control" name="Name">
+                            <div class="text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dns-cname-record-cname-input">CNAME</label>
+                            <input id="dns-cname-record-cname-input" class="form-control" name="Cname">
+                        </div>
+                    </div>
+                </form>
+                <form id="lab_ui_mx-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditMxRecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-mx-record-name-input">Name</label>
+                            <input id="dns-mx-record-name-input" class="form-control" name="Name">
+                            <div class="text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-6">
+                                <label for="dns-mx-record-preference-input">Preference</label>
+                                <input id="dns-mx-record-preference-input" class="form-control" name="Preference">
+                            </div>
+                            <div class="form-group col-18">
+                                <label for="dns-mx-record-exchange-input">Host</label>
+                                <input id="dns-mx-record-exchange-input" class="form-control" name="Exchange">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <form id="lab_ui_srv-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditSrvRecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-srv-record-name-input">Name</label>
+                            <input id="dns-srv-record-name-input" class="form-control" name="Name" placeholder="_service._protocol.name">
+                            <div class="row">
+                                <div class="col-12"><small class="text-muted">_service._protocol.name</small></div>
+                                <div class="col-12 text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-8">
+                                <label for="dns-srv-record-priority-input">Priority</label>
+                                <input id="dns-srv-record-priority-input" class="form-control" name="Priority">
+                            </div>
+                            <div class="form-group col-8">
+                                <label for="dns-srv-record-weight-input">Weight</label>
+                                <input id="dns-srv-record-weight-input" class="form-control" name="Weight">
+                            </div>
+                            <div class="form-group col-8">
+                                <label for="dns-srv-record-port-input">Port</label>
+                                <input id="dns-srv-record-port-input" class="form-control" name="Port">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dns-srv-record-target-input">Target</label>
+                            <input id="dns-srv-record-target-input" class="form-control" name="Target">
+                        </div>
+                    </div>
+                </form>
+                <form id="lab_ui_txt-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditTxtRecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-txt-record-name-input">Name</label>
+                            <input id="dns-txt-record-name-input" class="form-control" name="Name">
+                            <div class="text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dns-txt-record-value-input">Value</label>
+                            <textarea id="dns-txt-record-value-input" class="form-control" name="Value"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger mr-auto" id="delete-dns-record-btn">Delete</button>
+                <button type="button" class="btn btn-secondary" id="save-dns-record-btn">Save</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <script src="./M20483C _ LAB 04_files/jquery.min.js.téléchargement"></script>
+    <script src="./M20483C _ LAB 04_files/bootstrap.bundle.min.js.téléchargement"></script>
+    
+    <script src="./M20483C _ LAB 04_files/labs.js.téléchargement"></script>
+    <script src="./M20483C _ LAB 04_files/all.min.js.téléchargement"></script>
+    <script src="./M20483C _ LAB 04_files/easytimer.min.js.téléchargement"></script>
+    <script src="./M20483C _ LAB 04_files/handlebars.min.js.téléchargement" integrity="sha256-dlwklXLDib5XGMYI+HdNEXczJXTsFtq+qIrSdXoCv6o=" crossorigin="anonymous"></script>
+    <script type="text/x-handlebars-template" id="vm-credentials-template">
+        {{#each this}}
+            <table>
+                <tr>
+                    <th class="pr-2">Username</th>
+                    <td>{{Username}}</td>
+                    <td class="pl-2"><i class="fas fa-paste paste-credential paste-tab" data-text="{{Username}}"></i></td>
+                </tr>
+                <tr>
+                    <th class="pr-2">Password</th>
+                    <td>{{Password}}</td>
+                    <td class="pl-2"><i class="fas fa-paste paste-credential paste-enter" data-text="{{Password}}"></i></td>
+                </tr>
+            </table>
+        {{/each}}
+    </script>
+    <script type="text/javascript">
+        window.focus();
+
+        $('a.confirmed-navigation').on('click',
+            function() {
+                window.onbeforeunload = null;
+            });
+
+        var pasteBox = document.getElementById('paste-box');
+        pasteBox.disabled = true;
+        var pasteBoxOpen = false;
+
+        $('#paste-box-dropdown').on('shown.bs.dropdown',
+            function() {
+                pasteBoxOpen = true;
+                pasteBox.disabled = false;
+                pasteBox.focus();
+            });
+
+        $('#paste-box-dropdown').on('hidden.bs.dropdown',
+            function() {
+                pasteBoxOpen = false;
+                window.focus();
+                pasteBox.value = '';
+                pasteBox.disabled = true;
+            });
+
+        window.onbeforeunload = function(e) {
+            return "If you navigate away from this page your changes may be lost and VMs deleted. We will try to save them for you.\n\nIt may be best to cancel navigation and click the \"End Lab\" or \"Save Lab\" button, instead.";
+        };
+
+        var pasteboxKbEvent = function(e) {
+            if (document.activeElement !== pasteBox) return;
+
+            client.guac.sendKeyEvent(0, 0xFFE3);
+            client.guac.sendKeyEvent(0, 0xFFE9);
+
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+        };
+
+        window.addEventListener('keydown', pasteboxKbEvent, true);
+        window.addEventListener('keyup', pasteboxKbEvent, true);
+        window.addEventListener('keypress', pasteboxKbEvent, true);
+
+        document.addEventListener('paste',
+            function(e) {
+                if (document.activeElement !== pasteBox) {
+                    return;
+                }
+                if (typeof e.clipboardData === 'undefined') {
+                    var text = window.clipboardData.getData('Text');
+                } else {
+                    var text = e.clipboardData.getData('text/plain');
+                }
+
+                client.sendKeys(text);
+
+                if (pasteBoxOpen) $('#paste-box-dropdown').dropdown('toggle');
+            });
+
+        var checkVmStateTimeout;
+        
+        function checkVmState(connecting) {
+            $('.connection-error-box,#display').hide();
+            $('#display-error-checking').show();
+
+            if (checkVmStateTimeout) clearTimeout(checkVmStateTimeout);
+
+            var vmId = $('#vm-dropdown-menu a.active').data('vmId');
+
+            $.ajax({
+                url: '/Labs/NVmControl/f2def404-29f7-e911-abe3-00155de2c913/' + vmId + '/get-state',
+                type: 'get',
+                success: function(data) {
+                    $('.connection-error-box').hide();
+                    switch(data) {
+                    case 'stopped':
+                    case 'saved':
+                        $('#display-error-stopped').show();
+                        break;
+                    case 'starting':
+                        $('#display-error-starting').show();
+                        checkVmStateTimeout = setTimeout(function() { checkVmState(false); }, 2000);
+                        break;
+                    case 'stopping':
+                        $('#display-error-stopping').show();
+                        checkVmStateTimeout = setTimeout(function() { checkVmState(false); }, 2000);
+                        break;
+                    case 'saving':
+                        $('#display-error-checking').show();
+                        checkVmStateTimeout = setTimeout(function() { checkVmState(false); }, 2000);
+                        break;
+                    case 'started':
+                        if (connecting) {
+                            $('#display-error').show();
+                        } else {
+                            $('#vm-dropdown-menu a.active').triggerHandler('click');
+                        }
+                        break;
+                    default:
+                        $('#display-error-contact').show();
+                        break;
+                    }
+                },
+                error: function() {
+                    $('#display-error-contact').show();
+                }
+            });
+        }
+
+        var envId = "f5def404-29f7-e911-abe3-00155de2c913";
+
+        var Client = Client || {};
+
+        Client.Rde = function(displayElement) {
+            this.tunnelUrl = 'wss://remote.labsonline.it/wsTunnel';
+            this.guac = null;
+            this.mouse = null;
+            this.keyboard = null;
+            this.tunnel = null;
+            this.enhancedMode = false;
+            this.resizeTimeout = null;
+            this.keysPressed = [];
+
+            var KEYSYM_CTRL = 0xFFE3;
+            var KEYSYM_ALT = 0xFFE9;
+            var KEYSYM_DELETE = 0xFFFF;
+            
+            var self = this;
+            
+            var onkeydown = function(keysym) {
+                self.guac.sendKeyEvent(1, keysym);
+                self.registerKeypress(keysym);
+            };
+
+            var onkeyup = function(keysym) {
+                self.guac.sendKeyEvent(0, keysym);
+                self.unregisterKeypress(keysym);
+            };
+
+            this.initialize = function() {
+                this.tunnel = new Guacamole.WebSocketTunnel(this.tunnelUrl);
+                this.guac = new Guacamole.Client(this.tunnel);
+                this.guac.onerror = function() {
+                    self.enhancedMode = false;
+                    $('#enhanced-mode-switch').prop('checked', false);
+                    checkVmState(true);
+                }
+
+                window.onresize = function() {
+                    if (self.resizeTimeout) window.clearTimeout(self.resizeTimeout);
+                    self.resizeTimeout = window.setTimeout(function() {
+                        window.clearTimeout(self.resizeTimeout);
+                        if (self.enhancedMode) {
+                            var outerOuterDisplay = document.getElementById('outer-display');
+                            self.guac.sendSize(outerOuterDisplay.offsetWidth, outerOuterDisplay.offsetHeight);
+                        }
+                    }, 300);
+                };
+                
+                displayElement.appendChild(this.guac.getDisplay().getElement());
+
+                window.onunload = function() {
+                    self.guac.disconnect();
+                };
+
+                this.mouse = new Guacamole.Mouse(this.guac.getDisplay().getElement());
+
+                this.mouse.onmousedown = function(mouseState) {
+                    self.guac.sendMouseState(mouseState);
+                };
+                this.mouse.onmouseup = function(mouseState) {
+                    self.guac.sendMouseState(mouseState);
+                };
+                this.mouse.onmousemove = function(mouseState) {
+                    self.guac.sendMouseState(mouseState);
+                };
+
+                this.keyboard = new Guacamole.Keyboard(document);
+                this.captureKeyboard();
+            };
+            
+            this.captureKeyboard = function() {
+                this.keyboard.onkeyup = onkeyup;
+                this.keyboard.onkeydown = onkeydown;
+            }
+            
+            this.releaseKeyboard = function() {
+                this.keyboard.onkeyup = null;
+                this.keyboard.onkeydown = null;
+            }
+            
+            this.registerKeypress = function(keysym) {
+                this.keysPressed.push(keysym);
+            }
+            
+            this.unregisterKeypress = function(keysym) {
+                var index = this.keysPressed.indexOf(keysym);
+                if (index === -1) return;
+                this.keysPressed.splice(index, 1);
+            }
+            
+            this.unregisterAllKeypresses = function() {
+                var self = this;
+                this.keysPressed.forEach(function(keysym) {
+                    self.guac.sendKeyEvent(0, keysym);
+                    if (keysym === KEYSYM_ALT) {
+                        self.guac.sendKeyEvent(1, keysym);
+                        self.guac.sendKeyEvent(0, keysym);
+                    }
+                });
+                this.keysPressed = [];
+            }
+
+            this.connect = function(envId, vmId) {
+                var self = this;
+
+                try {
+                    this.guac.disconnect();
+                } catch (e) { /* ignore */
+                }
+
+                window.setTimeout(function() {
+                        var connectionString = 'eid=' + envId + '&vid=' + vmId;
+                        if (self.enhancedMode) {
+                            var outerDisplay = document.getElementById('outer-display');
+                            var supportedAudioFormats = Guacamole.AudioPlayer.getSupportedTypes();
+                            connectionString += '&enhanced=1&width=' + outerDisplay.offsetWidth + '&height=' + outerDisplay.offsetHeight + '&audio=' + supportedAudioFormats.join('&audio=');
+                        }
+                        self.guac.connect(connectionString);
+                    },
+                    500);
+            };
+            
+            this.toggleEnhancedMode = function(enabled) {
+                this.enhancedMode = enabled;
+                $('#enhanced-mode-switch').prop('checked', enabled);
+                $('#vm-dropdown-menu a.active').first().triggerHandler('click');
+            };
+
+            this.initialize();
+
+            this.sendCad = function() {
+                this.unregisterAllKeypresses();
+                this.guac.sendKeyEvent(1, KEYSYM_CTRL);
+                this.guac.sendKeyEvent(1, KEYSYM_ALT);
+                this.guac.sendKeyEvent(1, KEYSYM_DELETE);
+                this.guac.sendKeyEvent(0, KEYSYM_CTRL);
+                this.guac.sendKeyEvent(0, KEYSYM_ALT);
+                this.guac.sendKeyEvent(0, KEYSYM_DELETE);
+            };
+
+            this.sendKeys = function(text) {
+                var self = this;
+                this.unregisterAllKeypresses();
+                text = text.replace(/\r\n?/g, "\n");
+                var strArr = text.split("");
+                
+                var sendKey = function(strArr) {
+                    if (strArr.length === 0) return;
+                    
+                    var char = strArr.shift();
+                    
+                    var codepoint = char.charCodeAt(0);
+                    var keysym = codepoint;
+                    if (codepoint >= 0x0100) {
+                        keysym = 0x01000000 | codepoint;
+                    }
+                    self.guac.sendKeyEvent(1, keysym);
+                    self.guac.sendKeyEvent(0, keysym);
+                    
+                    window.setTimeout(sendKey, 10, strArr);
+                }
+                
+                sendKey(strArr);
+            };
+        };
+
+        var client = new Client.Rde(document.getElementById('display'));
+        
+        var vmCredentialsTarget = document.getElementById('vm-credentials-target');
+        var vmCredentialsTemplate = Handlebars.compile(document.getElementById('vm-credentials-template').innerHTML);
+        function showCredentialsForVm(vmCredentials) {
+            vmCredentialsTarget.innerHTML = vmCredentialsTemplate(vmCredentials);
+        }
+
+        function showVmContextMenus(vmId) {
+            var vmContextMenuDropdowns = $('.vm-context-menu-dropdown');
+            vmContextMenuDropdowns.each(function(vmCintextMenuDropdownIndex, vmCOntextMenuDropdownElement) {
+                var vmContextMenuDropdown = $(vmCOntextMenuDropdownElement);
+                vmContextMenuDropdown.toggle(false);
+
+                var vmContextMenus = vmContextMenuDropdown.find('.vm-context-menu');
+                vmContextMenus.toggle(false);
+
+                vmContextMenus.each(function(vmContextMenuIndex, vmContextMenuElement) {
+                    var vmContextMenu = $(vmContextMenuElement);
+                    if (vmContextMenu.data('vmId') === vmId) {
+                        vmContextMenu.toggle(true);
+                        vmContextMenuDropdown.toggle(true);
+                    }
+                });
+            });
+        }
+
+        var vmItems = $('#vm-dropdown-menu a');
+        vmItems.on(
+            'click',
+            function() {
+                if (checkVmStateTimeout) {
+                    clearTimeout(checkVmStateTimeout);
+                }
+                $('#vm-dropdown-menu a').removeClass('active');
+                var $this = $(this);
+                $this.addClass('active');
+                client.connect(envId, $this.data('vmId'));
+                $('#vm-dropdown-btn').text($this.text());
+                $('.connection-error-box').hide();
+                $('#display').show();
+                showCredentialsForVm($this.data('vmCredentials'));
+                showVmContextMenus($this.data('vmId'));
+            }).first().triggerHandler('click');
+
+        var selectVm = function(vmName) {
+            vmItems.each(function(i, el) {
+                if (el.dataset.vmName === vmName) {
+                    $(el).triggerHandler('click');
+                }
+            });
+        };
+
+        document.addEventListener('select-vm', function(e) {
+            selectVm(e.detail);
+        });
+
+        $('#cad-btn').on('click',
+            function() {
+                client.sendCad();
+                $(this).blur();
+            });
+        
+        var pasteTextHandler = function() {
+            var stringToSend = $(this).data('text');
+            if ($(this).hasClass('paste-enter')) {
+                stringToSend += "\n";
+            }
+            if ($(this).hasClass('paste-tab')) {
+                stringToSend += "\t";;
+            }
+            client.sendKeys(stringToSend);
+        };
+
+        $('.paste-text').on('click', pasteTextHandler);
+        $('#vm-credentials-target').on('click', '.paste-credential', pasteTextHandler);
+
+        $('.reconnect-display-btn').on('click',
+            function() {
+                $('#vm-dropdown-menu a.active').triggerHandler('click');
+                $(this).blur();
+            });
+
+        var infoModal = $('#launch-info-modal');
+        var errataModel = $('#launch-errata-modal');
+        if (infoModal.data('show') === true) {
+            infoModal.modal('show');
+            if (errataModel.data('show') === true) {
+                $('#info-modal-ok-btn').on('click',
+                    function() {
+                        window.setTimeout(function() { errataModel.modal('show'); }, 500);
+                    });
+            }
+        } else if (errataModel.data('show') === true) {
+            errataModel.modal('show');
+        }
+
+        $('.power-op').on('click',
+            function() {
+                var op = $(this).data('op');
+                var vmId = $('#vm-dropdown-menu a.active').first().data('vmId');
+                $.ajax({
+                    url: '/Labs/NVmControl/f2def404-29f7-e911-abe3-00155de2c913/' + vmId + '/' + op,
+                    type: 'get',
+                    success: function() {
+                        if (op === 'start') {
+                            checkVmState(false);
+                        }
+                    },
+                    error: function() {
+                        alert('An error occurred whilst carrying out that power operation');
+                    }
+                });
+                $(this).blur();
+            });
+        
+        $('#enhanced-mode-switch').on('click', function() {
+            client.toggleEnhancedMode($(this).is(':checked'));
+            $(this).blur();
+        });
+
+        var timerTarget = $("#lab-timer");
+        var timerTargetTimer = $("#lab-timer-timer");
+        var timerWarning = $('#lab-timer-warning');
+        var warningThreshold = 14;
+        var canExtend = true;
+
+        $('#stopwatch').popover();
+        timerWarning.popover({
+            template:
+                '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header bg-warning"></h3><div class="popover-body"></div></div>',
+            trigger: 'manual',
+            placement: 'top',
+            content:
+                '<div class="text-center"><div class="mb-2">You may extend by a further 60 minutes:</div>' +
+                    '<button id="extend-timer-btn" class="btn btn-success">Extend</button>' +
+                    '<button id="ignore-timer-btn" class="btn btn-secondary ml-2">Ignore</button>' +
+                    '</div>',
+            html: true,
+            title: '<i class="fa fa-exclamation-triangle"></i> Your Lab will end soon',
+            boundary: 'window'
+        });
+
+        $('body').on('click',
+            '#extend-timer-btn',
+            function() {
+                $('#extend-timer-btn').attr('disabled', true).html('Requesting...');
+                $.ajax({
+                    url: '/Modules/AddTime/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'post',
+                    success: function(data) {
+                        startTimer(data);
+                        timerTarget.removeClass('badge-warning').addClass('badge-secondary');
+                        timerWarning.popover('hide');
+                    },
+                    error: function() {
+                        alert('There was an error extending your lab expiry time. Please try again or contact support');
+                    }
+                });
+            });
+        $('body').on('click',
+            '#ignore-timer-btn',
+            function() {
+                timerWarning.popover('toggle');
+            });
+
+        $('.popover-help').popover({
+            container: "body",
+            placement: "top",
+            trigger: "hover",
+            boundary: "window"
+        });
+
+        var timer = new Timer();
+
+        function startTimer(seconds) {
+            if (timer.isRunning()) {
+                timer.stop();
+            }
+
+            timer.start({
+                precision: 'seconds',
+                startValues: { seconds: seconds },
+                target: { seconds: 0 },
+                countdown: true
+            });
+        }
+
+        function showTimerWarning() {
+            timerWarning.popover('show');
+            timerTarget.removeClass('badge-secondary')
+                .addClass('badge-warning')
+                .on('click',
+                    function() {
+                        timerWarning.popover('toggle');
+                    });
+        }
+
+        timerTargetTimer.html(timer.getTimeValues().toString());
+
+        timer.addEventListener('secondsUpdated',
+            function(e) {
+                var timeValues = timer.getTimeValues();
+                timerTargetTimer.html(timeValues.toString());
+            });
+
+        timer.addEventListener('minutesUpdated',
+            function(e) {
+                var timeValues = timer.getTimeValues();
+                if (canExtend && timeValues.days === 0 && timeValues.hours === 0 && timeValues.minutes === warningThreshold) {
+                    showTimerWarning();
+                }
+            });
+
+        timer.addEventListener('started',
+            function(e) {
+                var timeValues = timer.getTimeValues();
+                if (canExtend && timeValues.days === 0 && timeValues.hours === 0 && timeValues.minutes <= warningThreshold) {
+                    showTimerWarning();
+                }
+            });
+
+        timer.addEventListener('targetAchieved',
+            function() {
+                window.onbeforeunload = null;
+                window.location.replace('/Modules/ExpireLab/f2def404-29f7-e911-abe3-00155de2c913');
+            });
+
+        startTimer(28799);
+
+        $('#screenshotBtn').on(
+            'click',
+            function() {
+                var canvas = $('#display canvas').first();
+                this.href = canvas[0].toDataURL();
+                this.filename = 'screenshot.png';
+                this.download = 'screenshot.png';
+            });
+
+        $('.dvd-image-item').on('click',
+            function() {
+                var self = $(this);
+                $.ajax({
+                    url: '/Labs/InsertIsoImage/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        VmId: self.data('vmId'),
+                        DiskDriveId: self.data('diskDriveId'),
+                        MediaImageId: self.data('mediaImageId')
+                    }),
+                    dataType: 'json',
+                    error: function() {
+                        alert('An error occurred whilst inserting a DVD');
+                    }
+                });
+            });
+        $('.dvd-drive-eject-btn').on('click',
+            function() {
+                var self = $(this);
+                $.ajax({
+                    url: '/Labs/EjectIsoImage/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        VmId: self.data('vmId'),
+                        DiskDriveId: self.data('diskDriveId')
+                    }),
+                    dataType: 'json',
+                    error: function() {
+                        alert('An error occurred whilst ejecting a DVD');
+                    }
+                });
+            });
+        $('.net-switch-item').on('click',
+            function() {
+                var self = $(this);
+                $.ajax({
+                    url: '/Labs/ConnectNetAdapterSwitch/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        VmId: self.data('vmId'),
+                        VNetAdapterId: self.data('netAdapterId'),
+                        VSwitchId: self.data('switchId')
+                    }),
+                    dataType: 'json',
+                    error: function() {
+                        alert('An error occurred whilst changing network connections');
+                    }
+                });
+            });
+
+        $('.fd-image-item').on('click',
+            function() {
+                var self = $(this);
+                $.ajax({
+                    url: '/Labs/InsertFdImage/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        VmId: self.data('vmId'),
+                        MediaImageId: self.data('mediaImageId')
+                    }),
+                    dataType: 'json',
+                    error: function() {
+                        alert('An error occurred whilst inserting a floppy disk image');
+                    }
+                });
+            });
+        $('.fd-drive-eject-btn').on('click',
+            function() {
+                var self = $(this);
+                $.ajax({
+                    url: '/Labs/EjectFdImage/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        VmId: self.data('vmId')
+                    }),
+                    dataType: 'json',
+                    error: function() {
+                        alert('An error occurred whilst ejecting a floppy disk image');
+                    }
+                });
+            });
+
+        var labDns = false;
+
+        function clearDnsRecords() {
+            $('.dns-records').each(function() {
+                var el = $(this);
+                el.html('');
+            });
+        }
+        function showDnsRecords() {
+            $('.dns-records').each(function() {
+                var el = $(this);
+                if (el.find('tr').length > 0) {
+                    el.show();
+                } else {
+                    el.siblings('.no-dns-records').show();
+                }
+            });
+        }
+        function showDnsLoading() {
+            $('.dns-records,.no-dns-records').hide();
+            $('.dns-records-loading').show();
+        }
+        function hideDnsLoading() {
+            $('.dns-records-loading').hide();
+        }
+        function appendDnsEntries(data) {
+            appendARecords(data.ARecords);
+            appendAaaaRecords(data.AaaaRecords);
+            appendCnameRecords(data.CnameRecords);
+            appendMxRecords(data.MxRecords);
+            appendSrvRecords(data.SrvRecords);
+            appendTxtRecords(data.TxtRecords);
+        }
+        function setLabZoneName(zoneName) {
+            $('span.dns-zone-name').html(zoneName);
+        }
+        var aRecordsBody = $('#lab_ui_a-records');
+        var aaaaRecordsBody = $('#lab_ui_aaaa-records');
+        var cnameRecordsBody = $('#lab_ui_cname-records');
+        var mxRecordsBody = $('#lab_ui_mx-records');
+        var srvRecordsBody = $('#lab_ui_srv-records');
+        var txtRecordsBody = $('#lab_ui_txt-records');
+        function getEditDeleteCell() {
+            return $('<td/>')
+                .append($('<a href="#" class="dns-record-edit-btn dns-record-op-btn text-black mr-2" data-op="edit"/>').append($('<i class="fas fa-edit"></i>')))
+                .append($('<a href="#" class="dns-record-delete-btn dns-record-op-btn text-danger" data-op="delete"/>').append($('<i class="fas fa-trash-alt"></i>')));
+        }
+        function appendARecords(aRecords) {
+            aRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'a');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('ipv4Address', record.Ipv4Address);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Ipv4Address));
+                row.append(getEditDeleteCell());
+                aRecordsBody.append(row);
+            });
+        }
+        function appendAaaaRecords(aaaaRecords) {
+            aaaaRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'aaaa');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('ipv6Address', record.Ipv6Address);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Ipv6Address));
+                row.append(getEditDeleteCell());
+                aaaaRecordsBody.append(row);
+            });
+        }
+        function appendCnameRecords(cnameRecords) {
+            cnameRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'cname');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('cname', record.Cname);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Cname));
+                row.append(getEditDeleteCell());
+                cnameRecordsBody.append(row);
+            });
+        }
+        function appendMxRecords(mxRecords) {
+            mxRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'mx');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('preference', record.Preference);
+                row.data('exchange', record.Exchange);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Preference));
+                row.append($('<td/>').html(record.Exchange));
+                row.append(getEditDeleteCell());
+                mxRecordsBody.append(row);
+            });
+        }
+        function appendSrvRecords(srvRecords) {
+            srvRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'srv');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('priority', record.Priority);
+                row.data('weight', record.Weight);
+                row.data('port', record.Port);
+                row.data('target', record.Target);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Priority));
+                row.append($('<td/>').html(record.Weight));
+                row.append($('<td/>').html(record.Port));
+                row.append($('<td/>').html(record.Target));
+                row.append(getEditDeleteCell());
+                srvRecordsBody.append(row);
+            });
+        }
+        function appendTxtRecords(txtRecords) {
+            txtRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'txt');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('value', record.Value);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Value));
+                row.append(getEditDeleteCell());
+                txtRecordsBody.append(row);
+            });
+        }
+        function loadLabDns(id) {
+            showDnsLoading();
+            clearDnsRecords();
+            $.ajax({
+                url: '/LabDomains/GetLabDnsEntries/' + id,
+                type: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    setLabZoneName(data.FqZoneName);
+                    appendDnsEntries(data);
+                },
+                complete: function() {
+                    hideDnsLoading();
+                    showDnsRecords();
+                }
+            });
+        }
+
+        var dnsForms = {
+            "a": $('#lab_ui_a-record-form'),
+            "aaaa": $('#lab_ui_aaaa-record-form'),
+            "cname": $('#lab_ui_cname-record-form'),
+            "mx": $('#lab_ui_mx-record-form'),
+            "srv": $('#lab_ui_srv-record-form'),
+            "txt": $('#lab_ui_txt-record-form')
+        };
+        var dnsFormsModal = $('#lab_ui_lab-dns-modal');
+        var dnsFormsModalButtons = dnsFormsModal.find('.modal-footer button');
+        function hideForms() {
+            $('.dns-record-form').hide().removeClass('active');
+        }
+        function showRecordForm(type) {
+            dnsForms[type].show().addClass('active');
+        }
+        function resetRecordFormFields(type) {
+            dnsForms[type].find('input,textarea').val('').removeAttr('readonly');
+            dnsForms[type].find('input[name="Delete"]').val('false');
+        }
+        function fillRecordForm(type, data) {
+            var fields = dnsForms[type].find('input,textarea');
+            fields.each(function() {
+                var fieldName = this.name.charAt(0).toLowerCase() + this.name.slice(1);
+                if (fieldName in data) {
+                    this.value = data[fieldName];
+                }
+            });
+        }
+        function disableNameField(type) {
+            dnsForms[type].find('input[name="Name"]').attr('readonly', true);
+        }
+        function hideDnsDeleteButton() {
+            $('#delete-dns-record-btn').hide();
+        }
+        function showDnsDeleteButton() {
+            $('#delete-dns-record-btn').show();
+        }
+        function disableDnsFormButtons() {
+            dnsFormsModalButtons.attr('disabled', true);
+        }
+        function enableDnsFormButtons() {
+            dnsFormsModalButtons.removeAttr('disabled');
+        }
+        function disableDnsOpButtons() {
+            $('a.dns-record-op-btn').addClass('disabled');
+        }
+        function enableDnsOpButtons() {
+            $('a.dns-record-op-btn').removeClass('disabled');
+        }
+        function setDeleteFlag() {
+            dnsFormsModal.find('form.active:first input[name="Delete"]').val('true');
+        }
+        function registerDnsClickEvents() {
+            dnsFormsModal.on('hidden.bs.modal', function() {
+                client.captureKeyboard();
+                enableDnsOpButtons();
+            });
+            dnsFormsModal.on('shown.bs.modal', function() {
+                client.releaseKeyboard();
+            });
+            $('a.add-dns-record-btn').on('click', function(e) {
+                hideForms();
+                var type = $(this).data('recordType');
+                if (type in dnsForms) {
+                    showRecordForm(type);
+                    resetRecordFormFields(type);
+                    hideDnsDeleteButton();
+                    enableDnsFormButtons();
+                    dnsFormsModal.modal('show');
+                }
+
+                e.preventDefault();
+            });
+            $('tbody.dns-records').on('click', 'a.dns-record-op-btn', function(e) {
+                e.preventDefault();
+
+                if ($(this).hasClass('disabled')) return;
+
+                hideForms();
+                var record = $(this).closest('tr').data();
+                var op = $(this).data('op');
+                if (!record.recordType in dnsForms) {
+                    return;
+                }
+
+                disableDnsOpButtons();
+                
+                if (op === 'edit') {
+                    showRecordForm(record.recordType);
+                    resetRecordFormFields(record.recordType);
+                    disableNameField(record.recordType);
+                    showDnsDeleteButton();
+                    fillRecordForm(record.recordType, record);
+                    enableDnsFormButtons();
+                    dnsFormsModal.modal('show');
+                    return;
+                }
+                
+                if (op === 'delete') {
+                    showRecordForm(record.recordType);
+                    resetRecordFormFields(record.recordType);
+                    fillRecordForm(record.recordType, record);
+                    setDeleteFlag();
+                    dnsFormsModal.find('form.active').trigger('submit');
+                    return;
+                }
+
+                enableDnsOpButtons();
+            });
+            $('.dns-record-form').on('submit', function(e) {
+                e.preventDefault();
+                var form = $(this);
+                var formData = new FormData(form[0]);
+
+                $.ajax({
+                    url: form.attr('action'),
+                    type: 'post',
+                    processData: false,
+                    contentType: false,
+                    data: formData,
+                    success: function() {
+                        loadLabDns('f2def404-29f7-e911-abe3-00155de2c913');
+                        dnsFormsModal.modal('hide');
+                    },
+                    complete: function() {
+                        enableDnsFormButtons();
+                        enableDnsOpButtons();
+                    }
+                });
+            });
+            $('#save-dns-record-btn').on('click', function(e) {
+                e.preventDefault();
+                disableDnsFormButtons();
+                dnsFormsModal.find('form.active').trigger('submit');
+            });
+            $('#delete-dns-record-btn').on('click', function(e) {
+                e.preventDefault();
+                setDeleteFlag();
+                $('#save-dns-record-btn').triggerHandler('click');
+            });
+        }
+
+        if (labDns) {
+            document.addEventListener('DOMContentLoaded', function() {
+                loadLabDns('f2def404-29f7-e911-abe3-00155de2c913');
+                registerDnsClickEvents();
+            });
+        }
+
+        var fullscreenBtn = document.getElementById('fullscreen-btn');
+        var exitFullscreenBtn = document.getElementById('exit-fullscreen-btn');
+
+        fullscreenBtn.addEventListener('click',
+            function() {
+                var elem = document.documentElement;
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.mozRequestFullScreen) { /* Firefox */
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                    elem.msRequestFullscreen();
+                }
+            });
+        
+        exitFullscreenBtn.addEventListener('click',
+            function() {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { /* Firefox */
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { /* IE/Edge */
+                    document.msExitFullscreen();
+                }
+            });
+        
+        document.addEventListener('fullscreenchange', function() {
+            if (document.fullscreenElement === null) {
+                exitFullscreenBtn.style.display = 'none';
+                fullscreenBtn.style.display = '';
+            } else {
+                exitFullscreenBtn.style.display = '';
+                fullscreenBtn.style.display = 'none';
+            }
+        });
+        
+        document.body.style.backgroundColor = '#fff';
+    </script>
+
+
+
+</body></html>

@@ -1,0 +1,1861 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M20483C | All Modules - Programming in C# - go  deploy</title>
+
+        <link rel="stylesheet" href="./M20483C _ LAB 08_files/godeployMain.min.css">
+    <link rel="stylesheet" href="./M20483C _ LAB 08_files/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" type="text/css" href="./M20483C _ LAB 08_files/labs.min.css">
+
+</head>
+<body class="" style="background-color: rgb(255, 255, 255);">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top py-0 bg-brand" id="main-navbar">
+        <span class="h1 navbar-brand brandname my-1 ">go  deploy</span>
+            <div class="navbar-text h5 font-weight-normal my-1 ml-1 mr-auto collapse navbar-collapse" id="navbar-title">M20483C | All Modules - Programming in C#</div>
+        <div class="collapse navbar-collapse header-nav" id="header-nav-menu">
+<form action="https://lms.godeploy.it/Account/LogOff?Length=6" class="navbar-right" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="RzxbEh_C_O1u5siOYspFt00Ol_pPjLWXqtcnvwlY-dJm6E7EbwmIrsKZCvKJfCvOh6f4vZroMcEYhsZAIZRplrPKUtyTs0-x5ENFzroXHbqwX7SBnmXvi2sCbI-RqxCbQVMqLMB8kVrSYGC2VA9k8A2"></form>        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" style="font-size: 1.4em;" href="https://lms.godeploy.it/RedirectToHome" title="Home">
+                    <i class="far fa-home" title="Home"></i>
+                </a>
+            </li>
+                                    
+            <li class="nav-item dropdown">
+                <a class="nav-link" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 1.4em;" aria-label="Account profile icon that opens a list of account options">
+                    <i class="far fa-user-circle"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right shadow" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="https://lms.godeploy.it/Manage">oheinrich@orange.fr</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="javascript:document.getElementById(&#39;logoutForm&#39;).submit()">Log off</a>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a href="https://godeploy.zendesk.com/hc/en-us" target="_blank" class="nav-link" style="font-size: 1.4em;"><span class="sr-only">Help icon that links to the help articles and allows you to create support requests</span><i class="far fa-question-circle" title="Help"></i></a>
+            </li>
+        </ul>
+</div>
+
+
+    </nav>
+
+    
+
+<main id="lab-container" class="h-100" data-mei-id="f2def404-29f7-e911-abe3-00155de2c913">
+    <h1 class="sr-only">M20483C | All Modules - Programming in C#</h1>
+    <div class="row h-100 no-gutters">
+        <div class="col bg-light h-100 position-relative" style="overflow-y: auto; flex-basis: calc(67.9696% - 3px);" id="lab-content-container">
+
+            <nav class="navbar navbar-expand navbar-light bg-gray-400" id="lab-navbar">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link tab-link" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#" id="tab-home-link" data-target="tab-home" data-link-text="Home" data-scroll-top="0">Home</a>
+        </li>
+            <li class="nav-item active bg-light">
+                <a class="nav-link tab-link" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#" id="tab-lab-guide-link" data-target="tab-lab-guide" aria-valuetext="Lab Guide">Lab Guide</a>
+            </li>
+            </ul>
+</nav>
+
+
+            <div class="container position-relative pt-2 lab-tab" id="tab-home" style="display: none;">
+                    <div class="mb-4">
+        <h6 class="mt-0"><i class="fa fa-server"></i> Virtual Machines</h6>
+
+        <div class="popover-help mb-2" data-toggle="popover" data-content="Select Virtual Machine" data-original-title="" title="">
+            <div class="dropdown" id="vm-dropdown">
+                <button class="btn btn-sm btn-outline-secondary dropdown-toggle btn-block text-left" type="button" id="vm-dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">20483C-SEA-DEV1</button>
+                <div class="dropdown-menu" aria-labelledby="vm-dropdown-btn" id="vm-dropdown-menu">
+                        <a class="dropdown-item active" data-vm-id="f7def404-29f7-e911-abe3-00155de2c913" data-vm-credentials="[{&quot;Username&quot;:&quot;Admin&quot;,&quot;Password&quot;:&quot;Pa55w.rd&quot;}]" data-has-optical-drive="false" data-has-floppy-drive="true)" data-vm-name="20483C-SEA-DEV1" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">20483C-SEA-DEV1</a>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" id="cad-btn" class="btn btn-sm btn-outline-secondary mb-1">Ctrl+Alt+Del</button>
+
+        <button class="btn btn-sm btn-outline-secondary reconnect-display-btn popover-help mb-1" data-toggle="popover" data-content="Reconnect selected VM Display" data-original-title="" title="">
+            <i class="fas fa-sync"></i>
+        </button>
+
+        <div class="btn-group popover-help mb-1" data-toggle="popover" data-content="Selected VM Power Operations" data-original-title="" title="">
+            <div class="dropdown">
+                <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="far fa-bolt"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="pwr-dropdown-btn" id="pwr-dropdown-menu">
+                    <a class="dropdown-item text-danger power-op" data-op="stop" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">Power Off</a>
+                    <a class="dropdown-item text-danger power-op" data-op="start" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">Power On</a>
+                    <a class="dropdown-item text-danger power-op" data-op="restart" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">Restart</a>
+                        <a class="dropdown-item text-danger power-op" data-op="reset-gateway" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">Reset Gateway</a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div id="vm-credentials-target" style="font-size: 80%" class="mt-3">
+            <table>
+                <tbody><tr>
+                    <th class="pr-2">Username</th>
+                    <td>Admin</td>
+                    <td class="pl-2"><i class="fas fa-paste paste-credential paste-tab" data-text="Admin"></i></td>
+                </tr>
+                <tr>
+                    <th class="pr-2">Password</th>
+                    <td>Pa55w.rd</td>
+                    <td class="pl-2"><i class="fas fa-paste paste-credential paste-enter" data-text="Pa55w.rd"></i></td>
+                </tr>
+            </tbody></table>
+    </div>
+    </div>
+    <hr>
+
+
+
+<div class="mb-4 position-relative" aria-label="VM Tools">
+    <h6><i class="fa fa-wrench"></i> Tools</h6>
+        <button id="fullscreen-btn" type="button" class="btn btn-sm btn-outline-secondary popover-help mb-1" data-toggle="popover" data-content="Fullscreen mode" data-original-title="" title="">
+            <i class="far fa-expand-alt"></i>
+        </button>
+        <button id="exit-fullscreen-btn" type="button" class="btn btn-sm btn-outline-secondary popover-help mb-1" style="display: none;" data-toggle="popover" data-content="Exit fullscreen mode" data-original-title="" title="">
+            <i class="far fa-compress-alt"></i>
+        </button>
+        <a id="screenshotBtn" class="btn btn-sm btn-outline-secondary popover-help mb-1" data-toggle="popover" data-content="Take a screenshot" data-original-title="" title="">
+            <i class="far fa-file-image"></i>
+        </a>
+        <div class="btn-group mb-1 popover-help" data-toggle="popover" data-content="Paste into the VM" data-original-title="" title="">
+            <div class="dropdown" id="paste-box-dropdown">
+                <button class="btn btn-sm btn-outline-secondary" type="button" id="paste-box-dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="far fa-paste"></i>
+                </button>
+                <div class="dropdown-menu bg-success text-white" aria-labelledby="paste-box-dropdown-btn">
+                    <div class="px-3 py-2 position-relative">
+                        <p class="text-center mt-0"><strong>Paste Activated</strong></p>
+                        <p class="text-justify mb-0">You may paste using Ctrl + V or right click here and click 'Paste'</p>
+                        <textarea id="paste-box" class="position-absolute h-100 w-100" style="opacity: 0; top: 0; left: 0" disabled=""></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="btn-group mb-1 popover-help" data-toggle="popover" data-content="Exit Lab Options" data-original-title="" title="">
+        <div class="dropdown">
+            <button class="btn btn-sm btn-outline-secondary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Exit Lab
+            </button>
+            <div class="dropdown-menu" aria-labelledby="end-dropdown-btn" id="end-dropdown-menu">
+                    <a class="dropdown-item text-success" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#" data-toggle="modal" data-target="#save-lab-modal">Exit and Save Lab</a>
+                <a class="dropdown-item text-danger" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#" data-toggle="modal" data-target="#end-lab-modal">Exit and End Lab</a>
+            </div>
+        </div>
+    </div>
+        <div class="custom-control custom-checkbox mt-2 popover-help" data-toggle="popover" data-content="Switching Enhanced Mode on enables audio and improved display resolution features" data-original-title="" title="">
+            <input type="checkbox" class="custom-control-input" id="enhanced-mode-switch">
+            <label class="custom-control-label" for="enhanced-mode-switch">Enhanced Mode</label>
+        </div>
+</div>
+
+<div class="mb-4">
+    <h6><i class="fas fa-info-circle"></i> Lab Information</h6>
+    <p>
+            <a data-toggle="modal" data-target="#launch-info-modal" aria-haspopup="true" aria-expanded="false" href="https://lms.godeploy.it/Labs/DelegateLab/f2def404-29f7-e911-abe3-00155de2c913#">Show Lab Information</a>
+            <br>
+        <a href="https://godeploy.zendesk.com/hc/en-us/requests/new" target="_blank">Submit a Support Request</a>
+    </p>
+</div>
+
+            </div>
+
+<div id="tab-lab-guide" class="lab-tab container position-relative pt-4" style="">
+    <div id="labGuideContainer">
+        <h6><i class="fas fa-book"></i> Lab Guide</h6>
+        <div class="py-2">
+            <button class="btn btn-sm btn-brand popout-btn d-block w-100" data-link="/Labs/LabGuide/f2def404-29f7-e911-abe3-00155de2c913">
+                View in Another Window
+            </button>
+        </div>
+        <div class="form-inline">
+<div class="btn-group btn-group-sm mr-2" id="labGuidePageSelector" style="">
+    <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lab 8</button>
+    <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(0px, 26px, 0px); top: 0px; left: 0px; will-change: transform;">
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=87a301e4-e6ac-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="87a301e4-e6ac-e811-8373-00155d026631">Lab 1</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=1c980c6c-43fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="1c980c6c-43fd-e811-8373-00155d026631">Lab 2</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=5d3d54a8-43fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="5d3d54a8-43fd-e811-8373-00155d026631">Lab 3</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=e61a2fd7-43fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="e61a2fd7-43fd-e811-8373-00155d026631">Lab 4</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=8bf74af0-43fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="8bf74af0-43fd-e811-8373-00155d026631">Lab 5</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=f90df406-44fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="f90df406-44fd-e811-8373-00155d026631">Lab 6</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=780fb7b3-44fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="780fb7b3-44fd-e811-8373-00155d026631">Lab 7</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=3a876de6-44fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link active" data-page-id="3a876de6-44fd-e811-8373-00155d026631">Lab 8</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=88a3d872-45fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="88a3d872-45fd-e811-8373-00155d026631">Lab 9</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=ca0447b3-45fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="ca0447b3-45fd-e811-8373-00155d026631">Lab 10</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=7db412da-45fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="7db412da-45fd-e811-8373-00155d026631">Lab 11</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=5a3fb3fa-45fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="5a3fb3fa-45fd-e811-8373-00155d026631">Lab 12</a>
+            <a href="https://lms.godeploy.it/Labs/LabGuidePageMarkup/f2def404-29f7-e911-abe3-00155de2c913?pageId=87bd782a-46fd-e811-8373-00155d026631" class="dropdown-item lab-guide-page-link" data-page-id="87bd782a-46fd-e811-8373-00155d026631">Lab 13</a>
+    </div>
+</div>
+
+            <div class="custom-control custom-checkbox ml-2">
+                <input type="checkbox" class="custom-control-input" id="show-screenshots-checkbox">
+                <label class="custom-control-label" for="show-screenshots-checkbox">Show Screenshots</label>
+            </div>
+        </div>
+        <div class="lab-markdown reduced-headers pt-2" id="lab-guide-area"><h3 id="module-8-accessing-remote-data">Module 8: Accessing Remote Data</h3>
+<div class=" alert alert-danger"><p>Important Information about running this class.</p>
+<p>YOU MUST SAVE THE LABS EVERY DAY.  YOU SHOULD ALSO CHECK THE LABS ARE SAVED BY LOGGING BACK INTO THE LMS.</p>
+<p>FAILING TO DO SO WILL RESULT IN LOSS OF WORK WHICH IS UNRECOVERABLE.  GO DEPLOY WILL BE UNABLE TO RECOVER LABS WHICH HAVE NOT BEEN SAVED!</p></div>
+<h4 id="lab-retrieving-and-modifying-grade-data-remotely">Lab: Retrieving and Modifying Grade Data Remotely</h4>
+<div class=" alert alert-secondary"><p><strong>Scenario</strong></p>
+<p>Currently, the application retrieves data from a local database. However, you have decided to store the data in the cloud and must configure the application so that it can retrieve data from the web. You must create a WCF Data Service for the SchoolGrades database that will be integrated into the application to enable access to the data. Finally, you have been asked to write code that displays student images by retrieving them from across the web.</p>
+<p><strong>Objectives</strong></p>
+<p>After completing this lab, you will be able to:</p>
+<ul>
+<li>Create a WCF Data Service.</li>
+<li>Use an OData Connected Service.</li>
+<li>Retrieve data over the web.</li>
+</ul>
+<p><strong>Lab Setup</strong></p>
+<p>Estimated Time: <strong>60 minutes</strong></p></div>
+<h4 id="exercise-1-creating-a-wcf-data-service-for-the-schoolgrades-database">Exercise 1: Creating a WCF Data Service for the SchoolGrades Database</h4>
+<div class=" alert alert-secondary"><p><strong>Scenario</strong></p>
+<p>In this exercise, you will create a WCF Data Service for the SchoolGrades database so that the client application can connect to the database over the web.</p>
+<ul>
+<li>First, you will add a new ASP.NET Web Application project to the solution and configure it for the client application.</li>
+<li>You will then expose the entities in the Entity Data Model (EDM) from a data service in the new project.</li>
+<li>Next, you will specify the data context for the data service and configure access rights to the entities that it exposes.</li>
+<li>Finally, you will add an operation to the data service that returns a list of all the students in a specified class.</li>
+</ul></div>
+<h5 id="task-1-configure-data-service-in-the-gradesweb-project">Task 1: Configure data service in the Grades.Web project</h5>
+<ol>
+<li><p>Initialize the database:</p>
+<ul>
+<li>In the <strong>Apps</strong> list, click <strong>File Explorer</strong>.</li>
+<li>In File Explorer, navigate to the <strong>[Repository Root]\Allfiles\Mod08\Labfiles\Databases</strong> folder, and then double-click <strong>SetupSchoolGradesDB.cmd</strong>.<br>
+<br><div class=" alert alert-warning"><p><strong>Note:</strong> If a Windows protected your PC dialog appears, click <strong>More info</strong> and then click <strong>Run Anyway</strong>. Close File Explorer.</p></div></li></ul></li>
+<li><p>Ensure that you have completed the following steps before starting work on this module:</p>
+<ul>
+<li>Install <strong>Microsoft.OData.ConnectedService.vsix</strong> from <strong>[Repository Root]\AllFiles\Assets</strong>.</li>
+<li>Install <strong>WcfDataServices.exe</strong> from <strong>[Repository Root]\AllFiles\Assets</strong>.</li>
+<li>Run <strong>WCF.reg</strong> file from <strong>[Repository Root]\AllFiles\Assets</strong>.<br>
+<br></li></ul></li>
+<li><p>Open <strong>Visual Studio 2017</strong>.</p></li>
+<li><p>In <strong>Visual Studio</strong>, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p></li>
+<li><p>In the <strong>Open Project</strong> dialog box, browse to <strong>[Repository Root]\Allfiles\Mod08\Labfiles\Starter\Exercise 1</strong>, click <strong>GradesPrototype.sln</strong>, and then click <strong>Open</strong>.</p></li>
+</ol>
+<div class=" alert alert-warning"><p><strong>Note:</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p></div>
+<ol start="4">
+<li><p>In <strong>Solution Explorer</strong>, right-click the <strong>GradesPrototype</strong> solution, and then click <strong>Restore NuGet Packages</strong>.</p></li>
+<li><p>In the <strong>Grades.Web</strong> project, right-click on <strong>Referencs</strong>, and then click <strong>Add Reference</strong>.</p></li>
+<li><p>In the <strong>Reference Manager - Grades.Web</strong> dialog box do the following steps:</p>
+<ul>
+<li>Click <strong>Projects</strong>,and then select <strong>Grades.DataModel</strong>.</li>
+<li>Click <strong>Browse</strong>.</li>
+<li>In the <strong>Select the files to reference</strong> dialog box, browse to the <strong>[Repository Root]\Allfiles\Mod08\Labfiles\Starter\Exercise 1\packages\EntityFramework.5.0.0\lib\net45</strong> folder, click <strong>EntityFramework.dll</strong>, and click <strong>Add</strong>.</li>
+<li>Click <strong>OK</strong>.<br>
+<br></li></ul></li>
+<li><p>In Solution Explorer, expand the <strong>GradesPrototype</strong> project, and then double-click <strong>App.config</strong>.</p></li>
+<li><p>In the code editor, copy the following XML to the clipboard:</p>
+<pre class="single-paste line-paster language-xml"><code class="xml  language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>connectionStrings</span><span class="token punctuation">&gt;</span></span>
+    &lt;add name="SchoolGradesDBEntities" connectionString="metadata=res://*/GradesModel.csdl|res://*/GradesModel.ssdl|res://*/GradesModel.msl;provider=System.Data.SqlClient;provider connection string="data source=.\sqlexpress;initial catalog=SchoolGradesDB;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"" providerName="System.Data.EntityClient" /&gt;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>connectionStrings</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-paster-rows"><span data-code="&lt;connectionStrings&gt;
+    &lt;add name=&quot;SchoolGradesDBEntities&quot; connectionString=&quot;metadata=res://*/GradesModel.csdl|res://*/GradesModel.ssdl|res://*/GradesModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=.\sqlexpress;initial catalog=SchoolGradesDB;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;&quot; providerName=&quot;System.Data.EntityClient&quot; /&gt;
+&lt;/connectionStrings&gt;" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In <strong>Solution Explorer</strong>, in the <strong>Grades.Web</strong> project, double-click <strong>Web.config</strong>.</p></li>
+<li><p>Click at the end of the opening <strong>&lt;configuration\&gt;</strong> element, press Enter, and then paste the contents of the clipboard.</p></li>
+</ol>
+<h5 id="task-2-specify-the-gradesdbentities-data-context-for-the-data-service">Task 2: Specify the GradesDBEntities data context for the data service</h5>
+<ol>
+<li><p>In <strong>Solution Explorer</strong>, in <strong>Grades.Web</strong> project, expand <strong>Services</strong>, and then double-click <strong>GradesWebDataService.svc</strong>.</p></li>
+<li><p>In the code editor, type the following code under all the <strong>using</strong>:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">using</span> Grades<span class="token punctuation">.</span>DataModel<span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="using Grades.DataModel;" class="paste"></span></span></code></pre></li>
+<li><p>On the <strong>View</strong> menu, click <strong>Task List</strong>.</p></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 2a: Replace the object keyword with your data source class name</strong> task.</p></li>
+<li><p>In the code editor, locate the comment <strong>TODO: Exercise 1: Task 2a: Replace the object keyword with your data source class name</strong>, and then type the following code instead of the <strong>object</strong> keyword:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">SchoolGradesDBEntities<span aria-hidden="true" class="line-paster-rows"><span data-code="SchoolGradesDBEntities" class="paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 2b: set rules to indicate which entity sets and service operations are visible, updatable, etc</strong> task.</p></li>
+<li><p>In the code editor, click at the end of the comment line, press Enter, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token comment">// Configure all entity sets to permit read and write access.</span>
+config<span class="token punctuation">.</span><span class="token function">SetEntitySetAccessRule</span><span class="token punctuation">(</span><span class="token string">"Grades"</span><span class="token punctuation">,</span> EntitySetRights<span class="token punctuation">.</span>All<span class="token punctuation">)</span><span class="token punctuation">;</span>
+config<span class="token punctuation">.</span><span class="token function">SetEntitySetAccessRule</span><span class="token punctuation">(</span><span class="token string">"Teachers"</span><span class="token punctuation">,</span> EntitySetRights<span class="token punctuation">.</span>All<span class="token punctuation">)</span><span class="token punctuation">;</span>
+config<span class="token punctuation">.</span><span class="token function">SetEntitySetAccessRule</span><span class="token punctuation">(</span><span class="token string">"Students"</span><span class="token punctuation">,</span> EntitySetRights<span class="token punctuation">.</span>All<span class="token punctuation">)</span><span class="token punctuation">;</span>
+config<span class="token punctuation">.</span><span class="token function">SetEntitySetAccessRule</span><span class="token punctuation">(</span><span class="token string">"Subjects"</span><span class="token punctuation">,</span> EntitySetRights<span class="token punctuation">.</span>All<span class="token punctuation">)</span><span class="token punctuation">;</span>
+config<span class="token punctuation">.</span><span class="token function">SetEntitySetAccessRule</span><span class="token punctuation">(</span><span class="token string">"Users"</span><span class="token punctuation">,</span> EntitySetRights<span class="token punctuation">.</span>All<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="// Configure all entity sets to permit read and write access.
+config.SetEntitySetAccessRule(&quot;Grades&quot;, EntitySetRights.All);
+config.SetEntitySetAccessRule(&quot;Teachers&quot;, EntitySetRights.All);
+config.SetEntitySetAccessRule(&quot;Students&quot;, EntitySetRights.All);
+config.SetEntitySetAccessRule(&quot;Subjects&quot;, EntitySetRights.All);
+config.SetEntitySetAccessRule(&quot;Users&quot;, EntitySetRights.All);" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-3-add-an-operation-to-retrieve-all-of-the-students-in-a-specified-class">Task 3: Add an operation to retrieve all of the students in a specified class</h5>
+<ol>
+<li><p>Click after the closing braces for the <strong>InitializeService</strong> method, press Enter twice, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token comment">// Find all students in a specified class.</span>
+<span class="token punctuation">[</span><span class="token class-name">WebGet</span><span class="token punctuation">]</span>
+<span class="token keyword">public</span> IEnumerable<span class="token operator">&lt;</span>Student<span class="token operator">&gt;</span> <span class="token function">StudentsInClass</span><span class="token punctuation">(</span><span class="token keyword">string</span> className<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">var</span> students <span class="token operator">=</span> <span class="token keyword">from</span> <span class="token class-name">Student</span> s <span class="token keyword">in</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token class-name">CurrentDataSource<span class="token punctuation">.</span>Students</span>
+                   <span class="token keyword">where</span> String<span class="token punctuation">.</span><span class="token function">Equals</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span>Teacher<span class="token punctuation">.</span>Class<span class="token punctuation">,</span> className<span class="token punctuation">)</span>
+                   <span class="token keyword">select</span> s<span class="token punctuation">;</span><span class="token keyword">return</span> students<span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-paster-rows"><span data-code="// Find all students in a specified class.
+[WebGet]
+public IEnumerable&lt;Student&gt; StudentsInClass(string className)
+{
+    var students = from Student s in this.CurrentDataSource.Students
+                   where String.Equals(s.Teacher.Class, className)
+                   select s;return students;}" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 1: Task 2b: set rules to indicate which entity sets and service operations are visible, updatable, etc</strong>. task.</p></li>
+<li><p>In the code editor, click at the end of the comment line, press Enter, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token comment">// Configure the StudentsInClass operation as read-only.</span>
+config<span class="token punctuation">.</span><span class="token function">SetServiceOperationAccessRule</span><span class="token punctuation">(</span><span class="token string">"StudentsInClass"</span><span class="token punctuation">,</span> ServiceOperationRights<span class="token punctuation">.</span>AllRead<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="// Configure the StudentsInClass operation as read-only.
+config.SetServiceOperationAccessRule(&quot;StudentsInClass&quot;, ServiceOperationRights.AllRead);" class="paste"></span><span class="no-paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-4-build-and-test-the-data-service">Task 4: Build and test the data service</h5>
+<ol>
+<li><p>On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p></li>
+<li><p>In <strong>Solution Explore</strong>r, in the <strong>Grades.Web</strong> project, in the <strong>Services</strong> folder, right-click <strong>GradesWebDataService.svc</strong>, and then click <strong>View in Browser (Microsoft Edge)</strong>.</p></li>
+<li><p>In Microsoft Edge, if the <strong>Intranet settings are turned off by default</strong> message appears, click <strong>Don't show this message again</strong>.</p></li>
+<li><p>Verify that Microsoft Edge displays an XML description of the entities that Data Service exposes.</p></li>
+<li><p>Close the Browser.</p></li>
+<li><p>In Visual Studio, on the <strong>File</strong> menu, click <strong>Close Solution</strong>.</p></li>
+</ol>
+<div class=" alert alert-success"><p><strong>Result:</strong> After completing this exercise, you should have configured a WCF Data Service in the application to provide remote access to the <strong>SchoolGrades</strong> database.</p></div>
+<h4 id="exercise-2-integrating-the-data-service-into-the-application">Exercise 2: Integrating the Data Service into the Application</h4>
+<div class=" alert alert-secondary"><p><strong>Scenario</strong></p>
+<p>In this exercise, you will integrate OData Connected Service into the Grades Prototype application.</p>
+<ul>
+<li>First, you will add a connected service in the GradesPrototype project that references the running WCF Data Service.</li>
+<li>You will then modify the code that accesses the local EDM to use the WCF Data Service instead.</li>
+<li>Next, you will modify the code that saves changes back to the database to do so through the data service.</li>
+<li>Finally, you will test the application to verify that it runs the same as if the data was being called locally</li>
+</ul></div>
+<h5 id="task-1-add-an-odata-connected-service-for-the-wcf-data-service-to-the-gradesprototype-application">Task 1: Add an OData Connected Service for the WCF Data Service to the GradesPrototype application</h5>
+<ol>
+<li><p>In Visual Studio, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</p></li>
+<li><p>In the <strong>Open Project</strong> dialog box, browse to <strong>[Repository Root]\Allfiles\Mod08\Labfiles\Starter\Exercise 2</strong>, click <strong>GradesPrototype.sln</strong>, and then click <strong>Open</strong>.</p></li>
+</ol>
+<div class=" alert alert-warning"><p><strong>Note:</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p></div>
+<ol start="3">
+<li><p>In <strong>Solution Explorer</strong>, right-click the <strong>GradesPrototype</strong> solution, and then click <strong>Set StartUp Projects</strong>.</p></li>
+<li><p>In the <strong>Solution 'GradesPrototype' Property Pages</strong> dialog box, click <strong>Multiple startup projects</strong>.</p></li>
+<li><p>In the <strong>Action</strong> column for <strong>Grades.Web</strong> and <strong>GradesPrototype</strong>, click<strong>Start</strong>, and then click <strong>OK</strong>.</p></li>
+<li><p>On the <strong>Build</strong> menu, click <strong>Rebuild Solution</strong>.</p></li>
+<li><p>In Solution Explorer, in the <strong>Grades.Web</strong> project, in the <strong>Services</strong> folder, right-click <strong>GradesWebDataService.svc</strong>, and then click <strong>View in Browser (Microsoft Edge)</strong>.</p></li>
+<li><p>In <strong>Solution Explorer</strong>, expand <strong>GradesPrototype</strong>, expand <strong>References</strong>, right-click <strong>Grades.DataModel,</strong> and then click <strong>Remove</strong>.</p></li>
+<li><p>Right-click <strong>References</strong>, and then click <strong>Add Connected Service</strong>.</p></li>
+<li><p>In the <strong>Connected Services</strong> window, choose <strong>OData Connected Service</strong>.</p></li>
+<li><p>In the <strong>Configure endpoint</strong> dialog box, in the <strong>Service name</strong> text box, type <strong>Grades.DataModel</strong>.</p></li>
+<li><p>In the <strong>Address</strong> text box, type <a href="http://localhost:1655/Services/GradesWebDataService.svc/$metadata">http://localhost:1655/Services/GradesWebDataService.svc/$metadata</a>, and then click <strong>Next</strong>.</p></li>
+<li><p>Click <strong>Finish</strong> and wait until the process completes.</p></li>
+<li><p>In <strong>Solution Explorer</strong>, in the <strong>GradesPrototype</strong> project, expand <strong>Connected Services</strong>, expand the <strong>Grades.DataModel</strong> folder, and then double-click <strong>Reference.cs</strong>.</p></li>
+<li><p>In the code editor, modify the <strong>namespace SchoolGradesDBModel</strong> code to look like the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">namespace</span> Grades<span class="token punctuation">.</span>DataModel<span aria-hidden="true" class="line-paster-rows"><span data-code="namespace Grades.DataModel" class="paste"></span></span></code></pre></li>
+<li><p>In <strong>Solution Explorer</strong>, right-click the <strong>GradesPrototype</strong> project, point to <strong>Add</strong>, and then click <strong>New Folder</strong>.</p></li>
+<li><p>Delete the existing name, type <strong>DataModel</strong>, and then press Enter.</p></li>
+<li><p>In <strong>Solution Explorer</strong>, expand the <strong>Grades.DataModel</strong> project, right-click <strong>Classes.cs</strong>, and then click <strong>Copy</strong>.</p></li>
+<li><p>In <strong>GradesPrototype</strong>, right-click <strong>DataModel</strong>, and then click <strong>Paste</strong>.</p></li>
+<li><p>In <strong>Grades.DataModel</strong>, right-click <strong>customGrade.cs</strong>, and then click <strong>Copy</strong>.</p></li>
+<li><p>In <strong>GradesPrototype</strong>, right-click <strong>DataModel</strong>, and then click <strong>Paste</strong>.</p></li>
+<li><p>In <strong>Grades.DataModel</strong>, right-click <strong>customTeacher.cs</strong>, and then click <strong>Copy</strong>.</p></li>
+<li><p>In <strong>GradesPrototype</strong>, right-click <strong>DataModel</strong>, and then click <strong>Paste</strong>.</p></li>
+</ol>
+<h5 id="task-2-modify-the-code-that-accesses-the-edm-to-use-the-wcf-data-service">Task 2: Modify the code that accesses the EDM to use the WCF Data Service</h5>
+<ol>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 2a: Specify the URL of the GradesWebDataService</strong> task.</p></li>
+<li><p>In the code editor, below the comment, click inside the parentheses, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">new</span> <span class="token class-name">Uri</span><span class="token punctuation">(</span><span class="token string">"http://localhost:1655/Services/GradesWebDataService.svc"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-paster-rows"><span data-code="new Uri(&quot;http://localhost:1655/Services/GradesWebDataService.svc&quot;)" class="paste"></span></span></code></pre></li>
+<li><p>Add the following code to the <strong>SessionContext</strong> class, after the <strong>Save</strong> method:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">static</span> <span class="token function">SessionContext</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    DBContext<span class="token punctuation">.</span>MergeOption <span class="token operator">=</span> System<span class="token punctuation">.</span>Data<span class="token punctuation">.</span>Services<span class="token punctuation">.</span>Client<span class="token punctuation">.</span>MergeOption<span class="token punctuation">.</span>PreserveChanges<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-paster-rows"><span data-code="static SessionContext()
+{
+    DBContext.MergeOption = System.Data.Services.Client.MergeOption.PreserveChanges;
+}" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 2b: Load User and Grades data with Students</strong> task.</p></li>
+<li><p>In the code editor, at the end of the comment, press Enter, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">SessionContext<span class="token punctuation">.</span>DBContext<span class="token punctuation">.</span><span class="token function">LoadProperty</span><span class="token punctuation">(</span>student<span class="token punctuation">,</span> <span class="token string">"User"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+SessionContext<span class="token punctuation">.</span>DBContext<span class="token punctuation">.</span><span class="token function">LoadProperty</span><span class="token punctuation">(</span>student<span class="token punctuation">,</span> <span class="token string">"Grades"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="SessionContext.DBContext.LoadProperty(student, &quot;User&quot;);
+SessionContext.DBContext.LoadProperty(student, &quot;Grades&quot;);" class="paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 2c: Load User and Students data with Teachers</strong> task.</p></li>
+<li><p>In the code editor, below the comment, click at the end of the <strong>SessionContext.DBContext.Teachers</strong> code, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token punctuation">.</span><span class="token function">Expand</span><span class="token punctuation">(</span><span class="token string">"User, Students"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-paster-rows"><span data-code=".Expand(&quot;User, Students&quot;)" class="paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 2d: Load User and Grades data with Students</strong> task.</p></li>
+<li><p>In the code editor, below the comment, click at the end of the <strong>SessionContext.DBContext.Students</strong> code, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token punctuation">.</span><span class="token function">Expand</span><span class="token punctuation">(</span><span class="token string">"User, Grades"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-paster-rows"><span data-code=".Expand(&quot;User, Grades&quot;)" class="paste"></span></span></code></pre></li>
+<li><p>In <strong>Solution Explorer</strong>, in the <strong>GradesPrototype</strong> project, expand <strong>DataModel</strong>, and then double-click <strong>customTeacher.cs</strong>.</p></li>
+<li><p>Click at the end of the <strong>using System.Threading.Tasks</strong> code, press Enter, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">using</span> GradesPrototype<span class="token punctuation">.</span>Services<span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="using GradesPrototype.Services;" class="paste"></span></span></code></pre></li>
+<li><p>In the code editor, locate the <strong>TODO: Exercise 2: Task 2e: Refer to the Students collection in the SessionContext.DBContext object</strong> comment in the <strong>customTeacher.cs</strong> file. There are two comments with this text. This is because the comment is located in the <strong>customTeacher.cs</strong> file that you copied from the <strong>Grades.DataModel</strong> project. Make sure that you modify the <strong>customTeacher.cs</strong> file in the <strong>GradesPrototype</strong> project.</p></li>
+<li><p>In the line below the comment, delete the word <strong>Students</strong>, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">SessionContext<span class="token punctuation">.</span>DBContext<span class="token punctuation">.</span>Students<span aria-hidden="true" class="line-paster-rows"><span data-code="SessionContext.DBContext.Students" class="paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 2f: Reference the SessionContext.DBContext.Students collection</strong>.</p></li>
+<li><p>In the code editor, below the comment, change</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">SessionContext<span class="token punctuation">.</span>DBContext<span class="token punctuation">.</span>Students<span class="token punctuation">.</span>Local<span aria-hidden="true" class="line-paster-rows"><span data-code="SessionContext.DBContext.Students.Local" class="paste"></span></span></code></pre>
+<p>to the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">SessionContext<span class="token punctuation">.</span>DBContext<span class="token punctuation">.</span>Students<span class="token punctuation">.</span><span class="token function">Expand</span><span class="token punctuation">(</span><span class="token string">"User, Grades"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-paster-rows"><span data-code="SessionContext.DBContext.Students.Expand(&quot;User, Grades&quot;)" class="paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 2g: Use the AddToGrades method to add a new grade.</strong></p></li>
+<li><p>In the code editor, below the comment, change</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">SessionContext<span class="token punctuation">.</span>DBContext<span class="token punctuation">.</span>Grades<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span>newGrade<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="SessionContext.DBContext.Grades.Add(newGrade);" class="paste"></span></span></code></pre>
+<p>to the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">SessionContext<span class="token punctuation">.</span>DBContext<span class="token punctuation">.</span><span class="token function">AddToGrades</span><span class="token punctuation">(</span>newGrade<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="SessionContext.DBContext.AddToGrades(newGrade);" class="paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 2h: Load Subject data with Grades</strong> task.</p></li>
+<li><p>In the code editor, below the comment, change <strong>SessionContext.DBContext.Grades</strong> to the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">SessionContext<span class="token punctuation">.</span>DBContext<span class="token punctuation">.</span>Grades<span class="token punctuation">.</span><span class="token function">Expand</span><span class="token punctuation">(</span><span class="token string">"Subject"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-paster-rows"><span data-code="SessionContext.DBContext.Grades.Expand(&quot;Subject&quot;)" class="paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 2i: Use the AddToStudents method to add a new student</strong> task.</p></li>
+<li><p>In the code editor, below the comment, change</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">SessionContext<span class="token punctuation">.</span>DBContext<span class="token punctuation">.</span>Students<span class="token punctuation">.</span><span class="token function">Add</span><span class="token punctuation">(</span>newStudent<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="SessionContext.DBContext.Students.Add(newStudent);" class="paste"></span></span></code></pre>
+<p>to the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">SessionContext<span class="token punctuation">.</span>DBContext<span class="token punctuation">.</span><span class="token function">AddToStudents</span><span class="token punctuation">(</span>newStudent<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="SessionContext.DBContext.AddToStudents(newStudent);" class="paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-3-modify-the-code-that-saves-changes-back-to-the-database-to-use-the-wcf-data-service">Task 3: Modify the code that saves changes back to the database to use the WCF Data Service</h5>
+<ol>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 3a: Specify that the selected student has been changed</strong> task.</p></li>
+<li><p>In the code editor, click in the blank space below the comment, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">SessionContext<span class="token punctuation">.</span>DBContext<span class="token punctuation">.</span><span class="token function">UpdateObject</span><span class="token punctuation">(</span>student<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="SessionContext.DBContext.UpdateObject(student);" class="paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 3b: Specify that the current student has been changed</strong> task.</p></li>
+<li><p>In the code editor, click in the blank space below the comment, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">SessionContext<span class="token punctuation">.</span>DBContext<span class="token punctuation">.</span><span class="token function">UpdateObject</span><span class="token punctuation">(</span>SessionContext<span class="token punctuation">.</span>CurrentStudent<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="SessionContext.DBContext.UpdateObject(SessionContext.CurrentStudent);" class="paste"></span></span></code></pre></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 2: Task 3c: Specify that the current user has been changed</strong> task.</p></li>
+<li><p>Click in the blank space below the comment, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp">SessionContext<span class="token punctuation">.</span>DBContext<span class="token punctuation">.</span><span class="token function">UpdateObject</span><span class="token punctuation">(</span>currentUser<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="SessionContext.DBContext.UpdateObject(currentUser);" class="paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-4-build-and-test-the-application-to-verify-that-the-application-still-functions-correctly">Task 4: Build and test the application to verify that the application still functions correctly</h5>
+<ol>
+<li><p>On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p></li>
+<li><p>On the <strong>Debug</strong> menu, click <strong>Start Without Debugging</strong>.</p></li>
+<li><p>In the <strong>Username</strong> text box, type <strong>vallee</strong>.</p></li>
+<li><p>In the <strong>Password</strong> text box, type <strong>password99</strong>, and then click <strong>Log on</strong>.</p></li>
+<li><p>In the student list, click <strong>Eric Gruber</strong>, and then click <strong>Remove Student</strong>.</p></li>
+<li><p>In the <strong>Confirm</strong> dialog box, click <strong>Yes</strong>.</p></li>
+<li><p>Verify that <strong>Eric Gruber</strong> is removed from the student list.</p></li>
+<li><p>Click <strong>Enroll Student</strong>.</p></li>
+<li><p>In the <strong>Assign Student</strong> dialog box, click <strong>Jon Orton</strong>.</p></li>
+<li><p>In the <strong>Confirm</strong> dialog box, click <strong>Yes</strong>.</p></li>
+<li><p>In the <strong>Assign Student</strong> dialog box, click <strong>Close</strong>, and then verify that <strong>Jon Orton</strong> is added to the student list.</p></li>
+<li><p>Click <strong>Change Password</strong>.</p></li>
+<li><p>In the <strong>Change Password Dialog</strong> dialog box, in the <strong>Old Password</strong> text box, type <strong>password99</strong>.</p></li>
+<li><p>In the <strong>New Password</strong> text box, type <strong>password88</strong>.</p></li>
+<li><p>In the <strong>Confirm</strong> text box, type <strong>password88</strong>, and then click <strong>OK</strong>.</p></li>
+<li><p>In the <strong>Password</strong> dialog box, click <strong>OK</strong>, and then click <strong>Log off</strong>.</p></li>
+<li><p>Click <strong>Log on</strong>, verify that the <strong>Logon Failed</strong> dialog box appears, and then click <strong>OK</strong>.</p></li>
+<li><p>In the <strong>Password</strong> text box, type <strong>password88</strong>, and then click <strong>Log on</strong>.</p></li>
+<li><p>Verify that the student list is displayed.</p></li>
+<li><p>Click <strong>Log off</strong>, and then in the <strong>Username</strong> text box, type <strong>grubere</strong>.</p></li>
+<li><p>In the <strong>Password</strong> text box, type <strong>password</strong>, and then click <strong>Log on</strong>.</p></li>
+<li><p>Verify that the student profile for Eric Gruber appears, and then click <strong>Log off</strong>.</p></li>
+<li><p>Close the application.</p></li>
+<li><p>In Visual Studio, on the <strong>File</strong> menu, click <strong>Close Solution</strong>.</p></li>
+</ol>
+<div class=" alert alert-success"><p><strong>Result:</strong> After completing this exercise, you should have updated the <strong>Grades Prototype</strong> application to use OData Connected Service.</p></div>
+<h4 id="exercise-3-retrieving-student-photographs-over-the-web-if-time-permits">Exercise 3: Retrieving Student Photographs Over the Web (If Time Permits)</h4>
+<div class=" alert alert-secondary"><p><strong>Scenario</strong></p>
+<p>In this exercise, you will write code that displays student images by retrieving the image from across the web.</p>
+<ul>
+<li>You will modify the StudentsPage window (that displays the list of students in a class), the StudentProfile window (that displays the details for an individual student), and the AssignStudentDialog window (that displays a list of unassigned students) to include the student photographs.</li>
+<li>The data for each student contains an ImageName property that specifies the filename of the photograph for the student on the web server.</li>
+<li>These files are located in the Images\Portraits folder on the same web server that hosts the data service (in the Web.Grades project).</li>
+<li>You will build a value converter class that generates the URL of an image from the ImageName property and then use an Image control to use the URL to fetch and render the image in each of the specified windows.</li>
+<li>Finally, you will run the application to verify that the images appear.</li>
+</ul></div>
+<h5 id="task-1-create-the-imagenameconverter-value-converter-class">Task 1: Create the ImageNameConverter value converter class</h5>
+<ol>
+<li>In Visual Studio, on the <strong>File</strong> menu, point to <strong>Open</strong>, and then click <strong>Project/Solution</strong>.</li>
+<li>In the <strong>Open Project</strong> dialog box, browse to <strong>[Repository Root]\Allfiles\Mod08\Labfiles\Starter\Exercise 3</strong>, click <strong>GradesPrototype.sln</strong>, and then click <strong>Open</strong>.</li>
+</ol>
+<div class=" alert alert-warning"><p><strong>Note:</strong> If any Security warning dialog box appears, clear <strong>Ask me for every project in this solution</strong> check box and then click <strong>OK</strong>.</p></div>
+<ol start="3">
+<li><p>In <strong>Solution Explorer</strong>, right-click the <strong>GradesPrototype</strong> solution, and then click <strong>Set StartUp Projects</strong>.</p></li>
+<li><p>In the <strong>Solution 'GradesPrototype' Property Pages</strong> dialog box, click <strong>Multiple startup projects</strong>.</p></li>
+<li><p>In the <strong>Action</strong> column for <strong>Grades.Web</strong> and <strong>GradesPrototype</strong>, click <strong>Start</strong>, and then click <strong>OK</strong>.</p></li>
+<li><p>On the <strong>Build</strong> menu, click <strong>Rebuild Solution</strong>.</p></li>
+<li><p>In the <strong>Task List</strong> window, double-click the <strong>TODO: Exercise 3: Task 1: Create the ImageNameConverter value converter to convert the image name of a student photograph into the URL of the image on the Web server</strong> task.</p></li>
+<li><p>Click at the end of the <strong>// Converter class for transforming an image name for a photograph into a URL</strong> comment, press Enter, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ImageNameConverter</span> <span class="token punctuation">:</span> <span class="token class-name">IValueConverter</span>
+<span class="token punctuation">{</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-paster-rows"><span data-code="public class ImageNameConverter : IValueConverter
+{
+}" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>In the <strong>ImageNameConverter</strong> class, type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">const</span> <span class="token keyword">string</span> webFolder <span class="token operator">=</span> <span class="token string">"http://localhost:1650/Images/Portraits/"</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-paster-rows"><span data-code="const string webFolder = &quot;http://localhost:1650/Images/Portraits/&quot;;" class="paste"></span></span></code></pre></li>
+<li><p>Right-click the <strong>IValueConverter</strong> keyword, point to <strong>Quick Actions and refactorings</strong>, and then click <strong>Implement Interface</strong>.</p></li>
+<li><p>In the <strong>Convert</strong> method, delete the existing statement that throws a <strong>NotImplementedException</strong>, and then type the following code:</p>
+<pre class="single-paste line-paster language-csharp"><code class="csharp  language-csharp"><span class="token keyword">string</span> fileName <span class="token operator">=</span> <span class="token keyword">value</span> <span class="token keyword">as</span> <span class="token keyword">string</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>fileName <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">string</span><span class="token punctuation">.</span><span class="token function">Format</span><span class="token punctuation">(</span><span class="token string">"{0}{1}"</span><span class="token punctuation">,</span> webFolder<span class="token punctuation">,</span> fileName<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">else</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">string</span><span class="token punctuation">.</span>Empty<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-paster-rows"><span data-code="string fileName = value as string;
+
+if (fileName != null)
+{
+    return string.Format(&quot;{0}{1}&quot;, webFolder, fileName);
+}
+else
+{
+    return string.Empty;
+}" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p></li>
+</ol>
+<h5 id="task-2-add-an-image-control-to-the-studentspage-view-and-bind-it-to-the-imagename-property">Task 2: Add an Image control to the StudentsPage view and bind it to the ImageName property</h5>
+<ol>
+<li><p>In <strong>Solution Explorer</strong>, in the <strong>GradesPrototype</strong> project, expand <strong>Views</strong>, and then double-click <strong>StudentsPage.xaml</strong>.</p></li>
+<li><p>In the XAML editor, in the <strong>UserControl</strong> element at the top of the markup, click after the <strong>xmlns:d="http://schemas.microsoft.com/expression/blend/2008"</strong> line, press Enter, and then type the following markup:</p>
+<pre class="single-paste line-paster language-xml"><code class="xml  language-xml">xmlns:local="clr-namespace:GradesPrototype.Views"<span aria-hidden="true" class="line-paster-rows"><span data-code="xmlns:local=&quot;clr-namespace:GradesPrototype.Views&quot;" class="paste"></span></span></code></pre></li>
+<li><p>Locate the <strong>TODO: Exercise 3: Task 2a. Add an instance of the ImageNameConverter class as a resource to the view</strong> comment, click at the end of the comment, press Enter, and then type the following markup:</p>
+<pre class="single-paste line-paster language-xml"><code class="xml  language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>UserControl.Resources</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">local:</span>ImageNameConverter</span> <span class="token attr-name"><span class="token namespace">x:</span>Key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ImageNameConverter<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>UserControl.Resources</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-paster-rows"><span data-code="&lt;UserControl.Resources&gt;
+    &lt;local:ImageNameConverter x:Key=&quot;ImageNameConverter&quot;/&gt;
+&lt;/UserControl.Resources&gt;" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>Locate the <strong>TODO: Exercise 3: Task 2b. Add an Image control to display the photo of the student</strong> comment, click at the end of the comment, press Enter, and then type the following markup:</p>
+<pre class="single-paste line-paster language-xml"><code class="xml  language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Image</span> <span class="token attr-name">Height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>100<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span aria-hidden="true" class="line-paster-rows"><span data-code="&lt;Image Height=&quot;100&quot; /&gt;" class="paste"></span></span></code></pre></li>
+<li><p>Locate the <strong>Exercise 3: Task 2c. Bind the Image control to the ImageName property and use the ImageNameConverter to convert the image name into a URL</strong> comment.</p></li>
+<li><p>In the line above the comment, modify the</p>
+<pre class="single-paste line-paster language-xml"><code class="xml  language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Image</span> <span class="token attr-name">Height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>100<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span aria-hidden="true" class="line-paster-rows"><span data-code="&lt;Image Height=&quot;100&quot; /&gt;" class="paste"></span></span></code></pre>
+<p>markup to look like the following markup:</p>
+<pre class="single-paste line-paster language-xml"><code class="xml  language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Image</span> <span class="token attr-name">Height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>100<span class="token punctuation">"</span></span> <span class="token attr-name">Source</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{Binding ImageName, Converter={StaticResource ImageNameConverter}}<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span aria-hidden="true" class="line-paster-rows"><span data-code="&lt;Image Height=&quot;100&quot; Source=&quot;{Binding ImageName, Converter={StaticResource ImageNameConverter}}&quot; /&gt;" class="paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-3-add-an-image-control-to-the-studentprofile-view-and-bind-it-to-the-imagename-property">Task 3: Add an Image control to the StudentProfile view and bind it to the ImageName property</h5>
+<ol>
+<li><p>In Solution Explorer, double-click <strong>StudentProfile.xaml</strong>.</p></li>
+<li><p>Locate the <strong>TODO: Exercise 3: Task 3a. Add an instance of the ImageNameConverter class as a resource to the view</strong> comment.</p></li>
+<li><p>Click at the end of the comment, press Enter, and then type the following markup:</p>
+<pre class="single-paste line-paster language-xml"><code class="xml  language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">app:</span>ImageNameConverter</span> <span class="token attr-name"><span class="token namespace">x:</span>Key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ImageNameConverter<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span><span aria-hidden="true" class="line-paster-rows"><span data-code="&lt;app:ImageNameConverter x:Key=&quot;ImageNameConverter&quot;/&gt;" class="paste"></span></span></code></pre></li>
+<li><p>Locate the <strong>TODO: Exercise 3: Task 3b. Add an Image control to display the photo of the student and bind the Image control to the ImageName property and use the ImageNameConverter to convert the image name into a URL</strong> comment.</p></li>
+<li><p>Click at the end of the comment, press Enter, and then type the following markup:</p>
+<pre class="single-paste line-paster language-xml"><code class="xml  language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Image</span> <span class="token attr-name">Height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>150<span class="token punctuation">"</span></span> <span class="token attr-name">Source</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{Binding ImageName, Converter={StaticResource ImageNameConverter}}<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span aria-hidden="true" class="line-paster-rows"><span data-code="&lt;Image Height=&quot;150&quot; Source=&quot;{Binding ImageName, Converter={StaticResource ImageNameConverter}}&quot; /&gt;" class="paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-4-add-an-image-control-to-the-assignstudentdialog-control-and-bind-it-to-the-imagename-property">Task 4: Add an Image control to the AssignStudentDialog control and bind it to the ImageName property</h5>
+<ol>
+<li><p>In <strong>Solution Explorer</strong>, expand <strong>Controls</strong>, and then double-click <strong>AssignStudentDialog.xaml</strong>.</p></li>
+<li><p>In the XAML editor, at the top of the markup, click at the end of the <strong>xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"</strong> line, press Enter, and then type the following markup:</p>
+<pre class="single-paste line-paster language-xml"><code class="xml  language-xml">xmlns:local="clr-namespace:GradesPrototype.Views"<span aria-hidden="true" class="line-paster-rows"><span data-code="xmlns:local=&quot;clr-namespace:GradesPrototype.Views&quot;" class="paste"></span></span></code></pre></li>
+<li><p>Locate the <strong>TODO: Exercise 3: Task 4a. Add an instance of the ImageNameConverter class as a resource to the view</strong> comment.</p></li>
+<li><p>Click at the end of the comment, press Enter, and then type the following markup:</p>
+<pre class="single-paste line-paster language-xml"><code class="xml  language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Window.Resources</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">local:</span>ImageNameConverter</span> <span class="token attr-name"><span class="token namespace">x:</span>Key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ImageNameConverter<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Window.Resources</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-paster-rows"><span data-code="&lt;Window.Resources&gt;
+    &lt;local:ImageNameConverter x:Key=&quot;ImageNameConverter&quot;/&gt;
+&lt;/Window.Resources&gt;" class="paste"></span><span class="no-paste"></span><span class="no-paste"></span></span></code></pre></li>
+<li><p>Locate the <strong>TODO: Exercise 3: Task 4b. Add an Image control to display the photo of the student and bind the control to the ImageName property and use the ImageNameConverter to convert the image name into a URL</strong> comment.</p></li>
+<li><p>Click at the end of the comment, press Enter, and then type the following markup:</p>
+<pre class="single-paste line-paster language-xml"><code class="xml  language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Image</span> <span class="token attr-name">Height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>100<span class="token punctuation">"</span></span> <span class="token attr-name">Source</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{Binding ImageName, Converter = {StaticResource ImageNameConverter}}<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span aria-hidden="true" class="line-paster-rows"><span data-code="&lt;Image Height=&quot;100&quot; Source=&quot;{Binding ImageName, Converter = {StaticResource ImageNameConverter}}&quot; /&gt;" class="paste"></span></span></code></pre></li>
+</ol>
+<h5 id="task-5-build-and-test-the-application-verifying-that-students-photographs-appear-in-the-list-of-students-for-the-teacher">Task 5: Build and test the application, verifying that student's photographs appear in the list of students for the teacher</h5>
+<ol>
+<li><p>On the <strong>Build</strong> menu, click <strong>Build Solution</strong>.</p></li>
+<li><p>On the <strong>Debug</strong> menu, click <strong>Start Without Debugging</strong>.</p></li>
+<li><p>In the <strong>Username</strong> text box, type <strong>vallee</strong>.</p></li>
+<li><p>In the <strong>Password</strong> text box, type <strong>password88</strong>, and then click <strong>Log on</strong>.</p></li>
+<li><p>Verify that the student list now includes images.</p></li>
+<li><p>Click <strong>George Li</strong>, and then verify that the student profile appears with an image.</p></li>
+<li><p>Click <strong>Remove Student</strong>.</p></li>
+<li><p>In the <strong>Confirm</strong> dialog box, click <strong>Yes</strong>.</p></li>
+<li><p>Click <strong>Enroll Student</strong>.</p></li>
+<li><p>In the <strong>Assign Student</strong> dialog box, verify that each of the unassigned students has an image.</p></li>
+<li><p>Click <strong>George Li</strong>.</p></li>
+<li><p>In the <strong>Confirm</strong> dialog box, click <strong>Yes</strong>.</p></li>
+<li><p>In the <strong>Assign Student</strong> dialog box, click <strong>Close</strong>.</p></li>
+<li><p>Verify that George Li is added to the student list with an image.</p></li>
+<li><p>Close the application.</p></li>
+<li><p>On the <strong>File</strong> menu, click <strong>Close Solution</strong>.</p></li>
+</ol>
+<div class=" alert alert-success"><p><strong>Result:</strong> After completing this exercise, the student list, student profile, and unassigned student dialog box will display the images of students that were retrieved across the web.</p></div>
+<div class=" alert alert-info"><p><strong>Congratulations!</strong>  You have now completed this lab.  You should ensure you save your lab environment.  Failure to do so will result in the loss of all work.</p></div></div>
+    </div>
+    <div id="labGuidePoppedOutContainer" class="text-center" style="display:none;">
+        <p>Your lab guide is open in another window</p>
+        <p class="text-muted"><i class="fal fa-window fa-9x"></i></p>
+        <p><button class="btn btn-brand d-block w-100 focus-popout-btn">Show Lab Guide</button></p>
+    </div>
+</div>
+
+
+                        <div class="lab-timer text-center bg-light p-2" id="lab-timer-container">
+                <div class="position-relative h-100 w-100" id="lab-timer-warning" data-original-title="" title="">
+                    <h2><span class="badge badge-secondary style colorDefinition size_lg" id="lab-timer">
+                        <i class="fas fa-stopwatch" id="stopwatch" data-toggle="popover" data-content="Time Remaining" data-trigger="hover" data-placement="top" data-original-title="" title=""></i>
+                        <span id="lab-timer-timer">07:55:06</span>
+                    </span></h2>
+                </div>
+            </div>
+
+        </div>
+        <div class="gutter gutter-horizontal" style="flex-basis: 6px;"></div><div class="col bg-dark" style="overflow: auto; flex-basis: calc(32.0304% - 3px);" id="lab-display-container">
+            <div style="position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 1;">
+    <div class="d-flex align-items-center justify-content-center" style="height: 100%; overflow: hidden" id="outer-display">
+
+        <div class="card border-warning connection-error-box" id="display-error-checking" style="display: none;">
+            <div class="card-header bg-warning border-0 text-white">Sorry, there was a problem connecting to your VM</div>
+            <div class="card-body text-center">
+                <p>We're checking your connection, please wait...</p>
+            </div>
+        </div>
+
+        <div class="card border-danger connection-error-box" id="display-error" style="display: none;">
+            <div class="card-header bg-danger border-0 text-white">Sorry, there was a problem connecting to your VM</div>
+            <div class="card-body text-center">
+                <button class="btn btn-sm btn-outline-secondary ml-1 reconnect-display-btn">Reconnect</button>
+            </div>
+        </div>
+
+        <div class="card border-danger connection-error-box" id="display-error-contact" style="display: none;">
+            <div class="card-header bg-danger border-0 text-white">Unexpected VM State</div>
+            <div class="card-body text-center">
+                <p>Your VM is in an unexpected state. Please <a href="mailto:support@godeploy.it">contact support</a>.</p>
+            </div>
+        </div>
+
+        <div class="card border-primary connection-error-box" id="display-error-stopped" style="display: none;">
+            <div class="card-header bg-primary border-0 text-white">Your VM is turned off</div>
+            <div class="card-body text-center">
+                <button class="btn btn-sm btn-outline-secondary ml-1 power-op" data-op="start">Power on</button>
+            </div>
+        </div>
+
+        <div class="card border-primary connection-error-box" id="display-error-starting" style="display: none;">
+            <div class="card-header bg-primary border-0 text-white">Your VM is turning on</div>
+            <div class="card-body text-center">
+                <p>Your VM is turning on, please wait...</p>
+            </div>
+        </div>
+
+        <div class="card border-primary connection-error-box" id="display-error-stopping" style="display: none;">
+            <div class="card-header bg-primary border-0 text-white">Your VM is turning off</div>
+            <div class="card-body text-center">
+                <p>Your VM is turning off, please wait...</p>
+            </div>
+        </div>
+
+        <div id="display" class="position-relative">
+            <div style="position: absolute; top: 0; left: 0; background-color: #000; z-index: -2; height: 100%;width:100%"></div>
+        <div style="position: relative; width: 1024px; height: 768px;"><div style="position: relative; width: 1024px; height: 768px; transform-origin: 0px 0px;"><div style="width: 1024px; height: 768px; position: absolute; left: 0px; top: 0px; overflow: hidden;"><canvas width="1024" height="768" style="z-index: -1; position: absolute; left: 0px; top: 0px;"></canvas></div><div style="width: 32px; height: 32px; position: absolute; left: 0px; top: 0px; overflow: hidden; transform: translate(-15px, -15px) matrix(1, 0, 0, 1, 0, 0);"><canvas width="64" height="64" style="z-index: -1; position: absolute; left: 0px; top: 0px;"></canvas></div></div></div></div>
+    </div>
+</div>
+
+        </div>
+    </div>
+</main>
+
+<div class="modal" tabindex="-1" role="dialog" id="end-lab-modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-warning text-white">
+                <h5 class="modal-title">Warning - you are about to end your lab</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                    <p>Any change you have made to your lab will be irrevocably lost and you will need to start again.</p>
+                    <p class="mb-0">You can, instead, save your lab and then continue from where you left off, later.</p>
+            </div>
+            <div class="modal-footer">
+                    <a href="https://lms.godeploy.it/Modules/SaveLab/f2def404-29f7-e911-abe3-00155de2c913" class="btn btn-link text-success confirmed-navigation">Save my Lab</a>
+                <a href="https://lms.godeploy.it/Modules/EndLab/f2def404-29f7-e911-abe3-00155de2c913" class="btn btn-danger confirmed-navigation" id="end-lab-btn">End my lab</a>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="save-lab-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h5 class="modal-title">Save your lab</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you wish to leave?</p>
+                    <p>Your lab will be saved for 7 days, after which it will be stopped and deleted.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://lms.godeploy.it/Modules/SaveLab/f2def404-29f7-e911-abe3-00155de2c913" class="btn btn-success confirmed-navigation">Save my Lab</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="launch-info-modal" data-show="true" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-white">
+                    <h5 class="modal-title">Important information about your lab</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>When launching Visual Studio you must sign in with a Microsoft Account or create a new one.&nbsp; The Visual Studio Community Edition trial has expired and is to be expected.</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="info-modal-ok-btn">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" role="dialog" id="launch-errata-modal" data-show="false">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-warning text-white">
+                    <h5 class="modal-title">Important information about your lab</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p><br></p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="info-modal-ok-btn">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="modal" tabindex="-1" role="dialog" id="screenshot-modal">
+    <div class="modal-dialog modal-lg" role="document" style="max-width: 1024px;">
+        <div class="modal-content">
+            <div class="modal-body" id="screenshot-background" style="background-position: center center; background-repeat: no-repeat; background-size: auto 100%; height: 768px;">
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="lab_ui_lab-dns-modal" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">DNS Record</h5>
+            </div>
+            <div class="modal-body">
+                <form id="lab_ui_a-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditARecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-a-record-name-input">Name</label>
+                            <input id="dns-a-record-name-input" class="form-control" name="Name">
+                            <div class="text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dns-a-record-ipv4address-input">IPv4 Address</label>
+                            <input id="dns-a-record-ipv4address-input" class="form-control" name="Ipv4Address">
+                        </div>
+                    </div>
+                </form>
+                <form id="lab_ui_aaaa-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditAaaaRecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-aaaa-record-name-input">Name</label>
+                            <input id="dns-aaaa-record-name-input" class="form-control" name="Name">
+                            <div class="text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dns-aaaa-record-ipv6address-input">IPv6 Address</label>
+                            <input id="dns-aaaa-record-ipv6address-input" class="form-control" name="Ipv6Address">
+                        </div>
+                    </div>
+                </form>
+                <form id="lab_ui_cname-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditCnameRecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-cname-record-name-input">Name</label>
+                            <input id="dns-cname-record-name-input" class="form-control" name="Name">
+                            <div class="text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dns-cname-record-cname-input">CNAME</label>
+                            <input id="dns-cname-record-cname-input" class="form-control" name="Cname">
+                        </div>
+                    </div>
+                </form>
+                <form id="lab_ui_mx-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditMxRecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-mx-record-name-input">Name</label>
+                            <input id="dns-mx-record-name-input" class="form-control" name="Name">
+                            <div class="text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-6">
+                                <label for="dns-mx-record-preference-input">Preference</label>
+                                <input id="dns-mx-record-preference-input" class="form-control" name="Preference">
+                            </div>
+                            <div class="form-group col-18">
+                                <label for="dns-mx-record-exchange-input">Host</label>
+                                <input id="dns-mx-record-exchange-input" class="form-control" name="Exchange">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <form id="lab_ui_srv-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditSrvRecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-srv-record-name-input">Name</label>
+                            <input id="dns-srv-record-name-input" class="form-control" name="Name" placeholder="_service._protocol.name">
+                            <div class="row">
+                                <div class="col-12"><small class="text-muted">_service._protocol.name</small></div>
+                                <div class="col-12 text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-8">
+                                <label for="dns-srv-record-priority-input">Priority</label>
+                                <input id="dns-srv-record-priority-input" class="form-control" name="Priority">
+                            </div>
+                            <div class="form-group col-8">
+                                <label for="dns-srv-record-weight-input">Weight</label>
+                                <input id="dns-srv-record-weight-input" class="form-control" name="Weight">
+                            </div>
+                            <div class="form-group col-8">
+                                <label for="dns-srv-record-port-input">Port</label>
+                                <input id="dns-srv-record-port-input" class="form-control" name="Port">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dns-srv-record-target-input">Target</label>
+                            <input id="dns-srv-record-target-input" class="form-control" name="Target">
+                        </div>
+                    </div>
+                </form>
+                <form id="lab_ui_txt-record-form" class="dns-record-form" action="https://lms.godeploy.it/LabDomains/AddEditTxtRecord/f2def404-29f7-e911-abe3-00155de2c913">
+                    <div>
+                        <input type="hidden" name="RecordSetId">
+                        <input type="hidden" name="RecordId">
+                        <input type="hidden" name="Delete" class="dns-record-delete-flag">
+                        <div class="form-group">
+                            <label for="dns-txt-record-name-input">Name</label>
+                            <input id="dns-txt-record-name-input" class="form-control" name="Name">
+                            <div class="text-right"><small class="text-muted">.<span class="dns-zone-name"></span></small></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dns-txt-record-value-input">Value</label>
+                            <textarea id="dns-txt-record-value-input" class="form-control" name="Value"></textarea>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger mr-auto" id="delete-dns-record-btn">Delete</button>
+                <button type="button" class="btn btn-secondary" id="save-dns-record-btn">Save</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+    <script src="./M20483C _ LAB 08_files/jquery.min.js.téléchargement"></script>
+    <script src="./M20483C _ LAB 08_files/bootstrap.bundle.min.js.téléchargement"></script>
+    
+    <script src="./M20483C _ LAB 08_files/labs.js.téléchargement"></script>
+    <script src="./M20483C _ LAB 08_files/all.min.js.téléchargement"></script>
+    <script src="./M20483C _ LAB 08_files/easytimer.min.js.téléchargement"></script>
+    <script src="./M20483C _ LAB 08_files/handlebars.min.js.téléchargement" integrity="sha256-dlwklXLDib5XGMYI+HdNEXczJXTsFtq+qIrSdXoCv6o=" crossorigin="anonymous"></script>
+    <script type="text/x-handlebars-template" id="vm-credentials-template">
+        {{#each this}}
+            <table>
+                <tr>
+                    <th class="pr-2">Username</th>
+                    <td>{{Username}}</td>
+                    <td class="pl-2"><i class="fas fa-paste paste-credential paste-tab" data-text="{{Username}}"></i></td>
+                </tr>
+                <tr>
+                    <th class="pr-2">Password</th>
+                    <td>{{Password}}</td>
+                    <td class="pl-2"><i class="fas fa-paste paste-credential paste-enter" data-text="{{Password}}"></i></td>
+                </tr>
+            </table>
+        {{/each}}
+    </script>
+    <script type="text/javascript">
+        window.focus();
+
+        $('a.confirmed-navigation').on('click',
+            function() {
+                window.onbeforeunload = null;
+            });
+
+        var pasteBox = document.getElementById('paste-box');
+        pasteBox.disabled = true;
+        var pasteBoxOpen = false;
+
+        $('#paste-box-dropdown').on('shown.bs.dropdown',
+            function() {
+                pasteBoxOpen = true;
+                pasteBox.disabled = false;
+                pasteBox.focus();
+            });
+
+        $('#paste-box-dropdown').on('hidden.bs.dropdown',
+            function() {
+                pasteBoxOpen = false;
+                window.focus();
+                pasteBox.value = '';
+                pasteBox.disabled = true;
+            });
+
+        window.onbeforeunload = function(e) {
+            return "If you navigate away from this page your changes may be lost and VMs deleted. We will try to save them for you.\n\nIt may be best to cancel navigation and click the \"End Lab\" or \"Save Lab\" button, instead.";
+        };
+
+        var pasteboxKbEvent = function(e) {
+            if (document.activeElement !== pasteBox) return;
+
+            client.guac.sendKeyEvent(0, 0xFFE3);
+            client.guac.sendKeyEvent(0, 0xFFE9);
+
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+        };
+
+        window.addEventListener('keydown', pasteboxKbEvent, true);
+        window.addEventListener('keyup', pasteboxKbEvent, true);
+        window.addEventListener('keypress', pasteboxKbEvent, true);
+
+        document.addEventListener('paste',
+            function(e) {
+                if (document.activeElement !== pasteBox) {
+                    return;
+                }
+                if (typeof e.clipboardData === 'undefined') {
+                    var text = window.clipboardData.getData('Text');
+                } else {
+                    var text = e.clipboardData.getData('text/plain');
+                }
+
+                client.sendKeys(text);
+
+                if (pasteBoxOpen) $('#paste-box-dropdown').dropdown('toggle');
+            });
+
+        var checkVmStateTimeout;
+        
+        function checkVmState(connecting) {
+            $('.connection-error-box,#display').hide();
+            $('#display-error-checking').show();
+
+            if (checkVmStateTimeout) clearTimeout(checkVmStateTimeout);
+
+            var vmId = $('#vm-dropdown-menu a.active').data('vmId');
+
+            $.ajax({
+                url: '/Labs/NVmControl/f2def404-29f7-e911-abe3-00155de2c913/' + vmId + '/get-state',
+                type: 'get',
+                success: function(data) {
+                    $('.connection-error-box').hide();
+                    switch(data) {
+                    case 'stopped':
+                    case 'saved':
+                        $('#display-error-stopped').show();
+                        break;
+                    case 'starting':
+                        $('#display-error-starting').show();
+                        checkVmStateTimeout = setTimeout(function() { checkVmState(false); }, 2000);
+                        break;
+                    case 'stopping':
+                        $('#display-error-stopping').show();
+                        checkVmStateTimeout = setTimeout(function() { checkVmState(false); }, 2000);
+                        break;
+                    case 'saving':
+                        $('#display-error-checking').show();
+                        checkVmStateTimeout = setTimeout(function() { checkVmState(false); }, 2000);
+                        break;
+                    case 'started':
+                        if (connecting) {
+                            $('#display-error').show();
+                        } else {
+                            $('#vm-dropdown-menu a.active').triggerHandler('click');
+                        }
+                        break;
+                    default:
+                        $('#display-error-contact').show();
+                        break;
+                    }
+                },
+                error: function() {
+                    $('#display-error-contact').show();
+                }
+            });
+        }
+
+        var envId = "f5def404-29f7-e911-abe3-00155de2c913";
+
+        var Client = Client || {};
+
+        Client.Rde = function(displayElement) {
+            this.tunnelUrl = 'wss://remote.labsonline.it/wsTunnel';
+            this.guac = null;
+            this.mouse = null;
+            this.keyboard = null;
+            this.tunnel = null;
+            this.enhancedMode = false;
+            this.resizeTimeout = null;
+            this.keysPressed = [];
+
+            var KEYSYM_CTRL = 0xFFE3;
+            var KEYSYM_ALT = 0xFFE9;
+            var KEYSYM_DELETE = 0xFFFF;
+            
+            var self = this;
+            
+            var onkeydown = function(keysym) {
+                self.guac.sendKeyEvent(1, keysym);
+                self.registerKeypress(keysym);
+            };
+
+            var onkeyup = function(keysym) {
+                self.guac.sendKeyEvent(0, keysym);
+                self.unregisterKeypress(keysym);
+            };
+
+            this.initialize = function() {
+                this.tunnel = new Guacamole.WebSocketTunnel(this.tunnelUrl);
+                this.guac = new Guacamole.Client(this.tunnel);
+                this.guac.onerror = function() {
+                    self.enhancedMode = false;
+                    $('#enhanced-mode-switch').prop('checked', false);
+                    checkVmState(true);
+                }
+
+                window.onresize = function() {
+                    if (self.resizeTimeout) window.clearTimeout(self.resizeTimeout);
+                    self.resizeTimeout = window.setTimeout(function() {
+                        window.clearTimeout(self.resizeTimeout);
+                        if (self.enhancedMode) {
+                            var outerOuterDisplay = document.getElementById('outer-display');
+                            self.guac.sendSize(outerOuterDisplay.offsetWidth, outerOuterDisplay.offsetHeight);
+                        }
+                    }, 300);
+                };
+                
+                displayElement.appendChild(this.guac.getDisplay().getElement());
+
+                window.onunload = function() {
+                    self.guac.disconnect();
+                };
+
+                this.mouse = new Guacamole.Mouse(this.guac.getDisplay().getElement());
+
+                this.mouse.onmousedown = function(mouseState) {
+                    self.guac.sendMouseState(mouseState);
+                };
+                this.mouse.onmouseup = function(mouseState) {
+                    self.guac.sendMouseState(mouseState);
+                };
+                this.mouse.onmousemove = function(mouseState) {
+                    self.guac.sendMouseState(mouseState);
+                };
+
+                this.keyboard = new Guacamole.Keyboard(document);
+                this.captureKeyboard();
+            };
+            
+            this.captureKeyboard = function() {
+                this.keyboard.onkeyup = onkeyup;
+                this.keyboard.onkeydown = onkeydown;
+            }
+            
+            this.releaseKeyboard = function() {
+                this.keyboard.onkeyup = null;
+                this.keyboard.onkeydown = null;
+            }
+            
+            this.registerKeypress = function(keysym) {
+                this.keysPressed.push(keysym);
+            }
+            
+            this.unregisterKeypress = function(keysym) {
+                var index = this.keysPressed.indexOf(keysym);
+                if (index === -1) return;
+                this.keysPressed.splice(index, 1);
+            }
+            
+            this.unregisterAllKeypresses = function() {
+                var self = this;
+                this.keysPressed.forEach(function(keysym) {
+                    self.guac.sendKeyEvent(0, keysym);
+                    if (keysym === KEYSYM_ALT) {
+                        self.guac.sendKeyEvent(1, keysym);
+                        self.guac.sendKeyEvent(0, keysym);
+                    }
+                });
+                this.keysPressed = [];
+            }
+
+            this.connect = function(envId, vmId) {
+                var self = this;
+
+                try {
+                    this.guac.disconnect();
+                } catch (e) { /* ignore */
+                }
+
+                window.setTimeout(function() {
+                        var connectionString = 'eid=' + envId + '&vid=' + vmId;
+                        if (self.enhancedMode) {
+                            var outerDisplay = document.getElementById('outer-display');
+                            var supportedAudioFormats = Guacamole.AudioPlayer.getSupportedTypes();
+                            connectionString += '&enhanced=1&width=' + outerDisplay.offsetWidth + '&height=' + outerDisplay.offsetHeight + '&audio=' + supportedAudioFormats.join('&audio=');
+                        }
+                        self.guac.connect(connectionString);
+                    },
+                    500);
+            };
+            
+            this.toggleEnhancedMode = function(enabled) {
+                this.enhancedMode = enabled;
+                $('#enhanced-mode-switch').prop('checked', enabled);
+                $('#vm-dropdown-menu a.active').first().triggerHandler('click');
+            };
+
+            this.initialize();
+
+            this.sendCad = function() {
+                this.unregisterAllKeypresses();
+                this.guac.sendKeyEvent(1, KEYSYM_CTRL);
+                this.guac.sendKeyEvent(1, KEYSYM_ALT);
+                this.guac.sendKeyEvent(1, KEYSYM_DELETE);
+                this.guac.sendKeyEvent(0, KEYSYM_CTRL);
+                this.guac.sendKeyEvent(0, KEYSYM_ALT);
+                this.guac.sendKeyEvent(0, KEYSYM_DELETE);
+            };
+
+            this.sendKeys = function(text) {
+                var self = this;
+                this.unregisterAllKeypresses();
+                text = text.replace(/\r\n?/g, "\n");
+                var strArr = text.split("");
+                
+                var sendKey = function(strArr) {
+                    if (strArr.length === 0) return;
+                    
+                    var char = strArr.shift();
+                    
+                    var codepoint = char.charCodeAt(0);
+                    var keysym = codepoint;
+                    if (codepoint >= 0x0100) {
+                        keysym = 0x01000000 | codepoint;
+                    }
+                    self.guac.sendKeyEvent(1, keysym);
+                    self.guac.sendKeyEvent(0, keysym);
+                    
+                    window.setTimeout(sendKey, 10, strArr);
+                }
+                
+                sendKey(strArr);
+            };
+        };
+
+        var client = new Client.Rde(document.getElementById('display'));
+        
+        var vmCredentialsTarget = document.getElementById('vm-credentials-target');
+        var vmCredentialsTemplate = Handlebars.compile(document.getElementById('vm-credentials-template').innerHTML);
+        function showCredentialsForVm(vmCredentials) {
+            vmCredentialsTarget.innerHTML = vmCredentialsTemplate(vmCredentials);
+        }
+
+        function showVmContextMenus(vmId) {
+            var vmContextMenuDropdowns = $('.vm-context-menu-dropdown');
+            vmContextMenuDropdowns.each(function(vmCintextMenuDropdownIndex, vmCOntextMenuDropdownElement) {
+                var vmContextMenuDropdown = $(vmCOntextMenuDropdownElement);
+                vmContextMenuDropdown.toggle(false);
+
+                var vmContextMenus = vmContextMenuDropdown.find('.vm-context-menu');
+                vmContextMenus.toggle(false);
+
+                vmContextMenus.each(function(vmContextMenuIndex, vmContextMenuElement) {
+                    var vmContextMenu = $(vmContextMenuElement);
+                    if (vmContextMenu.data('vmId') === vmId) {
+                        vmContextMenu.toggle(true);
+                        vmContextMenuDropdown.toggle(true);
+                    }
+                });
+            });
+        }
+
+        var vmItems = $('#vm-dropdown-menu a');
+        vmItems.on(
+            'click',
+            function() {
+                if (checkVmStateTimeout) {
+                    clearTimeout(checkVmStateTimeout);
+                }
+                $('#vm-dropdown-menu a').removeClass('active');
+                var $this = $(this);
+                $this.addClass('active');
+                client.connect(envId, $this.data('vmId'));
+                $('#vm-dropdown-btn').text($this.text());
+                $('.connection-error-box').hide();
+                $('#display').show();
+                showCredentialsForVm($this.data('vmCredentials'));
+                showVmContextMenus($this.data('vmId'));
+            }).first().triggerHandler('click');
+
+        var selectVm = function(vmName) {
+            vmItems.each(function(i, el) {
+                if (el.dataset.vmName === vmName) {
+                    $(el).triggerHandler('click');
+                }
+            });
+        };
+
+        document.addEventListener('select-vm', function(e) {
+            selectVm(e.detail);
+        });
+
+        $('#cad-btn').on('click',
+            function() {
+                client.sendCad();
+                $(this).blur();
+            });
+        
+        var pasteTextHandler = function() {
+            var stringToSend = $(this).data('text');
+            if ($(this).hasClass('paste-enter')) {
+                stringToSend += "\n";
+            }
+            if ($(this).hasClass('paste-tab')) {
+                stringToSend += "\t";;
+            }
+            client.sendKeys(stringToSend);
+        };
+
+        $('.paste-text').on('click', pasteTextHandler);
+        $('#vm-credentials-target').on('click', '.paste-credential', pasteTextHandler);
+
+        $('.reconnect-display-btn').on('click',
+            function() {
+                $('#vm-dropdown-menu a.active').triggerHandler('click');
+                $(this).blur();
+            });
+
+        var infoModal = $('#launch-info-modal');
+        var errataModel = $('#launch-errata-modal');
+        if (infoModal.data('show') === true) {
+            infoModal.modal('show');
+            if (errataModel.data('show') === true) {
+                $('#info-modal-ok-btn').on('click',
+                    function() {
+                        window.setTimeout(function() { errataModel.modal('show'); }, 500);
+                    });
+            }
+        } else if (errataModel.data('show') === true) {
+            errataModel.modal('show');
+        }
+
+        $('.power-op').on('click',
+            function() {
+                var op = $(this).data('op');
+                var vmId = $('#vm-dropdown-menu a.active').first().data('vmId');
+                $.ajax({
+                    url: '/Labs/NVmControl/f2def404-29f7-e911-abe3-00155de2c913/' + vmId + '/' + op,
+                    type: 'get',
+                    success: function() {
+                        if (op === 'start') {
+                            checkVmState(false);
+                        }
+                    },
+                    error: function() {
+                        alert('An error occurred whilst carrying out that power operation');
+                    }
+                });
+                $(this).blur();
+            });
+        
+        $('#enhanced-mode-switch').on('click', function() {
+            client.toggleEnhancedMode($(this).is(':checked'));
+            $(this).blur();
+        });
+
+        var timerTarget = $("#lab-timer");
+        var timerTargetTimer = $("#lab-timer-timer");
+        var timerWarning = $('#lab-timer-warning');
+        var warningThreshold = 14;
+        var canExtend = true;
+
+        $('#stopwatch').popover();
+        timerWarning.popover({
+            template:
+                '<div class="popover" role="tooltip"><div class="arrow"></div><h3 class="popover-header bg-warning"></h3><div class="popover-body"></div></div>',
+            trigger: 'manual',
+            placement: 'top',
+            content:
+                '<div class="text-center"><div class="mb-2">You may extend by a further 60 minutes:</div>' +
+                    '<button id="extend-timer-btn" class="btn btn-success">Extend</button>' +
+                    '<button id="ignore-timer-btn" class="btn btn-secondary ml-2">Ignore</button>' +
+                    '</div>',
+            html: true,
+            title: '<i class="fa fa-exclamation-triangle"></i> Your Lab will end soon',
+            boundary: 'window'
+        });
+
+        $('body').on('click',
+            '#extend-timer-btn',
+            function() {
+                $('#extend-timer-btn').attr('disabled', true).html('Requesting...');
+                $.ajax({
+                    url: '/Modules/AddTime/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'post',
+                    success: function(data) {
+                        startTimer(data);
+                        timerTarget.removeClass('badge-warning').addClass('badge-secondary');
+                        timerWarning.popover('hide');
+                    },
+                    error: function() {
+                        alert('There was an error extending your lab expiry time. Please try again or contact support');
+                    }
+                });
+            });
+        $('body').on('click',
+            '#ignore-timer-btn',
+            function() {
+                timerWarning.popover('toggle');
+            });
+
+        $('.popover-help').popover({
+            container: "body",
+            placement: "top",
+            trigger: "hover",
+            boundary: "window"
+        });
+
+        var timer = new Timer();
+
+        function startTimer(seconds) {
+            if (timer.isRunning()) {
+                timer.stop();
+            }
+
+            timer.start({
+                precision: 'seconds',
+                startValues: { seconds: seconds },
+                target: { seconds: 0 },
+                countdown: true
+            });
+        }
+
+        function showTimerWarning() {
+            timerWarning.popover('show');
+            timerTarget.removeClass('badge-secondary')
+                .addClass('badge-warning')
+                .on('click',
+                    function() {
+                        timerWarning.popover('toggle');
+                    });
+        }
+
+        timerTargetTimer.html(timer.getTimeValues().toString());
+
+        timer.addEventListener('secondsUpdated',
+            function(e) {
+                var timeValues = timer.getTimeValues();
+                timerTargetTimer.html(timeValues.toString());
+            });
+
+        timer.addEventListener('minutesUpdated',
+            function(e) {
+                var timeValues = timer.getTimeValues();
+                if (canExtend && timeValues.days === 0 && timeValues.hours === 0 && timeValues.minutes === warningThreshold) {
+                    showTimerWarning();
+                }
+            });
+
+        timer.addEventListener('started',
+            function(e) {
+                var timeValues = timer.getTimeValues();
+                if (canExtend && timeValues.days === 0 && timeValues.hours === 0 && timeValues.minutes <= warningThreshold) {
+                    showTimerWarning();
+                }
+            });
+
+        timer.addEventListener('targetAchieved',
+            function() {
+                window.onbeforeunload = null;
+                window.location.replace('/Modules/ExpireLab/f2def404-29f7-e911-abe3-00155de2c913');
+            });
+
+        startTimer(28799);
+
+        $('#screenshotBtn').on(
+            'click',
+            function() {
+                var canvas = $('#display canvas').first();
+                this.href = canvas[0].toDataURL();
+                this.filename = 'screenshot.png';
+                this.download = 'screenshot.png';
+            });
+
+        $('.dvd-image-item').on('click',
+            function() {
+                var self = $(this);
+                $.ajax({
+                    url: '/Labs/InsertIsoImage/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        VmId: self.data('vmId'),
+                        DiskDriveId: self.data('diskDriveId'),
+                        MediaImageId: self.data('mediaImageId')
+                    }),
+                    dataType: 'json',
+                    error: function() {
+                        alert('An error occurred whilst inserting a DVD');
+                    }
+                });
+            });
+        $('.dvd-drive-eject-btn').on('click',
+            function() {
+                var self = $(this);
+                $.ajax({
+                    url: '/Labs/EjectIsoImage/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        VmId: self.data('vmId'),
+                        DiskDriveId: self.data('diskDriveId')
+                    }),
+                    dataType: 'json',
+                    error: function() {
+                        alert('An error occurred whilst ejecting a DVD');
+                    }
+                });
+            });
+        $('.net-switch-item').on('click',
+            function() {
+                var self = $(this);
+                $.ajax({
+                    url: '/Labs/ConnectNetAdapterSwitch/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        VmId: self.data('vmId'),
+                        VNetAdapterId: self.data('netAdapterId'),
+                        VSwitchId: self.data('switchId')
+                    }),
+                    dataType: 'json',
+                    error: function() {
+                        alert('An error occurred whilst changing network connections');
+                    }
+                });
+            });
+
+        $('.fd-image-item').on('click',
+            function() {
+                var self = $(this);
+                $.ajax({
+                    url: '/Labs/InsertFdImage/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        VmId: self.data('vmId'),
+                        MediaImageId: self.data('mediaImageId')
+                    }),
+                    dataType: 'json',
+                    error: function() {
+                        alert('An error occurred whilst inserting a floppy disk image');
+                    }
+                });
+            });
+        $('.fd-drive-eject-btn').on('click',
+            function() {
+                var self = $(this);
+                $.ajax({
+                    url: '/Labs/EjectFdImage/f2def404-29f7-e911-abe3-00155de2c913',
+                    type: 'POST',
+                    contentType: "application/json; charset=utf-8",
+                    data: JSON.stringify({
+                        VmId: self.data('vmId')
+                    }),
+                    dataType: 'json',
+                    error: function() {
+                        alert('An error occurred whilst ejecting a floppy disk image');
+                    }
+                });
+            });
+
+        var labDns = false;
+
+        function clearDnsRecords() {
+            $('.dns-records').each(function() {
+                var el = $(this);
+                el.html('');
+            });
+        }
+        function showDnsRecords() {
+            $('.dns-records').each(function() {
+                var el = $(this);
+                if (el.find('tr').length > 0) {
+                    el.show();
+                } else {
+                    el.siblings('.no-dns-records').show();
+                }
+            });
+        }
+        function showDnsLoading() {
+            $('.dns-records,.no-dns-records').hide();
+            $('.dns-records-loading').show();
+        }
+        function hideDnsLoading() {
+            $('.dns-records-loading').hide();
+        }
+        function appendDnsEntries(data) {
+            appendARecords(data.ARecords);
+            appendAaaaRecords(data.AaaaRecords);
+            appendCnameRecords(data.CnameRecords);
+            appendMxRecords(data.MxRecords);
+            appendSrvRecords(data.SrvRecords);
+            appendTxtRecords(data.TxtRecords);
+        }
+        function setLabZoneName(zoneName) {
+            $('span.dns-zone-name').html(zoneName);
+        }
+        var aRecordsBody = $('#lab_ui_a-records');
+        var aaaaRecordsBody = $('#lab_ui_aaaa-records');
+        var cnameRecordsBody = $('#lab_ui_cname-records');
+        var mxRecordsBody = $('#lab_ui_mx-records');
+        var srvRecordsBody = $('#lab_ui_srv-records');
+        var txtRecordsBody = $('#lab_ui_txt-records');
+        function getEditDeleteCell() {
+            return $('<td/>')
+                .append($('<a href="#" class="dns-record-edit-btn dns-record-op-btn text-black mr-2" data-op="edit"/>').append($('<i class="fas fa-edit"></i>')))
+                .append($('<a href="#" class="dns-record-delete-btn dns-record-op-btn text-danger" data-op="delete"/>').append($('<i class="fas fa-trash-alt"></i>')));
+        }
+        function appendARecords(aRecords) {
+            aRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'a');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('ipv4Address', record.Ipv4Address);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Ipv4Address));
+                row.append(getEditDeleteCell());
+                aRecordsBody.append(row);
+            });
+        }
+        function appendAaaaRecords(aaaaRecords) {
+            aaaaRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'aaaa');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('ipv6Address', record.Ipv6Address);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Ipv6Address));
+                row.append(getEditDeleteCell());
+                aaaaRecordsBody.append(row);
+            });
+        }
+        function appendCnameRecords(cnameRecords) {
+            cnameRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'cname');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('cname', record.Cname);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Cname));
+                row.append(getEditDeleteCell());
+                cnameRecordsBody.append(row);
+            });
+        }
+        function appendMxRecords(mxRecords) {
+            mxRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'mx');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('preference', record.Preference);
+                row.data('exchange', record.Exchange);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Preference));
+                row.append($('<td/>').html(record.Exchange));
+                row.append(getEditDeleteCell());
+                mxRecordsBody.append(row);
+            });
+        }
+        function appendSrvRecords(srvRecords) {
+            srvRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'srv');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('priority', record.Priority);
+                row.data('weight', record.Weight);
+                row.data('port', record.Port);
+                row.data('target', record.Target);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Priority));
+                row.append($('<td/>').html(record.Weight));
+                row.append($('<td/>').html(record.Port));
+                row.append($('<td/>').html(record.Target));
+                row.append(getEditDeleteCell());
+                srvRecordsBody.append(row);
+            });
+        }
+        function appendTxtRecords(txtRecords) {
+            txtRecords.forEach(function(record) {
+                var row = $('<tr/>');
+                row.data('recordType', 'txt');
+                row.data('recordSetId', record.RecordSetId);
+                row.data('recordId', record.RecordId);
+                row.data('name', record.Name);
+                row.data('value', record.Value);
+                row.append($('<td/>').html(record.Name));
+                row.append($('<td/>').html(record.Value));
+                row.append(getEditDeleteCell());
+                txtRecordsBody.append(row);
+            });
+        }
+        function loadLabDns(id) {
+            showDnsLoading();
+            clearDnsRecords();
+            $.ajax({
+                url: '/LabDomains/GetLabDnsEntries/' + id,
+                type: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    setLabZoneName(data.FqZoneName);
+                    appendDnsEntries(data);
+                },
+                complete: function() {
+                    hideDnsLoading();
+                    showDnsRecords();
+                }
+            });
+        }
+
+        var dnsForms = {
+            "a": $('#lab_ui_a-record-form'),
+            "aaaa": $('#lab_ui_aaaa-record-form'),
+            "cname": $('#lab_ui_cname-record-form'),
+            "mx": $('#lab_ui_mx-record-form'),
+            "srv": $('#lab_ui_srv-record-form'),
+            "txt": $('#lab_ui_txt-record-form')
+        };
+        var dnsFormsModal = $('#lab_ui_lab-dns-modal');
+        var dnsFormsModalButtons = dnsFormsModal.find('.modal-footer button');
+        function hideForms() {
+            $('.dns-record-form').hide().removeClass('active');
+        }
+        function showRecordForm(type) {
+            dnsForms[type].show().addClass('active');
+        }
+        function resetRecordFormFields(type) {
+            dnsForms[type].find('input,textarea').val('').removeAttr('readonly');
+            dnsForms[type].find('input[name="Delete"]').val('false');
+        }
+        function fillRecordForm(type, data) {
+            var fields = dnsForms[type].find('input,textarea');
+            fields.each(function() {
+                var fieldName = this.name.charAt(0).toLowerCase() + this.name.slice(1);
+                if (fieldName in data) {
+                    this.value = data[fieldName];
+                }
+            });
+        }
+        function disableNameField(type) {
+            dnsForms[type].find('input[name="Name"]').attr('readonly', true);
+        }
+        function hideDnsDeleteButton() {
+            $('#delete-dns-record-btn').hide();
+        }
+        function showDnsDeleteButton() {
+            $('#delete-dns-record-btn').show();
+        }
+        function disableDnsFormButtons() {
+            dnsFormsModalButtons.attr('disabled', true);
+        }
+        function enableDnsFormButtons() {
+            dnsFormsModalButtons.removeAttr('disabled');
+        }
+        function disableDnsOpButtons() {
+            $('a.dns-record-op-btn').addClass('disabled');
+        }
+        function enableDnsOpButtons() {
+            $('a.dns-record-op-btn').removeClass('disabled');
+        }
+        function setDeleteFlag() {
+            dnsFormsModal.find('form.active:first input[name="Delete"]').val('true');
+        }
+        function registerDnsClickEvents() {
+            dnsFormsModal.on('hidden.bs.modal', function() {
+                client.captureKeyboard();
+                enableDnsOpButtons();
+            });
+            dnsFormsModal.on('shown.bs.modal', function() {
+                client.releaseKeyboard();
+            });
+            $('a.add-dns-record-btn').on('click', function(e) {
+                hideForms();
+                var type = $(this).data('recordType');
+                if (type in dnsForms) {
+                    showRecordForm(type);
+                    resetRecordFormFields(type);
+                    hideDnsDeleteButton();
+                    enableDnsFormButtons();
+                    dnsFormsModal.modal('show');
+                }
+
+                e.preventDefault();
+            });
+            $('tbody.dns-records').on('click', 'a.dns-record-op-btn', function(e) {
+                e.preventDefault();
+
+                if ($(this).hasClass('disabled')) return;
+
+                hideForms();
+                var record = $(this).closest('tr').data();
+                var op = $(this).data('op');
+                if (!record.recordType in dnsForms) {
+                    return;
+                }
+
+                disableDnsOpButtons();
+                
+                if (op === 'edit') {
+                    showRecordForm(record.recordType);
+                    resetRecordFormFields(record.recordType);
+                    disableNameField(record.recordType);
+                    showDnsDeleteButton();
+                    fillRecordForm(record.recordType, record);
+                    enableDnsFormButtons();
+                    dnsFormsModal.modal('show');
+                    return;
+                }
+                
+                if (op === 'delete') {
+                    showRecordForm(record.recordType);
+                    resetRecordFormFields(record.recordType);
+                    fillRecordForm(record.recordType, record);
+                    setDeleteFlag();
+                    dnsFormsModal.find('form.active').trigger('submit');
+                    return;
+                }
+
+                enableDnsOpButtons();
+            });
+            $('.dns-record-form').on('submit', function(e) {
+                e.preventDefault();
+                var form = $(this);
+                var formData = new FormData(form[0]);
+
+                $.ajax({
+                    url: form.attr('action'),
+                    type: 'post',
+                    processData: false,
+                    contentType: false,
+                    data: formData,
+                    success: function() {
+                        loadLabDns('f2def404-29f7-e911-abe3-00155de2c913');
+                        dnsFormsModal.modal('hide');
+                    },
+                    complete: function() {
+                        enableDnsFormButtons();
+                        enableDnsOpButtons();
+                    }
+                });
+            });
+            $('#save-dns-record-btn').on('click', function(e) {
+                e.preventDefault();
+                disableDnsFormButtons();
+                dnsFormsModal.find('form.active').trigger('submit');
+            });
+            $('#delete-dns-record-btn').on('click', function(e) {
+                e.preventDefault();
+                setDeleteFlag();
+                $('#save-dns-record-btn').triggerHandler('click');
+            });
+        }
+
+        if (labDns) {
+            document.addEventListener('DOMContentLoaded', function() {
+                loadLabDns('f2def404-29f7-e911-abe3-00155de2c913');
+                registerDnsClickEvents();
+            });
+        }
+
+        var fullscreenBtn = document.getElementById('fullscreen-btn');
+        var exitFullscreenBtn = document.getElementById('exit-fullscreen-btn');
+
+        fullscreenBtn.addEventListener('click',
+            function() {
+                var elem = document.documentElement;
+                if (elem.requestFullscreen) {
+                    elem.requestFullscreen();
+                } else if (elem.mozRequestFullScreen) { /* Firefox */
+                    elem.mozRequestFullScreen();
+                } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+                    elem.webkitRequestFullscreen();
+                } else if (elem.msRequestFullscreen) { /* IE/Edge */
+                    elem.msRequestFullscreen();
+                }
+            });
+        
+        exitFullscreenBtn.addEventListener('click',
+            function() {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { /* Firefox */
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { /* IE/Edge */
+                    document.msExitFullscreen();
+                }
+            });
+        
+        document.addEventListener('fullscreenchange', function() {
+            if (document.fullscreenElement === null) {
+                exitFullscreenBtn.style.display = 'none';
+                fullscreenBtn.style.display = '';
+            } else {
+                exitFullscreenBtn.style.display = '';
+                fullscreenBtn.style.display = 'none';
+            }
+        });
+        
+        document.body.style.backgroundColor = '#fff';
+    </script>
+
+
+
+</body></html>
