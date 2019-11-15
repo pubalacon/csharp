@@ -1,0 +1,11 @@
+C:\Users\Joep\source\repos\Override-VS-New\AnimalPark\obj\Debug\netcoreapp3.0\AnimalPark.csprojAssemblyReference.cache
+C:\Users\Joep\source\repos\Override-VS-New\AnimalPark\obj\Debug\netcoreapp3.0\AnimalPark.AssemblyInfoInputs.cache
+C:\Users\Joep\source\repos\Override-VS-New\AnimalPark\obj\Debug\netcoreapp3.0\AnimalPark.AssemblyInfo.cs
+C:\Users\Joep\source\repos\Override-VS-New\AnimalPark\bin\Debug\netcoreapp3.0\AnimalPark.exe
+C:\Users\Joep\source\repos\Override-VS-New\AnimalPark\bin\Debug\netcoreapp3.0\AnimalPark.deps.json
+C:\Users\Joep\source\repos\Override-VS-New\AnimalPark\bin\Debug\netcoreapp3.0\AnimalPark.runtimeconfig.json
+C:\Users\Joep\source\repos\Override-VS-New\AnimalPark\bin\Debug\netcoreapp3.0\AnimalPark.runtimeconfig.dev.json
+C:\Users\Joep\source\repos\Override-VS-New\AnimalPark\bin\Debug\netcoreapp3.0\AnimalPark.dll
+C:\Users\Joep\source\repos\Override-VS-New\AnimalPark\bin\Debug\netcoreapp3.0\AnimalPark.pdb
+C:\Users\Joep\source\repos\Override-VS-New\AnimalPark\obj\Debug\netcoreapp3.0\AnimalPark.dll
+C:\Users\Joep\source\repos\Override-VS-New\AnimalPark\obj\Debug\netcoreapp3.0\AnimalPark.pdb
