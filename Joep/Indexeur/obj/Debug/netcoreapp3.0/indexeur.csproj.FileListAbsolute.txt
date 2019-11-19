@@ -1,0 +1,11 @@
+C:\data\GitHub\csharp\Joep\Indexeur\bin\Debug\netcoreapp3.0\indexeur.exe
+C:\data\GitHub\csharp\Joep\Indexeur\bin\Debug\netcoreapp3.0\indexeur.deps.json
+C:\data\GitHub\csharp\Joep\Indexeur\bin\Debug\netcoreapp3.0\indexeur.runtimeconfig.json
+C:\data\GitHub\csharp\Joep\Indexeur\bin\Debug\netcoreapp3.0\indexeur.runtimeconfig.dev.json
+C:\data\GitHub\csharp\Joep\Indexeur\bin\Debug\netcoreapp3.0\indexeur.dll
+C:\data\GitHub\csharp\Joep\Indexeur\bin\Debug\netcoreapp3.0\indexeur.pdb
+C:\data\GitHub\csharp\Joep\Indexeur\obj\Debug\netcoreapp3.0\indexeur.csprojAssemblyReference.cache
+C:\data\GitHub\csharp\Joep\Indexeur\obj\Debug\netcoreapp3.0\indexeur.AssemblyInfoInputs.cache
+C:\data\GitHub\csharp\Joep\Indexeur\obj\Debug\netcoreapp3.0\indexeur.AssemblyInfo.cs
+C:\data\GitHub\csharp\Joep\Indexeur\obj\Debug\netcoreapp3.0\indexeur.dll
+C:\data\GitHub\csharp\Joep\Indexeur\obj\Debug\netcoreapp3.0\indexeur.pdb

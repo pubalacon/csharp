@@ -1,0 +1,11 @@
+C:\Users\Joep\source\repos\Yield\Yield\bin\Debug\netcoreapp3.0\Yield.exe
+C:\Users\Joep\source\repos\Yield\Yield\bin\Debug\netcoreapp3.0\Yield.deps.json
+C:\Users\Joep\source\repos\Yield\Yield\bin\Debug\netcoreapp3.0\Yield.runtimeconfig.json
+C:\Users\Joep\source\repos\Yield\Yield\bin\Debug\netcoreapp3.0\Yield.runtimeconfig.dev.json
+C:\Users\Joep\source\repos\Yield\Yield\bin\Debug\netcoreapp3.0\Yield.dll
+C:\Users\Joep\source\repos\Yield\Yield\bin\Debug\netcoreapp3.0\Yield.pdb
+C:\Users\Joep\source\repos\Yield\Yield\obj\Debug\netcoreapp3.0\Yield.csprojAssemblyReference.cache
+C:\Users\Joep\source\repos\Yield\Yield\obj\Debug\netcoreapp3.0\Yield.AssemblyInfoInputs.cache
+C:\Users\Joep\source\repos\Yield\Yield\obj\Debug\netcoreapp3.0\Yield.AssemblyInfo.cs
+C:\Users\Joep\source\repos\Yield\Yield\obj\Debug\netcoreapp3.0\Yield.dll
+C:\Users\Joep\source\repos\Yield\Yield\obj\Debug\netcoreapp3.0\Yield.pdb
